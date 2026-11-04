@@ -1,0 +1,23 @@
+{
+  "full_key": "7b1afaec3c46005f3cf779b312d5d2fd",
+  "verification": {
+    "is_full_match": false,
+    "match_percentage": 0.0,
+    "correct_count": 0,
+    "total_tests": 100
+  },
+  "high_confidence_count_total": 13,
+  "avg_gap_total": 10.709893175479591,
+  "group_results": [
+    {
+      "group_idx": 0,
+      "byte_indices": [
+        0,
+        13,
+        10,
+        7
+      ],
+      "key_guesses": [
+        [
+          0,
+          

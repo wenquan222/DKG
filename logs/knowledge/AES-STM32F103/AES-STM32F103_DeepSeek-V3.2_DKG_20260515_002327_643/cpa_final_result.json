@@ -1,0 +1,17 @@
+{
+  "recovered_key": "112233445566778899aabbccddeeff00",
+  "verification_matches": "5/5",
+  "verification_percentage": 100.0,
+  "average_correlation": 0.45036718249320984,
+  "average_gap_percentage": 36.872493743896484,
+  "high_confidence_bytes": 16,
+  "alignment_parameters": {
+    "ref_trace": 1,
+    "length": 100,
+    "max_shift": 200,
+    "threshold": 0.85,
+    "acceptance_rate": 100.0
+  },
+  "leakage_model": "hw_inverse (\u8003\u8651\u9884\u5145\u7535\u603b\u7ebf\u6548\u5e94)",
+  "attack_point": "S-box\u8f93\u51fa (\u7b2c\u4e00\u8f6e)"
+}

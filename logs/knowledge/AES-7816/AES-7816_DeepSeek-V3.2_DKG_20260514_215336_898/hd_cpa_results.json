@@ -1,0 +1,121 @@
+{
+  "recovered_key": "a81a06903c46fc9ec8dba6b301d5690e",
+  "high_confidence_count": 15,
+  "threshold": 0.05,
+  "leakage_model": "Hamming Distance",
+  "reference_state": "00",
+  "byte_results": [
+    {
+      "byte_idx": 0,
+      "key": 168,
+      "correlation": 0.3975654837220459,
+      "gap": 0.07649243774684694,
+      "sample": 5503
+    },
+    {
+      "byte_idx": 1,
+      "key": 26,
+      "correlation": 0.38897753526952017,
+      "gap": 0.088342608260909,
+      "sample": 5601
+    },
+    {
+      "byte_idx": 2,
+      "key": 6,
+      "correlation": 0.3820292858259829,
+      "gap": 0.14467519255826636,
+      "sample": 5505
+    },
+    {
+      "byte_idx": 3,
+      "key": 144,
+      "correlation": 0.43297801635637695,
+      "gap": 0.1358109274633047,
+      "sample": 5503
+    },
+    {
+      "byte_idx": 4,
+      "key": 60,
+      "correlation": 0.39423585387503446,
+      "gap": 0.10494245061185803,
+      "sample": 5500
+    },
+    {
+      "byte_idx": 5,
+      "key": 70,
+      "correlation": 0.3764395179896789,
+      "gap": 0.08763643249388386,
+      "sample": 5551
+    },
+    {
+      "byte_idx": 6,
+      "key": 252,
+      "correlation": 0.34114538849467435,
+      "gap": 0.07974817580050986,
+      "sample": 5595
+    },
+    {
+      "byte_idx": 7,
+      "key": 158,
+      "correlation": 0.40281415474923254,
+      "gap": 0.05739549416612344,
+      "sample": 5547
+    },
+    {
+      "byte_idx": 8,
+      "key": 200,
+      "correlation": 0.42062082246365284,
+      "gap": 0.0828936697019389,
+      "sample": 5547
+    },
+    {
+      "byte_idx": 9,
+      "key": 219,
+      "correlation": 0.4018770385532951,
+      "gap": 0.10664070144158477,
+      "sample": 5601
+    },
+    {
+      "byte_idx": 10,
+      "key": 166,
+      "correlation": 0.35983395282883834,
+      "gap": 0.07221142636405498,
+      "sample": 5645
+    },
+    {
+      "byte_idx": 11,
+      "key": 179,
+      "correlation": 0.40601049300567565,
+      "gap": 0.1439212915232846,
+      "sample": 5553
+    },
+    {
+      "byte_idx": 12,
+      "key": 1,
+      "correlation": 0.3523824382917987,
+      "gap": 0.08874609260483407,
+      "sample": 5647
+    },
+    {
+      "byte_idx": 13,
+      "key": 213,
+      "correlation": 0.4141411718894548,
+      "gap": 0.08975917690247853,
+      "sample": 5551
+    },
+    {
+      "byte_idx": 14,
+      "key": 105,
+      "correlation": 0.35252028523949364,
+      "gap": 0.06667793738188249,
+      "sample": 5648
+    },
+    {
+      "byte_idx": 15,
+      "key": 14,
+      "correlation": 0.37068366541338177,
+      "gap": 0.02496762624075216,
+      "sample": 5556
+    }
+  ]
+}

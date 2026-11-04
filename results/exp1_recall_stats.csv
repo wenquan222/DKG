@@ -1,0 +1,7 @@
+﻿doc_id,tp,fn,total,recall_pct
+MAN-01-2024-MathMagic-AES-Contact-TestCard-Example,28,0,28,100.0
+PAP-04-2004-CHES-Brier-CPA-Leakage-Model,20,7,27,74.07
+PAP-93-2014-ePrint-OFlynn-AES256-Bootloader-CPA,16,2,18,88.89
+TOOL-01-08-2023-NewAE-CW-SCA101-Lab4_2-CPA-AES,22,2,24,91.67
+TOOL-01-12-2023-NewAE-CW-SCA201-Lab1_1A-Resync-SAD,14,2,16,87.5
+OVERALL,100,13,113,88.5

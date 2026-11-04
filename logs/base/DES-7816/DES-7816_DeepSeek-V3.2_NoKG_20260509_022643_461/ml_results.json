@@ -1,0 +1,47 @@
+{
+  "pca_explained_variance": 0.8274841071849566,
+  "train_accuracy": 1.0,
+  "test_accuracy": 0.13333333333333333,
+  "top_key_guesses": [
+    {
+      "key": 0,
+      "accuracy": 0.74
+    },
+    {
+      "key": 1,
+      "accuracy": 0.74
+    },
+    {
+      "key": 2,
+      "accuracy": 0.74
+    },
+    {
+      "key": 3,
+      "accuracy": 0.74
+    },
+    {
+      "key": 4,
+      "accuracy": 0.74
+    },
+    {
+      "key": 5,
+      "accuracy": 0.74
+    },
+    {
+      "key": 6,
+      "accuracy": 0.74
+    },
+    {
+      "key": 7,
+      "accuracy": 0.74
+    },
+    {
+      "key": 8,
+      "accuracy": 0.74
+    },
+    {
+      "key": 9,
+      "accuracy": 0.74
+    }
+  ]
+}

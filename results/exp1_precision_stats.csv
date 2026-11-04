@@ -1,0 +1,5 @@
+﻿layer,Y,N,partial,other,total,strict_precision_pct,lenient_precision_pct
+Upper,90,3,7,0,100,90.0,93.5
+Lower,97,1,2,0,100,97.0,98.0
+Cross,43,1,6,0,50,86.0,92.0
+Overall,230,5,15,0,250,92.0,95.0

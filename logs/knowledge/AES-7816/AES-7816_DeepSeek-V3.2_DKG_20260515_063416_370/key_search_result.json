@@ -1,0 +1,7 @@
+{
+  "found": false,
+  "found_key": null,
+  "tested_count": 46931,
+  "total_combinations": 390625,
+  "method": "random_sampling"
+}

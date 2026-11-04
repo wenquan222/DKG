@@ -1,0 +1,21 @@
+{
+  "recovered_round_keys": {
+    "RK0": "7e050833",
+    "RK1": "5687bfcb",
+    "RK2": "bc35754c",
+    "RK3": "7c007b58"
+  },
+  "analysis_summary": {
+    "traces_used": 100,
+    "average_correlation": 0.4433021104909953,
+    "successful_rounds": 4,
+    "verification_status": "partial - round keys recovered, master key derivation needed",
+    "kg_guidance_followed": [
+      "Direct CPA attempted first (no alignment)",
+      "4-round CPA performed as per SM4 requirements",
+      "Software implementation - no vertical alignment applied",
+      "Hamming weight leakage model used",
+      "Variance-based ROI exploration performed"
+    ]
+  }
+}

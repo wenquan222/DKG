@@ -1,0 +1,10 @@
+{
+  "recovered_key": "113fc05ad620f5375a3f4a3baad77829",
+  "verification_passed": false,
+  "match_rate": 0.0,
+  "high_confidence_count": 5,
+  "avg_correlation": 0.42949759028851986,
+  "avg_gap": 0.059955697506666183,
+  "start_position": 1520,
+  "end_position": 1590
+}

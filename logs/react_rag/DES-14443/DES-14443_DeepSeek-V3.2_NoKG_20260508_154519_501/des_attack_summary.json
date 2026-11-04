@@ -1,0 +1,10 @@
+{
+  "algorithm": "DES-64",
+  "device": "\u975e\u63a5\u89e6\u5f0f\u667a\u80fd\u5361 (14443)",
+  "side_channel": "\u7535\u78c1\u4fa7\u4fe1\u9053 (EM)",
+  "n_traces": 10000,
+  "attack_method": "CPA with R_xor_LOut target",
+  "recovered_key": "1022324454667688",
+  "verification": "PASSED",
+  "notes": "Direct CPA attack successful, key_search corrected 3 S-boxes"
+}

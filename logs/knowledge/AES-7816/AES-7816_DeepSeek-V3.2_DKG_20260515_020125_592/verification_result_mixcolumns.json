@@ -1,0 +1,10 @@
+{
+  "recovered_key": "1122ba7fb746d6b6c864639182011761",
+  "verification_passed": false,
+  "match_rate": 0.0,
+  "high_confidence_count": 1,
+  "avg_correlation": 0.4079950526356697,
+  "avg_gap": 0.023020077496767044,
+  "attack_strategy": "two_stage_mixcolumns_grouped",
+  "mix_start_point": 1884
+}

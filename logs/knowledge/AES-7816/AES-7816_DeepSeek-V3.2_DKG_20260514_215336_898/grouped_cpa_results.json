@@ -1,0 +1,150 @@
+{
+  "recovered_key": "d2fe226db72531f200bab246aa6c8bd1",
+  "verification_matches": 0,
+  "mixcolumns_groups": [
+    [
+      0,
+      13,
+      10,
+      7
+    ],
+    [
+      4,
+      1,
+      14,
+      11
+    ],
+    [
+      8,
+      5,
+      2,
+      15
+    ],
+    [
+      12,
+      9,
+      6,
+      3
+    ]
+  ],
+  "peak_indices": [
+    1081,
+    1162,
+    1212,
+    1525
+  ],
+  "byte_results": [
+    {
+      "byte_idx": 0,
+      "key": 210,
+      "correlation": 0.38701642688344146,
+      "sample": 1131,
+      "group": 0
+    },
+    {
+      "byte_idx": 1,
+      "key": 254,
+      "correlation": 0.4399113420847263,
+      "sample": 1213,
+      "group": 1
+    },
+    {
+      "byte_idx": 2,
+      "key": 34,
+      "correlation": 0.4818480012444314,
+      "sample": 1256,
+      "group": 2
+    },
+    {
+      "byte_idx": 3,
+      "key": 109,
+      "correlation": 0.4213873725753895,
+      "sample": 1559,
+      "group": 3
+    },
+    {
+      "byte_idx": 4,
+      "key": 183,
+      "correlation": 0.40427791307561617,
+      "sample": 1170,
+      "group": 1
+    },
+    {
+      "byte_idx": 5,
+      "key": 37,
+      "correlation": 0.4518768006246276,
+      "sample": 1217,
+      "group": 2
+    },
+    {
+      "byte_idx": 6,
+      "key": 49,
+      "correlation": 0.41053628782673823,
+      "sample": 1586,
+      "group": 3
+    },
+    {
+      "byte_idx": 7,
+      "key": 242,
+      "correlation": 0.37803574119671757,
+      "sample": 1123,
+      "group": 0
+    },
+    {
+      "byte_idx": 8,
+      "key": 0,
+      "correlation": 0.4941517453622783,
+      "sample": 1285,
+      "group": 2
+    },
+    {
+      "byte_idx": 9,
+      "key": 186,
+      "correlation": 0.3800607051651224,
+      "sample": 1529,
+      "group": 3
+    },
+    {
+      "byte_idx": 10,
+      "key": 178,
+      "correlation": 0.4240863842286344,
+      "sample": 1099,
+      "group": 0
+    },
+    {
+      "byte_idx": 11,
+      "key": 70,
+      "correlation": 0.40679090967395864,
+      "sample": 1162,
+      "group": 1
+    },
+    {
+      "byte_idx": 12,
+      "key": 170,
+      "correlation": 0.4728985323357265,
+      "sample": 1607,
+      "group": 3
+    },
+    {
+      "byte_idx": 13,
+      "key": 108,
+      "correlation": 0.3811556974285414,
+      "sample": 1150,
+      "group": 0
+    },
+    {
+      "byte_idx": 14,
+      "key": 139,
+      "correlation": 0.3867576658746588,
+      "sample": 1194,
+      "group": 1
+    },
+    {
+      "byte_idx": 15,
+      "key": 209,
+      "correlation": 0.40097312594133827,
+      "sample": 1266,
+      "group": 2
+    }
+  ]
+}

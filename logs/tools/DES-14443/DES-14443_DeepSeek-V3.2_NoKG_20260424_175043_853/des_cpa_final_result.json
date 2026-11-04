@@ -1,0 +1,15 @@
+{
+  "algorithm": "DES-64",
+  "device": "Contactless Smart Card (EM)",
+  "n_traces": 10000,
+  "n_points": 300,
+  "preprocessing": [
+    "Vertical Alignment (baseline correction)"
+  ],
+  "cpa_model": "R_xor_LOut with HW leakage model",
+  "recovered_48bit_subkey": "1002324454422688",
+  "final_56bit_des_key": "1022324454667688",
+  "cpa_avg_correlation": 0.0679,
+  "verification": "PASSED (100/100 random traces)",
+  "key_search_rounds": 245
+}

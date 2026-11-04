@@ -1,0 +1,10 @@
+{
+  "recovered_key": "113fc05a082031375ada4a3b72d7786a",
+  "verification_passed": false,
+  "match_rate": 0.0,
+  "high_confidence_count": 4,
+  "avg_correlation": 0.41769696958363056,
+  "avg_gap": 0.06015684828162193,
+  "best_model": "HW",
+  "filter_weight": 7
+}

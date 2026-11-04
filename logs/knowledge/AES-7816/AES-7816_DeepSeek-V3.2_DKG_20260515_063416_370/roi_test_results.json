@@ -1,0 +1,142 @@
+[
+  {
+    "roi": [
+      1550,
+      1580
+    ],
+    "key_guesses": [
+      17,
+      109,
+      238,
+      42,
+      214,
+      57,
+      151,
+      156,
+      4,
+      179,
+      53,
+      130,
+      170,
+      75,
+      120,
+      214
+    ],
+    "high_confidence_count": 8,
+    "avg_gap": 9.562889323111062,
+    "verification_match": false,
+    "match_percentage": 0.0
+  },
+  {
+    "roi": [
+      1540,
+      1570
+    ],
+    "key_guesses": [
+      17,
+      109,
+      237,
+      42,
+      161,
+      219,
+      151,
+      157,
+      31,
+      179,
+      93,
+      138,
+      170,
+      236,
+      155,
+      214
+    ],
+    "high_confidence_count": 11,
+    "avg_gap": 10.913232008537392,
+    "verification_match": false,
+    "match_percentage": 0.0
+  },
+  {
+    "roi": [
+      1560,
+      1590
+    ],
+    "key_guesses": [
+      17,
+      24,
+      238,
+      42,
+      214,
+      39,
+      157,
+      4,
+      4,
+      218,
+      53,
+      165,
+      170,
+      75,
+      120,
+      213
+    ],
+    "high_confidence_count": 10,
+    "avg_gap": 10.35368440772659,
+    "verification_match": false,
+    "match_percentage": 0.0
+  },
+  {
+    "roi": [
+      1520,
+      1550
+    ],
+    "key_guesses": [
+      214,
+      63,
+      231,
+      153,
+      189,
+      37,
+      160,
+      55,
+      20,
+      186,
+      200,
+      59,
+      55,
+      215,
+      155,
+      34
+    ],
+    "high_confidence_count": 9,
+    "avg_gap": 8.977249632065865,
+    "verification_match": false,
+    "match_percentage": 0.0
+  },
+  {
+    "roi": [
+      1570,
+      1600
+    ],
+    "key_guesses": [
+      17,
+      193,
+      238,
+      42,
+      214,
+      132,
+      247,
+      17,
+      4,
+      218,
+      134,
+      165,
+      170,
+      154,
+      120,
+      213
+    ],
+    "high_confidence_count": 10,
+    "avg_gap": 11.093576072762705,
+    "verification_match": false,
+    "match_percentage": 0.0
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "recovered_key": "159d6f6f62d3773f",
+  "byte_results": [
+    {
+      "byte_index": 0,
+      "key": "15",
+      "correlation": 0.03142219814881968,
+      "best_model": "HW"
+    },
+    {
+      "byte_index": 1,
+      "key": "9d",
+      "correlation": 0.03077339743255843,
+      "best_model": "HW"
+    },
+    {
+      "byte_index": 2,
+      "key": "6f",
+      "correlation": 0.025321216709247273,
+      "best_model": "HW"
+    },
+    {
+      "byte_index": 3,
+      "key": "6f",
+      "correlation": 0.029475113989216893,
+      "best_model": "HW"
+    },
+    {
+      "byte_index": 4,
+      "key": "62",
+      "correlation": 0.03188956168160095,
+      "best_model": "HW"
+    },
+    {
+      "byte_index": 5,
+      "key": "d3",
+      "correlation": 0.02064923918731463,
+      "best_model": "HW"
+    },
+    {
+      "byte_index": 6,
+      "key": "77",
+      "correlation": 0.02146069027341564,
+      "best_model": "HW"
+    },
+    {
+      "byte_index": 7,
+      "key": "3f",
+      "correlation": 0.040988807064147946,
+      "best_model": "HW"
+    }
+  ],
+  "decryption_accuracy": 0.0,
+  "notes": "Comprehensive CPA attack with multiple power models",
+  "trace_count_used": 10000,
+  "high_power_region": "140-170"
+}

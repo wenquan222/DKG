@@ -1,0 +1,9 @@
+{
+  "recovered_key_2000": "eb7f525e3d566637",
+  "recovered_key_5000": "75d8174b2de54517",
+  "encryption_match_rate_2000": 0.0,
+  "encryption_match_rate_5000": 0.0,
+  "attack_notes": "CPA attack on individual bytes assuming XOR encryption",
+  "trace_count": 10000,
+  "sample_points": 300
+}

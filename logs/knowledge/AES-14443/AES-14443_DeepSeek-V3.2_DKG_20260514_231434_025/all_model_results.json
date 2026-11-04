@@ -1,0 +1,414 @@
+{
+  "HW": {
+    "key": "1127366018d2e793fff71e08f3c6b9ae",
+    "avg_correlation": 0.0559218343660606,
+    "high_confidence": 4,
+    "results": [
+      {
+        "byte_idx": 0,
+        "best_key": 17,
+        "best_correlation": 0.060253371042889796,
+        "gap_pct": 9.018175825354941
+      },
+      {
+        "byte_idx": 1,
+        "best_key": 39,
+        "best_correlation": 0.04665970123846059,
+        "gap_pct": 1.1642303116627717
+      },
+      {
+        "byte_idx": 2,
+        "best_key": 54,
+        "best_correlation": 0.05701084517650602,
+        "gap_pct": 8.15081478173543
+      },
+      {
+        "byte_idx": 3,
+        "best_key": 96,
+        "best_correlation": 0.0604538842170663,
+        "gap_pct": 15.04687740184141
+      },
+      {
+        "byte_idx": 4,
+        "best_key": 24,
+        "best_correlation": 0.05496750368156628,
+        "gap_pct": 7.311234810694264
+      },
+      {
+        "byte_idx": 5,
+        "best_key": 210,
+        "best_correlation": 0.057821629524865886,
+        "gap_pct": 12.928183680074296
+      },
+      {
+        "byte_idx": 6,
+        "best_key": 231,
+        "best_correlation": 0.05513648132807389,
+        "gap_pct": 0.6167650605418714
+      },
+      {
+        "byte_idx": 7,
+        "best_key": 147,
+        "best_correlation": 0.06215096866763882,
+        "gap_pct": 10.251309277215302
+      },
+      {
+        "byte_idx": 8,
+        "best_key": 255,
+        "best_correlation": 0.05356055399999516,
+        "gap_pct": 5.6459778984647455
+      },
+      {
+        "byte_idx": 9,
+        "best_key": 247,
+        "best_correlation": 0.05610990164262415,
+        "gap_pct": 6.30653099869411
+      },
+      {
+        "byte_idx": 10,
+        "best_key": 30,
+        "best_correlation": 0.05374906791345367,
+        "gap_pct": 9.04815845820926
+      },
+      {
+        "byte_idx": 11,
+        "best_key": 8,
+        "best_correlation": 0.05490551788024617,
+        "gap_pct": 0.2728919483621183
+      },
+      {
+        "byte_idx": 12,
+        "best_key": 243,
+        "best_correlation": 0.05460394460767824,
+        "gap_pct": 8.77077710988024
+      },
+      {
+        "byte_idx": 13,
+        "best_key": 198,
+        "best_correlation": 0.05774286929646094,
+        "gap_pct": 2.8490549819210518
+      },
+      {
+        "byte_idx": 14,
+        "best_key": 185,
+        "best_correlation": 0.052190482848102175,
+        "gap_pct": 3.2580297333155324
+      },
+      {
+        "byte_idx": 15,
+        "best_key": 174,
+        "best_correlation": 0.05743262679134154,
+        "gap_pct": 10.214956999714817
+      }
+    ]
+  },
+  "BIT0": {
+    "key": "20c66f2ed0985fcaf2bb60df34a71042",
+    "avg_correlation": 0.05814948029832624,
+    "high_confidence": 8,
+    "results": [
+      {
+        "byte_idx": 0,
+        "best_key": 32,
+        "best_correlation": 0.050124619549939575,
+        "gap_pct": 2.1905274391826026
+      },
+      {
+        "byte_idx": 1,
+        "best_key": 198,
+        "best_correlation": 0.0515401430692098,
+        "gap_pct": 15.843148622839202
+      },
+      {
+        "byte_idx": 2,
+        "best_key": 111,
+        "best_correlation": 0.0694909238992335,
+        "gap_pct": 11.622248280679317
+      },
+      {
+        "byte_idx": 3,
+        "best_key": 46,
+        "best_correlation": 0.05563871451007754,
+        "gap_pct": 13.081345650972015
+      },
+      {
+        "byte_idx": 4,
+        "best_key": 208,
+        "best_correlation": 0.05471577995692871,
+        "gap_pct": 10.56752833327706
+      },
+      {
+        "byte_idx": 5,
+        "best_key": 152,
+        "best_correlation": 0.04988485539116833,
+        "gap_pct": 9.274434896361987
+      },
+      {
+        "byte_idx": 6,
+        "best_key": 95,
+        "best_correlation": 0.06078991883118167,
+        "gap_pct": 2.875624763242247
+      },
+      {
+        "byte_idx": 7,
+        "best_key": 202,
+        "best_correlation": 0.06962249805593979,
+        "gap_pct": 22.69696629911754
+      },
+      {
+        "byte_idx": 8,
+        "best_key": 242,
+        "best_correlation": 0.054170114161442594,
+        "gap_pct": 5.406631235203201
+      },
+      {
+        "byte_idx": 9,
+        "best_key": 187,
+        "best_correlation": 0.07640943172584366,
+        "gap_pct": 23.18878274027062
+      },
+      {
+        "byte_idx": 10,
+        "best_key": 96,
+        "best_correlation": 0.05032450242059428,
+        "gap_pct": 4.505027727262006
+      },
+      {
+        "byte_idx": 11,
+        "best_key": 223,
+        "best_correlation": 0.06016322049315873,
+        "gap_pct": 15.670334634572953
+      },
+      {
+        "byte_idx": 12,
+        "best_key": 52,
+        "best_correlation": 0.05394985411796972,
+        "gap_pct": 6.218547275650031
+      },
+      {
+        "byte_idx": 13,
+        "best_key": 167,
+        "best_correlation": 0.06512858932617457,
+        "gap_pct": 13.97421008540719
+      },
+      {
+        "byte_idx": 14,
+        "best_key": 16,
+        "best_correlation": 0.05816919897194886,
+        "gap_pct": 4.802242598398345
+      },
+      {
+        "byte_idx": 15,
+        "best_key": 66,
+        "best_correlation": 0.050269320292408555,
+        "gap_pct": 6.09126438869119
+      }
+    ]
+  },
+  "BIT7": {
+    "key": "1185f58370cc4d2f8be1cc967eb7bc32",
+    "avg_correlation": 0.0546643945470232,
+    "high_confidence": 3,
+    "results": [
+      {
+        "byte_idx": 0,
+        "best_key": 17,
+        "best_correlation": 0.0539972448002649,
+        "gap_pct": 10.769162447540527
+      },
+      {
+        "byte_idx": 1,
+        "best_key": 133,
+        "best_correlation": 0.05051401841889647,
+        "gap_pct": 9.412981076398856
+      },
+      {
+        "byte_idx": 2,
+        "best_key": 245,
+        "best_correlation": 0.06564112984842542,
+        "gap_pct": 7.1258157697402265
+      },
+      {
+        "byte_idx": 3,
+        "best_key": 131,
+        "best_correlation": 0.052009311009001476,
+        "gap_pct": 5.08978365322938
+      },
+      {
+        "byte_idx": 4,
+        "best_key": 112,
+        "best_correlation": 0.04995530513478922,
+        "gap_pct": 0.45476786759513776
+      },
+      {
+        "byte_idx": 5,
+        "best_key": 204,
+        "best_correlation": 0.05513759473708345,
+        "gap_pct": 3.846111491638624
+      },
+      {
+        "byte_idx": 6,
+        "best_key": 77,
+        "best_correlation": 0.057573762056687135,
+        "gap_pct": 4.048950769696151
+      },
+      {
+        "byte_idx": 7,
+        "best_key": 47,
+        "best_correlation": 0.05047676057499708,
+        "gap_pct": 1.4139218291942879
+      },
+      {
+        "byte_idx": 8,
+        "best_key": 139,
+        "best_correlation": 0.054343622377082436,
+        "gap_pct": 5.576712819795834
+      },
+      {
+        "byte_idx": 9,
+        "best_key": 225,
+        "best_correlation": 0.060223524008803674,
+        "gap_pct": 1.540842729492559
+      },
+      {
+        "byte_idx": 10,
+        "best_key": 204,
+        "best_correlation": 0.05509349344667823,
+        "gap_pct": 12.65150724841825
+      },
+      {
+        "byte_idx": 11,
+        "best_key": 150,
+        "best_correlation": 0.04852557493482568,
+        "gap_pct": 0.8001840659818624
+      },
+      {
+        "byte_idx": 12,
+        "best_key": 126,
+        "best_correlation": 0.049757536253381855,
+        "gap_pct": 4.118966241640557
+      },
+      {
+        "byte_idx": 13,
+        "best_key": 183,
+        "best_correlation": 0.06070655295220935,
+        "gap_pct": 14.734060663329396
+      },
+      {
+        "byte_idx": 14,
+        "best_key": 188,
+        "best_correlation": 0.05741499755081031,
+        "gap_pct": 1.572948103026257
+      },
+      {
+        "byte_idx": 15,
+        "best_key": 50,
+        "best_correlation": 0.05325988464843454,
+        "gap_pct": 1.103495698797553
+      }
+    ]
+  },
+  "IDENTITY": {
+    "key": "11eaf5d40e902e078b2c03f48ab7e832",
+    "avg_correlation": 0.058263563265706066,
+    "high_confidence": 8,
+    "results": [
+      {
+        "byte_idx": 0,
+        "best_key": 17,
+        "best_correlation": 0.07265665625785443,
+        "gap_pct": 30.97315239054898
+      },
+      {
+        "byte_idx": 1,
+        "best_key": 234,
+        "best_correlation": 0.04765870887799582,
+        "gap_pct": 0.9289044420545725
+      },
+      {
+        "byte_idx": 2,
+        "best_key": 245,
+        "best_correlation": 0.07046962701420234,
+        "gap_pct": 3.574313052414144
+      },
+      {
+        "byte_idx": 3,
+        "best_key": 212,
+        "best_correlation": 0.05823012421442359,
+        "gap_pct": 14.162942171675821
+      },
+      {
+        "byte_idx": 4,
+        "best_key": 14,
+        "best_correlation": 0.05571747572353683,
+        "gap_pct": 11.634207618681986
+      },
+      {
+        "byte_idx": 5,
+        "best_key": 144,
+        "best_correlation": 0.05679227623757012,
+        "gap_pct": 10.343987333244241
+      },
+      {
+        "byte_idx": 6,
+        "best_key": 46,
+        "best_correlation": 0.06370014964546057,
+        "gap_pct": 23.79842320075674
+      },
+      {
+        "byte_idx": 7,
+        "best_key": 7,
+        "best_correlation": 0.05764951255113084,
+        "gap_pct": 12.646513344041152
+      },
+      {
+        "byte_idx": 8,
+        "best_key": 139,
+        "best_correlation": 0.05790690484756395,
+        "gap_pct": 11.696292655288786
+      },
+      {
+        "byte_idx": 9,
+        "best_key": 44,
+        "best_correlation": 0.05747464106402006,
+        "gap_pct": 3.5038824167388043
+      },
+      {
+        "byte_idx": 10,
+        "best_key": 3,
+        "best_correlation": 0.0549588361944357,
+        "gap_pct": 0.13301690574545466
+      },
+      {
+        "byte_idx": 11,
+        "best_key": 244,
+        "best_correlation": 0.052074121727040096,
+        "gap_pct": 6.560905935371722
+      },
+      {
+        "byte_idx": 12,
+        "best_key": 138,
+        "best_correlation": 0.04952181707013905,
+        "gap_pct": 5.12808546584032
+      },
+      {
+        "byte_idx": 13,
+        "best_key": 183,
+        "best_correlation": 0.057918858405775944,
+        "gap_pct": 7.767665687875387
+      },
+      {
+        "byte_idx": 14,
+        "best_key": 232,
+        "best_correlation": 0.06372165151960221,
+        "gap_pct": 17.188297666021036
+      },
+      {
+        "byte_idx": 15,
+        "best_key": 50,
+        "best_correlation": 0.05576565090054551,
+        "gap_pct": 6.858494890397861
+      }
+    ]
+  }
+}

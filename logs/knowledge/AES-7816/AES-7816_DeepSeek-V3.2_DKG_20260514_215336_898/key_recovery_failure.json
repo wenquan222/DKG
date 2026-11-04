@@ -1,0 +1,13 @@
+{
+  "success": false,
+  "tested_combinations": 100000,
+  "cpa_high_confidence_count": 15,
+  "best_cpa_key": "a81a06903c46fc9ec8dba6b301d5690e",
+  "reason": "key_search failed to find correct key",
+  "recommendations": [
+    "Expand search range for low-confidence bytes",
+    "Try different attack points (S-box input, last round)",
+    "Consider Hamming distance leakage model",
+    "Collect more traces for better SNR"
+  ]
+}

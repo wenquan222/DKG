@@ -1,0 +1,955 @@
+{
+  "schema_version": "cpa_detail_v2",
+  "round_index": 2,
+  "n_traces": 96,
+  "n_points": 6500,
+  "leakage_model": "HW",
+  "target": "S-box_out",
+  "corr_mode": "abs",
+  "results": [
+    {
+      "byte": 0,
+      "topK": [
+        {
+          "key": 90,
+          "score": 0.7632761210656022,
+          "time_index": 4218
+        },
+        {
+          "key": 224,
+          "score": 0.5289413562379658,
+          "time_index": 3620
+        },
+        {
+          "key": 255,
+          "score": 0.461093617256525,
+          "time_index": 4629
+        },
+        {
+          "key": 24,
+          "score": 0.45123968595694774,
+          "time_index": 5368
+        },
+        {
+          "key": 148,
+          "score": 0.44514956113865317,
+          "time_index": 3017
+        },
+        {
+          "key": 229,
+          "score": 0.41391919950793704,
+          "time_index": 2791
+        },
+        {
+          "key": 46,
+          "score": 0.41289437755944364,
+          "time_index": 1565
+        },
+        {
+          "key": 68,
+          "score": 0.4108559083375847,
+          "time_index": 5168
+        },
+        {
+          "key": 170,
+          "score": 0.4075319086705475,
+          "time_index": 200
+        },
+        {
+          "key": 78,
+          "score": 0.4072434180062451,
+          "time_index": 2989
+        },
+        {
+          "key": 163,
+          "score": 0.4070883633749175,
+          "time_index": 5998
+        },
+        {
+          "key": 57,
+          "score": 0.40593590681277286,
+          "time_index": 622
+        },
+        {
+          "key": 53,
+          "score": 0.4046239872052393,
+          "time_index": 369
+        },
+        {
+          "key": 43,
+          "score": 0.40333380141737213,
+          "time_index": 4222
+        },
+        {
+          "key": 137,
+          "score": 0.40273627475055257,
+          "time_index": 806
+        },
+        {
+          "key": 89,
+          "score": 0.4018037209213195,
+          "time_index": 954
+        },
+        {
+          "key": 168,
+          "score": 0.4004215515455638,
+          "time_index": 1210
+        },
+        {
+          "key": 87,
+          "score": 0.3993987130355199,
+          "time_index": 2274
+        },
+        {
+          "key": 96,
+          "score": 0.3983255595153356,
+          "time_index": 3003
+        },
+        {
+          "key": 195,
+          "score": 0.3973200834536713,
+          "time_index": 2641
+        }
+      ],
+      "best_key": 90
+    },
+    {
+      "byte": 1,
+      "topK": [
+        {
+          "key": 106,
+          "score": 0.6899195002599596,
+          "time_index": 4169
+        },
+        {
+          "key": 227,
+          "score": 0.5130508383131492,
+          "time_index": 4400
+        },
+        {
+          "key": 29,
+          "score": 0.468905051627325,
+          "time_index": 4162
+        },
+        {
+          "key": 137,
+          "score": 0.4619295142250512,
+          "time_index": 1465
+        },
+        {
+          "key": 100,
+          "score": 0.45824235480557896,
+          "time_index": 3733
+        },
+        {
+          "key": 21,
+          "score": 0.45456817717469655,
+          "time_index": 2114
+        },
+        {
+          "key": 216,
+          "score": 0.45282925307530547,
+          "time_index": 4366
+        },
+        {
+          "key": 233,
+          "score": 0.45034232480635444,
+          "time_index": 751
+        },
+        {
+          "key": 95,
+          "score": 0.44002244388225226,
+          "time_index": 3834
+        },
+        {
+          "key": 83,
+          "score": 0.43745320684220107,
+          "time_index": 1170
+        },
+        {
+          "key": 60,
+          "score": 0.4350985158200292,
+          "time_index": 1852
+        },
+        {
+          "key": 101,
+          "score": 0.43464662880439364,
+          "time_index": 5616
+        },
+        {
+          "key": 127,
+          "score": 0.42866188218529666,
+          "time_index": 1807
+        },
+        {
+          "key": 15,
+          "score": 0.42586537477008074,
+          "time_index": 2700
+        },
+        {
+          "key": 243,
+          "score": 0.42572978037761183,
+          "time_index": 3943
+        },
+        {
+          "key": 217,
+          "score": 0.42248532376045395,
+          "time_index": 188
+        },
+        {
+          "key": 187,
+          "score": 0.4219726600982088,
+          "time_index": 821
+        },
+        {
+          "key": 18,
+          "score": 0.4168050546841228,
+          "time_index": 812
+        },
+        {
+          "key": 228,
+          "score": 0.4163593392054193,
+          "time_index": 2725
+        },
+        {
+          "key": 198,
+          "score": 0.4161090620286713,
+          "time_index": 2911
+        }
+      ],
+      "best_key": 106
+    },
+    {
+      "byte": 2,
+      "topK": [
+        {
+          "key": 177,
+          "score": 0.8157566972948889,
+          "time_index": 4127
+        },
+        {
+          "key": 254,
+          "score": 0.4507143552468135,
+          "time_index": 3373
+        },
+        {
+          "key": 214,
+          "score": 0.4370534600440884,
+          "time_index": 3249
+        },
+        {
+          "key": 202,
+          "score": 0.4267048170990463,
+          "time_index": 4849
+        },
+        {
+          "key": 143,
+          "score": 0.4260201513942565,
+          "time_index": 3099
+        },
+        {
+          "key": 240,
+          "score": 0.4236558609775602,
+          "time_index": 1457
+        },
+        {
+          "key": 76,
+          "score": 0.42358135183796974,
+          "time_index": 1457
+        },
+        {
+          "key": 112,
+          "score": 0.4205189527180516,
+          "time_index": 4659
+        },
+        {
+          "key": 221,
+          "score": 0.41788726258604914,
+          "time_index": 4963
+        },
+        {
+          "key": 13,
+          "score": 0.41510822147362675,
+          "time_index": 1825
+        },
+        {
+          "key": 34,
+          "score": 0.41492659077602134,
+          "time_index": 1135
+        },
+        {
+          "key": 174,
+          "score": 0.41394670143779005,
+          "time_index": 3364
+        },
+        {
+          "key": 204,
+          "score": 0.40381842717954397,
+          "time_index": 1877
+        },
+        {
+          "key": 137,
+          "score": 0.39997727475515216,
+          "time_index": 3834
+        },
+        {
+          "key": 158,
+          "score": 0.39153439561504255,
+          "time_index": 3068
+        },
+        {
+          "key": 229,
+          "score": 0.38796451224986506,
+          "time_index": 5666
+        },
+        {
+          "key": 209,
+          "score": 0.38793361189228087,
+          "time_index": 1214
+        },
+        {
+          "key": 116,
+          "score": 0.38773338741958074,
+          "time_index": 4281
+        },
+        {
+          "key": 72,
+          "score": 0.3876777934106084,
+          "time_index": 1633
+        },
+        {
+          "key": 115,
+          "score": 0.3875628669309584,
+          "time_index": 4493
+        }
+      ],
+      "best_key": 177
+    },
+    {
+      "byte": 3,
+      "topK": [
+        {
+          "key": 154,
+          "score": 0.6627895823034206,
+          "time_index": 4535
+        },
+        {
+          "key": 18,
+          "score": 0.47556707728464553,
+          "time_index": 3893
+        },
+        {
+          "key": 202,
+          "score": 0.4607344781995434,
+          "time_index": 2952
+        },
+        {
+          "key": 128,
+          "score": 0.4585992361221193,
+          "time_index": 3176
+        },
+        {
+          "key": 61,
+          "score": 0.4584024737539303,
+          "time_index": 6161
+        },
+        {
+          "key": 97,
+          "score": 0.4485905438275985,
+          "time_index": 148
+        },
+        {
+          "key": 117,
+          "score": 0.4475554649386551,
+          "time_index": 1048
+        },
+        {
+          "key": 90,
+          "score": 0.44680354399931743,
+          "time_index": 282
+        },
+        {
+          "key": 140,
+          "score": 0.4425752785944145,
+          "time_index": 1744
+        },
+        {
+          "key": 44,
+          "score": 0.4303127560874626,
+          "time_index": 815
+        },
+        {
+          "key": 72,
+          "score": 0.42765108870652807,
+          "time_index": 5610
+        },
+        {
+          "key": 123,
+          "score": 0.42106427697797594,
+          "time_index": 606
+        },
+        {
+          "key": 212,
+          "score": 0.41889296324017494,
+          "time_index": 5664
+        },
+        {
+          "key": 246,
+          "score": 0.4173532624968978,
+          "time_index": 1501
+        },
+        {
+          "key": 59,
+          "score": 0.4136684617915992,
+          "time_index": 3916
+        },
+        {
+          "key": 88,
+          "score": 0.4088773486787075,
+          "time_index": 4285
+        },
+        {
+          "key": 107,
+          "score": 0.4081153905117146,
+          "time_index": 2453
+        },
+        {
+          "key": 24,
+          "score": 0.4078141388937797,
+          "time_index": 3774
+        },
+        {
+          "key": 162,
+          "score": 0.4059503119581849,
+          "time_index": 744
+        },
+        {
+          "key": 194,
+          "score": 0.4048144873037184,
+          "time_index": 1047
+        }
+      ],
+      "best_key": 154
+    }
+  ],
+  "subkey_results": [
+    {
+      "byte": 0,
+      "topK": [
+        {
+          "key": 90,
+          "score": 0.7632761210656022,
+          "time_index": 4218
+        },
+        {
+          "key": 224,
+          "score": 0.5289413562379658,
+          "time_index": 3620
+        },
+        {
+          "key": 255,
+          "score": 0.461093617256525,
+          "time_index": 4629
+        },
+        {
+          "key": 24,
+          "score": 0.45123968595694774,
+          "time_index": 5368
+        },
+        {
+          "key": 148,
+          "score": 0.44514956113865317,
+          "time_index": 3017
+        },
+        {
+          "key": 229,
+          "score": 0.41391919950793704,
+          "time_index": 2791
+        },
+        {
+          "key": 46,
+          "score": 0.41289437755944364,
+          "time_index": 1565
+        },
+        {
+          "key": 68,
+          "score": 0.4108559083375847,
+          "time_index": 5168
+        },
+        {
+          "key": 170,
+          "score": 0.4075319086705475,
+          "time_index": 200
+        },
+        {
+          "key": 78,
+          "score": 0.4072434180062451,
+          "time_index": 2989
+        },
+        {
+          "key": 163,
+          "score": 0.4070883633749175,
+          "time_index": 5998
+        },
+        {
+          "key": 57,
+          "score": 0.40593590681277286,
+          "time_index": 622
+        },
+        {
+          "key": 53,
+          "score": 0.4046239872052393,
+          "time_index": 369
+        },
+        {
+          "key": 43,
+          "score": 0.40333380141737213,
+          "time_index": 4222
+        },
+        {
+          "key": 137,
+          "score": 0.40273627475055257,
+          "time_index": 806
+        },
+        {
+          "key": 89,
+          "score": 0.4018037209213195,
+          "time_index": 954
+        },
+        {
+          "key": 168,
+          "score": 0.4004215515455638,
+          "time_index": 1210
+        },
+        {
+          "key": 87,
+          "score": 0.3993987130355199,
+          "time_index": 2274
+        },
+        {
+          "key": 96,
+          "score": 0.3983255595153356,
+          "time_index": 3003
+        },
+        {
+          "key": 195,
+          "score": 0.3973200834536713,
+          "time_index": 2641
+        }
+      ],
+      "best_key": 90
+    },
+    {
+      "byte": 1,
+      "topK": [
+        {
+          "key": 106,
+          "score": 0.6899195002599596,
+          "time_index": 4169
+        },
+        {
+          "key": 227,
+          "score": 0.5130508383131492,
+          "time_index": 4400
+        },
+        {
+          "key": 29,
+          "score": 0.468905051627325,
+          "time_index": 4162
+        },
+        {
+          "key": 137,
+          "score": 0.4619295142250512,
+          "time_index": 1465
+        },
+        {
+          "key": 100,
+          "score": 0.45824235480557896,
+          "time_index": 3733
+        },
+        {
+          "key": 21,
+          "score": 0.45456817717469655,
+          "time_index": 2114
+        },
+        {
+          "key": 216,
+          "score": 0.45282925307530547,
+          "time_index": 4366
+        },
+        {
+          "key": 233,
+          "score": 0.45034232480635444,
+          "time_index": 751
+        },
+        {
+          "key": 95,
+          "score": 0.44002244388225226,
+          "time_index": 3834
+        },
+        {
+          "key": 83,
+          "score": 0.43745320684220107,
+          "time_index": 1170
+        },
+        {
+          "key": 60,
+          "score": 0.4350985158200292,
+          "time_index": 1852
+        },
+        {
+          "key": 101,
+          "score": 0.43464662880439364,
+          "time_index": 5616
+        },
+        {
+          "key": 127,
+          "score": 0.42866188218529666,
+          "time_index": 1807
+        },
+        {
+          "key": 15,
+          "score": 0.42586537477008074,
+          "time_index": 2700
+        },
+        {
+          "key": 243,
+          "score": 0.42572978037761183,
+          "time_index": 3943
+        },
+        {
+          "key": 217,
+          "score": 0.42248532376045395,
+          "time_index": 188
+        },
+        {
+          "key": 187,
+          "score": 0.4219726600982088,
+          "time_index": 821
+        },
+        {
+          "key": 18,
+          "score": 0.4168050546841228,
+          "time_index": 812
+        },
+        {
+          "key": 228,
+          "score": 0.4163593392054193,
+          "time_index": 2725
+        },
+        {
+          "key": 198,
+          "score": 0.4161090620286713,
+          "time_index": 2911
+        }
+      ],
+      "best_key": 106
+    },
+    {
+      "byte": 2,
+      "topK": [
+        {
+          "key": 177,
+          "score": 0.8157566972948889,
+          "time_index": 4127
+        },
+        {
+          "key": 254,
+          "score": 0.4507143552468135,
+          "time_index": 3373
+        },
+        {
+          "key": 214,
+          "score": 0.4370534600440884,
+          "time_index": 3249
+        },
+        {
+          "key": 202,
+          "score": 0.4267048170990463,
+          "time_index": 4849
+        },
+        {
+          "key": 143,
+          "score": 0.4260201513942565,
+          "time_index": 3099
+        },
+        {
+          "key": 240,
+          "score": 0.4236558609775602,
+          "time_index": 1457
+        },
+        {
+          "key": 76,
+          "score": 0.42358135183796974,
+          "time_index": 1457
+        },
+        {
+          "key": 112,
+          "score": 0.4205189527180516,
+          "time_index": 4659
+        },
+        {
+          "key": 221,
+          "score": 0.41788726258604914,
+          "time_index": 4963
+        },
+        {
+          "key": 13,
+          "score": 0.41510822147362675,
+          "time_index": 1825
+        },
+        {
+          "key": 34,
+          "score": 0.41492659077602134,
+          "time_index": 1135
+        },
+        {
+          "key": 174,
+          "score": 0.41394670143779005,
+          "time_index": 3364
+        },
+        {
+          "key": 204,
+          "score": 0.40381842717954397,
+          "time_index": 1877
+        },
+        {
+          "key": 137,
+          "score": 0.39997727475515216,
+          "time_index": 3834
+        },
+        {
+          "key": 158,
+          "score": 0.39153439561504255,
+          "time_index": 3068
+        },
+        {
+          "key": 229,
+          "score": 0.38796451224986506,
+          "time_index": 5666
+        },
+        {
+          "key": 209,
+          "score": 0.38793361189228087,
+          "time_index": 1214
+        },
+        {
+          "key": 116,
+          "score": 0.38773338741958074,
+          "time_index": 4281
+        },
+        {
+          "key": 72,
+          "score": 0.3876777934106084,
+          "time_index": 1633
+        },
+        {
+          "key": 115,
+          "score": 0.3875628669309584,
+          "time_index": 4493
+        }
+      ],
+      "best_key": 177
+    },
+    {
+      "byte": 3,
+      "topK": [
+        {
+          "key": 154,
+          "score": 0.6627895823034206,
+          "time_index": 4535
+        },
+        {
+          "key": 18,
+          "score": 0.47556707728464553,
+          "time_index": 3893
+        },
+        {
+          "key": 202,
+          "score": 0.4607344781995434,
+          "time_index": 2952
+        },
+        {
+          "key": 128,
+          "score": 0.4585992361221193,
+          "time_index": 3176
+        },
+        {
+          "key": 61,
+          "score": 0.4584024737539303,
+          "time_index": 6161
+        },
+        {
+          "key": 97,
+          "score": 0.4485905438275985,
+          "time_index": 148
+        },
+        {
+          "key": 117,
+          "score": 0.4475554649386551,
+          "time_index": 1048
+        },
+        {
+          "key": 90,
+          "score": 0.44680354399931743,
+          "time_index": 282
+        },
+        {
+          "key": 140,
+          "score": 0.4425752785944145,
+          "time_index": 1744
+        },
+        {
+          "key": 44,
+          "score": 0.4303127560874626,
+          "time_index": 815
+        },
+        {
+          "key": 72,
+          "score": 0.42765108870652807,
+          "time_index": 5610
+        },
+        {
+          "key": 123,
+          "score": 0.42106427697797594,
+          "time_index": 606
+        },
+        {
+          "key": 212,
+          "score": 0.41889296324017494,
+          "time_index": 5664
+        },
+        {
+          "key": 246,
+          "score": 0.4173532624968978,
+          "time_index": 1501
+        },
+        {
+          "key": 59,
+          "score": 0.4136684617915992,
+          "time_index": 3916
+        },
+        {
+          "key": 88,
+          "score": 0.4088773486787075,
+          "time_index": 4285
+        },
+        {
+          "key": 107,
+          "score": 0.4081153905117146,
+          "time_index": 2453
+        },
+        {
+          "key": 24,
+          "score": 0.4078141388937797,
+          "time_index": 3774
+        },
+        {
+          "key": 162,
+          "score": 0.4059503119581849,
+          "time_index": 744
+        },
+        {
+          "key": 194,
+          "score": 0.4048144873037184,
+          "time_index": 1047
+        }
+      ],
+      "best_key": 154
+    }
+  ],
+  "subkey_analysis": [
+    {
+      "subkey_type": "byte",
+      "subkey_index": 0,
+      "byte": 0,
+      "best_key": 90,
+      "best_key_hex": "0x5A",
+      "top1_key": 90,
+      "top1_score": 0.7632761210656022,
+      "top2_score": 0.5289413562379658,
+      "top1_top2_gap": 0.3070117855910086,
+      "time_index": 4218,
+      "candidate_count": 20,
+      "low_confidence": false
+    },
+    {
+      "subkey_type": "byte",
+      "subkey_index": 1,
+      "byte": 1,
+      "best_key": 106,
+      "best_key_hex": "0x6A",
+      "top1_key": 106,
+      "top1_score": 0.6899195002599596,
+      "top2_score": 0.5130508383131492,
+      "top1_top2_gap": 0.2563613028475213,
+      "time_index": 4169,
+      "candidate_count": 20,
+      "low_confidence": false
+    },
+    {
+      "subkey_type": "byte",
+      "subkey_index": 2,
+      "byte": 2,
+      "best_key": 177,
+      "best_key_hex": "0xB1",
+      "top1_key": 177,
+      "top1_score": 0.8157566972948889,
+      "top2_score": 0.4507143552468135,
+      "top1_top2_gap": 0.447489236996933,
+      "time_index": 4127,
+      "candidate_count": 20,
+      "low_confidence": false
+    },
+    {
+      "subkey_type": "byte",
+      "subkey_index": 3,
+      "byte": 3,
+      "best_key": 154,
+      "best_key_hex": "0x9A",
+      "top1_key": 154,
+      "top1_score": 0.6627895823034206,
+      "top2_score": 0.47556707728464553,
+      "top1_top2_gap": 0.2824765355662808,
+      "time_index": 4535,
+      "candidate_count": 20,
+      "low_confidence": false
+    }
+  ],
+  "recovered_round_key": "5A6AB19A",
+  "cpa_avg_correlation": 0.7329354752309678,
+  "cpa_min_correlation": 0.6627895823034206,
+  "avg_correlation": 0.7329354752309678,
+  "min_correlation": 0.6627895823034206,
+  "per_byte": [
+    {
+      "byte": 0,
+      "key": "0x5A",
+      "correlation": 0.7632761210656022,
+      "time_index": 4218
+    },
+    {
+      "byte": 1,
+      "key": "0x6A",
+      "correlation": 0.6899195002599596,
+      "time_index": 4169
+    },
+    {
+      "byte": 2,
+      "key": "0xB1",
+      "correlation": 0.8157566972948889,
+      "time_index": 4127
+    },
+    {
+      "byte": 3,
+      "key": "0x9A",
+      "correlation": 0.6627895823034206,
+      "time_index": 4535
+    }
+  ],
+  "high_confidence_count": 4,
+  "recovery_assessment": "4/4 bytes high-confidence in this round. Proceed to the next round or verify the master key if round 3 is finished.",
+  "low_confidence_subkeys": [],
+  "recommended_candidates": 20,
+  "recommended_next_step": "continue_round_recovery_or_verify_master_key"
+}

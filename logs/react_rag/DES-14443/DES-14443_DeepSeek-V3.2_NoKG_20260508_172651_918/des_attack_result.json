@@ -1,0 +1,21 @@
+{
+  "device": "非接触式智能卡 (14443)",
+  "side_channel": "EM",
+  "algorithm": "DES",
+  "n_traces": 10000,
+  "n_points": 300,
+  "cpa_target": "R_xor_LOut",
+  "cpa_leakage_model": "HW",
+  "cpa_avg_correlation": 0.0679,
+  "cpa_high_confidence_count": 8,
+  "cpa_recovered_subkey": "1002324454422688",
+  "correct_key": "1022324454667688",
+  "hamming_distance": 5,
+  "verification": "MATCH",
+  "attack_steps": [
+    "垂直对齐 (ref_start=0, ref_end=50)",
+    "CPA攻击 (target=R_xor_LOut, candidates=30)",
+    "Key_search (max_combinations=50000)",
+    "密钥验证"
+  ]
+}

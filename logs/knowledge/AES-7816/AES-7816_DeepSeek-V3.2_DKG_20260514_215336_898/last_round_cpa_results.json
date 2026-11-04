@@ -1,0 +1,105 @@
+{
+  "recovered_round_key": "7a417cfc57c0285c20914a3061a1ab1d",
+  "verification_matches": 0,
+  "attack_point": "Last round S-box input",
+  "leakage_model": "Hamming Weight",
+  "region": "6450-6600",
+  "byte_results": [
+    {
+      "byte_idx": 0,
+      "key": 122,
+      "correlation": 0.3186231968290777,
+      "sample": 6532
+    },
+    {
+      "byte_idx": 1,
+      "key": 65,
+      "correlation": 0.35573867756365946,
+      "sample": 6587
+    },
+    {
+      "byte_idx": 2,
+      "key": 124,
+      "correlation": 0.27270148969178487,
+      "sample": 6450
+    },
+    {
+      "byte_idx": 3,
+      "key": 252,
+      "correlation": 0.3951307352490496,
+      "sample": 6533
+    },
+    {
+      "byte_idx": 4,
+      "key": 87,
+      "correlation": 0.31827081581281375,
+      "sample": 6452
+    },
+    {
+      "byte_idx": 5,
+      "key": 192,
+      "correlation": 0.22462174341632254,
+      "sample": 6452
+    },
+    {
+      "byte_idx": 6,
+      "key": 40,
+      "correlation": 0.39438887305658055,
+      "sample": 6460
+    },
+    {
+      "byte_idx": 7,
+      "key": 92,
+      "correlation": 0.2977335403808084,
+      "sample": 6599
+    },
+    {
+      "byte_idx": 8,
+      "key": 32,
+      "correlation": 0.2495340442031974,
+      "sample": 6553
+    },
+    {
+      "byte_idx": 9,
+      "key": 145,
+      "correlation": 0.283885479141091,
+      "sample": 6463
+    },
+    {
+      "byte_idx": 10,
+      "key": 74,
+      "correlation": 0.31158267985400573,
+      "sample": 6589
+    },
+    {
+      "byte_idx": 11,
+      "key": 48,
+      "correlation": 0.3294132786109102,
+      "sample": 6464
+    },
+    {
+      "byte_idx": 12,
+      "key": 97,
+      "correlation": 0.3394749580037066,
+      "sample": 6462
+    },
+    {
+      "byte_idx": 13,
+      "key": 161,
+      "correlation": 0.29632638941597106,
+      "sample": 6599
+    },
+    {
+      "byte_idx": 14,
+      "key": 171,
+      "correlation": 0.37423452071898666,
+      "sample": 6574
+    },
+    {
+      "byte_idx": 15,
+      "key": 29,
+      "correlation": 0.3333910655192821,
+      "sample": 6564
+    }
+  ]
+}

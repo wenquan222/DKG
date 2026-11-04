@@ -1,0 +1,7 @@
+{
+  "bit_model": "5325a959b6f18717de26fd6dd5463dcd",
+  "sbox_in_hw": "c93645e5154b324e33694f15083f332b",
+  "linear_value": "3625551a154b12b0137d66145f3f6807",
+  "addroundkey": "00000000000000000000000000000000",
+  "hd_based": "b4211c40b6f18717de26fd6dd5463dcd"
+}

@@ -1,0 +1,96 @@
+{
+  "device": "STM32F429 MCU",
+  "algorithm": "AES-128",
+  "side_channel": "EM",
+  "recovered_key": "00112233445566778899aabbccddeeff",
+  "verification": "PASSED",
+  "cpa_results": {
+    "byte_0": {
+      "best_key": 0,
+      "best_correlation": 0.44629811937409275,
+      "gap": 0.2916952454190392
+    },
+    "byte_1": {
+      "best_key": 17,
+      "best_correlation": 0.5536480010140242,
+      "gap": 0.3620030656544314
+    },
+    "byte_2": {
+      "best_key": 34,
+      "best_correlation": 0.5320725762357602,
+      "gap": 0.37210839220982894
+    },
+    "byte_3": {
+      "best_key": 51,
+      "best_correlation": 0.5563189964226435,
+      "gap": 0.37167853708417775
+    },
+    "byte_4": {
+      "best_key": 68,
+      "best_correlation": 0.5661763341018299,
+      "gap": 0.38316361292420914
+    },
+    "byte_5": {
+      "best_key": 85,
+      "best_correlation": 0.5340674797068244,
+      "gap": 0.37164924431102186
+    },
+    "byte_6": {
+      "best_key": 102,
+      "best_correlation": 0.5801816631434991,
+      "gap": 0.4034137874586263
+    },
+    "byte_7": {
+      "best_key": 119,
+      "best_correlation": 0.5951654609095824,
+      "gap": 0.40735215493145627
+    },
+    "byte_8": {
+      "best_key": 136,
+      "best_correlation": 0.6141322142439002,
+      "gap": 0.408515445664444
+    },
+    "byte_9": {
+      "best_key": 153,
+      "best_correlation": 0.4875442743900689,
+      "gap": 0.34812188752338513
+    },
+    "byte_10": {
+      "best_key": 170,
+      "best_correlation": 0.6307870654522859,
+      "gap": 0.46396898561585154
+    },
+    "byte_11": {
+      "best_key": 187,
+      "best_correlation": 0.5473944154961328,
+      "gap": 0.37393887290517125
+    },
+    "byte_12": {
+      "best_key": 204,
+      "best_correlation": 0.6538627231396693,
+      "gap": 0.4740383123065152
+    },
+    "byte_13": {
+      "best_key": 221,
+      "best_correlation": 0.6179720064684957,
+      "gap": 0.4349121791541801
+    },
+    "byte_14": {
+      "best_key": 238,
+      "best_correlation": 0.5512920434373783,
+      "gap": 0.3712220265111914
+    },
+    "byte_15": {
+      "best_key": 255,
+      "best_correlation": 0.564038172332172,
+      "gap": 0.4023414467802907
+    }
+  },
+  "statistics": {
+    "high_confidence_bytes": 16,
+    "avg_correlation": 0.5644344716167724,
+    "avg_gap": 0.39000769977836375,
+    "min_gap": 0.2916952454190392,
+    "max_gap": 0.4740383123065152
+  }
+}

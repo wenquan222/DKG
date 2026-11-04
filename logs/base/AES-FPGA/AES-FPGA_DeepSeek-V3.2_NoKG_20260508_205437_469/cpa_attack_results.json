@@ -1,0 +1,153 @@
+{
+  "recovered_key": [
+    214,
+    183,
+    32,
+    15,
+    105,
+    76,
+    37,
+    114,
+    77,
+    157,
+    8,
+    213,
+    113,
+    238,
+    81,
+    3
+  ],
+  "key_hex": [
+    "0xd6",
+    "0xb7",
+    "0x20",
+    "0x0f",
+    "0x69",
+    "0x4c",
+    "0x25",
+    "0x72",
+    "0x4d",
+    "0x9d",
+    "0x08",
+    "0xd5",
+    "0x71",
+    "0xee",
+    "0x51",
+    "0x03"
+  ],
+  "key_string": "d6b7200f694c25724d9d08d571ee5103",
+  "byte_results": [
+    {
+      "byte": 0,
+      "key": 214,
+      "correlation": 0.09938047947893054,
+      "sample_point": 81
+    },
+    {
+      "byte": 1,
+      "key": 183,
+      "correlation": 0.09924150481058105,
+      "sample_point": 132
+    },
+    {
+      "byte": 2,
+      "key": 32,
+      "correlation": 0.09937427344462516,
+      "sample_point": 215
+    },
+    {
+      "byte": 3,
+      "key": 15,
+      "correlation": 0.10733356859091571,
+      "sample_point": 69
+    },
+    {
+      "byte": 4,
+      "key": 105,
+      "correlation": 0.1025526979395765,
+      "sample_point": 233
+    },
+    {
+      "byte": 5,
+      "key": 76,
+      "correlation": 0.09814477468285847,
+      "sample_point": 102
+    },
+    {
+      "byte": 6,
+      "key": 37,
+      "correlation": 0.0976956753096083,
+      "sample_point": 86
+    },
+    {
+      "byte": 7,
+      "key": 114,
+      "correlation": 0.0960131654109773,
+      "sample_point": 200
+    },
+    {
+      "byte": 8,
+      "key": 77,
+      "correlation": 0.0923985684702872,
+      "sample_point": 124
+    },
+    {
+      "byte": 9,
+      "key": 157,
+      "correlation": 0.1009279498221409,
+      "sample_point": 186
+    },
+    {
+      "byte": 10,
+      "key": 8,
+      "correlation": 0.08980700655654947,
+      "sample_point": 292
+    },
+    {
+      "byte": 11,
+      "key": 213,
+      "correlation": 0.1011432891488938,
+      "sample_point": 200
+    },
+    {
+      "byte": 12,
+      "key": 113,
+      "correlation": 0.10121597123488017,
+      "sample_point": 294
+    },
+    {
+      "byte": 13,
+      "key": 238,
+      "correlation": 0.10405461786541702,
+      "sample_point": 92
+    },
+    {
+      "byte": 14,
+      "key": 81,
+      "correlation": 0.09946517045455372,
+      "sample_point": 28
+    },
+    {
+      "byte": 15,
+      "key": 3,
+      "correlation": 0.09078067074018996,
+      "sample_point": 114
+    }
+  ],
+  "statistics": {
+    "mean_correlation": 0.09872058649756157,
+    "max_correlation": 0.10733356859091571,
+    "min_correlation": 0.08980700655654947,
+    "std_correlation": 0.00452183628658817,
+    "unique_sample_points": 15,
+    "sample_point_range": [
+      28,
+      294
+    ]
+  },
+  "attack_config": {
+    "leakage_model": "Hamming Weight of First Round S-box Output",
+    "preprocessing": "Standardization",
+    "method": "CPA"
+  }
+}

@@ -1,0 +1,172 @@
+[
+  {
+    "region_idx": 0,
+    "region": [
+      6517,
+      6528
+    ],
+    "roi": [
+      6512,
+      6533
+    ],
+    "key_guesses": [
+      211,
+      26,
+      250,
+      129,
+      60,
+      70,
+      0,
+      99,
+      54,
+      219,
+      121,
+      179,
+      75,
+      213,
+      133,
+      94
+    ],
+    "high_confidence_count": 7,
+    "avg_correlation": 0.3162615845284263,
+    "avg_gap": 8.002762002669606,
+    "verification_match": false,
+    "match_percentage": 0.0
+  },
+  {
+    "region_idx": 1,
+    "region": [
+      6503,
+      6512
+    ],
+    "roi": [
+      6498,
+      6517
+    ],
+    "key_guesses": [
+      123,
+      26,
+      250,
+      236,
+      60,
+      70,
+      0,
+      95,
+      60,
+      247,
+      121,
+      179,
+      18,
+      213,
+      210,
+      253
+    ],
+    "high_confidence_count": 13,
+    "avg_correlation": 0.315998189299011,
+    "avg_gap": 10.709893175479591,
+    "verification_match": false,
+    "match_percentage": 0.0
+  },
+  {
+    "region_idx": 2,
+    "region": [
+      6477,
+      6483
+    ],
+    "roi": [
+      6472,
+      6488
+    ],
+    "key_guesses": [
+      211,
+      26,
+      250,
+      236,
+      60,
+      70,
+      0,
+      95,
+      60,
+      247,
+      121,
+      179,
+      18,
+      213,
+      210,
+      94
+    ],
+    "high_confidence_count": 9,
+    "avg_correlation": 0.3162436747254441,
+    "avg_gap": 9.452162232270176,
+    "verification_match": false,
+    "match_percentage": 0.0
+  },
+  {
+    "region_idx": 3,
+    "region": [
+      6361,
+      6366
+    ],
+    "roi": [
+      6356,
+      6371
+    ],
+    "key_guesses": [
+      211,
+      26,
+      250,
+      236,
+      60,
+      70,
+      0,
+      95,
+      103,
+      247,
+      121,
+      114,
+      18,
+      213,
+      133,
+      0
+    ],
+    "high_confidence_count": 11,
+    "avg_correlation": 0.3143009723854534,
+    "avg_gap": 9.6304195603416,
+    "verification_match": false,
+    "match_percentage": 0.0
+  },
+  {
+    "region_idx": 4,
+    "region": [
+      6492,
+      6496
+    ],
+    "roi": [
+      6487,
+      6501
+    ],
+    "key_guesses": [
+      211,
+      26,
+      250,
+      144,
+      60,
+      70,
+      32,
+      176,
+      60,
+      219,
+      121,
+      179,
+      18,
+      213,
+      133,
+      94
+    ],
+    "high_confidence_count": 7,
+    "avg_correlation": 0.31224216625934437,
+    "avg_gap": 8.455486062880347,
+    "verification_match": false,
+    "match_percentage": 0.0
+  }
+]

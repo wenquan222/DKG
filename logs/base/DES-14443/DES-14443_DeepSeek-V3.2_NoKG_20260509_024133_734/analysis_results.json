@@ -1,0 +1,19 @@
+{
+  "data_summary": {
+    "num_traces": 10000,
+    "num_unique_plains": 256,
+    "num_unique_ciphers": 256,
+    "plain_cipher_inconsistency": "存在（相同明文对应不同密文）"
+  },
+  "cpa_results": {
+    "sbox1_best_key": "00",
+    "max_correlation": 0.0,
+    "conclusion": "CPA攻击失败，可能因为密钥变化"
+  },
+  "recommendations": [
+    "确认数据采集时密钥是否固定",
+    "如果密钥变化，需要知道变化模式",
+    "考虑使用模板攻击或机器学习方法",
+    "重新采集固定密钥的数据进行传统CPA攻击"
+  ]
+}

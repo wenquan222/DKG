@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-05-15 01:04:59",
+  "target_device": "STM32F429 MCU",
+  "algorithm": "AES-128",
+  "side_channel": "EM (Electromagnetic)",
+  "trace_count": 1000,
+  "samples_per_trace": 1000,
+  "preprocessing": {
+    "filtering": "Moving average (window=3)",
+    "alignment": "Not needed (traces already aligned)",
+    "vertical_alignment": "Not applied (software implementation)"
+  },
+  "attack_parameters": {
+    "attack_point": "First round S-box output",
+    "leakage_model": "Hamming Weight (HW)",
+    "method": "CPA (Correlation Power Analysis)"
+  },
+  "recovered_key": "00112233445566778899aabbccddeeff",
+  "verification": {
+    "all_traces_match": true,
+    "matched_count": 1000,
+    "total_count": 1000
+  },
+  "correlation_statistics": {
+    "average_correlation": 0.5025079907145507,
+    "min_correlation": 0.4446133385053431,
+    "max_correlation": 0.6290903257161056,
+    "byte_correlations": [
+      0.5859614451625336,
+      0.4460589811902415,
+      0.4446133385053431,
+      0.47714926232671484,
+      0.4801703236140407,
+      0.46504307007887974,
+      0.5083179733489166,
+      0.5111035612042882,
+      0.506257064325275,
+      0.4844562520884029,
+      0.44831294312730896,
+      0.5095977497655828,
+      0.5397674832900351,
+      0.5285298510815417,
+      0.47569822660760097,
+      0.6290903257161056
+    ]
+  },
+  "gap_analysis": {
+    "average_gap_percent": 66.77074273783398
+  }
+}

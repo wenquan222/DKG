@@ -1,0 +1,8 @@
+{
+  "recovered_key": "112233445566778899aabbccddeeff00",
+  "verification_accuracy": 100.0,
+  "avg_correlation": 0.804078782888011,
+  "trace_count": 100,
+  "key_pattern": "112233445566778899aabbccddeeff00",
+  "attack_successful": true
+}

@@ -1,0 +1,13 @@
+{
+  "algorithm": "AES-128",
+  "device": "Contactless Smartcard",
+  "method": "CPA",
+  "recovered_key": "112233445566778899AABBCCDDEEFF00",
+  "verification": "MATCH",
+  "high_confidence_count": 13,
+  "avg_correlation": 0.144,
+  "traces_used": 5000,
+  "preprocessing": "None (direct CPA)",
+  "leakage_target": "S-box_out",
+  "leakage_model": "HW"
+}

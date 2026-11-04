@@ -1,0 +1,7 @@
+{
+  "found": false,
+  "found_key": null,
+  "tested_count": 3125,
+  "total_combinations": 3125,
+  "method": "exhaustive"
+}

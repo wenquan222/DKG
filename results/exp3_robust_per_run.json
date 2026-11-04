@@ -1,0 +1,2263 @@
+{
+  "DSv3.2_R1": {
+    "AES-14443": [
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_DeepSeek-V3.2_DKG_20260424_035025_991"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_DeepSeek-V3.2_DKG_20260424_043228_901"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_DeepSeek-V3.2_DKG_20260424_052150_469"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_DeepSeek-V3.2_DKG_20260424_060750_001"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_DeepSeek-V3.2_DKG_20260424_064754_231"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_DeepSeek-V3.2_DKG_20260424_073632_849"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_DeepSeek-V3.2_DKG_20260424_081721_878"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_DeepSeek-V3.2_DKG_20260424_090136_431"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_DeepSeek-V3.2_DKG_20260424_100018_756"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_DeepSeek-V3.2_DKG_20260424_104518_885"
+      }
+    ],
+    "AES-7816": [
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_DeepSeek-V3.2_DKG_20260424_033034_097"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_DeepSeek-V3.2_DKG_20260424_041901_879"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_DeepSeek-V3.2_DKG_20260424_050425_874"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_DeepSeek-V3.2_DKG_20260424_055306_408"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_DeepSeek-V3.2_DKG_20260424_063157_580"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_DeepSeek-V3.2_DKG_20260424_071757_595"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_DeepSeek-V3.2_DKG_20260424_080330_028"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_DeepSeek-V3.2_DKG_20260424_084710_828"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_DeepSeek-V3.2_DKG_20260424_094421_939"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_DeepSeek-V3.2_DKG_20260424_102907_712"
+      }
+    ],
+    "AES-FPGA": [
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_DeepSeek-V3.2_DKG_20260424_035911_337"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_DeepSeek-V3.2_DKG_20260424_044140_606"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_DeepSeek-V3.2_DKG_20260424_052839_425"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_DeepSeek-V3.2_DKG_20260424_061413_954"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_DeepSeek-V3.2_DKG_20260424_065651_358"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_DeepSeek-V3.2_DKG_20260424_074440_153"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_DeepSeek-V3.2_DKG_20260424_082617_161"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_DeepSeek-V3.2_DKG_20260424_090921_470"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_DeepSeek-V3.2_DKG_20260424_101032_405"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_DeepSeek-V3.2_DKG_20260424_105153_101"
+      }
+    ],
+    "AES-STM32F103": [
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_DeepSeek-V3.2_DKG_20260424_040456_536"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_DeepSeek-V3.2_DKG_20260424_044804_942"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_DeepSeek-V3.2_DKG_20260424_053246_934"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_DeepSeek-V3.2_DKG_20260424_061705_033"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_DeepSeek-V3.2_DKG_20260424_070107_687"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_DeepSeek-V3.2_DKG_20260424_075036_417"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_DeepSeek-V3.2_DKG_20260424_083235_064"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_DeepSeek-V3.2_DKG_20260424_091301_843"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_DeepSeek-V3.2_DKG_20260424_101529_720"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_DeepSeek-V3.2_DKG_20260424_105500_964"
+      }
+    ],
+    "AES-STM32F429": [
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_DeepSeek-V3.2_DKG_20260424_041005_547"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_DeepSeek-V3.2_DKG_20260424_045349_789"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_DeepSeek-V3.2_DKG_20260424_053712_360"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_DeepSeek-V3.2_DKG_20260424_062147_733"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_DeepSeek-V3.2_DKG_20260424_071016_817"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_DeepSeek-V3.2_DKG_20260424_075418_325"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_DeepSeek-V3.2_DKG_20260424_083728_456"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_DeepSeek-V3.2_DKG_20260424_091726_661"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_DeepSeek-V3.2_DKG_20260424_102026_490"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_DeepSeek-V3.2_DKG_20260424_110029_948"
+      }
+    ],
+    "DES-14443": [
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_DeepSeek-V3.2_DKG_20260424_041427_874"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_DeepSeek-V3.2_DKG_20260424_045841_089"
+      },
+      {
+        "case": "DES-14443",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "DES-14443_DeepSeek-V3.2_DKG_20260424_054100_441"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_DeepSeek-V3.2_DKG_20260424_062745_953"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_DeepSeek-V3.2_DKG_20260424_071357_992"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_DeepSeek-V3.2_DKG_20260424_075915_671"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_DeepSeek-V3.2_DKG_20260424_084300_465"
+      },
+      {
+        "case": "DES-14443",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "DES-14443_DeepSeek-V3.2_DKG_20260424_092442_284"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_DeepSeek-V3.2_DKG_20260424_102552_605"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_DeepSeek-V3.2_DKG_20260424_110603_813"
+      }
+    ],
+    "DES-7816": [
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_DeepSeek-V3.2_DKG_20260424_033542_819"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_DeepSeek-V3.2_DKG_20260424_042333_640"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_DeepSeek-V3.2_DKG_20260424_050818_364"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_DeepSeek-V3.2_DKG_20260424_055713_492"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_DeepSeek-V3.2_DKG_20260424_063655_071"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_DeepSeek-V3.2_DKG_20260424_072226_223"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_DeepSeek-V3.2_DKG_20260424_080737_349"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_DeepSeek-V3.2_DKG_20260424_085206_845"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_DeepSeek-V3.2_DKG_20260424_094835_522"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_DeepSeek-V3.2_DKG_20260424_103441_777"
+      }
+    ],
+    "SM4-7816": [
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_DeepSeek-V3.2_DKG_20260424_034021_511"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_DeepSeek-V3.2_DKG_20260424_042721_638"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_DeepSeek-V3.2_DKG_20260424_051637_831"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_DeepSeek-V3.2_DKG_20260424_060319_808"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_DeepSeek-V3.2_DKG_20260424_064115_015"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_DeepSeek-V3.2_DKG_20260424_072843_834"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_DeepSeek-V3.2_DKG_20260424_081211_398"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_DeepSeek-V3.2_DKG_20260424_085625_170"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_DeepSeek-V3.2_DKG_20260424_095345_636"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_DeepSeek-V3.2_DKG_20260424_103944_793"
+      }
+    ]
+  },
+  "GLM-5_R1": {
+    "AES-14443": [
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_GLM5_DKG_20260424_035111_905"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_GLM5_DKG_20260424_041706_520"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_GLM5_DKG_20260424_051050_223"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_GLM5_DKG_20260424_062155_112"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_GLM5_DKG_20260424_104523_561"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_GLM5_DKG_20260424_115040_321"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_GLM5_DKG_20260424_122111_966"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_GLM5_DKG_20260424_130434_489"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_GLM5_DKG_20260424_140940_886"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_GLM5_DKG_20260424_151308_258"
+      }
+    ],
+    "AES-7816": [
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_GLM5_DKG_20260424_033036_970"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_GLM5_DKG_20260424_040706_568"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_GLM5_DKG_20260424_045432_709"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_GLM5_DKG_20260424_060228_221"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_GLM5_DKG_20260424_063628_872"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_GLM5_DKG_20260424_113600_145"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_GLM5_DKG_20260424_120909_594"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_GLM5_DKG_20260424_125051_973"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_GLM5_DKG_20260424_132316_091"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_GLM5_DKG_20260424_144816_743"
+      }
+    ],
+    "AES-FPGA": [
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "narrative hex match: 0123456789ABCDEFFEDCBA9876543210 near keyword '验证'",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_GLM5_DKG_20260424_035642_867"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "narrative hex match: 0123456789ABCDEFFEDCBA9876543210 near keyword '验证'",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_GLM5_DKG_20260424_042312_862"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_GLM5_DKG_20260424_051544_313"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_GLM5_DKG_20260424_062610_093"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_GLM5_DKG_20260424_105218_217"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_GLM5_DKG_20260424_115711_023"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_GLM5_DKG_20260424_122843_318"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_GLM5_DKG_20260424_130951_282"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_GLM5_DKG_20260424_143430_025"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_GLM5_DKG_20260424_151935_682"
+      }
+    ],
+    "AES-STM32F103": [
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_GLM5_DKG_20260424_035841_474"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_GLM5_DKG_20260424_044027_966"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_GLM5_DKG_20260424_051904_431"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_GLM5_DKG_20260424_062901_976"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_GLM5_DKG_20260424_105703_928"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_GLM5_DKG_20260424_115925_313"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_GLM5_DKG_20260424_123056_790"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_GLM5_DKG_20260424_131203_145"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_GLM5_DKG_20260424_143723_711"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_GLM5_DKG_20260424_152216_168"
+      }
+    ],
+    "AES-STM32F429": [
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_GLM5_DKG_20260424_040139_954"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_GLM5_DKG_20260424_044809_352"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_GLM5_DKG_20260424_052239_103"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_GLM5_DKG_20260424_063130_829"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_GLM5_DKG_20260424_110043_785"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_GLM5_DKG_20260424_120241_559"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_GLM5_DKG_20260424_124452_195"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_GLM5_DKG_20260424_131441_799"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_GLM5_DKG_20260424_144045_029"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_GLM5_DKG_20260424_152551_128"
+      }
+    ],
+    "DES-14443": [
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_GLM5_DKG_20260424_040456_020"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_GLM5_DKG_20260424_045107_018"
+      },
+      {
+        "case": "DES-14443",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "DES-14443_GLM5_DKG_20260424_052643_007"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_GLM5_DKG_20260424_063315_906"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_GLM5_DKG_20260424_110349_889"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_GLM5_DKG_20260424_120640_241"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_GLM5_DKG_20260424_124719_857"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_GLM5_DKG_20260424_131751_922"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_GLM5_DKG_20260424_144523_375"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_GLM5_DKG_20260424_152842_604"
+      }
+    ],
+    "DES-7816": [
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_GLM5_DKG_20260424_033241_850"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_GLM5_DKG_20260424_040954_254"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_GLM5_DKG_20260424_045747_515"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_GLM5_DKG_20260424_060722_548"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_GLM5_DKG_20260424_064152_435"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_GLM5_DKG_20260424_113902_056"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_GLM5_DKG_20260424_121413_328"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_GLM5_DKG_20260424_125357_165"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_GLM5_DKG_20260424_132831_405"
+      },
+      {
+        "case": "DES-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "DES-7816_GLM5_DKG_20260424_145156_986"
+      }
+    ],
+    "SM4-7816": [
+      {
+        "case": "SM4-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "SM4-7816_GLM5_DKG_20260424_033624_254"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_GLM5_DKG_20260424_041300_380"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_GLM5_DKG_20260424_050136_994"
+      },
+      {
+        "case": "SM4-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "SM4-7816_GLM5_DKG_20260424_061137_587"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_GLM5_DKG_20260424_114206_817"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_GLM5_DKG_20260424_121719_003"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "narrative hex match: 0123456789ABCDEFFEDCBA9876543210 near keyword '成功'",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_GLM5_DKG_20260424_125657_078"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_GLM5_DKG_20260424_140537_996"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_GLM5_DKG_20260424_150113_145"
+      },
+      {
+        "case": "SM4-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "SM4-7816_GLM5_DKG_20260424_161319_938"
+      }
+    ]
+  },
+  "Qwen3.5-397B_R1": {
+    "AES-14443": [
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_Qwen3.5-397B-A17B_DKG_20260424_035539_501"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_Qwen3.5-397B-A17B_DKG_20260424_043950_701"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_Qwen3.5-397B-A17B_DKG_20260424_053035_961"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_Qwen3.5-397B-A17B_DKG_20260424_064824_407"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_Qwen3.5-397B-A17B_DKG_20260424_075752_775"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_Qwen3.5-397B-A17B_DKG_20260424_085418_169"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_Qwen3.5-397B-A17B_DKG_20260424_093358_723"
+      },
+      {
+        "case": "AES-14443",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-14443_Qwen3.5-397B-A17B_DKG_20260424_113918_845"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_Qwen3.5-397B-A17B_DKG_20260424_124352_660"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_Qwen3.5-397B-A17B_DKG_20260424_135854_997"
+      }
+    ],
+    "AES-7816": [
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_Qwen3.5-397B-A17B_DKG_20260424_033039_942"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_Qwen3.5-397B-A17B_DKG_20260424_042157_347"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_Qwen3.5-397B-A17B_DKG_20260424_050823_391"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_Qwen3.5-397B-A17B_DKG_20260424_062824_889"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_Qwen3.5-397B-A17B_DKG_20260424_072318_018"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_Qwen3.5-397B-A17B_DKG_20260424_083119_631"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_Qwen3.5-397B-A17B_DKG_20260424_091716_856"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_Qwen3.5-397B-A17B_DKG_20260424_100618_921"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_Qwen3.5-397B-A17B_DKG_20260424_121527_181"
+      },
+      {
+        "case": "AES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-7816_Qwen3.5-397B-A17B_DKG_20260424_132555_383"
+      }
+    ],
+    "AES-FPGA": [
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_Qwen3.5-397B-A17B_DKG_20260424_040045_422"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_Qwen3.5-397B-A17B_DKG_20260424_044524_055"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_Qwen3.5-397B-A17B_DKG_20260424_053627_547"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_Qwen3.5-397B-A17B_DKG_20260424_065358_370"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_Qwen3.5-397B-A17B_DKG_20260424_080318_782"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_Qwen3.5-397B-A17B_DKG_20260424_085943_226"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_Qwen3.5-397B-A17B_DKG_20260424_095104_104"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_Qwen3.5-397B-A17B_DKG_20260424_114222_806"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_Qwen3.5-397B-A17B_DKG_20260424_125135_931"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_Qwen3.5-397B-A17B_DKG_20260424_140650_461"
+      }
+    ],
+    "AES-STM32F103": [
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_Qwen3.5-397B-A17B_DKG_20260424_040426_196"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_Qwen3.5-397B-A17B_DKG_20260424_044902_597"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_Qwen3.5-397B-A17B_DKG_20260424_055715_844"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_Qwen3.5-397B-A17B_DKG_20260424_065649_111"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_Qwen3.5-397B-A17B_DKG_20260424_080708_817"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_Qwen3.5-397B-A17B_DKG_20260424_090552_703"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_Qwen3.5-397B-A17B_DKG_20260424_095517_985"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_Qwen3.5-397B-A17B_DKG_20260424_114617_946"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_Qwen3.5-397B-A17B_DKG_20260424_130203_113"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_Qwen3.5-397B-A17B_DKG_20260424_142113_694"
+      }
+    ],
+    "AES-STM32F429": [
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_Qwen3.5-397B-A17B_DKG_20260424_040749_233"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_Qwen3.5-397B-A17B_DKG_20260424_045347_334"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-STM32F429_Qwen3.5-397B-A17B_DKG_20260424_060151_497"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_Qwen3.5-397B-A17B_DKG_20260424_070416_085"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_Qwen3.5-397B-A17B_DKG_20260424_081333_945"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_Qwen3.5-397B-A17B_DKG_20260424_091200_549"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_Qwen3.5-397B-A17B_DKG_20260424_100050_546"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_Qwen3.5-397B-A17B_DKG_20260424_114941_220"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_Qwen3.5-397B-A17B_DKG_20260424_131324_103"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_Qwen3.5-397B-A17B_DKG_20260424_143306_884"
+      }
+    ],
+    "DES-14443": [
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "key_search found=true with key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_Qwen3.5-397B-A17B_DKG_20260428_034924_460"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "key_search found=true with key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_Qwen3.5-397B-A17B_DKG_20260428_043944_261"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "narrative hex match: 1023324554677689 near keyword '成功'",
+        "matched_key": "1023324554677689",
+        "session_dir": "DES-14443_Qwen3.5-397B-A17B_DKG_20260428_045807_195"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "key_search found=true with key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_Qwen3.5-397B-A17B_DKG_20260428_054213_019"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "key_search found=true with key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_Qwen3.5-397B-A17B_DKG_20260428_060700_940"
+      },
+      {
+        "case": "DES-14443",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "DES-14443_Qwen3.5-397B-A17B_DKG_20260428_063446_861"
+      },
+      {
+        "case": "DES-14443",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "DES-14443_Qwen3.5-397B-A17B_DKG_20260428_085337_489"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "key_search found=true with key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_Qwen3.5-397B-A17B_DKG_20260428_110657_350"
+      },
+      {
+        "case": "DES-14443",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "DES-14443_Qwen3.5-397B-A17B_DKG_20260428_113338_156"
+      },
+      {
+        "case": "DES-14443",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "DES-14443_Qwen3.5-397B-A17B_DKG_20260428_131743_108"
+      }
+    ],
+    "DES-7816": [
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "narrative hex match: 1022324454667688 near keyword '通过'",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_Qwen3.5-397B-A17B_DKG_20260428_035514_995"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "key_search found=true with key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_Qwen3.5-397B-A17B_DKG_20260428_044640_730"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "narrative hex match: 1022324454667688 near keyword '验证'",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_Qwen3.5-397B-A17B_DKG_20260428_051027_367"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "narrative hex match: 1022324454667688 near keyword '验证'",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_Qwen3.5-397B-A17B_DKG_20260428_055427_436"
+      },
+      {
+        "case": "DES-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "DES-7816_Qwen3.5-397B-A17B_DKG_20260428_061235_732"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "narrative hex match: 1022324454667688 near keyword 'match'",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_Qwen3.5-397B-A17B_DKG_20260428_065952_847"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "narrative hex match: 1022324454667688 near keyword '验证'",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_Qwen3.5-397B-A17B_DKG_20260428_101158_455"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "narrative hex match: 1022324454667688 near keyword '✓'",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_Qwen3.5-397B-A17B_DKG_20260428_111417_426"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "key_search found=true with key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_Qwen3.5-397B-A17B_DKG_20260428_145030_172"
+      },
+      {
+        "case": "DES-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "DES-7816_Qwen3.5-397B-A17B_DKG_20260428_151423_190"
+      }
+    ],
+    "SM4-7816": [
+      {
+        "case": "SM4-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "SM4-7816_Qwen3.5-397B-A17B_DKG_20260428_042306_399"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_Qwen3.5-397B-A17B_DKG_20260428_045342_055"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_Qwen3.5-397B-A17B_DKG_20260428_052849_881"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_Qwen3.5-397B-A17B_DKG_20260428_060208_122"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_Qwen3.5-397B-A17B_DKG_20260428_062854_920"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_Qwen3.5-397B-A17B_DKG_20260428_084822_433"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_Qwen3.5-397B-A17B_DKG_20260428_102540_324"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_Qwen3.5-397B-A17B_DKG_20260428_112905_402"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_Qwen3.5-397B-A17B_DKG_20260428_150752_168"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_Qwen3.5-397B-A17B_DKG_20260428_152623_782"
+      }
+    ]
+  },
+  "NoKG_DSv3.2": {
+    "AES-14443": [
+      {
+        "case": "AES-14443",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-14443_DeepSeek-V3.2_NoKG_20260424_162851_654"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_DeepSeek-V3.2_NoKG_20260424_182407_232"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_DeepSeek-V3.2_NoKG_20260424_200410_836"
+      },
+      {
+        "case": "AES-14443",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-14443_DeepSeek-V3.2_NoKG_20260424_214534_276"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_DeepSeek-V3.2_NoKG_20260425_001000_908"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_DeepSeek-V3.2_NoKG_20260425_013552_975"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_DeepSeek-V3.2_NoKG_20260425_025845_260"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_DeepSeek-V3.2_NoKG_20260425_042221_165"
+      },
+      {
+        "case": "AES-14443",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-14443_DeepSeek-V3.2_NoKG_20260425_054658_720"
+      },
+      {
+        "case": "AES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-14443_DeepSeek-V3.2_NoKG_20260425_074958_478"
+      }
+    ],
+    "AES-7816": [
+      {
+        "case": "AES-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-7816_DeepSeek-V3.2_NoKG_20260424_155058_623"
+      },
+      {
+        "case": "AES-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-7816_DeepSeek-V3.2_NoKG_20260424_175526_378"
+      },
+      {
+        "case": "AES-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-7816_DeepSeek-V3.2_NoKG_20260424_192727_727"
+      },
+      {
+        "case": "AES-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-7816_DeepSeek-V3.2_NoKG_20260424_210754_985"
+      },
+      {
+        "case": "AES-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-7816_DeepSeek-V3.2_NoKG_20260424_233739_636"
+      },
+      {
+        "case": "AES-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-7816_DeepSeek-V3.2_NoKG_20260425_010027_815"
+      },
+      {
+        "case": "AES-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-7816_DeepSeek-V3.2_NoKG_20260425_023136_251"
+      },
+      {
+        "case": "AES-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-7816_DeepSeek-V3.2_NoKG_20260425_035220_060"
+      },
+      {
+        "case": "AES-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-7816_DeepSeek-V3.2_NoKG_20260425_051119_236"
+      },
+      {
+        "case": "AES-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-7816_DeepSeek-V3.2_NoKG_20260425_071723_181"
+      }
+    ],
+    "AES-FPGA": [
+      {
+        "case": "AES-FPGA",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-FPGA_DeepSeek-V3.2_NoKG_20260424_171951_224"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_DeepSeek-V3.2_NoKG_20260424_190329_262"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_DeepSeek-V3.2_NoKG_20260424_203728_273"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_DeepSeek-V3.2_NoKG_20260424_225208_328"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_DeepSeek-V3.2_NoKG_20260425_003153_991"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_DeepSeek-V3.2_NoKG_20260425_020734_280"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-FPGA_DeepSeek-V3.2_NoKG_20260425_031837_799"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_DeepSeek-V3.2_NoKG_20260425_044417_973"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_DeepSeek-V3.2_NoKG_20260425_064239_267"
+      },
+      {
+        "case": "AES-FPGA",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "AES-FPGA_DeepSeek-V3.2_NoKG_20260425_081604_720"
+      }
+    ],
+    "AES-STM32F103": [
+      {
+        "case": "AES-STM32F103",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-STM32F103_DeepSeek-V3.2_NoKG_20260424_173155_539"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_DeepSeek-V3.2_NoKG_20260424_191006_578"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-STM32F103_DeepSeek-V3.2_NoKG_20260424_204247_170"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-STM32F103_DeepSeek-V3.2_NoKG_20260424_230945_933"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_DeepSeek-V3.2_NoKG_20260425_003632_276"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_DeepSeek-V3.2_NoKG_20260425_021204_983"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": true,
+        "reason": "tool verification:MATCH on key=112233445566778899AABBCCDDEEFF00",
+        "matched_key": "112233445566778899AABBCCDDEEFF00",
+        "session_dir": "AES-STM32F103_DeepSeek-V3.2_NoKG_20260425_032947_970"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-STM32F103_DeepSeek-V3.2_NoKG_20260425_045028_944"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-STM32F103_DeepSeek-V3.2_NoKG_20260425_064827_413"
+      },
+      {
+        "case": "AES-STM32F103",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "AES-STM32F103_DeepSeek-V3.2_NoKG_20260425_082235_849"
+      }
+    ],
+    "AES-STM32F429": [
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_DeepSeek-V3.2_NoKG_20260424_174359_239"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_DeepSeek-V3.2_NoKG_20260424_191504_419"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_DeepSeek-V3.2_NoKG_20260424_205448_319"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_DeepSeek-V3.2_NoKG_20260424_232237_665"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_DeepSeek-V3.2_NoKG_20260425_004317_464"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_DeepSeek-V3.2_NoKG_20260425_021832_898"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_DeepSeek-V3.2_NoKG_20260425_034152_519"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_DeepSeek-V3.2_NoKG_20260425_050051_102"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_DeepSeek-V3.2_NoKG_20260425_070443_989"
+      },
+      {
+        "case": "AES-STM32F429",
+        "success": true,
+        "reason": "tool verification:MATCH on key=00112233445566778899AABBCCDDEEFF",
+        "matched_key": "00112233445566778899AABBCCDDEEFF",
+        "session_dir": "AES-STM32F429_DeepSeek-V3.2_NoKG_20260425_083541_903"
+      }
+    ],
+    "DES-14443": [
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_DeepSeek-V3.2_NoKG_20260424_175043_853"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_DeepSeek-V3.2_NoKG_20260424_192228_171"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_DeepSeek-V3.2_NoKG_20260424_210335_060"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_DeepSeek-V3.2_NoKG_20260424_233210_154"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_DeepSeek-V3.2_NoKG_20260425_005224_127"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_DeepSeek-V3.2_NoKG_20260425_022624_766"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_DeepSeek-V3.2_NoKG_20260425_034648_143"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_DeepSeek-V3.2_NoKG_20260425_050535_438"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_DeepSeek-V3.2_NoKG_20260425_071159_827"
+      },
+      {
+        "case": "DES-14443",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-14443_DeepSeek-V3.2_NoKG_20260425_084419_394"
+      }
+    ],
+    "DES-7816": [
+      {
+        "case": "DES-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "DES-7816_DeepSeek-V3.2_NoKG_20260424_160514_763"
+      },
+      {
+        "case": "DES-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "DES-7816_DeepSeek-V3.2_NoKG_20260424_180838_876"
+      },
+      {
+        "case": "DES-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "DES-7816_DeepSeek-V3.2_NoKG_20260424_194642_744"
+      },
+      {
+        "case": "DES-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "DES-7816_DeepSeek-V3.2_NoKG_20260424_212047_429"
+      },
+      {
+        "case": "DES-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "DES-7816_DeepSeek-V3.2_NoKG_20260424_235130_252"
+      },
+      {
+        "case": "DES-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "DES-7816_DeepSeek-V3.2_NoKG_20260425_011149_018"
+      },
+      {
+        "case": "DES-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=1022324454667688",
+        "matched_key": "1022324454667688",
+        "session_dir": "DES-7816_DeepSeek-V3.2_NoKG_20260425_024531_267"
+      },
+      {
+        "case": "DES-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "DES-7816_DeepSeek-V3.2_NoKG_20260425_040422_109"
+      },
+      {
+        "case": "DES-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "DES-7816_DeepSeek-V3.2_NoKG_20260425_052212_246"
+      },
+      {
+        "case": "DES-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "DES-7816_DeepSeek-V3.2_NoKG_20260425_073034_331"
+      }
+    ],
+    "SM4-7816": [
+      {
+        "case": "SM4-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "SM4-7816_DeepSeek-V3.2_NoKG_20260424_161809_826"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_DeepSeek-V3.2_NoKG_20260424_181900_484"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_DeepSeek-V3.2_NoKG_20260424_195856_103"
+      },
+      {
+        "case": "SM4-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "SM4-7816_DeepSeek-V3.2_NoKG_20260424_213222_237"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_DeepSeek-V3.2_NoKG_20260425_000243_275"
+      },
+      {
+        "case": "SM4-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "SM4-7816_DeepSeek-V3.2_NoKG_20260425_012133_148"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_DeepSeek-V3.2_NoKG_20260425_025111_525"
+      },
+      {
+        "case": "SM4-7816",
+        "success": true,
+        "reason": "tool verification:MATCH on key=0123456789ABCDEFFEDCBA9876543210",
+        "matched_key": "0123456789ABCDEFFEDCBA9876543210",
+        "session_dir": "SM4-7816_DeepSeek-V3.2_NoKG_20260425_041225_489"
+      },
+      {
+        "case": "SM4-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "SM4-7816_DeepSeek-V3.2_NoKG_20260425_053134_409"
+      },
+      {
+        "case": "SM4-7816",
+        "success": false,
+        "reason": "no recovered key matches GT in narrative",
+        "session_dir": "SM4-7816_DeepSeek-V3.2_NoKG_20260425_074054_209"
+      }
+    ]
+  }
+}

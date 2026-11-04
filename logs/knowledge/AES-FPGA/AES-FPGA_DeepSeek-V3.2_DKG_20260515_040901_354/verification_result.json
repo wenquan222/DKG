@@ -1,0 +1,48 @@
+{
+  "recovered_key_hex": "5325a959b6f18717de26fd6dd5463dcd",
+  "match": false,
+  "mismatch_indices": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "details": [
+    {
+      "index": 0,
+      "plaintext": "b9d1c48e348fe771fa464a77a178fb07",
+      "expected_ciphertext": "51cd9cb46db542eec5843f16fc07cad9",
+      "actual_ciphertext": "6e5675d4d37efaed14822ee1603c90bd",
+      "match": false
+    },
+    {
+      "index": 1,
+      "plaintext": "4cfda4c3076157f581b71e46e8cb5675",
+      "expected_ciphertext": "fe979c49c712d5c7ac5e2cd873016ba9",
+      "actual_ciphertext": "80946680fadc580159e0cd82d1d6fd1c",
+      "match": false
+    },
+    {
+      "index": 2,
+      "plaintext": "16d62ba4d338ff7ba6b8cf19bab720e7",
+      "expected_ciphertext": "e03c5e4d489abd9e9b8f37c41ebe979f",
+      "actual_ciphertext": "032452b10fdc5d391e5f8eeb5ea1d728",
+      "match": false
+    },
+    {
+      "index": 3,
+      "plaintext": "d2382f119fb1a1ed38ed11e6ad18261b",
+      "expected_ciphertext": "16ca92893fead722a98aa6dd005af64a",
+      "actual_ciphertext": "1ae42f40379fb9fdba014e2ee0c48739",
+      "match": false
+    },
+    {
+      "index": 4,
+      "plaintext": "63854781880e477ed89c1abe66ee21b3",
+      "expected_ciphertext": "b1d808885ceeb7a5b51d5888a2fe9014",
+      "actual_ciphertext": "e4951f81bb81debfde4d55a85720c246",
+      "match": false
+    }
+  ]
+}

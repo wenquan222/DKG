@@ -1,0 +1,9 @@
+config,case,n,ok,SR,avg_rounds,avg_tokens,avg_duration_sec
+Knowledge,AES-7816,5,0,0.0,21.8,962537,2915.7
+Knowledge,AES-14443,5,0,0.0,20.6,888548,3466.9
+Knowledge,AES-FPGA,5,0,0.0,19.2,704816,1237.6
+Knowledge,AES-STM32F103,5,1,20.0,20.2,762302,1658.1
+Knowledge,AES-STM32F429,5,5,100.0,13.2,420959,1122.5
+Knowledge,DES-7816,5,0,0.0,19.2,803674,1019.6
+Knowledge,DES-14443,5,0,0.0,20.8,833174,1704.6
+Knowledge,SM4-7816,5,0,0.0,19.2,657262,1211.8
