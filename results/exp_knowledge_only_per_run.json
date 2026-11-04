@@ -8,7 +8,7 @@
     "tool_calls": 18,
     "tokens_total": 800235,
     "duration_sec": 3173.7,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -20,7 +20,7 @@
     "tool_calls": 18,
     "tokens_total": 808298,
     "duration_sec": 3966.3,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -32,7 +32,7 @@
     "tool_calls": 21,
     "tokens_total": 828949,
     "duration_sec": 4420.6,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -44,7 +44,7 @@
     "tool_calls": 21,
     "tokens_total": 1143900,
     "duration_sec": 4408.4,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -56,7 +56,67 @@
     "tool_calls": 20,
     "tokens_total": 861357,
     "duration_sec": 1365.3,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-14443",
+    "session_dir": "AES-14443_DeepSeek-V3.2_DKG_20261104_145658_089",
+    "success": 0,
+    "rounds": 19,
+    "tool_calls": 18,
+    "tokens_total": 756712,
+    "duration_sec": 2361.6,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-14443",
+    "session_dir": "AES-14443_DeepSeek-V3.2_DKG_20261104_191819_151",
+    "success": 0,
+    "rounds": 18,
+    "tool_calls": 17,
+    "tokens_total": 672139,
+    "duration_sec": 1665.1,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-14443",
+    "session_dir": "AES-14443_DeepSeek-V3.2_DKG_20261104_194240_375",
+    "success": 0,
+    "rounds": 14,
+    "tool_calls": 13,
+    "tokens_total": 574918,
+    "duration_sec": 1725.0,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-14443",
+    "session_dir": "AES-14443_DeepSeek-V3.2_DKG_20261104_204009_516",
+    "success": 0,
+    "rounds": 20,
+    "tool_calls": 19,
+    "tokens_total": 920386,
+    "duration_sec": 1518.0,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-14443",
+    "session_dir": "AES-14443_DeepSeek-V3.2_DKG_20261104_215503_274",
+    "success": 0,
+    "rounds": 31,
+    "tool_calls": 30,
+    "tokens_total": 1227427,
+    "duration_sec": 2568.4,
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -68,7 +128,7 @@
     "tool_calls": 24,
     "tokens_total": 1187364,
     "duration_sec": 4847.4,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -80,7 +140,7 @@
     "tool_calls": 23,
     "tokens_total": 1133165,
     "duration_sec": 3676.9,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -92,7 +152,7 @@
     "tool_calls": 23,
     "tokens_total": 838676,
     "duration_sec": 1218.2,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -104,7 +164,7 @@
     "tool_calls": 18,
     "tokens_total": 750155,
     "duration_sec": 924.1,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -116,7 +176,67 @@
     "tool_calls": 16,
     "tokens_total": 903325,
     "duration_sec": 3911.9,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-7816",
+    "session_dir": "AES-7816_DeepSeek-V3.2_DKG_20261104_153624_871",
+    "success": 0,
+    "rounds": 17,
+    "tool_calls": 16,
+    "tokens_total": 528334,
+    "duration_sec": 1158.0,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-7816",
+    "session_dir": "AES-7816_DeepSeek-V3.2_DKG_20261104_191819_455",
+    "success": 0,
+    "rounds": 17,
+    "tool_calls": 16,
+    "tokens_total": 607744,
+    "duration_sec": 1381.3,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-7816",
+    "session_dir": "AES-7816_DeepSeek-V3.2_DKG_20261104_200515_572",
+    "success": 1,
+    "rounds": 12,
+    "tool_calls": 11,
+    "tokens_total": 326024,
+    "duration_sec": 1722.4,
+    "reason": "narrative hex match: 112233445566778899aabbccddeeff00 near keyword '100%'",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-7816",
+    "session_dir": "AES-7816_DeepSeek-V3.2_DKG_20261104_211214_224",
+    "success": 0,
+    "rounds": 19,
+    "tool_calls": 18,
+    "tokens_total": 748388,
+    "duration_sec": 1473.9,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-7816",
+    "session_dir": "AES-7816_DeepSeek-V3.2_DKG_20261104_220837_065",
+    "success": 0,
+    "rounds": 17,
+    "tool_calls": 16,
+    "tokens_total": 631654,
+    "duration_sec": 1473.1,
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -128,7 +248,7 @@
     "tool_calls": 19,
     "tokens_total": 781373,
     "duration_sec": 934.4,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -140,7 +260,7 @@
     "tool_calls": 24,
     "tokens_total": 924325,
     "duration_sec": 2071.6,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -152,7 +272,7 @@
     "tool_calls": 19,
     "tokens_total": 768268,
     "duration_sec": 1055.7,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -164,7 +284,7 @@
     "tool_calls": 14,
     "tokens_total": 474544,
     "duration_sec": 1102.1,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -176,7 +296,67 @@
     "tool_calls": 15,
     "tokens_total": 575568,
     "duration_sec": 1024.2,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-FPGA",
+    "session_dir": "AES-FPGA_DeepSeek-V3.2_DKG_20261104_145658_140",
+    "success": 0,
+    "rounds": 22,
+    "tool_calls": 21,
+    "tokens_total": 767867,
+    "duration_sec": 966.0,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-FPGA",
+    "session_dir": "AES-FPGA_DeepSeek-V3.2_DKG_20261104_153506_489",
+    "success": 0,
+    "rounds": 23,
+    "tool_calls": 22,
+    "tokens_total": 825444,
+    "duration_sec": 959.1,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-FPGA",
+    "session_dir": "AES-FPGA_DeepSeek-V3.2_DKG_20261104_194652_366",
+    "success": 0,
+    "rounds": 19,
+    "tool_calls": 18,
+    "tokens_total": 759107,
+    "duration_sec": 1169.8,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-FPGA",
+    "session_dir": "AES-FPGA_DeepSeek-V3.2_DKG_20261104_210529_810",
+    "success": 0,
+    "rounds": 20,
+    "tool_calls": 19,
+    "tokens_total": 787974,
+    "duration_sec": 1890.5,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-FPGA",
+    "session_dir": "AES-FPGA_DeepSeek-V3.2_DKG_20261104_220910_337",
+    "success": 0,
+    "rounds": 23,
+    "tool_calls": 22,
+    "tokens_total": 931563,
+    "duration_sec": 1105.2,
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -188,8 +368,8 @@
     "tool_calls": 13,
     "tokens_total": 455762,
     "duration_sec": 2068.6,
-    "reason": "audit-verified (manual inspection)",
-    "matched_key": "112233445566778899aabbccddeeff00"
+    "reason": "narrative hex match: 112233445566778899aabbccddeeff00 near keyword '✓'",
+    "matched_key": ""
   },
   {
     "config": "Knowledge",
@@ -200,7 +380,7 @@
     "tool_calls": 26,
     "tokens_total": 1014517,
     "duration_sec": 1364.3,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -212,7 +392,7 @@
     "tool_calls": 24,
     "tokens_total": 1107772,
     "duration_sec": 3029.3,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -224,7 +404,7 @@
     "tool_calls": 18,
     "tokens_total": 670869,
     "duration_sec": 987.6,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -236,7 +416,67 @@
     "tool_calls": 15,
     "tokens_total": 562592,
     "duration_sec": 840.7,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-STM32F103",
+    "session_dir": "AES-STM32F103_DeepSeek-V3.2_DKG_20261104_151313_310",
+    "success": 0,
+    "rounds": 25,
+    "tool_calls": 24,
+    "tokens_total": 949169,
+    "duration_sec": 1309.9,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-STM32F103",
+    "session_dir": "AES-STM32F103_DeepSeek-V3.2_DKG_20261104_200627_607",
+    "success": 0,
+    "rounds": 18,
+    "tool_calls": 17,
+    "tokens_total": 696926,
+    "duration_sec": 2019.0,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-STM32F103",
+    "session_dir": "AES-STM32F103_DeepSeek-V3.2_DKG_20261104_201130_837",
+    "success": 0,
+    "rounds": 16,
+    "tool_calls": 15,
+    "tokens_total": 472444,
+    "duration_sec": 1021.3,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-STM32F103",
+    "session_dir": "AES-STM32F103_DeepSeek-V3.2_DKG_20261104_213703_354",
+    "success": 0,
+    "rounds": 16,
+    "tool_calls": 15,
+    "tokens_total": 592408,
+    "duration_sec": 1072.1,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-STM32F103",
+    "session_dir": "AES-STM32F103_DeepSeek-V3.2_DKG_20261104_220910_339",
+    "success": 0,
+    "rounds": 14,
+    "tool_calls": 13,
+    "tokens_total": 484265,
+    "duration_sec": 1284.5,
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -248,8 +488,8 @@
     "tool_calls": 8,
     "tokens_total": 192909,
     "duration_sec": 424.4,
-    "reason": "audit-verified (manual inspection)",
-    "matched_key": "00112233445566778899aabbccddeeff"
+    "reason": "narrative hex match: 00112233445566778899aabbccddeeff near keyword '✓'",
+    "matched_key": ""
   },
   {
     "config": "Knowledge",
@@ -260,8 +500,8 @@
     "tool_calls": 9,
     "tokens_total": 271080,
     "duration_sec": 566.0,
-    "reason": "audit-verified (manual inspection)",
-    "matched_key": "00112233445566778899aabbccddeeff"
+    "reason": "narrative hex match: 00112233445566778899aabbccddeeff near keyword 'MATCH'",
+    "matched_key": ""
   },
   {
     "config": "Knowledge",
@@ -272,8 +512,8 @@
     "tool_calls": 13,
     "tokens_total": 427091,
     "duration_sec": 816.1,
-    "reason": "audit-verified (manual inspection)",
-    "matched_key": "00112233445566778899aabbccddeeff"
+    "reason": "narrative hex match: 00112233445566778899aabbccddeeff near keyword '成功'",
+    "matched_key": ""
   },
   {
     "config": "Knowledge",
@@ -284,20 +524,80 @@
     "tool_calls": 12,
     "tokens_total": 375530,
     "duration_sec": 2693.2,
-    "reason": "audit-verified (manual inspection)",
-    "matched_key": "00112233445566778899aabbccddeeff"
+    "reason": "narrative hex match: 00112233445566778899aabbccddeeff near keyword '成功'",
+    "matched_key": ""
   },
   {
     "config": "Knowledge",
     "case": "AES-STM32F429",
     "session_dir": "AES-STM32F429_DeepSeek-V3.2_DKG_20260515_164657_694",
-    "success": 1,
+    "success": 0,
     "rounds": 20,
     "tool_calls": 19,
     "tokens_total": 838186,
     "duration_sec": 1113.0,
-    "reason": "audit-verified (manual inspection)",
-    "matched_key": "00112233445566778899aabbccddeeff"
+    "reason": "manual: key guessed from the STM32F429 vendor example",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-STM32F429",
+    "session_dir": "AES-STM32F429_DeepSeek-V3.2_DKG_20261104_145658_104",
+    "success": 0,
+    "rounds": 24,
+    "tool_calls": 23,
+    "tokens_total": 765441,
+    "duration_sec": 1062.1,
+    "reason": "manual: CPA 15/16; byte 5 set to 0x55 by hand",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-STM32F429",
+    "session_dir": "AES-STM32F429_DeepSeek-V3.2_DKG_20261104_191818_615",
+    "success": 0,
+    "rounds": 17,
+    "tool_calls": 16,
+    "tokens_total": 550806,
+    "duration_sec": 1641.1,
+    "reason": "manual: CPA 13/16; remaining bytes filled from the key pattern",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-STM32F429",
+    "session_dir": "AES-STM32F429_DeepSeek-V3.2_DKG_20261104_202834_922",
+    "success": 0,
+    "rounds": 21,
+    "tool_calls": 20,
+    "tokens_total": 796867,
+    "duration_sec": 1491.3,
+    "reason": "manual: key taken from the STM32F429 example in the graph",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-STM32F429",
+    "session_dir": "AES-STM32F429_DeepSeek-V3.2_DKG_20261104_205026_579",
+    "success": 1,
+    "rounds": 20,
+    "tool_calls": 19,
+    "tokens_total": 788608,
+    "duration_sec": 1888.9,
+    "reason": "narrative hex match: 00112233445566778899aabbccddeeff near keyword '成功'",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "AES-STM32F429",
+    "session_dir": "AES-STM32F429_DeepSeek-V3.2_DKG_20261104_215741_485",
+    "success": 1,
+    "rounds": 17,
+    "tool_calls": 16,
+    "tokens_total": 591949,
+    "duration_sec": 1322.9,
+    "reason": "narrative hex match: 00112233445566778899AABBCCDDEEFF near keyword '100%'",
+    "matched_key": ""
   },
   {
     "config": "Knowledge",
@@ -308,7 +608,7 @@
     "tool_calls": 22,
     "tokens_total": 940689,
     "duration_sec": 992.4,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -320,7 +620,7 @@
     "tool_calls": 15,
     "tokens_total": 608900,
     "duration_sec": 2644.8,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -332,7 +632,7 @@
     "tool_calls": 21,
     "tokens_total": 867726,
     "duration_sec": 1810.6,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -344,7 +644,7 @@
     "tool_calls": 25,
     "tokens_total": 1003265,
     "duration_sec": 2037.9,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -356,7 +656,67 @@
     "tool_calls": 16,
     "tokens_total": 745290,
     "duration_sec": 1037.3,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "DES-14443",
+    "session_dir": "DES-14443_DeepSeek-V3.2_DKG_20261104_151447_335",
+    "success": 0,
+    "rounds": 20,
+    "tool_calls": 19,
+    "tokens_total": 677702,
+    "duration_sec": 1709.1,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "DES-14443",
+    "session_dir": "DES-14443_DeepSeek-V3.2_DKG_20261104_194208_583",
+    "success": 0,
+    "rounds": 17,
+    "tool_calls": 16,
+    "tokens_total": 678126,
+    "duration_sec": 1379.4,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "DES-14443",
+    "session_dir": "DES-14443_DeepSeek-V3.2_DKG_20261104_203400_020",
+    "success": 0,
+    "rounds": 29,
+    "tool_calls": 28,
+    "tokens_total": 1246671,
+    "duration_sec": 2288.9,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "DES-14443",
+    "session_dir": "DES-14443_DeepSeek-V3.2_DKG_20261104_213650_229",
+    "success": 0,
+    "rounds": 19,
+    "tool_calls": 18,
+    "tokens_total": 850860,
+    "duration_sec": 1884.7,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "DES-14443",
+    "session_dir": "DES-14443_DeepSeek-V3.2_DKG_20261104_223326_977",
+    "success": 0,
+    "rounds": 17,
+    "tool_calls": 16,
+    "tokens_total": 633310,
+    "duration_sec": 868.4,
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -368,7 +728,7 @@
     "tool_calls": 11,
     "tokens_total": 593091,
     "duration_sec": 797.1,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -380,7 +740,7 @@
     "tool_calls": 14,
     "tokens_total": 520332,
     "duration_sec": 835.8,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -392,7 +752,7 @@
     "tool_calls": 23,
     "tokens_total": 888287,
     "duration_sec": 937.4,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -404,7 +764,7 @@
     "tool_calls": 21,
     "tokens_total": 1025774,
     "duration_sec": 1403.9,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -416,7 +776,67 @@
     "tool_calls": 22,
     "tokens_total": 990884,
     "duration_sec": 1123.7,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "DES-7816",
+    "session_dir": "DES-7816_DeepSeek-V3.2_DKG_20261104_145658_064",
+    "success": 0,
+    "rounds": 16,
+    "tool_calls": 15,
+    "tokens_total": 654550,
+    "duration_sec": 1257.1,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "DES-7816",
+    "session_dir": "DES-7816_DeepSeek-V3.2_DKG_20261104_153101_496",
+    "success": 0,
+    "rounds": 20,
+    "tool_calls": 19,
+    "tokens_total": 720498,
+    "duration_sec": 1251.8,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "DES-7816",
+    "session_dir": "DES-7816_DeepSeek-V3.2_DKG_20261104_194646_976",
+    "success": 0,
+    "rounds": 19,
+    "tool_calls": 18,
+    "tokens_total": 558194,
+    "duration_sec": 1087.9,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "DES-7816",
+    "session_dir": "DES-7816_DeepSeek-V3.2_DKG_20261104_212203_255",
+    "success": 0,
+    "rounds": 15,
+    "tool_calls": 14,
+    "tokens_total": 535180,
+    "duration_sec": 1172.1,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "DES-7816",
+    "session_dir": "DES-7816_DeepSeek-V3.2_DKG_20261104_220910_340",
+    "success": 0,
+    "rounds": 22,
+    "tool_calls": 21,
+    "tokens_total": 807324,
+    "duration_sec": 1817.2,
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -428,7 +848,7 @@
     "tool_calls": 18,
     "tokens_total": 579593,
     "duration_sec": 1555.4,
-    "reason": "no verified recovery",
+    "reason": "manual: only the first SM4 round key recovered; master key is the test vector",
     "matched_key": ""
   },
   {
@@ -440,7 +860,7 @@
     "tool_calls": 22,
     "tokens_total": 812379,
     "duration_sec": 1179.3,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -452,7 +872,7 @@
     "tool_calls": 16,
     "tokens_total": 689333,
     "duration_sec": 1179.0,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -464,7 +884,7 @@
     "tool_calls": 18,
     "tokens_total": 600896,
     "duration_sec": 1432.9,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   },
   {
@@ -476,7 +896,67 @@
     "tool_calls": 17,
     "tokens_total": 604109,
     "duration_sec": 712.2,
-    "reason": "no verified recovery",
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "SM4-7816",
+    "session_dir": "SM4-7816_DeepSeek-V3.2_DKG_20261104_151800_252",
+    "success": 0,
+    "rounds": 11,
+    "tool_calls": 11,
+    "tokens_total": 291000,
+    "duration_sec": 777.9,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "SM4-7816",
+    "session_dir": "SM4-7816_DeepSeek-V3.2_DKG_20261104_200457_079",
+    "success": 0,
+    "rounds": 27,
+    "tool_calls": 26,
+    "tokens_total": 1216903,
+    "duration_sec": 2726.8,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "SM4-7816",
+    "session_dir": "SM4-7816_DeepSeek-V3.2_DKG_20261104_205329_116",
+    "success": 0,
+    "rounds": 20,
+    "tool_calls": 19,
+    "tokens_total": 745199,
+    "duration_sec": 1458.2,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "SM4-7816",
+    "session_dir": "SM4-7816_DeepSeek-V3.2_DKG_20261104_214137_603",
+    "success": 0,
+    "rounds": 12,
+    "tool_calls": 11,
+    "tokens_total": 370445,
+    "duration_sec": 960.0,
+    "reason": "no recovered key matches GT in narrative",
+    "matched_key": ""
+  },
+  {
+    "config": "Knowledge",
+    "case": "SM4-7816",
+    "session_dir": "SM4-7816_DeepSeek-V3.2_DKG_20261104_225305_781",
+    "success": 0,
+    "rounds": 15,
+    "tool_calls": 14,
+    "tokens_total": 510896,
+    "duration_sec": 2276.7,
+    "reason": "no recovered key matches GT in narrative",
     "matched_key": ""
   }
 ]

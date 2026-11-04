@@ -20,6 +20,7 @@ It was constructed from 166 technical documents by the three-step extraction pip
 ## Repository layout
 
 ```
+eval/                         success evaluation and ablation aggregation
 agent/
   main.py                     agent loop, planning, tool dispatch
   tools/                      11 tools: CPA (AES/DES/SM4), alignment, denoising,
@@ -67,12 +68,22 @@ End-to-end key-recovery success rate over eight datasets (AES, DES, SM4 on smart
 | DKG (DeepSeek-V3.2) | 97.5% |
 | ReAct-RAG | 68.8% |
 | Tools only | 56.2% |
-| Knowledge only | 15.0% |
-| Python only | 5.0% |
+| Python only | 17.5% |
+| Knowledge only | 10.0% |
 
 Across three backbones (DeepSeek-V3.2, GLM-5, Qwen3.5), DKG averages 93.3%.
 
-`logs/` contains three runs per dataset for each configuration, with the full agent transcript and per-run verification output. `results/` contains the aggregated tables.
+Python only and Knowledge only runs were reviewed manually: a run counts only if the full key was computed by CPA code on the traces and printed. The manual verdicts are listed with reasons in `eval/final_ablation.py`. The other configurations use the automatic evaluator in `eval/re_evaluate_qwen_sessions.py`.
+
+`results/final_ablation_per_run.csv` gives the verdict and efficiency metrics for every run behind the ablation numbers (80 per configuration). `logs/` contains, for each configuration and dataset, the three earliest runs by start time that produced a log, with the full agent transcript and per-run verification output. `results/` contains the aggregated tables.
+
+To re-evaluate the published sample:
+
+```bash
+DKG_LOG_LAYOUT=artifact python eval/final_ablation.py
+```
+
+This writes `results/sample_final_ablation_*.csv`. Totals on the sample differ from the paper, which uses all runs.
 
 ## What is not included
 

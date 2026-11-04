@@ -1,0 +1,5 @@
+config,n,ok,SR,avg_rounds,avg_tokens,avg_duration_sec
+Base,80,14,17.5,15.4,202070,1801
+Tools,80,45,56.2,25.6,481205,756
+Knowledge,80,8,10.0,19.1,730222,1648
+DKG,80,78,97.5,13.9,343127,337
