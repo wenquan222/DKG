@@ -139,7 +139,7 @@
 
 | Paper | # items sourced |
 |---|---:|
-| `expert_experience` | 47 |
+| `expert_experience` | 65 |
 | `PAP-86` | 13 |
 | `PAP-21` | 12 |
 | `PAP-26` | 12 |
