@@ -121,7 +121,7 @@ class DKGSearcher:
             "rationale": row.get("rationale"),
             "applies_to": applies_to,
             "source": source,
-            # 2026-04-23 Patch 002：canonical 字段透传给 markdown render
+            # canonical 字段透传给 markdown render
             "is_canonical": bool(row.get("is_canonical", False)),
             "priority": int(row.get("priority") or 0),
         }
@@ -157,7 +157,7 @@ class DKGSearcher:
                 continue
 
             # ========== 1. 搜索上层节点 ==========
-            # 2026-04-23 Patch 002：补齐 12 类 label（+DiagnosticMethod/ValidationMethod/RecoveryMethod）
+            # 补齐 12 类 label（+DiagnosticMethod/ValidationMethod/RecoveryMethod）
             #                      + ORDER BY is_canonical/priority，保障 canonical expert path 优先
             upper = self._run("""
                 MATCH (n)
@@ -184,7 +184,7 @@ class DKGSearcher:
                     results["upper_matches"].append(entry)
 
             # ========== 2. 从上层节点出发搜索关系 ==========
-            # 2026-04-23 Patch 002：补齐 12 类 label + ORDER BY canonical 优先
+            # 补齐 12 类 label + ORDER BY canonical 优先
             rels = self._run("""
                 MATCH (n)-[r]-(m)
                 WHERE (n:Algorithm OR n:DeviceClass OR n:TraceType OR
@@ -251,7 +251,7 @@ class DKGSearcher:
             # Strategy 有 5 个文本字段：name / type / trigger_condition / content / rationale
             # 其中 content 是 JSON 字符串（troubleshooting_checklist / anti_pattern_set / parameter_preset_bundle 的结构化内容）
             # 关键词匹配后，通过 OPTIONAL MATCH 拉出这个 Strategy 关联的 upper 实体（strategy_applies_to 的目标）
-            # 2026-04-23 Patch 002：canonical Strategy 优先
+            # canonical Strategy 优先
             strat_rows = self._run("""
                 MATCH (s:Strategy)
                 WHERE toLower(s.name) CONTAINS toLower($kw)
@@ -314,7 +314,7 @@ class DKGSearcher:
             # 比如 agent 查询里匹配到了 "Static Alignment" 这个 upper 节点，
             # 即使关键词没直接命中 Strategy，也应该把连到 Static Alignment 的 Strategy 全部拉出来
             # （比如 CPA Failure Troubleshooting Priority Checklist、Static Alignment Parameter Preset Bundle 等）
-            # 2026-04-23 Patch 002：跨层反拉 Strategy 也按 canonical 优先
+            # 跨层反拉 Strategy 也按 canonical 优先
             strat_cross = self._run("""
                 MATCH (s:Strategy)-[sat:strategy_applies_to]->(component)
                 WHERE component.name IN $names

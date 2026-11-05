@@ -1313,7 +1313,7 @@ def main():
     base_url = config["api"]["siliconflow"]["base_url"]
     # api_key 路由：每个模型独占一个 key，避免 TPM (tokens per minute) 撞车
     # 4 个模型并行时各走各的 key，互不限速
-    # 2026-04-23 扩：大规模 exp3 启用 DSv3.2 + Qwen3.5 + GLM-5 + M2.5 四路并行，
+    # 大规模 exp3 启用 DSv3.2 + Qwen3.5 + GLM-5 + M2.5 四路并行，
     # 各占一个 key（api_key / api_key_2 / api_key_pro / api_key_pro_2）。
     MODEL_TO_KEY_FIELD = {
         # Pro 系列（走 api_key_pro / api_key_pro_2）
@@ -1322,7 +1322,7 @@ def main():
         # 普通系列（走 api_key / api_key_2）
         "deepseek-ai/DeepSeek-V3.2":        "api_key",
         "Qwen/Qwen3.5-397B-A17B":           "api_key_2",
-        # 其他（保留作单独 smoke 用，不进 4 路并行默认组）
+        # 其他（保留作单独测试用，不进 4 路并行默认组）
         "moonshotai/Kimi-K2-Instruct-0905": "api_key_2",
         "deepseek-ai/DeepSeek-V3.1-Terminus": "api_key",
     }

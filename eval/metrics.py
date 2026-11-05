@@ -31,7 +31,7 @@ GROUND_TRUTH_KEYS = {
 
 # DES 的校验位校正：原始密钥 vs CPA 恢复密钥
 # DES 每 byte 最低 bit 是 parity，不参与加密；去 parity 后的等价 key 加密结果完全一致
-# 2026-04-23 补全 DES-14443 的 parity 等价（此前缺失导致 Patch 002 smoke 真 MATCH 被误判 FAIL）
+# 补全 DES-14443 的 parity 等价（避免真 MATCH 被误判 FAIL）
 DES_KEY_EQUIVALENTS = {
     "DES-7816":  ["1122334455667788", "1022324454667688"],
     "DES-14443": ["1122334455667788", "1022324454667688"],

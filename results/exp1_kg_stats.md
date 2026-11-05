@@ -1,7 +1,7 @@
 # DKG Knowledge Graph Statistics
 
-> Generated: 2026-04-29T10:48:45  
-> KG version: Round 1 + Patches 001–005 + Chapter 9 (Round 2 fusion, 166 source documents)
+> Generated: 2026-11-05  
+> KG version: Round 2 fusion (166 source documents)
 
 ## Summary
 
@@ -68,10 +68,9 @@
 
 | Type | Count |
 |---|---:|
-| troubleshooting_checklist | 17 |
+| troubleshooting_checklist | 23 |
 | parameter_preset_bundle | 10 |
 | anti_pattern_set | 10 |
-| canonical_pipeline_principle | 6 |
 
 ### Canonical Strategy priority distribution
 
@@ -83,13 +82,6 @@
 
 ### Canonical Strategy IDs
 
-- `patch_neg_001`
-- `patch_neg_002`
-- `patch_neg_003`
-- `patch_neg_004`
-- `patch_neg_005`
-- `patch_neg_006`
-- `patch_neg_007_no_premature_success_declaration`
 - `strat_001`
 - `strat_002`
 - `strat_003`
@@ -98,12 +90,19 @@
 - `strat_027`
 - `strat_029`
 - `strat_030`
+- `strat_alignment_metric_separation`
+- `strat_argmax_not_reference`
 - `strat_des_master_key_recovery_protocol`
+- `strat_green_band_key_search`
 - `strat_key_search_escalate_before_pivot`
+- `strat_max_shift_large_start`
+- `strat_no_target_churn_software`
+- `strat_no_vertical_align_software`
 - `strat_nonprofiled_cpa_low_hc_no_churn`
 - `strat_software_impl_roi_variance_first`
 - `strat_static_align_tuning_loop`
 - `strat_variance_roi_precedence_over_plaintext_corr`
+- `strat_verify_before_declare`
 
 ### Action operation-type distribution
 
@@ -150,8 +149,6 @@
 | `STD-06-2024-ISO-IEC-17825-Updated` | 9 |
 | `PAP-29` | 8 |
 | `PAP-97` | 8 |
-| `expert_experience.md-patch-001` | 7 |
-| `expert_experience.md (round1 patch 001)` | 6 |
 | `PAP-16` | 6 |
 | `PAP-81` | 6 |
 | `MAN-08-2024-Riscure-Inspector-Tutorials` | 6 |

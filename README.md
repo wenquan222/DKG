@@ -31,6 +31,7 @@ knowledge/
   extraction/                 three-step extraction pipeline and prompts
   graph_db/                   Neo4j initialization and query
   sources/extract*.py         document parsing for corpus construction
+  sources/expert_experience/  practitioner notes used as one of the corpus documents
   upper_layer/, lower_layer/  constructed graph (JSON)
 results/                      result tables for all experiments (CSV/JSON/Markdown)
 logs/                         per-run agent logs for the reported experiments
@@ -89,7 +90,7 @@ This writes `results/sample_final_ablation_*.csv`. Totals on the sample differ f
 
 The measurement traces (about 350 MB) are not distributed with this repository because of their size. They are available from the authors on request.
 
-The 166 source documents used to build the graph are third-party publications, standards, and vendor manuals, so they are not redistributed here. The extraction pipeline in `knowledge/extraction/` reproduces the graph from a corpus assembled according to the source categories described in the paper.
+The 166 source documents used to build the graph are third-party publications, standards, and vendor manuals, so they are not redistributed here. The practitioner notes that form one of these documents are included at `knowledge/sources/expert_experience/expert_experience.md`. The extraction pipeline in `knowledge/extraction/` reproduces the graph from a corpus assembled according to the source categories described in the paper.
 
 ## Contact
 
