@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
+帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'"
+"帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -473,9 +473,9 @@ from scipy import stats
 import os
 
 # 加载数据
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
+plain_path = 'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'
+cipher_path = 'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy'
+wave_path = 'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
 
 plain = np.load(plain_path)
 cipher = np.load(cipher_path)
@@ -1008,22 +1008,22 @@ for byte_idx in range(4):
 
 ```
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mIndexError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[265][39m[32m, line 66[39m
-[32m     63[39m test_key = [32m0xAB[39m
-[32m     64[39m test_byte = [32m0[39m
-[32m---> [39m[32m66[39m result = [43msm4_round1_target[49m[43m([49m[43mtest_pt[49m[43m,[49m[43m [49m[43mtest_key[49m[43m,[49m[43m [49m[43mtest_byte[49m[43m)[49m
-[32m     67[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33mTest: plaintext=[39m[38;5;132;01m{[39;00mtest_pt.hex()[38;5;132;01m}[39;00m[33m, key_guess=[39m[38;5;132;01m{[39;00mtest_key[38;5;132;01m:[39;00m[33m02x[39m[38;5;132;01m}[39;00m[33m, target_byte=[39m[38;5;132;01m{[39;00mtest_byte[38;5;132;01m}[39;00m[33m"[39m)
-[32m     68[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  S-box output: [39m[38;5;132;01m{[39;00mresult[38;5;132;01m:[39;00m[33m02x[39m[38;5;132;01m}[39;00m[33m"[39m)
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+Cell In[265], line 66
+     63 test_key = 0xAB
+     64 test_byte = 0
+---> 66 result = sm4_round1_target(test_pt, test_key, test_byte)
+     67 print(f"Test: plaintext={test_pt.hex()}, key_guess={test_key:02x}, target_byte={test_byte}")
+     68 print(f"  S-box output: {result:02x}")
 
-[36mCell[39m[36m [39m[32mIn[265][39m[32m, line 57[39m, in [36msm4_round1_target[39m[34m(pt_bytes, key_guess, target_byte, round_num)[39m
-[32m     54[39m     t_byte = T & [32m0xFF[39m
-[32m     56[39m [38;5;66;03m# S-box输出[39;00m
-[32m---> [39m[32m57[39m sbox_out = [43mSM4_SBOX[49m[43m[[49m[43mt_byte[49m[43m][49m
-[32m     59[39m [38;5;28;01mreturn[39;00m sbox_out
+Cell In[265], line 57, in sm4_round1_target(pt_bytes, key_guess, target_byte, round_num)
+     54     t_byte = T & 0xFF
+     56 # S-box输出
+---> 57 sbox_out = SM4_SBOX[t_byte]
+     59 return sbox_out
 
-[31mIndexError[39m: list index out of range
+IndexError: list index out of range
 ```
 
 
@@ -1151,10 +1151,10 @@ for byte_idx in range(4):
 
 ```
 ---ERROR---
-  [36mCell[39m[36m [39m[32mIn[266][39m[32m, line 11[39m
-[31m    [39m[31m0x47, 0x07, 0xa7, 0xfc, 0xf3, 0x73, 0x17, 0ba, 0x83, 0x59, 0x3c, 0x19, 0xe6, 0x85, 0x4f, 0xa8,[39m
+  Cell In[266], line 11
+    0x47, 0x07, 0xa7, 0xfc, 0xf3, 0x73, 0x17, 0ba, 0x83, 0x59, 0x3c, 0x19, 0xe6, 0x85, 0x4f, 0xa8,
                                                ^
-[31mSyntaxError[39m[31m:[39m invalid binary literal
+SyntaxError: invalid binary literal
 ```
 
 
@@ -2856,46 +2856,46 @@ Next steps:
 4. If MISMATCH, use key_search with appropriate budget
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mTypeError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[279][39m[32m, line 68[39m
-[32m     66[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mjson[39;00m
-[32m     67[39m [38;5;28;01mwith[39;00m [38;5;28mopen[39m([33m'[39m[33mcpa_results_summary.json[39m[33m'[39m, [33m'[39m[33mw[39m[33m'[39m) [38;5;28;01mas[39;00m f:
-[32m---> [39m[32m68[39m     [43mjson[49m[43m.[49m[43mdump[49m[43m([49m[43mresults[49m[43m,[49m[43m [49m[43mf[49m[43m,[49m[43m [49m[43mindent[49m[43m=[49m[32;43m2[39;49m[43m)[49m
-[32m     70[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33mResults saved to [39m[33m'[39m[33mcpa_results_summary.json[39m[33m'[39m[33m"[39m)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[279], line 68
+     66 import json
+     67 with open('cpa_results_summary.json', 'w') as f:
+---> 68     json.dump(results, f, indent=2)
+     70 print(f"\nResults saved to 'cpa_results_summary.json'")
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py:179[39m, in [36mdump[39m[34m(obj, fp, skipkeys, ensure_ascii, check_circular, allow_nan, cls, indent, separators, default, sort_keys, **kw)[39m
-[32m    173[39m     iterable = [38;5;28mcls[39m(skipkeys=skipkeys, ensure_ascii=ensure_ascii,
-[32m    174[39m         check_circular=check_circular, allow_nan=allow_nan, indent=indent,
-[32m    175[39m         separators=separators,
-[32m    176[39m         default=default, sort_keys=sort_keys, **kw).iterencode(obj)
-[32m    177[39m [38;5;66;03m# could accelerate with writelines in some versions of Python, at[39;00m
-[32m    178[39m [38;5;66;03m# a debuggability cost[39;00m
-[32m--> [39m[32m179[39m [43m[49m[38;5;28;43;01mfor[39;49;00m[43m [49m[43mchunk[49m[43m [49m[38;5;129;43;01min[39;49;00m[43m [49m[43miterable[49m[43m:[49m
-[32m    180[39m [43m    [49m[43mfp[49m[43m.[49m[43mwrite[49m[43m([49m[43mchunk[49m[43m)[49m
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py:179, in dump(obj, fp, skipkeys, ensure_ascii, check_circular, allow_nan, cls, indent, separators, default, sort_keys, **kw)
+    173     iterable = cls(skipkeys=skipkeys, ensure_ascii=ensure_ascii,
+    174         check_circular=check_circular, allow_nan=allow_nan, indent=indent,
+    175         separators=separators,
+    176         default=default, sort_keys=sort_keys, **kw).iterencode(obj)
+    177 # could accelerate with writelines in some versions of Python, at
+    178 # a debuggability cost
+--> 179 for chunk in iterable:
+    180     fp.write(chunk)
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:432[39m, in [36m_make_iterencode.<locals>._iterencode[39m[34m(o, _current_indent_level)[39m
-[32m    430[39m     [38;5;28;01myield from[39;00m _iterencode_list(o, _current_indent_level)
-[32m    431[39m [38;5;28;01melif[39;00m [38;5;28misinstance[39m(o, [38;5;28mdict[39m):
-[32m--> [39m[32m432[39m     [38;5;28;01myield from[39;00m _iterencode_dict(o, _current_indent_level)
-[32m    433[39m [38;5;28;01melse[39;00m:
-[32m    434[39m     [38;5;28;01mif[39;00m markers [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:432, in _make_iterencode.<locals>._iterencode(o, _current_indent_level)
+    430     yield from _iterencode_list(o, _current_indent_level)
+    431 elif isinstance(o, dict):
+--> 432     yield from _iterencode_dict(o, _current_indent_level)
+    433 else:
+    434     if markers is not None:
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:406[39m, in [36m_make_iterencode.<locals>._iterencode_dict[39m[34m(dct, _current_indent_level)[39m
-[32m    404[39m         [38;5;28;01melse[39;00m:
-[32m    405[39m             chunks = _iterencode(value, _current_indent_level)
-[32m--> [39m[32m406[39m         [38;5;28;01myield from[39;00m chunks
-[32m    407[39m [38;5;28;01mif[39;00m newline_indent [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
-[32m    408[39m     _current_indent_level -= [32m1[39m
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:406, in _make_iterencode.<locals>._iterencode_dict(dct, _current_indent_level)
+    404         else:
+    405             chunks = _iterencode(value, _current_indent_level)
+--> 406         yield from chunks
+    407 if newline_indent is not None:
+    408     _current_indent_level -= 1
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:439[39m, in [36m_make_iterencode.<locals>._iterencode[39m[34m(o, _current_indent_level)[39m
-[32m    437[39m         [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m([33m"[39m[33mCircular reference detected[39m[33m"[39m)
-[32m    438[39m     markers[markerid] = o
-[32m--> [39m[32m439[39m o = [43m_default[49m[43m([49m[43mo[49m[43m)[49m
-[32m    440[39m [38;5;28;01myield from[39;00m _iterencode(o, _current_indent_level)
-[32m    441[39m [38;5;28;01mif[39;00m markers [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:439, in _make_iterencode.<locals>._iterencode(o, _current_indent_level)
+    437         raise ValueError("Circular reference detected")
+    438     markers[markerid] = o
+--> 439 o = _default(o)
+    440 yield from _iterencode(o, _current_indent_level)
+    441 if markers is not None:
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\js
+File ~\AppData\Local\Programs\Python\Python311\Lib\js
 ...(truncated)
 ```
 

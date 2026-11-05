@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'
+帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'"
+"帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -513,9 +513,9 @@ import matplotlib.pyplot as plt
 import os
 
 # 加载数据
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'
+plain_path = 'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'
+cipher_path = 'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy'
+wave_path = 'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'
 
 print("检查文件是否存在:")
 print(f"明文文件: {os.path.exists(plain_path)}")
@@ -1833,39 +1833,39 @@ print(f"\n对齐后结果已保存到文件")
 平均差距百分比: 12.6% → 36.9%
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mValueError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[70][39m[32m, line 31[39m
-[32m     29[39m x = np.arange([32m16[39m)
-[32m     30[39m width = [32m0.35[39m
-[32m---> [39m[32m31[39m [43mplt[49m[43m.[49m[43mbar[49m[43m([49m[43mx[49m[43m [49m[43m-[49m[43m [49m[43mwidth[49m[43m/[49m[32;43m2[39;49m[43m,[49m[43m [49m[43mcorrelations[49m[43m,[49m[43m [49m[43mwidth[49m[43m,[49m[43m [49m[43malpha[49m[43m=[49m[32;43m0.7[39;49m[43m,[49m[43m [49m[43mlabel[49m[43m=[49m[33;43m'[39;49m[33;43m对齐前[39;49m[33;43m'[39;49m[43m)[49m
-[32m     32[39m plt.bar(x + width/[32m2[39m, aligned_correlations, width, alpha=[32m0.7[39m, label=[33m'[39m[33m对齐后[39m[33m'[39m)
-[32m     33[39m plt.axhline(y=correlations.mean(), color=[33m'[39m[33mb[39m[33m'[39m, linestyle=[33m'[39m[33m--[39m[33m'[39m, alpha=[32m0.5[39m, label=[33mf[39m[33m'[39m[33m对齐前平均: [39m[38;5;132;01m{[39;00mcorrelations.mean()[38;5;132;01m:[39;00m[33m.3f[39m[38;5;132;01m}[39;00m[33m'[39m)
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[70], line 31
+     29 x = np.arange(16)
+     30 width = 0.35
+---> 31 plt.bar(x - width/2, correlations, width, alpha=0.7, label='对齐前')
+     32 plt.bar(x + width/2, aligned_correlations, width, alpha=0.7, label='对齐后')
+     33 plt.axhline(y=correlations.mean(), color='b', linestyle='--', alpha=0.5, label=f'对齐前平均: {correlations.mean():.3f}')
 
-[36mFile [39m[32mF:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\matplotlib\pyplot.py:2989[39m, in [36mbar[39m[34m(x, height, width, bottom, align, data, **kwargs)[39m
-[32m   2978[39m [38;5;129m@_copy_docstring_and_deprecators[39m(Axes.bar)
-[32m   2979[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mbar[39m(
-[32m   2980[39m     x: [38;5;28mfloat[39m | ArrayLike,
-[32m   (...)[39m[32m   2987[39m     **kwargs,
-[32m   2988[39m ) -> BarContainer:
-[32m-> [39m[32m2989[39m     [38;5;28;01mreturn[39;00m [43mgca[49m[43m([49m[43m)[49m[43m.[49m[43mbar[49m[43m([49m
-[32m   2990[39m [43m        [49m[43mx[49m[43m,[49m
-[32m   2991[39m [43m        [49m[43mheight[49m[43m,[49m
-[32m   2992[39m [43m        [49m[43mwidth[49m[43m=[49m[43mwidth[49m[43m,[49m
-[32m   2993[39m [43m        [49m[43mbottom[49m[43m=[49m[43mbottom[49m[43m,[49m
-[32m   2994[39m [43m        [49m[43malign[49m[43m=[49m[43malign[49m[43m,[49m
-[32m   2995[39m [43m        [49m[43m*[49m[43m*[49m[43m([49m[43m{[49m[33;43m"[39;49m[33;43mdata[39;49m[33;43m"[39;49m[43m:[49m[43m [49m[43mdata[49m[43m}[49m[43m [49m[38;5;28;43;01mif[39;49;00m[43m [49m[43mdata[49m[43m [49m[38;5;129;43;01mis[39;49;00m[43m [49m[38;5;129;43;01mnot[39;49;00m[43m [49m[38;5;28;43;01mNone[39;49;00m[43m [49m[38;5;28;43;01melse[39;49;00m[43m [49m[43m{[49m[43m}[49m[43m)[49m[43m,[49m
-[32m   2996[39m [43m        [49m[43m*[49m[43m*[49m[43mkwargs[49m[43m,[49m
-[32m   2997[39m [43m    [49m[43m)[49m
+File .venv\Lib\site-packages\matplotlib\pyplot.py:2989, in bar(x, height, width, bottom, align, data, **kwargs)
+   2978 @_copy_docstring_and_deprecators(Axes.bar)
+   2979 def bar(
+   2980     x: float | ArrayLike,
+   (...)   2987     **kwargs,
+   2988 ) -> BarContainer:
+-> 2989     return gca().bar(
+   2990         x,
+   2991         height,
+   2992         width=width,
+   2993         bottom=bottom,
+   2994         align=align,
+   2995         **({"data": data} if data is not None else {}),
+   2996         **kwargs,
+   2997     )
 
-[36mFile [39m[32mF:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\matplotlib\__init__.py:1524[39m, in [36m_preprocess_data.<locals>.inner[39m[34m(ax, data, *args, **kwargs)[39m
-[32m   1521[39m [38;5;129m@functools[39m.wraps(func)
-[32m   1522[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34minner[39m(ax, *args, data=[38;5;28;01mNone[39;00m, **kwargs):
-[32m   1523[39m     [38;5;28;01mif[39;00m data [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
-[32m-> [39m[32m1524[39m         [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m
-[32m   1525[39m [43m            [49m[43max[49m[43m,[49m
-[32m   1526[39m [43m            [49m[43m*[49m[38;5;28;43mmap[39;49m[43m([49m[43mcbook[49m[43m.[49m[43msanitize_sequence[49m[43m,[49m[43m [49m[43margs[49m[43m)[49m[43m,[49m
-[32m   1527[39m [43m            [49m[43m*[49m[43m*[49m[43m{[49m[43mk[49m[43m:[49m[43m [49m[43mcbook[49m[43m.[49m[43msanitize_sequence[49m[43m([49m[43mv[49m[43m)[49m[43m [49m[38;5;28;43;01mfor[39;49;00m[43m [49m[43mk[49m[43m,[49m[43m [49m[43mv[49m[43m [49m[38;5;129;43;01min[39;49;00m[43m [49m[43mkwargs[49m[43m.[49m[43mitems[49m[43m([49m[43m)[49m[43m}[49m[43m)[49m
+File .venv\Lib\site-packages\matplotlib\__init__.py:1524, in _preprocess_data.<locals>.inner(ax, data, *args, **kwargs)
+   1521 @functools.wraps(func)
+   1522 def inner(ax, *args, data=None, **kwargs):
+   1523     if data is None:
+-> 1524         return func(
+   1525             ax,
+   1526             *map(cbook.sanitize_sequence, args),
+   1527             **{k: cbook.sanitize_sequence(v) for k, v in kwargs.items()})
 [3
 ...(truncated)
 ```
@@ -1966,47 +1966,47 @@ print(f"恢复的密钥: {key_candidates.tobytes().hex()} → {aligned_key_candi
 对齐后高置信度字节数 (差距 > 20%): 16/16
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mValueError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[71][39m[32m, line 14[39m
-[32m     12[39m x = np.arange([32m16[39m)
-[32m     13[39m width = [32m0.35[39m
-[32m---> [39m[32m14[39m [43mplt[49m[43m.[49m[43mbar[49m[43m([49m[43mx[49m[43m [49m[43m-[49m[43m [49m[43mwidth[49m[43m/[49m[32;43m2[39;49m[43m,[49m[43m [49m[43mcorrelations[49m[43m,[49m[43m [49m[43mwidth[49m[43m,[49m[43m [49m[43malpha[49m[43m=[49m[32;43m0.7[39;49m[43m,[49m[43m [49m[43mlabel[49m[43m=[49m[33;43m'[39;49m[33;43m对齐前[39;49m[33;43m'[39;49m[43m)[49m  [38;5;66;03m# 这里的correlations是CPA的相关性，不是对齐的相关性[39;00m
-[32m     15[39m plt.bar(x + width/[32m2[39m, aligned_correlations, width, alpha=[32m0.7[39m, label=[33m'[39m[33m对齐后[39m[33m'[39m)
-[32m     16[39m plt.axhline(y=correlations.mean(), color=[33m'[39m[33mb[39m[33m'[39m, linestyle=[33m'[39m[33m--[39m[33m'[39m, alpha=[32m0.5[39m, label=[33mf[39m[33m'[39m[33m对齐前平均: [39m[38;5;132;01m{[39;00mcorrelations.mean()[38;5;132;01m:[39;00m[33m.3f[39m[38;5;132;01m}[39;00m[33m'[39m)
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[71], line 14
+     12 x = np.arange(16)
+     13 width = 0.35
+---> 14 plt.bar(x - width/2, correlations, width, alpha=0.7, label='对齐前')  # 这里的correlations是CPA的相关性，不是对齐的相关性
+     15 plt.bar(x + width/2, aligned_correlations, width, alpha=0.7, label='对齐后')
+     16 plt.axhline(y=correlations.mean(), color='b', linestyle='--', alpha=0.5, label=f'对齐前平均: {correlations.mean():.3f}')
 
-[36mFile [39m[32mF:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\matplotlib\pyplot.py:2989[39m, in [36mbar[39m[34m(x, height, width, bottom, align, data, **kwargs)[39m
-[32m   2978[39m [38;5;129m@_copy_docstring_and_deprecators[39m(Axes.bar)
-[32m   2979[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mbar[39m(
-[32m   2980[39m     x: [38;5;28mfloat[39m | ArrayLike,
-[32m   (...)[39m[32m   2987[39m     **kwargs,
-[32m   2988[39m ) -> BarContainer:
-[32m-> [39m[32m2989[39m     [38;5;28;01mreturn[39;00m [43mgca[49m[43m([49m[43m)[49m[43m.[49m[43mbar[49m[43m([49m
-[32m   2990[39m [43m        [49m[43mx[49m[43m,[49m
-[32m   2991[39m [43m        [49m[43mheight[49m[43m,[49m
-[32m   2992[39m [43m        [49m[43mwidth[49m[43m=[49m[43mwidth[49m[43m,[49m
-[32m   2993[39m [43m        [49m[43mbottom[49m[43m=[49m[43mbottom[49m[43m,[49m
-[32m   2994[39m [43m        [49m[43malign[49m[43m=[49m[43malign[49m[43m,[49m
-[32m   2995[39m [43m        [49m[43m*[49m[43m*[49m[43m([49m[43m{[49m[33;43m"[39;49m[33;43mdata[39;49m[33;43m"[39;49m[43m:[49m[43m [49m[43mdata[49m[43m}[49m[43m [49m[38;5;28;43;01mif[39;49;00m[43m [49m[43mdata[49m[43m [49m[38;5;129;43;01mis[39;49;00m[43m [49m[38;5;129;43;01mnot[39;49;00m[43m [49m[38;5;28;43;01mNone[39;49;00m[43m [49m[38;5;28;43;01melse[39;49;00m[43m [49m[43m{[49m[43m}[49m[43m)[49m[43m,[49m
-[32m   2996[39m [43m        [49m[43m*[49m[43m*[49m[43mkwargs[49m[43m,[49m
-[32m   2997[39m [43m    [49m[43m)[49m
+File .venv\Lib\site-packages\matplotlib\pyplot.py:2989, in bar(x, height, width, bottom, align, data, **kwargs)
+   2978 @_copy_docstring_and_deprecators(Axes.bar)
+   2979 def bar(
+   2980     x: float | ArrayLike,
+   (...)   2987     **kwargs,
+   2988 ) -> BarContainer:
+-> 2989     return gca().bar(
+   2990         x,
+   2991         height,
+   2992         width=width,
+   2993         bottom=bottom,
+   2994         align=align,
+   2995         **({"data": data} if data is not None else {}),
+   2996         **kwargs,
+   2997     )
 
-[36mFile [39m[32mF:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\matplotlib\__init__.py:1524[39m, in [36m_preprocess_data.<locals>.inner[39m[34m(ax, data, *args, **kwargs)[39m
-[32m   1521[39m [38;5;129m@functools[39m.wraps(func)
-[32m   1522[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34minner[39m(ax, *args, data=[38;5;28;01mNone[39;00m, **kwargs):
-[32m   1523[39m     [38;5;28;01mif[39;00m data [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
-[32m-> [39m[32m1524[39m         [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m
-[32m   1525[39m [43m            [49m[43max[49m[43m,[49m
-[32m   1526[39m [43m            [49m[43m*[49m[38;5;28;43mmap[39;49m[43m([49m[43mcbook[49m[43m.[49m[43msanitize_sequence[49m[43m,[49m[43m [49m[43margs[49m[43m)[49m[43m,[49m
-[32m   1527[39m [43m            [49m[43m*[49m[43m*[49m[43m{[49m[43mk[49m[43m:[49m[43m [49m[43mcbook[49m[43m.[49m[43msanitize_sequence[49m[43m([49m[43mv[49m[43m)[49m[43m [49m[38;5;28;43;01mfor[39;49;00m[43m [49m[43mk[49m[43m,[49m[43m [49m[43mv[49m[43m [49m[38;5;129;43;01min[39;49;00m[43m [49m[43mkwargs[49m[43m.[49m[43mitems[49m[43m([49m[43m)[49m[43m}[49m[43m)[49m
-[32m   1529[39m     bound = new_sig.bind(ax, *args, **kwargs)
-[32m   1530[39m     auto_label = (bound.arguments.get(label_namer)
-[32m   1531[39m                   [38;5;129;01mor[39;00m bound.kwargs.get(label_namer))
+File .venv\Lib\site-packages\matplotlib\__init__.py:1524, in _preprocess_data.<locals>.inner(ax, data, *args, **kwargs)
+   1521 @functools.wraps(func)
+   1522 def inner(ax, *args, data=None, **kwargs):
+   1523     if data is None:
+-> 1524         return func(
+   1525             ax,
+   1526             *map(cbook.sanitize_sequence, args),
+   1527             **{k: cbook.sanitize_sequence(v) for k, v in kwargs.items()})
+   1529     bound = new_sig.bind(ax, *args, **kwargs)
+   1530     auto_label = (bound.arguments.get(label_namer)
+   1531                   or bound.kwargs.get(label_namer))
 
-[36mFile [39m[32mF:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\matplotlib\axes\_axes.py:2583[39m, in [36mAxes.bar[39m[34m(self, x, height, width, bottom, align, **kwargs)[39m
-[32m   2580[39m     [38;5;28;01mif[39;00m yerr [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
-[32m   2581[39m         yerr = [38;5;28mself[39m._convert_dx(yerr, y0, y, [38;5;28mself[39m.convert_yunits)
-[32m-> [39m[32m2583[39m x, heigh
+File .venv\Lib\site-packages\matplotlib\axes\_axes.py:2583, in Axes.bar(self, x, height, width, bottom, align, **kwargs)
+   2580     if yerr is not None:
+   2581         yerr = self._convert_dx(yerr, y0, y, self.convert_yunits)
+-> 2583 x, heigh
 ...(truncated)
 ```
 

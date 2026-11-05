@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
+帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'"
+"帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -523,9 +523,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 加载数据
-wave = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy')
-plain = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy')
-cipher = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy')
+wave = np.load(r'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy')
+plain = np.load(r'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy')
+cipher = np.load(r'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy')
 
 print(f"波形数据形状: {wave.shape}")
 print(f"明文数据形状: {plain.shape}")
@@ -625,11 +625,11 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\1926692062.py:58: UserWarni
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy",
+  "wave_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy",
   "ref_start": 0,
   "ref_end": 20,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy"
+  "plaintext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy"
 }
 ```
 </details>
@@ -637,7 +637,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\1926692062.py:58: UserWarni
 <details><summary><b>📋 ← `vertical_aligner`</b> (657 chars)</summary>
 
 ```
-{"out_wave_npy": "valigned_20260424_052818_741332.npy", "plot_path": "valign_compare_20260424_052818_741332.png", "n_traces": 10000, "n_points": 300, "ref_region": [0, 20], "baseline_std": 1.1194, "baseline_std_after": 1e-06, "out_plaintext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy", "out_ciphertext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy"}
+{"out_wave_npy": "valigned_20260424_052818_741332.npy", "plot_path": "valign_compare_20260424_052818_741332.png", "n_traces": 10000, "n_points": 300, "ref_region": [0, 20], "baseline_std": 1.1194, "baseline_std_after": 1e-06, "out_plaintext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy", "out_ciphertext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy"}
 ```
 </details>
 
@@ -652,7 +652,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\1926692062.py:58: UserWarni
 **🤖 LLM:** 垂直对齐成功！基线标准差从1.12降至1e-06。现在进行**第一次CPA探测**（无静态对齐）：
 
 **🔧 → `des_cpa_attack`** `{
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "plaintext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
   "wave_npy": "valigned_20260424_052818_741332.npy",
   "target": "S-box_out",
   "leakage_model": "HW",
@@ -782,8 +782,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\1652153811.py:55: UserWarni
   "length": 120,
   "max_shift": 300,
   "threshold": 85,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy"
+  "plaintext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy"
 }
 ```
 </details>

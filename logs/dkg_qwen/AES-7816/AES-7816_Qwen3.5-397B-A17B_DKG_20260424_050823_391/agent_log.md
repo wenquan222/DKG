@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
+帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'"
+"帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -444,8 +444,8 @@ The Python (Jupyter) working directory is already set to this session directory.
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy",
+  "plaintext_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy",
+  "wave_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy",
   "target": "S-box_out",
   "leakage_model": "HW",
   "candidates": 20
@@ -489,7 +489,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 加载波形数据
-wave = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy')
+wave = np.load('data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy')
 print(f"波形形状: {wave.shape}")
 print(f"点数: {wave.shape[1]}")
 
@@ -594,9 +594,9 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_24372\1181127500.py:53: UserWarni
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy",
+  "wave_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy",
+  "plaintext_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy",
+  "ciphertext_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy",
   "start": 1341,
   "length": 120,
   "max_shift": 200,
@@ -793,16 +793,16 @@ for i, byte_info in enumerate(detail['per_byte']):
 
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mKeyError[39m                                  Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[227][39m[32m, line 9[39m
-[32m      7[39m [38;5;66;03m# 查看每个字节的候选情况[39;00m
-[32m      8[39m [38;5;28mprint[39m([33m"[39m[33m=== CPA Detail Analysis ===[39m[38;5;130;01m\n[39;00m[33m"[39m)
-[32m----> [39m[32m9[39m [38;5;28;01mfor[39;00m i, byte_info [38;5;129;01min[39;00m [38;5;28menumerate[39m([43mdetail[49m[43m[[49m[33;43m'[39;49m[33;43mper_byte[39;49m[33;43m'[39;49m[43m][49m):
-[32m     10[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[33mByte [39m[38;5;132;01m{[39;00mi[38;5;132;01m}[39;00m[33m: best_key=[39m[38;5;132;01m{[39;00mbyte_info[[33m'[39m[33mbest_key_hex[39m[33m'[39m][38;5;132;01m}[39;00m[33m, gap_pct=[39m[38;5;132;01m{[39;00mbyte_info[[33m'[39m[33mgap_pct[39m[33m'[39m][38;5;132;01m:[39;00m[33m.2f[39m[38;5;132;01m}[39;00m[33m%, correlation=[39m[38;5;132;01m{[39;00mbyte_info[[33m'[39m[33mcorrelation[39m[33m'[39m][38;5;132;01m:[39;00m[33m.4f[39m[38;5;132;01m}[39;00m[33m"[39m)
-[32m     11[39m     [38;5;66;03m# 显示前5个候选[39;00m
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+Cell In[227], line 9
+      7 # 查看每个字节的候选情况
+      8 print("=== CPA Detail Analysis ===\n")
+----> 9 for i, byte_info in enumerate(detail['per_byte']):
+     10     print(f"Byte {i}: best_key={byte_info['best_key_hex']}, gap_pct={byte_info['gap_pct']:.2f}%, correlation={byte_info['correlation']:.4f}")
+     11     # 显示前5个候选
 
-[31mKeyError[39m: 'per_byte'
+KeyError: 'per_byte'
 ```
 
 
@@ -891,16 +891,16 @@ for i, byte_info in enumerate(detail['results']):
 
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mKeyError[39m                                  Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[229][39m[32m, line 10[39m
-[32m      8[39m [38;5;28mprint[39m([33m"[39m[33m=== CPA Detail Analysis ===[39m[38;5;130;01m\n[39;00m[33m"[39m)
-[32m      9[39m [38;5;28;01mfor[39;00m i, byte_info [38;5;129;01min[39;00m [38;5;28menumerate[39m(detail[[33m'[39m[33mresults[39m[33m'[39m]):
-[32m---> [39m[32m10[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[33mByte [39m[38;5;132;01m{[39;00mi[38;5;132;01m}[39;00m[33m: best_key=[39m[38;5;132;01m{[39;00m[43mbyte_info[49m[43m[[49m[33;43m'[39;49m[33;43mbest_key_hex[39;49m[33;43m'[39;49m[43m][49m[38;5;132;01m}[39;00m[33m, gap_pct=[39m[38;5;132;01m{[39;00mbyte_info[[33m'[39m[33mgap_pct[39m[33m'[39m][38;5;132;01m:[39;00m[33m.2f[39m[38;5;132;01m}[39;00m[33m%, correlation=[39m[38;5;132;01m{[39;00mbyte_info[[33m'[39m[33mcorrelation[39m[33m'[39m][38;5;132;01m:[39;00m[33m.4f[39m[38;5;132;01m}[39;00m[33m"[39m)
-[32m     11[39m     [38;5;66;03m# 显示前5个候选[39;00m
-[32m     12[39m     candidates = byte_info.get([33m'[39m[33mcandidates[39m[33m'[39m, [])
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+Cell In[229], line 10
+      8 print("=== CPA Detail Analysis ===\n")
+      9 for i, byte_info in enumerate(detail['results']):
+---> 10     print(f"Byte {i}: best_key={byte_info['best_key_hex']}, gap_pct={byte_info['gap_pct']:.2f}%, correlation={byte_info['correlation']:.4f}")
+     11     # 显示前5个候选
+     12     candidates = byte_info.get('candidates', [])
 
-[31mKeyError[39m: 'best_key_hex'
+KeyError: 'best_key_hex'
 ```
 
 
@@ -1106,8 +1106,8 @@ Byte 15: best_key=0x0E, score=0.6452, 2nd_score=0.6197, gap=0.0255, gap_pct=3.95
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy",
+  "plaintext_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy",
+  "wave_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy",
   "target": "S-box_out",
   "leakage_model": "HW",
   "candidates": 50
@@ -1145,9 +1145,9 @@ Byte 15: best_key=0x0E, score=0.6452, 2nd_score=0.6197, gap=0.0255, gap_pct=3.95
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy",
+  "wave_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy",
+  "plaintext_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy",
+  "ciphertext_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy",
   "start": 1341,
   "length": 100,
   "max_shift": 300,

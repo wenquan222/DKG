@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
+帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'"
+"帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -140,9 +140,9 @@ print(os.listdir('.'))
 
 # 加载数据
 print("\n加载数据...")
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
+plain_path = 'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'
+cipher_path = 'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy'
+wave_path = 'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
 
 plaintexts = np.load(plain_path)
 ciphertexts = np.load(cipher_path)
@@ -1037,31 +1037,31 @@ for byte_idx in range(4):
 使用所有100条轨迹进行CPA攻击...
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mOverflowError[39m                             Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[125][39m[32m, line 63[39m
-[32m     61[39m [38;5;28mprint[39m([33m"[39m[33m使用所有100条轨迹进行CPA攻击...[39m[33m"[39m)
-[32m     62[39m target_byte = [32m0[39m
-[32m---> [39m[32m63[39m corr_matrix_all = [43mcpa_attack_sm4_round[49m[43m([49m[43mtraces[49m[43m,[49m[43m [49m[43mplaintexts[49m[43m,[49m[43m [49m[43mtarget_byte[49m[43m)[49m
-[32m     65[39m [38;5;66;03m# 分析结果[39;00m
-[32m     66[39m max_corrs_all = np.max(corr_matrix_all, axis=[32m1[39m)
+---------------------------------------------------------------------------
+OverflowError                             Traceback (most recent call last)
+Cell In[125], line 63
+     61 print("使用所有100条轨迹进行CPA攻击...")
+     62 target_byte = 0
+---> 63 corr_matrix_all = cpa_attack_sm4_round(traces, plaintexts, target_byte)
+     65 # 分析结果
+     66 max_corrs_all = np.max(corr_matrix_all, axis=1)
 
-[36mCell[39m[36m [39m[32mIn[125][39m[32m, line 50[39m, in [36mcpa_attack_sm4_round[39m[34m(traces_data, plaintexts_data, target_byte, rk_guess_range)[39m
-[32m     47[39m [38;5;28;01mfor[39;00m i [38;5;129;01min[39;00m [38;5;28mrange[39m(n_traces):
-[32m     48[39m     [38;5;66;03m# 创建32位轮密钥猜测（只设置目标字节）[39;00m
-[32m     49[39m     rk_word = rk_byte_guess << ([32m8[39m * ([32m3[39m - (target_byte % [32m4[39m)))
-[32m---> [39m[32m50[39m     sbox_out = [43mgenerate_hypotheses_sm4_first_round[49m[43m([49m[43mplaintexts_data[49m[43m[[49m[43mi[49m[43m][49m[43m,[49m[43m [49m[43mrk_word[49m[43m,[49m[43m [49m[43mtarget_byte[49m[43m)[49m
-[32m     51[39m     hypotheses[i] = hamming_weight(sbox_out)
-[32m     53[39m [38;5;66;03m# 计算相关系数[39;00m
+Cell In[125], line 50, in cpa_attack_sm4_round(traces_data, plaintexts_data, target_byte, rk_guess_range)
+     47 for i in range(n_traces):
+     48     # 创建32位轮密钥猜测（只设置目标字节）
+     49     rk_word = rk_byte_guess << (8 * (3 - (target_byte % 4)))
+---> 50     sbox_out = generate_hypotheses_sm4_first_round(plaintexts_data[i], rk_word, target_byte)
+     51     hypotheses[i] = hamming_weight(sbox_out)
+     53 # 计算相关系数
 
-[36mCell[39m[36m [39m[32mIn[125][39m[32m, line 20[39m, in [36mgenerate_hypotheses_sm4_first_round[39m[34m(plaintext, rk_word, target_byte)[39m
-[32m     17[39m X0, X1, X2, X3 = X
-[32m     19[39m [38;5;66;03m# 计算 T = X1 ⊕ X2 ⊕ X3 ⊕ rk_word[39;00m
-[32m---> [39m[32m20[39m T = [43mX1[49m[43m [49m[43m^[49m[43m [49m[43mX2[49m[43m [49m[43m^[49m[43m [49m[43mX3[49m[43m [49m[43m^[49m[43m [49m[43mrk_word[49m
-[32m     22[39m [38;5;66;03m# 提取目标字节[39;00m
-[32m     23[39m byte_pos = [32m3[39m - (target_byte % [32m4[39m)  [38;5;66;03m# 字节顺序：最高位字节到最低位字节[39;00m
+Cell In[125], line 20, in generate_hypotheses_sm4_first_round(plaintext, rk_word, target_byte)
+     17 X0, X1, X2, X3 = X
+     19 # 计算 T = X1 ⊕ X2 ⊕ X3 ⊕ rk_word
+---> 20 T = X1 ^ X2 ^ X3 ^ rk_word
+     22 # 提取目标字节
+     23 byte_pos = 3 - (target_byte % 4)  # 字节顺序：最高位字节到最低位字节
 
-[31mOverflowError[39m: Python integer 16777216 out of bounds for uint8
+OverflowError: Python integer 16777216 out of bounds for uint8
 ```
 
 
@@ -1167,31 +1167,31 @@ plt.show()
 使用修复的函数进行CPA攻击...
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mOverflowError[39m                             Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[126][39m[32m, line 54[39m
-[32m     52[39m [38;5;28mprint[39m([33m"[39m[33m使用修复的函数进行CPA攻击...[39m[33m"[39m)
-[32m     53[39m target_byte = [32m0[39m
-[32m---> [39m[32m54[39m corr_matrix_fixed = [43mcpa_attack_sm4_round_fixed[49m[43m([49m[43mtraces[49m[43m,[49m[43m [49m[43mplaintexts[49m[43m,[49m[43m [49m[43mtarget_byte[49m[43m)[49m
-[32m     56[39m [38;5;66;03m# 分析结果[39;00m
-[32m     57[39m max_corrs_fixed = np.max(corr_matrix_fixed, axis=[32m1[39m)
+---------------------------------------------------------------------------
+OverflowError                             Traceback (most recent call last)
+Cell In[126], line 54
+     52 print("使用修复的函数进行CPA攻击...")
+     53 target_byte = 0
+---> 54 corr_matrix_fixed = cpa_attack_sm4_round_fixed(traces, plaintexts, target_byte)
+     56 # 分析结果
+     57 max_corrs_fixed = np.max(corr_matrix_fixed, axis=1)
 
-[36mCell[39m[36m [39m[32mIn[126][39m[32m, line 41[39m, in [36mcpa_attack_sm4_round_fixed[39m[34m(traces_data, plaintexts_data, target_byte)[39m
-[32m     38[39m [38;5;28;01mfor[39;00m i [38;5;129;01min[39;00m [38;5;28mrange[39m(n_traces):
-[32m     39[39m     [38;5;66;03m# 创建32位轮密钥猜测（只设置目标字节）[39;00m
-[32m     40[39m     rk_word = (rk_byte_guess << ([32m8[39m * ([32m3[39m - (target_byte % [32m4[39m)))) & [32m0xFFFFFFFF[39m
-[32m---> [39m[32m41[39m     sbox_out = [43mgenerate_hypotheses_sm4_first_round_fixed[49m[43m([49m[43mplaintexts_data[49m[43m[[49m[43mi[49m[43m][49m[43m,[49m[43m [49m[43mrk_word[49m[43m,[49m[43m [49m[43mtarget_byte[49m[43m)[49m
-[32m     42[39m     hypotheses[i] = hamming_weight(sbox_out)
-[32m     44[39m [38;5;66;03m# 计算相关系数[39;00m
+Cell In[126], line 41, in cpa_attack_sm4_round_fixed(traces_data, plaintexts_data, target_byte)
+     38 for i in range(n_traces):
+     39     # 创建32位轮密钥猜测（只设置目标字节）
+     40     rk_word = (rk_byte_guess << (8 * (3 - (target_byte % 4)))) & 0xFFFFFFFF
+---> 41     sbox_out = generate_hypotheses_sm4_first_round_fixed(plaintexts_data[i], rk_word, target_byte)
+     42     hypotheses[i] = hamming_weight(sbox_out)
+     44 # 计算相关系数
 
-[36mCell[39m[36m [39m[32mIn[126][39m[32m, line 14[39m, in [36mgenerate_hypotheses_sm4_first_round_fixed[39m[34m(plaintext, rk_word, target_byte)[39m
-[32m     11[39m rk_word = rk_word & [32m0xFFFFFFFF[39m
-[32m     13[39m [38;5;66;03m# 计算 T = X1 ⊕ X2 ⊕ X3 ⊕ rk_word[39;00m
-[32m---> [39m[32m14[39m T = [43m([49m[43mX1[49m[43m [49m[43m^[49m[43m [49m[43mX2[49m[43m [49m[43m^[49m[43m [49m[43mX3[49m[43m [49m[43m^[49m[43m [49m[43mrk_word[49m[43m)[49m[43m [49m[43m&[49m[43m [49m[32;43m0xFFFFFFFF[39;49m
-[32m     16[39m [38;5;66;03m# 提取目标字节[39;00m
-[32m     17[39m byte_pos = [32m3[39m - (target_byte % [32m4[39m)  [38;5;66;03m# 字节顺序：最高位字节到最低位字节[39;00m
+Cell In[126], line 14, in generate_hypotheses_sm4_first_round_fixed(plaintext, rk_word, target_byte)
+     11 rk_word = rk_word & 0xFFFFFFFF
+     13 # 计算 T = X1 ⊕ X2 ⊕ X3 ⊕ rk_word
+---> 14 T = (X1 ^ X2 ^ X3 ^ rk_word) & 0xFFFFFFFF
+     16 # 提取目标字节
+     17 byte_pos = 3 - (target_byte % 4)  # 字节顺序：最高位字节到最低位字节
 
-[31mOverflowError[39m: Python int too large to convert to C long
+OverflowError: Python int too large to convert to C long
 ```
 
 
@@ -1534,9 +1534,9 @@ def cpa_attack_simple(traces_data, plaintexts_data, target_byte):
     return correlation_matrix
 
 # 加载数据
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
+plain_path = 'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'
+cipher_path = 'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy'
+wave_path = 'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
 
 plaintexts = np.load(plain_path)
 ciphertexts = np.load(cipher_path)
@@ -1852,32 +1852,32 @@ print("这需要SM4的密钥扩展算法逆向")
 测试SM4实现...
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mIndexError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[133][39m[32m, line 119[39m
-[32m    116[39m test_plain = [33mb[39m[33m'[39m[38;5;130;01m\x01[39;00m[38;5;130;01m\x23[39;00m[38;5;130;01m\x45[39;00m[38;5;130;01m\x67[39;00m[38;5;130;01m\x89[39;00m[38;5;130;01m\xab[39;00m[38;5;130;01m\xcd[39;00m[38;5;130;01m\xef[39;00m[38;5;130;01m\xfe[39;00m[38;5;130;01m\xdc[39;00m[38;5;130;01m\xba[39;00m[38;5;130;01m\x98[39;00m[38;5;130;01m\x76[39;00m[38;5;130;01m\x54[39;00m[38;5;130;01m\x32[39;00m[38;5;130;01m\x10[39;00m[33m'[39m
-[32m    117[39m test_key = [33mb[39m[33m'[39m[38;5;130;01m\x01[39;00m[38;5;130;01m\x23[39;00m[38;5;130;01m\x45[39;00m[38;5;130;01m\x67[39;00m[38;5;130;01m\x89[39;00m[38;5;130;01m\xab[39;00m[38;5;130;01m\xcd[39;00m[38;5;130;01m\xef[39;00m[38;5;130;01m\xfe[39;00m[38;5;130;01m\xdc[39;00m[38;5;130;01m\xba[39;00m[38;5;130;01m\x98[39;00m[38;5;130;01m\x76[39;00m[38;5;130;01m\x54[39;00m[38;5;130;01m\x32[39;00m[38;5;130;01m\x10[39;00m[33m'[39m
-[32m--> [39m[32m119[39m cipher = [43msm4_encrypt_block[49m[43m([49m[43mtest_plain[49m[43m,[49m[43m [49m[43mtest_key[49m[43m)[49m
-[32m    120[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m测试明文: [39m[38;5;132;01m{[39;00mtest_plain.hex()[38;5;132;01m}[39;00m[33m"[39m)
-[32m    121[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m测试密钥: [39m[38;5;132;01m{[39;00mtest_key.hex()[38;5;132;01m}[39;00m[33m"[39m)
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+Cell In[133], line 119
+    116 test_plain = b'\x01\x23\x45\x67\x89\xab\xcd\xef\xfe\xdc\xba\x98\x76\x54\x32\x10'
+    117 test_key = b'\x01\x23\x45\x67\x89\xab\xcd\xef\xfe\xdc\xba\x98\x76\x54\x32\x10'
+--> 119 cipher = sm4_encrypt_block(test_plain, test_key)
+    120 print(f"测试明文: {test_plain.hex()}")
+    121 print(f"测试密钥: {test_key.hex()}")
 
-[36mCell[39m[36m [39m[32mIn[133][39m[32m, line 88[39m, in [36msm4_encrypt_block[39m[34m(plaintext, mk)[39m
-[32m     85[39m     [38;5;28;01mreturn[39;00m X0 ^ T_val
-[32m     87[39m [38;5;66;03m# 密钥扩展[39;00m
-[32m---> [39m[32m88[39m rk = [43mkey_expansion[49m[43m([49m[43mplaintext[49m[43m.[49m[43mtolist[49m[43m([49m[43m)[49m[43m [49m[38;5;28;43;01mif[39;49;00m[43m [49m[38;5;28;43misinstance[39;49m[43m([49m[43mplaintext[49m[43m,[49m[43m [49m[43mnp[49m[43m.[49m[43mndarray[49m[43m)[49m[43m [49m[38;5;28;43;01melse[39;49;00m[43m [49m[43mplaintext[49m[43m)[49m
-[32m     90[39m [38;5;66;03m# 将明文转换为4个32位字[39;00m
-[32m     91[39m X = []
+Cell In[133], line 88, in sm4_encrypt_block(plaintext, mk)
+     85     return X0 ^ T_val
+     87 # 密钥扩展
+---> 88 rk = key_expansion(plaintext.tolist() if isinstance(plaintext, np.ndarray) else plaintext)
+     90 # 将明文转换为4个32位字
+     91 X = []
 
-[36mCell[39m[36m [39m[32mIn[133][39m[32m, line 57[39m, in [36msm4_encrypt_block.<locals>.key_expansion[39m[34m(mk)[39m
-[32m     54[39m [38;5;28;01mif[39;00m i < [32m4[39m:
-[32m     55[39m     [38;5;66;03m# 前4轮[39;00m
-[32m     56[39m     x = K[i] ^ K[i+[32m1[39m] ^ K[i+[32m2[39m] ^ CK[i]
-[32m---> [39m[32m57[39m     rk_i = [43mK[49m[43m[[49m[43mi[49m[43m+[49m[32;43m3[39;49m[43m][49m ^ T_prime(x)
-[32m     58[39m [38;5;28;01melse[39;00m:
-[32m     59[39m     [38;5;66;03m# 后续轮[39;00m
-[32m     60[39m     x = rk[i-[32m4[39m] ^ rk[i-[32m3[39m] ^ rk[i-[32m2[39m] ^ CK[i]
+Cell In[133], line 57, in sm4_encrypt_block.<locals>.key_expansion(mk)
+     54 if i < 4:
+     55     # 前4轮
+     56     x = K[i] ^ K[i+1] ^ K[i+2] ^ CK[i]
+---> 57     rk_i = K[i+3] ^ T_prime(x)
+     58 else:
+     59     # 后续轮
+     60     x = rk[i-4] ^ rk[i-3] ^ rk[i-2] ^ CK[i]
 
-[31mIndexError[39m: list index out of range
+IndexError: list index out of range
 ```
 
 

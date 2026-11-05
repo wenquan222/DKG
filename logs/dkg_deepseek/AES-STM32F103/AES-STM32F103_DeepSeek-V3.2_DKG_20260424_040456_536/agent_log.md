@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'
+帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'"
+"帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -493,9 +493,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 加载数据
-plaintext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'
-ciphertext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'
+plaintext_path = 'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'
+ciphertext_path = 'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy'
+wave_path = 'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'
 
 plaintext = np.load(plaintext_path)
 ciphertext = np.load(ciphertext_path)
@@ -616,8 +616,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_1860\1653778022.py:61: UserWarnin
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy",
-  "data_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
+  "wave_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy",
+  "data_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
   "data_type": "plaintext",
   "byte_index": 0,
   "model": "HW"
@@ -645,10 +645,10 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_1860\1653778022.py:61: UserWarnin
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy",
+  "wave_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy",
   "weight": 3,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy"
+  "plaintext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy"
 }
 ```
 </details>
@@ -656,15 +656,15 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_1860\1653778022.py:61: UserWarnin
 <details><summary><b>📋 ← `weighted_moving_average`</b> (1564 chars)</summary>
 
 ```
-{"out_wave_npy": "smoothed_20260424_040613_583395.npy", "plot_path": "smooth_compare_20260424_040613_583395.png", "n_traces": 250, "n_points": 1500, "weight": 3, "plaintext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy", "ciphertext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy"}
+{"out_wave_npy": "smoothed_20260424_040613_583395.npy", "plot_path": "smooth_compare_20260424_040613_583395.png", "n_traces": 250, "n_points": 1500, "weight": 3, "plaintext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy", "ciphertext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy"}
 <>:25: SyntaxWarning: "is not" with a literal. Did you mean "!="?
 <>:27: SyntaxWarning: "is not" with a literal. Did you mean "!="?
 <>:25: SyntaxWarning: "is not" with a literal. Did you mean "!="?
 <>:27: SyntaxWarning: "is not" with a literal. Did you mean "!="?
 C:\Users\Andersen\AppData\Local\Temp\ipykernel_1860\993782142.py:25: SyntaxWarning: "is not" with a literal. Did you mean "!="?
-  if "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy" is not None:
+  if "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy" is not None:
 C:\Users\Andersen\AppData\Local\Temp\ipykernel_1860\993782142.py:27: SyntaxWarning: "is not" with a literal. Did you mean "!="?
-  if "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103
+  if "data/traces/AES-128-STM32F103
 ...(truncated)
 ```
 </details>
@@ -680,7 +680,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_1860\993782142.py:27: SyntaxWarni
 **🤖 LLM:** 现在让我对平滑后的波形进行直接CPA攻击。根据DKG知识，对于STM32F103这样的32位MCU软件实现，我应该使用S-box输出和汉明重量模型：
 
 **🔧 → `aes_cpa_attack`** `{
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
+  "plaintext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
   "wave_npy": "smoothed_20260424_040613_583395.npy",
   "candidates": 20,
   "leakage_model": "HW",
@@ -717,8 +717,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_1860\993782142.py:27: SyntaxWarni
   "algorithm": "AES",
   "mode": "ECB",
   "operation": "encrypt",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy",
+  "plaintext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy",
   "trace_index": 0
 }
 ```
@@ -778,16 +778,16 @@ for byte_idx in low_conf_bytes:
 低置信度字节分析:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mKeyError[39m                                  Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[99][39m[32m, line 8[39m
-[32m      5[39m     detail = json.load(f)
-[32m      7[39m [38;5;28mprint[39m([33m"[39m[33m低置信度字节分析:[39m[33m"[39m)
-[32m----> [39m[32m8[39m [38;5;28;01mfor[39;00m byte_info [38;5;129;01min[39;00m [43mdetail[49m[43m[[49m[33;43m'[39;49m[33;43mper_byte[39;49m[33;43m'[39;49m[43m][49m:
-[32m      9[39m     byte = byte_info[[33m'[39m[33mbyte[39m[33m'[39m]
-[32m     10[39m     gap_pct = byte_info[[33m'[39m[33mgap_pct[39m[33m'[39m]
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+Cell In[99], line 8
+      5     detail = json.load(f)
+      7 print("低置信度字节分析:")
+----> 8 for byte_info in detail['per_byte']:
+      9     byte = byte_info['byte']
+     10     gap_pct = byte_info['gap_pct']
 
-[31mKeyError[39m: 'per_byte'
+KeyError: 'per_byte'
 ```
 
 
@@ -887,16 +887,16 @@ results长度: 16
 各字节的gap_pct:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mKeyError[39m                                  Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[101][39m[32m, line 19[39m
-[32m     17[39m [38;5;28;01mfor[39;00m i, result [38;5;129;01min[39;00m [38;5;28menumerate[39m(results):
-[32m     18[39m     byte = result[[33m'[39m[33mbyte[39m[33m'[39m]
-[32m---> [39m[32m19[39m     gap_pct = [43mresult[49m[43m[[49m[33;43m'[39;49m[33;43mgap_pct[39;49m[33;43m'[39;49m[43m][49m
-[32m     20[39m     key = result[[33m'[39m[33mkey[39m[33m'[39m]
-[32m     21[39m     correlation = result[[33m'[39m[33mcorrelation[39m[33m'[39m]
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+Cell In[101], line 19
+     17 for i, result in enumerate(results):
+     18     byte = result['byte']
+---> 19     gap_pct = result['gap_pct']
+     20     key = result['key']
+     21     correlation = result['correlation']
 
-[31mKeyError[39m: 'gap_pct'
+KeyError: 'gap_pct'
 ```
 
 
@@ -940,16 +940,16 @@ print("\n现在使用key_search工具搜索正确密钥...")
 低置信度字节的候选密钥分析:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mKeyError[39m                                  Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[102][39m[32m, line 11[39m
-[32m      9[39m [38;5;28mprint[39m([33m"[39m[33m低置信度字节的候选密钥分析:[39m[33m"[39m)
-[32m     10[39m [38;5;28;01mfor[39;00m byte_idx [38;5;129;01min[39;00m low_conf_bytes:
-[32m---> [39m[32m11[39m     [38;5;28;01mif[39;00m [38;5;28mstr[39m(byte_idx) [38;5;129;01min[39;00m [43mdetail[49m[43m[[49m[33;43m'[39;49m[33;43mcandidates[39;49m[33;43m'[39;49m[43m][49m:
-[32m     12[39m         cands = detail[[33m'[39m[33mcandidates[39m[33m'[39m][[38;5;28mstr[39m(byte_idx)]
-[32m     13[39m         [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33m字节 [39m[38;5;132;01m{[39;00mbyte_idx[38;5;132;01m}[39;00m[33m: [39m[38;5;132;01m{[39;00m[38;5;28mlen[39m(cands)[38;5;132;01m}[39;00m[33m个候选[39m[33m"[39m)
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+Cell In[102], line 11
+      9 print("低置信度字节的候选密钥分析:")
+     10 for byte_idx in low_conf_bytes:
+---> 11     if str(byte_idx) in detail['candidates']:
+     12         cands = detail['candidates'][str(byte_idx)]
+     13         print(f"\n字节 {byte_idx}: {len(cands)}个候选")
 
-[31mKeyError[39m: 'candidates'
+KeyError: 'candidates'
 ```
 
 
@@ -968,8 +968,8 @@ print("\n现在使用key_search工具搜索正确密钥...")
   "algorithm": "AES",
   "recovered_key_hex": "11F5D6449766770D99AABBCC50EEFF00",
   "cpa_detail_file": "cpa_detail_20260424_040625_857857.json",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy",
+  "plaintext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy",
   "gap_threshold": 0.15,
   "max_candidates_per_byte": 20,
   "max_combinations": 50000
@@ -995,8 +995,8 @@ print("\n现在使用key_search工具搜索正确密钥...")
   "algorithm": "AES",
   "recovered_key_hex": "11F5D6449766770D99AABBCC50EEFF00",
   "cpa_detail_file": "cpa_detail_20260424_040625_857857.json",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy",
+  "plaintext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy",
   "gap_threshold": 0.15,
   "max_candidates_per_byte": 30,
   "max_combinations": 200000
@@ -1094,8 +1094,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_1860\1354780626.py:41: UserWarnin
   "length": 100,
   "max_shift": 200,
   "threshold": 85,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy"
+  "plaintext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy"
 }
 ```
 </details>

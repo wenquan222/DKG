@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
+帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'"
+"帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -513,9 +513,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load the data
-plaintext = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy')
-ciphertext = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy')
-wave = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy')
+plaintext = np.load('data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy')
+ciphertext = np.load('data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy')
+wave = np.load('data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy')
 
 print(f"Plaintext shape: {plaintext.shape}, dtype: {plaintext.dtype}")
 print(f"Ciphertext shape: {ciphertext.shape}, dtype: {ciphertext.dtype}")
@@ -560,16 +560,16 @@ Ciphertext shape: (100, 16), dtype: uint8
 Wave shape: (100, 6500), dtype: float32
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mAttributeError[39m                            Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[156][39m[32m, line 14[39m
-[32m     11[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33mWave shape: [39m[38;5;132;01m{[39;00mwave.shape[38;5;132;01m}[39;00m[33m, dtype: [39m[38;5;132;01m{[39;00mwave.dtype[38;5;132;01m}[39;00m[33m"[39m)
-[32m     13[39m [38;5;66;03m# Check first few traces[39;00m
-[32m---> [39m[32m14[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33mFirst plaintext trace: [39m[38;5;132;01m{[39;00m[43mplaintext[49m[43m[[49m[32;43m0[39;49m[43m][49m[43m.[49m[43mhex[49m()[38;5;132;01m}[39;00m[33m"[39m)
-[32m     15[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33mFirst ciphertext trace: [39m[38;5;132;01m{[39;00mciphertext[[32m0[39m].hex()[38;5;132;01m}[39;00m[33m"[39m)
-[32m     17[39m [38;5;66;03m# Plot average waveform to identify encryption regions[39;00m
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Cell In[156], line 14
+     11 print(f"Wave shape: {wave.shape}, dtype: {wave.dtype}")
+     13 # Check first few traces
+---> 14 print(f"\nFirst plaintext trace: {plaintext[0].hex()}")
+     15 print(f"First ciphertext trace: {ciphertext[0].hex()}")
+     17 # Plot average waveform to identify encryption regions
 
-[31mAttributeError[39m: 'numpy.ndarray' object has no attribute 'hex'
+AttributeError: 'numpy.ndarray' object has no attribute 'hex'
 ```
 
 
@@ -590,9 +590,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load the data
-plaintext = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy')
-ciphertext = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy')
-wave = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy')
+plaintext = np.load('data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy')
+ciphertext = np.load('data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy')
+wave = np.load('data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy')
 
 print(f"Plaintext shape: {plaintext.shape}, dtype: {plaintext.dtype}")
 print(f"Ciphertext shape: {ciphertext.shape}, dtype: {ciphertext.dtype}")
@@ -672,8 +672,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_22020\157781.py:37: UserWarning: 
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
   "round_index": 0,
   "target": "S-box_out",
   "leakage_model": "HW",
@@ -712,8 +712,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_22020\157781.py:37: UserWarning: 
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
-  "data_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
+  "data_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
   "data_type": "plaintext",
   "byte_index": 0,
   "model": "HW"
@@ -747,7 +747,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_22020\157781.py:37: UserWarning: 
 import numpy as np
 import matplotlib.pyplot as plt
 
-wave = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy')
+wave = np.load('data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy')
 
 # Find variance peaks
 var_wave = np.var(wave, axis=0)
@@ -813,8 +813,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_22020\3296963312.py:27: UserWarni
 import numpy as np
 import matplotlib.pyplot as plt
 
-wave = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy')
-plaintext = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy')
+wave = np.load('data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy')
+plaintext = np.load('data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy')
 
 # Plot a few individual traces to see the structure
 plt.figure(figsize=(15, 5))
@@ -881,13 +881,13 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_22020\858868594.py:44: UserWarnin
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
   "start": 1513,
   "length": 120,
   "max_shift": 200,
   "threshold": 85,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy"
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "ciphertext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy"
 }
 ```
 </details>
@@ -1068,8 +1068,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_22020\2560494752.py:54: RuntimeWa
   "algorithm": "SM4",
   "mode": "ECB",
   "operation": "encrypt",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "ciphertext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy",
   "trace_index": 0
 }
 ```
@@ -1100,8 +1100,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_22020\2560494752.py:54: RuntimeWa
   "algorithm": "SM4",
   "mode": "ECB",
   "operation": "encrypt",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "ciphertext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy",
   "trace_index": 50
 }
 ```
@@ -1128,8 +1128,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_22020\2560494752.py:54: RuntimeWa
   "algorithm": "SM4",
   "mode": "ECB",
   "operation": "encrypt",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "ciphertext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy",
   "trace_index": 99
 }
 ```

@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'
+帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'"
+"帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -141,9 +141,9 @@ print(os.listdir())
 
 # 加载数据
 print("\n加载数据...")
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'
+plain_path = 'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'
+cipher_path = 'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy'
+wave_path = 'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'
 
 plain = np.load(plain_path)
 cipher = np.load(cipher_path)
@@ -172,7 +172,7 @@ for i in range(min(5, len(cipher))):
 <details><summary><b>📋 ← `python_jupyter`</b> (996 chars)</summary>
 
 ```
-当前工作目录: F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\DKG\logs\exp_python_only\AES-STM32F103_DeepSeek-V3.2_NoKG_20260508_211127_810
+当前工作目录: logs\exp_python_only\AES-STM32F103_DeepSeek-V3.2_NoKG_20260508_211127_810
 
 目录内容:
 ['agent_log.md']
@@ -1095,34 +1095,34 @@ print(f"- 正确密钥与次佳密钥的差距: {gaps[-1]:.4f}")
   使用 250 条轨迹: 最佳密钥=0x11, 相关性=0.4777
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mAxisError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[58][39m[32m, line 69[39m
-[32m     67[39m [38;5;28;01mfor[39;00m i, n [38;5;129;01min[39;00m [38;5;28menumerate[39m(trace_counts):
-[32m     68[39m     correlations = corrs_list[i]
-[32m---> [39m[32m69[39m     max_corrs = [43mnp[49m[43m.[49m[43mmax[49m[43m([49m[43mnp[49m[43m.[49m[43mabs[49m[43m([49m[43mcorrelations[49m[43m)[49m[43m,[49m[43m [49m[43maxis[49m[43m=[49m[32;43m1[39;49m[43m)[49m
-[32m     70[39m     sorted_keys = np.argsort(max_corrs)[::-[32m1[39m]
-[32m     72[39m     [38;5;28;01mif[39;00m sorted_keys[[32m0[39m] == recovered_key[[32m0[39m]:
+---------------------------------------------------------------------------
+AxisError                                 Traceback (most recent call last)
+Cell In[58], line 69
+     67 for i, n in enumerate(trace_counts):
+     68     correlations = corrs_list[i]
+---> 69     max_corrs = np.max(np.abs(correlations), axis=1)
+     70     sorted_keys = np.argsort(max_corrs)[::-1]
+     72     if sorted_keys[0] == recovered_key[0]:
 
-[36mFile [39m[32mF:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\numpy\_core\fromnumeric.py:3164[39m, in [36mmax[39m[34m(a, axis, out, keepdims, initial, where)[39m
-[32m   3052[39m [38;5;129m@array_function_dispatch[39m(_max_dispatcher)
-[32m   3053[39m [38;5;129m@set_module[39m([33m'[39m[33mnumpy[39m[33m'[39m)
-[32m   3054[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mmax[39m(a, axis=[38;5;28;01mNone[39;00m, out=[38;5;28;01mNone[39;00m, keepdims=np._NoValue, initial=np._NoValue,
-[32m   3055[39m          where=np._NoValue):
-[32m   3056[39m [38;5;250m    [39m[33;03m"""[39;00m
-[32m   3057[39m [33;03m    Return the maximum of an array or maximum along an axis.[39;00m
-[32m   3058[39m 
-[32m   (...)[39m[32m   3162[39m [33;03m    5[39;00m
-[32m   3163[39m [33;03m    """[39;00m
-[32m-> [39m[32m3164[39m     [38;5;28;01mreturn[39;00m [43m_wrapreduction[49m[43m([49m[43ma[49m[43m,[49m[43m [49m[43mnp[49m[43m.[49m[43mmaximum[49m[43m,[49m[43m [49m[33;43m'[39;49m[33;43mmax[39;49m[33;43m'[39;49m[43m,[49m[43m [49m[43maxis[49m[43m,[49m[43m [49m[38;5;28;43;01mNone[39;49;00m[43m,[49m[43m [49m[43mout[49m[43m,[49m
-[32m   3165[39m [43m                          [49m[43mkeepdims[49m[43m=[49m[43mkeepdims[49m[43m,[49m[43m [49m[43minitial[49m[43m=[49m[43minitial[49m[43m,[49m[43m [49m[43mwhere[49m[43m=[49m[43mwhere[49m[43m)[49m
+File .venv\Lib\site-packages\numpy\_core\fromnumeric.py:3164, in max(a, axis, out, keepdims, initial, where)
+   3052 @array_function_dispatch(_max_dispatcher)
+   3053 @set_module('numpy')
+   3054 def max(a, axis=None, out=None, keepdims=np._NoValue, initial=np._NoValue,
+   3055          where=np._NoValue):
+   3056     """
+   3057     Return the maximum of an array or maximum along an axis.
+   3058 
+   (...)   3162     5
+   3163     """
+-> 3164     return _wrapreduction(a, np.maximum, 'max', axis, None, out,
+   3165                           keepdims=keepdims, initial=initial, where=where)
 
-[36mFile [39m[32mF:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\numpy\_core\fromnumeric.py:86[39m, in [36m_wrapreduction[39m[34m(obj, ufunc, method, axis, dtype, out, **kwargs)[39m
-[32m     83[39m         [38;5;28;01melse[39;00m:
-[32m     84[39m             [38;5;28;01mreturn[39;00m reduction(axis=axis, out=out, **passkwargs)
-[32m---> [39m[32m86[39m [38;5;28;01mreturn[39;00m [43mufunc[49m[43m.[49m[43mreduce[49m[43m([49m[43mobj[49m[43m,[49m[43m [49m[43maxis[49m[43m,[49m[43m [49m[43mdtype[49m[43m,[49m[43m [49m[43mout[49m[43m,[49m[43m [49m[43m*[49m[43m*[49m[43mpasskwargs[49m[43m)[49m
+File .venv\Lib\site-packages\numpy\_core\fromnumeric.py:86, in _wrapreduction(obj, ufunc, method, axis, dtype, out, **kwargs)
+     83         else:
+     84             return reduction(axis=axis, out=out, **passkwargs)
+---> 86 return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
 
-[31mAxisError[39m: axis 1 is out of bounds for array of dimension 1
+AxisError: axis 1 is out of bounds for array of dimension 1
 ```
 
 

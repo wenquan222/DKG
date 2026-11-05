@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
+帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'"
+"帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -472,9 +472,9 @@ import matplotlib.pyplot as plt
 import os
 
 # 加载数据
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
+plain_path = 'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'
+cipher_path = 'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy'
+wave_path = 'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
 
 plaintexts = np.load(plain_path)
 ciphertexts = np.load(cipher_path)
@@ -1198,38 +1198,38 @@ print(f"  相关性标准差: {np.std(all_corrs):.4f}")
 ```
 尝试在第一轮进行直接CPA攻击...
 使用高方差区域: 6160-6210
-F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
   c /= stddev[:, None]
-F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
   c /= stddev[None, :]
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mOverflowError[39m                             Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[104][39m[32m, line 95[39m
-[32m     92[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m使用高方差区域: 6160-6210[39m[33m"[39m)
-[32m     94[39m [38;5;66;03m# 尝试攻击第一轮的第一个字节（字节0）[39;00m
-[32m---> [39m[32m95[39m correlations, best_key, best_corr, all_corrs = [43msm4_cpa_round1_sbox_out[49m[43m([49m
-[32m     96[39m [43m    [49m[43mtraces[49m[43m,[49m[43m [49m[43mplaintexts[49m[43m,[49m[43m [49m
-[32m     97[39m [43m    [49m[43mtarget_word_idx[49m[43m=[49m[32;43m0[39;49m[43m,[49m[43m  [49m[38;5;66;43;03m# 假设攻击X1相关的S-box[39;49;00m
-[32m     98[39m [43m    [49m[43mtarget_byte_idx[49m[43m=[49m[32;43m0[39;49m[43m,[49m[43m  [49m[38;5;66;43;03m# 第一个字节[39;49;00m
-[32m     99[39m [43m    [49m[43mleakage_model[49m[43m=[49m[33;43m'[39;49m[33;43mHW[39;49m[33;43m'[39;49m[43m,[49m
-[32m    100[39m [43m    [49m[43msample_start[49m[43m=[49m[32;43m6100[39;49m[43m,[49m
-[32m    101[39m [43m    [49m[43msample_end[49m[43m=[49m[32;43m6250[39;49m
-[32m    102[39m [43m)[49m
-[32m    104[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m第一轮字节0 CPA结果:[39m[33m"[39m)
-[32m    105[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  最佳密钥猜测: [39m[38;5;132;01m{[39;00mbest_key[38;5;132;01m:[39;00m[33m02x[39m[38;5;132;01m}[39;00m[33m"[39m)
+---------------------------------------------------------------------------
+OverflowError                             Traceback (most recent call last)
+Cell In[104], line 95
+     92 print(f"使用高方差区域: 6160-6210")
+     94 # 尝试攻击第一轮的第一个字节（字节0）
+---> 95 correlations, best_key, best_corr, all_corrs = sm4_cpa_round1_sbox_out(
+     96     traces, plaintexts, 
+     97     target_word_idx=0,  # 假设攻击X1相关的S-box
+     98     target_byte_idx=0,  # 第一个字节
+     99     leakage_model='HW',
+    100     sample_start=6100,
+    101     sample_end=6250
+    102 )
+    104 print(f"第一轮字节0 CPA结果:")
+    105 print(f"  最佳密钥猜测: {best_key:02x}")
 
-[36mCell[39m[36m [39m[32mIn[104][39m[32m, line 58[39m, in [36msm4_cpa_round1_sbox_out[39m[34m(traces, plaintexts, target_word_idx, target_byte_idx, leakage_model, sample_start, sample_end)[39m
-[32m     53[39m rk_guess = key_guess << ([32m8[39m * ([32m3[39m - target_byte_idx))
-[32m     55[39m [38;5;66;03m# 计算中间值[39;00m
-[32m     56[39m [38;5;66;03m# 注意：这里我们假设攻击的是第一轮的第一个S-box[39;00m
-[32m     57[39m [38;5;66;03m# 实际上，SM4第一轮有4个并行的S-box操作[39;00m
-[32m---> [39m[32m58[39m intermediate = [43mX[49m[43m[[49m[32;43m1[39;49m[43m][49m[43m [49m[43m^[49m[43m [49m[43mX[49m[43m[[49m[32;43m2[39;49m[43m][49m[43m [49m[43m^[49m[43m [49m[43mX[49m[43m[[49m[32;43m3[39;49m[43m][49m[43m [49m[43m^[49m[43m [49m[43mrk_guess[49m
-[32m     60[39m [38;5;66;03m# 提取目标字节[39;00m
-[32m     61[39m byte_val = (intermediate >> ([32m8[39m * ([32m3[39m - target_byte_idx))) & [32m0xFF[39m
+Cell In[104], line 58, in sm4_cpa_round1_sbox_out(traces, plaintexts, target_word_idx, target_byte_idx, leakage_model, sample_start, sample_end)
+     53 rk_guess = key_guess << (8 * (3 - target_byte_idx))
+     55 # 计算中间值
+     56 # 注意：这里我们假设攻击的是第一轮的第一个S-box
+     57 # 实际上，SM4第一轮有4个并行的S-box操作
+---> 58 intermediate = X[1] ^ X[2] ^ X[3] ^ rk_guess
+     60 # 提取目标字节
+     61 byte_val = (intermediate >> (8 * (3 - target_byte_idx))) & 0xFF
 
-[31mOverflowError[39m: Python integer 16777216 out of bounds for uint8
+OverflowError: Python integer 16777216 out of bounds for uint8
 ```
 
 
@@ -2888,31 +2888,31 @@ plt.show()
 验证我们猜测的密钥...
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mOverflowError[39m                             Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[110][39m[32m, line 152[39m
-[32m    150[39m [38;5;66;03m# 测试每个候选密钥[39;00m
-[32m    151[39m [38;5;28;01mfor[39;00m name, key [38;5;129;01min[39;00m candidate_keys:
-[32m--> [39m[32m152[39m     match, matched_count, total_tests = [43mencrypt_decrypt_verify[49m[43m([49m[43mkey[49m[43m,[49m[43m [49m[43mplaintexts[49m[43m,[49m[43m [49m[43mciphertexts[49m[43m,[49m[43m [49m[32;43m3[39;49m[43m)[49m
-[32m    153[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;132;01m{[39;00mname[38;5;132;01m}[39;00m[33m: [39m[38;5;132;01m{[39;00mkey.hex()[38;5;132;01m}[39;00m[33m"[39m)
-[32m    154[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  验证结果: [39m[38;5;132;01m{[39;00m[33m'[39m[33m匹配[39m[33m'[39m[38;5;250m [39m[38;5;28;01mif[39;00m[38;5;250m [39mmatch[38;5;250m [39m[38;5;28;01melse[39;00m[38;5;250m [39m[33m'[39m[33m不匹配[39m[33m'[39m[38;5;132;01m}[39;00m[33m ([39m[38;5;132;01m{[39;00mmatched_count[38;5;132;01m}[39;00m[33m/[39m[38;5;132;01m{[39;00mtotal_tests[38;5;132;01m}[39;00m[33m)[39m[33m"[39m)
+---------------------------------------------------------------------------
+OverflowError                             Traceback (most recent call last)
+Cell In[110], line 152
+    150 # 测试每个候选密钥
+    151 for name, key in candidate_keys:
+--> 152     match, matched_count, total_tests = encrypt_decrypt_verify(key, plaintexts, ciphertexts, 3)
+    153     print(f"{name}: {key.hex()}")
+    154     print(f"  验证结果: {'匹配' if match else '不匹配'} ({matched_count}/{total_tests})")
 
-[36mCell[39m[36m [39m[32mIn[110][39m[32m, line 98[39m, in [36mencrypt_decrypt_verify[39m[34m(candidate_key, plaintexts, ciphertexts, num_tests)[39m
-[32m     94[39m matched_count = [32m0[39m
-[32m     96[39m [38;5;28;01mfor[39;00m i [38;5;129;01min[39;00m [38;5;28mrange[39m([38;5;28mmin[39m(num_tests, [38;5;28mlen[39m(plaintexts))):
-[32m     97[39m     [38;5;66;03m# 使用候选密钥加密明文[39;00m
-[32m---> [39m[32m98[39m     encrypted = [43msm4_encrypt_block[49m[43m([49m[43mplaintexts[49m[43m[[49m[43mi[49m[43m][49m[43m,[49m[43m [49m[43mcandidate_key[49m[43m)[49m
-[32m    100[39m     [38;5;66;03m# 与真实密文比较[39;00m
-[32m    101[39m     [38;5;28;01mif[39;00m [38;5;28mbytes[39m(encrypted) == [38;5;28mbytes[39m(ciphertexts[i]):
+Cell In[110], line 98, in encrypt_decrypt_verify(candidate_key, plaintexts, ciphertexts, num_tests)
+     94 matched_count = 0
+     96 for i in range(min(num_tests, len(plaintexts))):
+     97     # 使用候选密钥加密明文
+---> 98     encrypted = sm4_encrypt_block(plaintexts[i], candidate_key)
+    100     # 与真实密文比较
+    101     if bytes(encrypted) == bytes(ciphertexts[i]):
 
-[36mCell[39m[36m [39m[32mIn[110][39m[32m, line 24[39m, in [36msm4_encrypt_block[39m[34m(plaintext, mk)[39m
-[32m     22[39m [38;5;66;03m# 32轮加密[39;00m
-[32m     23[39m [38;5;28;01mfor[39;00m i [38;5;129;01min[39;00m [38;5;28mrange[39m([32m32[39m):
-[32m---> [39m[32m24[39m     t = [43mX[49m[43m[[49m[43mi[49m[43m+[49m[32;43m1[39;49m[43m][49m[43m [49m[43m^[49m[43m [49m[43mX[49m[43m[[49m[43mi[49m[43m+[49m[32;43m2[39;49m[43m][49m[43m [49m[43m^[49m[43m [49m[43mX[49m[43m[[49m[43mi[49m[43m+[49m[32;43m3[39;49m[43m][49m[43m [49m[43m^[49m[43m [49m[43mrk[49m[43m[[49m[43mi[49m[43m][49m
-[32m     25[39m     t = sm4_tau(t)
-[32m     26[39m     t = sm4_l_function(t)
+Cell In[110], line 24, in sm4_encrypt_block(plaintext, mk)
+     22 # 32轮加密
+     23 for i in range(32):
+---> 24     t = X[i+1] ^ X[i+2] ^ X[i+3] ^ rk[i]
+     25     t = sm4_tau(t)
+     26     t = sm4_l_function(t)
 
-[31mOverflowError[39m: Python integer 973020122 out of bounds for uint8
+OverflowError: Python integer 973020122 out of bounds for uint8
 ```
 
 

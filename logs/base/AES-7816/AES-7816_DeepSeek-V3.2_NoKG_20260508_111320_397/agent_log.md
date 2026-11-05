@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
+帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'"
+"帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -139,9 +139,9 @@ print(os.listdir('.'))
 
 # 加载数据
 print("\n加载数据...")
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
+plain_path = 'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'
+cipher_path = 'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy'
+wave_path = 'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
 
 plaintexts = np.load(plain_path)
 ciphertexts = np.load(cipher_path)
@@ -163,7 +163,7 @@ print(f"明文字节数: {plaintexts.shape[1] if len(plaintexts.shape) > 1 else 
 ```
 </details>
 
-**📋 ← `python_jupyter`:** `当前工作目录: F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\DKG\logs\exp_python_only\AES-7816_DeepSeek-V3.2_NoKG_20260508_111320_397
+**📋 ← `python_jupyter`:** `当前工作目录: logs\exp_python_only\AES-7816_DeepSeek-V3.2_NoKG_20260508_111320_397
 
 目录内容:
 ['agent_log.md']
@@ -1249,25 +1249,25 @@ print("\n✅ CPA攻击流程完成！")
 CPA攻击详细结果:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mFileNotFoundError[39m                         Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[15][39m[32m, line 29[39m
-[32m     27[39m [38;5;66;03m# 显示JSON结果[39;00m
-[32m     28[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33mCPA攻击详细结果:[39m[33m"[39m)
-[32m---> [39m[32m29[39m [38;5;28;01mwith[39;00m [38;5;28;43mopen[39;49m[43m([49m[33;43m'[39;49m[33;43mcpa_final_results.json[39;49m[33;43m'[39;49m[43m,[49m[43m [49m[33;43m'[39;49m[33;43mr[39;49m[33;43m'[39;49m[43m)[49m [38;5;28;01mas[39;00m f:
-[32m     30[39m     results = json.load(f)
-[32m     32[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m恢复的密钥 (十六进制): [39m[38;5;132;01m{[39;00mresults[[33m'[39m[33mrecovered_key_hex[39m[33m'[39m][38;5;132;01m}[39;00m[33m"[39m)
+---------------------------------------------------------------------------
+FileNotFoundError                         Traceback (most recent call last)
+Cell In[15], line 29
+     27 # 显示JSON结果
+     28 print("\nCPA攻击详细结果:")
+---> 29 with open('cpa_final_results.json', 'r') as f:
+     30     results = json.load(f)
+     32 print(f"恢复的密钥 (十六进制): {results['recovered_key_hex']}")
 
-[36mFile [39m[32mF:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\IPython\core\interactiveshell.py:343[39m, in [36m_modified_open[39m[34m(file, *args, **kwargs)[39m
-[32m    336[39m [38;5;28;01mif[39;00m file [38;5;129;01min[39;00m {[32m0[39m, [32m1[39m, [32m2[39m}:
-[32m    337[39m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(
-[32m    338[39m         [33mf[39m[33m"[39m[33mIPython won[39m[33m'[39m[33mt let you open fd=[39m[38;5;132;01m{[39;00mfile[38;5;132;01m}[39;00m[33m by default [39m[33m"[39m
-[32m    339[39m         [33m"[39m[33mas it is likely to crash IPython. If you know what you are doing, [39m[33m"[39m
-[32m    340[39m         [33m"[39m[33myou can use builtins[39m[33m'[39m[33m open.[39m[33m"[39m
-[32m    341[39m     )
-[32m--> [39m[32m343[39m [38;5;28;01mreturn[39;00m [43mio_open[49m[43m([49m[43mfile[49m[43m,[49m[43m [49m[43m*[49m[43margs[49m[43m,[49m[43m [49m[43m*[49m[43m*[49m[43mkwargs[49m[43m)[49m
+File .venv\Lib\site-packages\IPython\core\interactiveshell.py:343, in _modified_open(file, *args, **kwargs)
+    336 if file in {0, 1, 2}:
+    337     raise ValueError(
+    338         f"IPython won't let you open fd={file} by default "
+    339         "as it is likely to crash IPython. If you know what you are doing, "
+    340         "you can use builtins' open."
+    341     )
+--> 343 return io_open(file, *args, **kwargs)
 
-[31mFileNotFoundError[39m: [Errno 2] No such file or directory: 'cpa_final_results.json'
+FileNotFoundError: [Errno 2] No such file or directory: 'cpa_final_results.json'
 ```
 
 

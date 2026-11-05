@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
+帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'"
+"帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -239,9 +239,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 加载数据
-plaintext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'
-ciphertext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
+plaintext_path = 'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'
+ciphertext_path = 'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy'
+wave_path = 'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
 
 # 加载数据
 plaintext = np.load(plaintext_path)
@@ -407,9 +407,9 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_14288\2974701902.py:50: UserWarni
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy",
+  "plaintext_npy": "data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy",
+  "wave_npy": "data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy",
+  "ciphertext_npy": "data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy",
   "candidates": 30,
   "leakage_model": "HW",
   "target": "S-box_out"
@@ -451,8 +451,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_14288\2974701902.py:50: UserWarni
   "algorithm": "AES",
   "mode": "ECB",
   "operation": "encrypt",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy",
+  "plaintext_npy": "data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy",
   "trace_index": 0
 }
 ```
@@ -483,8 +483,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_14288\2974701902.py:50: UserWarni
   "algorithm": "AES",
   "recovered_key_hex": "115033445566778899AABBCCDDEEFF00",
   "cpa_detail_file": "cpa_detail_20260508_144900_216096.json",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy",
+  "plaintext_npy": "data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy",
   "gap_threshold": 0.15,
   "max_candidates_per_byte": 30,
   "max_combinations": 50000
@@ -515,8 +515,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_14288\2974701902.py:50: UserWarni
   "algorithm": "AES",
   "mode": "ECB",
   "operation": "encrypt",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy",
+  "plaintext_npy": "data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy",
   "trace_index": 0
 }
 ```
@@ -541,8 +541,8 @@ from Crypto.Cipher import AES
 import numpy as np
 
 # 加载数据
-plaintext = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy')
-ciphertext = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy')
+plaintext = np.load('data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy')
+ciphertext = np.load('data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy')
 
 # 正确的密钥
 correct_key = bytes.fromhex('112233445566778899AABBCCDDEEFF00')
@@ -672,16 +672,16 @@ Byte | Recovered | Correct | Status | Gap%
 --------------------------------------------------
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mKeyError[39m                                  Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[191][39m[32m, line 30[39m
-[32m     28[39m [38;5;66;03m# 获取该字节的gap_pct[39;00m
-[32m     29[39m gap_pct = [38;5;28;01mNone[39;00m
-[32m---> [39m[32m30[39m [38;5;28;01mfor[39;00m byte_info [38;5;129;01min[39;00m [43mcpa_detail[49m[43m[[49m[33;43m'[39;49m[33;43mper_byte[39;49m[33;43m'[39;49m[43m][49m:
-[32m     31[39m     [38;5;28;01mif[39;00m byte_info[[33m'[39m[33mbyte[39m[33m'[39m] == i:
-[32m     32[39m         gap_pct = byte_info[[33m'[39m[33mgap_pct[39m[33m'[39m]
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+Cell In[191], line 30
+     28 # 获取该字节的gap_pct
+     29 gap_pct = None
+---> 30 for byte_info in cpa_detail['per_byte']:
+     31     if byte_info['byte'] == i:
+     32         gap_pct = byte_info['gap_pct']
 
-[31mKeyError[39m: 'per_byte'
+KeyError: 'per_byte'
 ```
 
 

@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个STM32F429 MCU软件实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'
+帮我对一个STM32F429 MCU软件实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'，密文文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy',原始波形文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个STM32F429 MCU软件实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'"
+"帮我对一个STM32F429 MCU软件实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'，密文文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy',原始波形文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -140,9 +140,9 @@ import matplotlib.pyplot as plt
 import os
 
 # 检查文件是否存在
-plaintext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'
-ciphertext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'
+plaintext_path = 'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'
+ciphertext_path = 'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy'
+wave_path = 'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'
 
 print("文件检查:")
 print(f"明文文件存在: {os.path.exists(plaintext_path)}")
@@ -505,8 +505,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\1280174423.py:36: UserWarni
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy",
-  "data_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy",
+  "wave_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy",
+  "data_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy",
   "data_type": "plaintext",
   "byte_index": 0,
   "model": "HW"
@@ -534,8 +534,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\1280174423.py:36: UserWarni
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy",
+  "plaintext_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy",
+  "wave_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy",
   "target": "S-box_out",
   "leakage_model": "HW",
   "candidates": 30
@@ -571,8 +571,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\1280174423.py:36: UserWarni
   "algorithm": "AES",
   "mode": "ECB",
   "operation": "encrypt",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy",
+  "plaintext_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy",
   "trace_index": 0
 }
 ```
@@ -685,16 +685,16 @@ else:
 CPA攻击结果分析:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mKeyError[39m                                  Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[233][39m[32m, line 12[39m
-[32m      9[39m     cpa_detail = json.load(f)
-[32m     11[39m [38;5;28mprint[39m([33m"[39m[33mCPA攻击结果分析:[39m[33m"[39m)
-[32m---> [39m[32m12[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m恢复的密钥: [39m[38;5;132;01m{[39;00m[43mcpa_detail[49m[43m[[49m[33;43m'[39;49m[33;43mrecovered_key[39;49m[33;43m'[39;49m[43m][49m[38;5;132;01m}[39;00m[33m"[39m)
-[32m     13[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m平均相关性: [39m[38;5;132;01m{[39;00mcpa_detail[[33m'[39m[33mcpa_avg_correlation[39m[33m'[39m][38;5;132;01m:[39;00m[33m.4f[39m[38;5;132;01m}[39;00m[33m"[39m)
-[32m     14[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m最小相关性: [39m[38;5;132;01m{[39;00mcpa_detail[[33m'[39m[33mcpa_min_correlation[39m[33m'[39m][38;5;132;01m:[39;00m[33m.4f[39m[38;5;132;01m}[39;00m[33m"[39m)
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+Cell In[233], line 12
+      9     cpa_detail = json.load(f)
+     11 print("CPA攻击结果分析:")
+---> 12 print(f"恢复的密钥: {cpa_detail['recovered_key']}")
+     13 print(f"平均相关性: {cpa_detail['cpa_avg_correlation']:.4f}")
+     14 print(f"最小相关性: {cpa_detail['cpa_min_correlation']:.4f}")
 
-[31mKeyError[39m: 'recovered_key'
+KeyError: 'recovered_key'
 ```
 
 
@@ -764,8 +764,8 @@ print(f"\n恢复的密钥: {recovered_key}")
 from Crypto.Cipher import AES
 
 # 使用第一个轨迹的明文和密文验证
-plaintext = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy')
-ciphertext = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy')
+plaintext = np.load('data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy')
+ciphertext = np.load('data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy')
 
 key_bytes = bytes.fromhex(recovered_key)
 cipher = AES.new(key_bytes, AES.MODE_ECB)
@@ -790,16 +790,16 @@ print(f"  匹配: {ct == expected_ct}")
   最佳密钥: 0x00
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mKeyError[39m                                  Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[235][39m[32m, line 9[39m
-[32m      7[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33m字节 [39m[38;5;132;01m{[39;00mi[38;5;132;01m}[39;00m[33m:[39m[33m"[39m)
-[32m      8[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  最佳密钥: 0x[39m[38;5;132;01m{[39;00mbyte_result[[33m'[39m[33mbest_key[39m[33m'[39m][38;5;132;01m:[39;00m[33m02x[39m[38;5;132;01m}[39;00m[33m"[39m)
-[32m----> [39m[32m9[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  最佳相关性: [39m[38;5;132;01m{[39;00m[43mbyte_result[49m[43m[[49m[33;43m'[39;49m[33;43mbest_corr[39;49m[33;43m'[39;49m[43m][49m[38;5;132;01m:[39;00m[33m.4f[39m[38;5;132;01m}[39;00m[33m"[39m)
-[32m     10[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  时间索引: [39m[38;5;132;01m{[39;00mbyte_result[[33m'[39m[33mbest_time[39m[33m'[39m][38;5;132;01m}[39;00m[33m"[39m)
-[32m     11[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  候选密钥数量: [39m[38;5;132;01m{[39;00m[38;5;28mlen[39m(byte_result[[33m'[39m[33mcandidates[39m[33m'[39m])[38;5;132;01m}[39;00m[33m"[39m)
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+Cell In[235], line 9
+      7 print(f"\n字节 {i}:")
+      8 print(f"  最佳密钥: 0x{byte_result['best_key']:02x}")
+----> 9 print(f"  最佳相关性: {byte_result['best_corr']:.4f}")
+     10 print(f"  时间索引: {byte_result['best_time']}")
+     11 print(f"  候选密钥数量: {len(byte_result['candidates'])}")
 
-[31mKeyError[39m: 'best_corr'
+KeyError: 'best_corr'
 ```
 
 
@@ -834,8 +834,8 @@ try:
     cipher = AES.new(key_bytes, AES.MODE_ECB)
     
     # 使用第一个轨迹验证
-    plaintext = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy')
-    ciphertext = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy')
+    plaintext = np.load('data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy')
+    ciphertext = np.load('data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy')
     
     pt = bytes(plaintext[0])
     ct = cipher.encrypt(pt)

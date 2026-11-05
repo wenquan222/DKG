@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
+帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'"
+"帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -481,9 +481,9 @@ plt.rcParams['axes.unicode_minus'] = False
 
 # 加载数据
 print("正在加载数据...")
-plaintexts = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy')
-ciphertexts = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy')
-traces = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy')
+plaintexts = np.load('data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy')
+ciphertexts = np.load('data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy')
+traces = np.load('data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy')
 
 print(f"明文形状: {plaintexts.shape}")
 print(f"密文形状: {ciphertexts.shape}")
@@ -1076,9 +1076,9 @@ import os
 
 # 重新加载数据
 print("重新加载数据...")
-traces = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy')
-plaintexts = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy')
-ciphertexts = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy')
+traces = np.load('data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy')
+plaintexts = np.load('data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy')
+ciphertexts = np.load('data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy')
 
 print(f"数据加载完成: {traces.shape}")
 
@@ -2623,23 +2623,23 @@ print("\n分组攻击结果已保存到 grouped_attack_results.json")
 字节 15: 0x67, 相关性=0.0554
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mTypeError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[39][39m[32m, line 195[39m
-[32m    193[39m [38;5;66;03m# 保存分组攻击结果[39;00m
-[32m    194[39m [38;5;28;01mwith[39;00m [38;5;28mopen[39m([33m'[39m[33mgrouped_attack_results.json[39m[33m'[39m, [33m'[39m[33mw[39m[33m'[39m) [38;5;28;01mas[39;00m f:
-[32m--> [39m[32m195[39m     [43mjson[49m[43m.[49m[43mdump[49m[43m([49m[43m{[49m
-[32m    196[39m [43m        [49m[33;43m'[39;49m[33;43mkey[39;49m[33;43m'[39;49m[43m:[49m[43m [49m[43mrecovered_key[49m[43m.[49m[43mhex[49m[43m([49m[43m)[49m[43m,[49m
-[32m    197[39m [43m        [49m[33;43m'[39;49m[33;43mresults[39;49m[33;43m'[39;49m[43m:[49m[43m [49m[43m{[49m[38;5;28;43mstr[39;49m[43m([49m[43mk[49m[43m)[49m[43m:[49m[43m [49m[43mv[49m[43m [49m[38;5;28;43;01mfor[39;49;00m[43m [49m[43mk[49m[43m,[49m[43m [49m[43mv[49m[43m [49m[38;5;129;43;01min[39;49;00m[43m [49m[43mall_results[49m[43m.[49m[43mitems[49m[43m([49m[43m)[49m[43m}[49m
-[32m    198[39m [43m    [49m[43m}[49m[43m,[49m[43m [49m[43mf[49m[43m,[49m[43m [49m[43mindent[49m[43m=[49m[32;43m2[39;49m[43m)[49m
-[32m    200[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33m分组攻击结果已保存到 grouped_attack_results.json[39m[33m"[39m)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[39], line 195
+    193 # 保存分组攻击结果
+    194 with open('grouped_attack_results.json', 'w') as f:
+--> 195     json.dump({
+    196         'key': recovered_key.hex(),
+    197         'results': {str(k): v for k, v in all_results.items()}
+    198     }, f, indent=2)
+    200 print("\n分组攻击结果已保存到 grouped_attack_results.json")
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py:179[39m, in [36mdump[39m[34m(obj, fp, skipkeys, ensure_ascii, check_circular, allow_nan, cls, indent, separators, default, sort_keys, **kw)[39m
-[32m    173[39m     iterable = [38;5;28mcls[39m(skipkeys=skipkeys, ensure_ascii=ensure_ascii,
-[32m    174[39m         check_circular=check_circular, allow_nan=allow_nan, indent=indent,
-[32m    175[39m         separators=separators,
-[32m    176[39m         default=default, sort_keys=sort_keys, **kw).iterencode(obj)
-[32m    177[39m [38;5;66;03m# could accelerate with writelines in some versio
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py:179, in dump(obj, fp, skipkeys, ensure_ascii, check_circular, allow_nan, cls, indent, separators, default, sort_keys, **kw)
+    173     iterable = cls(skipkeys=skipkeys, ensure_ascii=ensure_ascii,
+    174         check_circular=check_circular, allow_nan=allow_nan, indent=indent,
+    175         separators=separators,
+    176         default=default, sort_keys=sort_keys, **kw).iterencode(obj)
+    177 # could accelerate with writelines in some versio
 ...(truncated)
 ```
 

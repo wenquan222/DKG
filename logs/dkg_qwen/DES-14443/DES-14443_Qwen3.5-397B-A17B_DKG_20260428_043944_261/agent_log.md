@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
+帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'"
+"帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -513,9 +513,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 加载数据
-wave = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy')
-plain = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy')
-cipher = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy')
+wave = np.load('data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy')
+plain = np.load('data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy')
+cipher = np.load('data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy')
 
 print(f"波形形状: {wave.shape}")
 print(f"明文形状: {plain.shape}")
@@ -608,7 +608,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_22020\4019692605.py:52: UserWarni
 import numpy as np
 import matplotlib.pyplot as plt
 
-wave = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy')
+wave = np.load('data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy')
 
 # 检查基线漂移：计算每条迹线在前50点的均值，看是否有明显差异
 baseline_means = np.mean(wave[:, :50], axis=1)
@@ -678,8 +678,8 @@ print(f"如果基线均值std > 5-10，可能需要垂直对齐")
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy",
+  "plaintext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "wave_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy",
   "target": "S-box_out",
   "leakage_model": "HW",
   "candidates": 30
@@ -715,8 +715,8 @@ print(f"如果基线均值std > 5-10，可能需要垂直对齐")
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy",
-  "data_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "wave_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy",
+  "data_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
   "data_type": "plaintext",
   "byte_index": 0,
   "model": "HW"
@@ -746,9 +746,9 @@ print(f"如果基线均值std > 5-10，可能需要垂直对齐")
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy",
+  "wave_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy",
+  "plaintext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy",
   "start": 146,
   "length": 100,
   "max_shift": 100,
@@ -942,16 +942,16 @@ Avg correlation: 0.05921214310306936
 Per S-box details:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mValueError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[119][39m[32m, line 15[39m
-[32m     13[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33mPer S-box details:[39m[33m"[39m)
-[32m     14[39m [38;5;28;01mfor[39;00m i, sbox [38;5;129;01min[39;00m [38;5;28menumerate[39m(detail.get([33m'[39m[33mper_sbox[39m[33m'[39m, [])):
-[32m---> [39m[32m15[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[33mS-box [39m[38;5;132;01m{[39;00mi[38;5;132;01m}[39;00m[33m: key=0x[39m[38;5;132;01m{[39;00msbox[[33m'[39m[33mkey[39m[33m'[39m][38;5;132;01m:[39;00m[33m02X[39m[38;5;132;01m}[39;00m[33m, corr=[39m[38;5;132;01m{[39;00msbox[[33m'[39m[33mcorrelation[39m[33m'[39m][38;5;132;01m:[39;00m[33m.4f[39m[38;5;132;01m}[39;00m[33m, gap=[39m[38;5;132;01m{[39;00msbox[[33m'[39m[33mgap_pct[39m[33m'[39m][38;5;132;01m:[39;00m[33m.1f[39m[38;5;132;01m}[39;00m[33m%, time=[39m[38;5;132;01m{[39;00msbox[[33m'[39m[33mtime_index[39m[33m'[39m][38;5;132;01m}[39;00m[33m"[39m)
-[32m     17[39m [38;5;66;03m# 检查是否有master_key字段[39;00m
-[32m     18[39m [38;5;28;01mif[39;00m [33m'[39m[33mmaster_key[39m[33m'[39m [38;5;129;01min[39;00m detail:
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[119], line 15
+     13 print("\nPer S-box details:")
+     14 for i, sbox in enumerate(detail.get('per_sbox', [])):
+---> 15     print(f"S-box {i}: key=0x{sbox['key']:02X}, corr={sbox['correlation']:.4f}, gap={sbox['gap_pct']:.1f}%, time={sbox['time_index']}")
+     17 # 检查是否有master_key字段
+     18 if 'master_key' in detail:
 
-[31mValueError[39m: Unknown format code 'X' for object of type 'str'
+ValueError: Unknown format code 'X' for object of type 'str'
 ```
 
 
@@ -1123,16 +1123,16 @@ print(f"\nCPA恢复的密钥: {recovered_key}")
 第一条密文: [244  52 176 244 134 252  74  75]
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mAttributeError[39m                            Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[121][39m[32m, line 10[39m
-[32m      8[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m第一条明文: [39m[38;5;132;01m{[39;00mplain[[32m0[39m][38;5;132;01m}[39;00m[33m"[39m)
-[32m      9[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m第一条密文: [39m[38;5;132;01m{[39;00mcipher[[32m0[39m][38;5;132;01m}[39;00m[33m"[39m)
-[32m---> [39m[32m10[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m明文hex: [39m[38;5;132;01m{[39;00m[43mplain[49m[43m[[49m[32;43m0[39;49m[43m][49m[43m.[49m[43mhex[49m()[38;5;132;01m}[39;00m[33m"[39m)
-[32m     11[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m密文hex: [39m[38;5;132;01m{[39;00mcipher[[32m0[39m].hex()[38;5;132;01m}[39;00m[33m"[39m)
-[32m     13[39m [38;5;66;03m# CPA恢复的密钥[39;00m
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Cell In[121], line 10
+      8 print(f"第一条明文: {plain[0]}")
+      9 print(f"第一条密文: {cipher[0]}")
+---> 10 print(f"明文hex: {plain[0].hex()}")
+     11 print(f"密文hex: {cipher[0].hex()}")
+     13 # CPA恢复的密钥
 
-[31mAttributeError[39m: 'numpy.ndarray' object has no attribute 'hex'
+AttributeError: 'numpy.ndarray' object has no attribute 'hex'
 ```
 
 

@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
+帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'"
+"帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -492,9 +492,9 @@ import matplotlib.pyplot as plt
 import os
 
 # 加载数据
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
+plain_path = 'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'
+cipher_path = 'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy'
+wave_path = 'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
 
 print("检查文件是否存在:")
 print(f"明文文件: {os.path.exists(plain_path)}")
@@ -1182,50 +1182,50 @@ Gap百分比: 61.17%
 平均gap百分比: 9.56%
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mTypeError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[290][39m[32m, line 68[39m
-[32m     66[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mjson[39;00m
-[32m     67[39m [38;5;28;01mwith[39;00m [38;5;28mopen[39m([33m'[39m[33mcpa_results.json[39m[33m'[39m, [33m'[39m[33mw[39m[33m'[39m) [38;5;28;01mas[39;00m f:
-[32m---> [39m[32m68[39m     [43mjson[49m[43m.[49m[43mdump[49m[43m([49m[43mcpa_results[49m[43m,[49m[43m [49m[43mf[49m[43m,[49m[43m [49m[43mindent[49m[43m=[49m[32;43m2[39;49m[43m)[49m
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[290], line 68
+     66 import json
+     67 with open('cpa_results.json', 'w') as f:
+---> 68     json.dump(cpa_results, f, indent=2)
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py:179[39m, in [36mdump[39m[34m(obj, fp, skipkeys, ensure_ascii, check_circular, allow_nan, cls, indent, separators, default, sort_keys, **kw)[39m
-[32m    173[39m     iterable = [38;5;28mcls[39m(skipkeys=skipkeys, ensure_ascii=ensure_ascii,
-[32m    174[39m         check_circular=check_circular, allow_nan=allow_nan, indent=indent,
-[32m    175[39m         separators=separators,
-[32m    176[39m         default=default, sort_keys=sort_keys, **kw).iterencode(obj)
-[32m    177[39m [38;5;66;03m# could accelerate with writelines in some versions of Python, at[39;00m
-[32m    178[39m [38;5;66;03m# a debuggability cost[39;00m
-[32m--> [39m[32m179[39m [43m[49m[38;5;28;43;01mfor[39;49;00m[43m [49m[43mchunk[49m[43m [49m[38;5;129;43;01min[39;49;00m[43m [49m[43miterable[49m[43m:[49m
-[32m    180[39m [43m    [49m[43mfp[49m[43m.[49m[43mwrite[49m[43m([49m[43mchunk[49m[43m)[49m
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py:179, in dump(obj, fp, skipkeys, ensure_ascii, check_circular, allow_nan, cls, indent, separators, default, sort_keys, **kw)
+    173     iterable = cls(skipkeys=skipkeys, ensure_ascii=ensure_ascii,
+    174         check_circular=check_circular, allow_nan=allow_nan, indent=indent,
+    175         separators=separators,
+    176         default=default, sort_keys=sort_keys, **kw).iterencode(obj)
+    177 # could accelerate with writelines in some versions of Python, at
+    178 # a debuggability cost
+--> 179 for chunk in iterable:
+    180     fp.write(chunk)
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:432[39m, in [36m_make_iterencode.<locals>._iterencode[39m[34m(o, _current_indent_level)[39m
-[32m    430[39m     [38;5;28;01myield from[39;00m _iterencode_list(o, _current_indent_level)
-[32m    431[39m [38;5;28;01melif[39;00m [38;5;28misinstance[39m(o, [38;5;28mdict[39m):
-[32m--> [39m[32m432[39m     [38;5;28;01myield from[39;00m _iterencode_dict(o, _current_indent_level)
-[32m    433[39m [38;5;28;01melse[39;00m:
-[32m    434[39m     [38;5;28;01mif[39;00m markers [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:432, in _make_iterencode.<locals>._iterencode(o, _current_indent_level)
+    430     yield from _iterencode_list(o, _current_indent_level)
+    431 elif isinstance(o, dict):
+--> 432     yield from _iterencode_dict(o, _current_indent_level)
+    433 else:
+    434     if markers is not None:
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:406[39m, in [36m_make_iterencode.<locals>._iterencode_dict[39m[34m(dct, _current_indent_level)[39m
-[32m    404[39m         [38;5;28;01melse[39;00m:
-[32m    405[39m             chunks = _iterencode(value, _current_indent_level)
-[32m--> [39m[32m406[39m         [38;5;28;01myield from[39;00m chunks
-[32m    407[39m [38;5;28;01mif[39;00m newline_indent [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
-[32m    408[39m     _current_indent_level -= [32m1[39m
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:406, in _make_iterencode.<locals>._iterencode_dict(dct, _current_indent_level)
+    404         else:
+    405             chunks = _iterencode(value, _current_indent_level)
+--> 406         yield from chunks
+    407 if newline_indent is not None:
+    408     _current_indent_level -= 1
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:326[39m, in [36m_make_iterencode.<locals>._iterencode_list[39m[34m(lst, _current_indent_level)[39m
-[32m    324[39m         [38;5;28;01melse[39;00m:
-[32m    325[39m             chunks = _iterencode(value, _current_indent_level)
-[32m--> [39m[32m326[39m         [38;5;28;01myield from[39;00m chunks
-[32m    327[39m [38;5;28;01mif[39;00m newline_indent [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
-[32m    328[39m     _current_indent_level -= [32m1[39m
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:326, in _make_iterencode.<locals>._iterencode_list(lst, _current_indent_level)
+    324         else:
+    325             chunks = _iterencode(value, _current_indent_level)
+--> 326         yield from chunks
+    327 if newline_indent is not None:
+    328     _current_indent_level -= 1
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:439[39m, in [36m_make_iterencode.<locals>._iterencode[39m[34m(o, _current_indent_level)[39m
-[32m    437[39m         [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m([33m"[39m[33mCircular reference detected[39m[33m"[39m)
-[32m    438[39m     markers[markerid] = o
-[32m--> [39m[32m439[39m o = [43m_default[49m[43m([49m[43mo[49m[43m)[49m
-[32m    440[39m [38;5;28;01myield from[39;00m _iterencode(o, _current_indent_level)
-[32m    441[39m [38;5;28;01mif[39;00m markers [38;5;129;01mis[
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:439, in _make_iterencode.<locals>._iterencode(o, _current_indent_level)
+    437         raise ValueError("Circular reference detected")
+    438     markers[markerid] = o
+--> 439 o = _default(o)
+    440 yield from _iterencode(o, _current_indent_level)
+    441 if markers is[
 ...(truncated)
 ```
 
@@ -2138,7 +2138,7 @@ with open('model_cpa_results.json', 'w') as f:
 平均gap: 10.91%
 恢复的密钥: 116ded2aa1db979d1fb35d8aaaec9bd6
 验证结果: False (0.00%)
-F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
  
 ...(truncated)
 ```
@@ -3063,46 +3063,46 @@ with open('group_attack_results.json', 'w') as f:
 测试了 125 个密钥，未找到正确密钥
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mTypeError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[302][39m[32m, line 113[39m
-[32m    104[39m group_attack_results = {
-[32m    105[39m     [33m'[39m[33mfull_key[39m[33m'[39m: full_key.hex(),
-[32m    106[39m     [33m'[39m[33mverification[39m[33m'[39m: verification,
-[32m   (...)[39m[32m    109[39m     [33m'[39m[33mgroup_results[39m[33m'[39m: group_results
-[32m    110[39m }
-[32m    112[39m [38;5;28;01mwith[39;00m [38;5;28mopen[39m([33m'[39m[33mgroup_attack_results.json[39m[33m'[39m, [33m'[39m[33mw[39m[33m'[39m) [38;5;28;01mas[39;00m f:
-[32m--> [39m[32m113[39m     [43mjson[49m[43m.[49m[43mdump[49m[43m([49m[43mgroup_attack_results[49m[43m,[49m[43m [49m[43mf[49m[43m,[49m[43m [49m[43mindent[49m[43m=[49m[32;43m2[39;49m[43m)[49m
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[302], line 113
+    104 group_attack_results = {
+    105     'full_key': full_key.hex(),
+    106     'verification': verification,
+   (...)    109     'group_results': group_results
+    110 }
+    112 with open('group_attack_results.json', 'w') as f:
+--> 113     json.dump(group_attack_results, f, indent=2)
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py:179[39m, in [36mdump[39m[34m(obj, fp, skipkeys, ensure_ascii, check_circular, allow_nan, cls, indent, separators, default, sort_keys, **kw)[39m
-[32m    173[39m     iterable = [38;5;28mcls[39m(skipkeys=skipkeys, ensure_ascii=ensure_ascii,
-[32m    174[39m         check_circular=check_circular, allow_nan=allow_nan, indent=indent,
-[32m    175[39m         separators=separators,
-[32m    176[39m         default=default, sort_keys=sort_keys, **kw).iterencode(obj)
-[32m    177[39m [38;5;66;03m# could accelerate with writelines in some versions of Python, at[39;00m
-[32m    178[39m [38;5;66;03m# a debuggability cost[39;00m
-[32m--> [39m[32m179[39m [43m[49m[38;5;28;43;01mfor[39;49;00m[43m [49m[43mchunk[49m[43m [49m[38;5;129;43;01min[39;49;00m[43m [49m[43miterable[49m[43m:[49m
-[32m    180[39m [43m    [49m[43mfp[49m[43m.[49m[43mwrite[49m[43m([49m[43mchunk[49m[43m)[49m
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py:179, in dump(obj, fp, skipkeys, ensure_ascii, check_circular, allow_nan, cls, indent, separators, default, sort_keys, **kw)
+    173     iterable = cls(skipkeys=skipkeys, ensure_ascii=ensure_ascii,
+    174         check_circular=check_circular, allow_nan=allow_nan, indent=indent,
+    175         separators=separators,
+    176         default=default, sort_keys=sort_keys, **kw).iterencode(obj)
+    177 # could accelerate with writelines in some versions of Python, at
+    178 # a debuggability cost
+--> 179 for chunk in iterable:
+    180     fp.write(chunk)
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:432[39m, in [36m_make_iterencode.<locals>._iterencode[39m[34m(o, _current_indent_level)[39m
-[32m    430[39m     [38;5;28;01myield from[39;00m _iterencode_list(o, _current_indent_level)
-[32m    431[39m [38;5;28;01melif[39;00m [38;5;28misinstance[39m(o, [38;5;28mdict[39m):
-[32m--> [39m[32m432[39m     [38;5;28;01myield from[39;00m _iterencode_dict(o, _current_indent_level)
-[32m    433[39m [38;5;28;01melse[39;00m:
-[32m    434[39m     [38;5;28;01mif[39;00m markers [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:432, in _make_iterencode.<locals>._iterencode(o, _current_indent_level)
+    430     yield from _iterencode_list(o, _current_indent_level)
+    431 elif isinstance(o, dict):
+--> 432     yield from _iterencode_dict(o, _current_indent_level)
+    433 else:
+    434     if markers is not None:
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:406[39m, in [36m_make_iterencode.<locals>._iterencode_dict[39m[34m(dct, _current_indent_level)[39m
-[32m    404[39m         [38;5;28;01melse[39;00m:
-[32m    405[39m             chunks = _iterencode(value, _current_indent_level)
-[32m--> [39m[32m406[39m         [38;5;28;01myield from[39;00m chunks
-[32m    407[39m [38;5;28;01mif[39;00m newline_indent [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
-[32m    408[39m     _current_indent_level -= [32m1[39m
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:406, in _make_iterencode.<locals>._iterencode_dict(dct, _current_indent_level)
+    404         else:
+    405             chunks = _iterencode(value, _current_indent_level)
+--> 406         yield from chunks
+    407 if newline_indent is not None:
+    408     _current_indent_level -= 1
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:326[39m, in [36m_make_iterencode.<locals>._iterencode_list[39m[34m(lst, _current_indent_level)[39m
-[32m    324[39m         [38;5;28;01melse[39;00m:
-[32m    325[39m             chunks = _iterencode(value, _current_indent_level)
-[32m--> [39m[32m326[39m         [38;5;28;01myield from[39;00m chunks
-[32m    327[39m [38;5;28;01mif[39;00m newline_indent [38;5;129;01mis[39;00m
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:326, in _make_iterencode.<locals>._iterencode_list(lst, _current_indent_level)
+    324         else:
+    325             chunks = _iterencode(value, _current_indent_level)
+--> 326         yield from chunks
+    327 if newline_indent is
 ...(truncated)
 ```
 

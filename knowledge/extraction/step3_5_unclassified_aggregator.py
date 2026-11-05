@@ -176,7 +176,7 @@ def write_schema_extension_candidates(
         "",
         "Review this file after each large batch. Each cluster is a candidate for adding "
         "a new node type (or property on existing node). Decisions tracked in "
-        "`extraction/extraction_issues.md`.",
+        "the project extraction notes.",
         "",
     ]
     if not clusters:

@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
+帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'"
+"帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -140,9 +140,9 @@ import matplotlib.pyplot as plt
 import os
 
 # 加载数据
-plaintext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'
-ciphertext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
+plaintext_path = 'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'
+ciphertext_path = 'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy'
+wave_path = 'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
 
 # 检查文件是否存在
 print(f"Plaintext file exists: {os.path.exists(plaintext_path)}")
@@ -397,11 +397,11 @@ Range of trace means: 4.456218`
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy",
+  "wave_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy",
   "ref_start": 0,
   "ref_end": 100,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy"
+  "plaintext_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy",
+  "ciphertext_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy"
 }
 ```
 </details>
@@ -409,7 +409,7 @@ Range of trace means: 4.456218`
 <details><summary><b>📋 ← `vertical_aligner`</b> (654 chars)</summary>
 
 ```
-{"out_wave_npy": "valigned_20260424_155300_149877.npy", "plot_path": "valign_compare_20260424_155300_149877.png", "n_traces": 100, "n_points": 7400, "ref_region": [0, 100], "baseline_std": 5.908, "baseline_std_after": 4e-06, "out_plaintext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy", "out_ciphertext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy"}
+{"out_wave_npy": "valigned_20260424_155300_149877.npy", "plot_path": "valign_compare_20260424_155300_149877.png", "n_traces": 100, "n_points": 7400, "ref_region": [0, 100], "baseline_std": 5.908, "baseline_std_after": 4e-06, "out_plaintext_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy", "out_ciphertext_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy"}
 ```
 </details>
 
@@ -510,7 +510,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\4281499672.py:13: UserWarni
 
 **🔧 → `plaintext_ciphertext_correlation`** `{
   "wave_npy": "valigned_20260424_155300_149877.npy",
-  "data_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy",
+  "data_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy",
   "data_type": "plaintext",
   "byte_index": 0,
   "model": "HW"
@@ -648,8 +648,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\3638758696.py:14: UserWarni
   "length": 20,
   "max_shift": 50,
   "threshold": 85,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy"
+  "plaintext_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy",
+  "ciphertext_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy"
 }
 ```
 </details>
@@ -1058,7 +1058,7 @@ C:\Users\A
 
 ```python
 # 重新加载原始波形，检查不同的参考区域
-raw_wave = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy')
+raw_wave = np.load('data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy')
 
 # 查看波形的不同区域
 plt.figure(figsize=(15, 10))
@@ -1117,11 +1117,11 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\2952904997.py:20: UserWarni
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy",
+  "wave_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy",
   "ref_start": 0,
   "ref_end": 50,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy"
+  "plaintext_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy",
+  "ciphertext_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy"
 }
 ```
 </details>
@@ -1129,7 +1129,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\2952904997.py:20: UserWarni
 <details><summary><b>📋 ← `vertical_aligner`</b> (654 chars)</summary>
 
 ```
-{"out_wave_npy": "valigned_20260424_155921_114845.npy", "plot_path": "valign_compare_20260424_155921_114845.png", "n_traces": 100, "n_points": 7400, "ref_region": [0, 50], "baseline_std": 9.8735, "baseline_std_after": 2e-06, "out_plaintext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy", "out_ciphertext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy"}
+{"out_wave_npy": "valigned_20260424_155921_114845.npy", "plot_path": "valign_compare_20260424_155921_114845.png", "n_traces": 100, "n_points": 7400, "ref_region": [0, 50], "baseline_std": 9.8735, "baseline_std_after": 2e-06, "out_plaintext_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy", "out_ciphertext_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy"}
 ```
 </details>
 
@@ -1145,7 +1145,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\2952904997.py:20: UserWarni
 
 **🔧 → `plaintext_ciphertext_correlation`** `{
   "wave_npy": "valigned_20260424_155921_114845.npy",
-  "data_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy",
+  "data_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy",
   "data_type": "plaintext",
   "byte_index": 0,
   "model": "HW"
@@ -1174,8 +1174,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\2952904997.py:20: UserWarni
   "length": 20,
   "max_shift": 50,
   "threshold": 85,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy"
+  "plaintext_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy",
+  "ciphertext_npy": "data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy"
 }
 ```
 </details>

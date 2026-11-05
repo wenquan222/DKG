@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'
+帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'"
+"帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -495,9 +495,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 加载数据
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'
-plaintext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'
-ciphertext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy'
+wave_path = 'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'
+plaintext_path = 'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'
+ciphertext_path = 'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy'
 
 # 加载数据
 waves = np.load(wave_path)
@@ -676,11 +676,11 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_1860\1344250121.py:57: UserWarnin
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy",
+  "wave_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy",
   "ref_start": 0,
   "ref_end": 50,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy"
+  "plaintext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy"
 }
 ```
 </details>
@@ -688,7 +688,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_1860\1344250121.py:57: UserWarnin
 <details><summary><b>📋 ← `vertical_aligner`</b> (653 chars)</summary>
 
 ```
-{"out_wave_npy": "valigned_20260424_044303_019438.npy", "plot_path": "valign_compare_20260424_044303_019438.png", "n_traces": 2000, "n_points": 300, "ref_region": [0, 50], "baseline_std": 5.774, "baseline_std_after": 1e-06, "out_plaintext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy", "out_ciphertext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy"}
+{"out_wave_npy": "valigned_20260424_044303_019438.npy", "plot_path": "valign_compare_20260424_044303_019438.png", "n_traces": 2000, "n_points": 300, "ref_region": [0, 50], "baseline_std": 5.774, "baseline_std_after": 1e-06, "out_plaintext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy", "out_ciphertext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy"}
 ```
 </details>
 
@@ -778,9 +778,9 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_1860\3229352749.py:33: UserWarnin
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
+  "plaintext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
   "wave_npy": "valigned_20260424_044303_019438.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
+  "ciphertext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
   "target": "S-box_in_xor_prev_ct",
   "leakage_model": "HW",
   "candidates": 30,
@@ -824,8 +824,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_1860\3229352749.py:33: UserWarnin
   "algorithm": "AES",
   "mode": "ECB",
   "operation": "encrypt",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
+  "plaintext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
   "trace_index": 0
 }
 ```
@@ -855,8 +855,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_1860\3229352749.py:33: UserWarnin
   "algorithm": "AES",
   "mode": "ECB",
   "operation": "encrypt",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
+  "plaintext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
   "trace_index": 0
 }
 ```
@@ -931,17 +931,17 @@ CPA攻击结果分析:
 各字节的相关系数:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mKeyError[39m                                  Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[196][39m[32m, line 14[39m
-[32m     11[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m相关模式: [39m[38;5;132;01m{[39;00mcpa_detail[[33m'[39m[33mcorr_mode[39m[33m'[39m][38;5;132;01m}[39;00m[33m"[39m)
-[32m     13[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33m各字节的相关系数:[39m[33m"[39m)
-[32m---> [39m[32m14[39m [38;5;28;01mfor[39;00m i, byte_info [38;5;129;01min[39;00m [38;5;28menumerate[39m([43mcpa_detail[49m[43m[[49m[33;43m'[39;49m[33;43mper_byte[39;49m[33;43m'[39;49m[43m][49m):
-[32m     15[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[33m字节 [39m[38;5;132;01m{[39;00mi[38;5;132;01m:[39;00m[33m2d[39m[38;5;132;01m}[39;00m[33m: 正相关候选 [39m[38;5;132;01m{[39;00mbyte_info[[33m'[39m[33mkey_pos[39m[33m'[39m][38;5;132;01m}[39;00m[33m (分数: [39m[38;5;132;01m{[39;00mbyte_info[[33m'[39m[33mscore_pos[39m[33m'[39m][38;5;132;01m:[39;00m[33m.4f[39m[38;5;132;01m}[39;00m[33m), [39m[33m"[39m
-[32m     16[39m           [33mf[39m[33m"[39m[33m负相关候选 [39m[38;5;132;01m{[39;00mbyte_info[[33m'[39m[33mkey_neg[39m[33m'[39m][38;5;132;01m}[39;00m[33m (分数: [39m[38;5;132;01m{[39;00mbyte_info[[33m'[39m[33mscore_neg[39m[33m'[39m][38;5;132;01m:[39;00m[33m.4f[39m[38;5;132;01m}[39;00m[33m)[39m[33m"[39m)
-[32m     18[39m [38;5;66;03m# 计算平均相关系数[39;00m
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+Cell In[196], line 14
+     11 print(f"相关模式: {cpa_detail['corr_mode']}")
+     13 print("\n各字节的相关系数:")
+---> 14 for i, byte_info in enumerate(cpa_detail['per_byte']):
+     15     print(f"字节 {i:2d}: 正相关候选 {byte_info['key_pos']} (分数: {byte_info['score_pos']:.4f}), "
+     16           f"负相关候选 {byte_info['key_neg']} (分数: {byte_info['score_neg']:.4f})")
+     18 # 计算平均相关系数
 
-[31mKeyError[39m: 'per_byte'
+KeyError: 'per_byte'
 ```
 
 
@@ -1411,16 +1411,16 @@ CPA攻击成功总结:
 各字节恢复详情:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mValueError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[199][39m[32m, line 31[39m
-[32m     28[39m     status = [33m"[39m[33m✓[39m[33m"[39m [38;5;28;01mif[39;00m (found_in_pos [38;5;129;01mor[39;00m found_in_neg) [38;5;28;01melse[39;00m [33m"[39m[33m✗[39m[33m"[39m
-[32m     29[39m     source = [33m"[39m[33m正相关[39m[33m"[39m [38;5;28;01mif[39;00m found_in_pos [38;5;28;01melse[39;00m [33m"[39m[33m负相关[39m[33m"[39m [38;5;28;01mif[39;00m found_in_neg [38;5;28;01melse[39;00m [33m"[39m[33m未找到[39m[33m"[39m
-[32m---> [39m[32m31[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  字节 [39m[38;5;132;01m{[39;00mi[38;5;132;01m:[39;00m[33m2d[39m[38;5;132;01m}[39;00m[33m: [39m[38;5;132;01m{[39;00mbyte_key_hex[38;5;132;01m}[39;00m[33m ([39m[38;5;132;01m{[39;00mstatus[38;5;132;01m}[39;00m[33m [39m[38;5;132;01m{[39;00msource[38;5;132;01m}[39;00m[33m), 相关系数: [39m[38;5;132;01m{[39;00mcorr_score[38;5;132;01m:[39;00m[33m.4f if corr_score else [39m[33m'[39m[33mN/A[39m[33m'[39m[38;5;132;01m}[39;00m[33m"[39m)
-[32m     33[39m [38;5;66;03m# 分析泄漏时间点[39;00m
-[32m     34[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33m泄漏时间点分析:[39m[33m"[39m)
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[199], line 31
+     28     status = "✓" if (found_in_pos or found_in_neg) else "✗"
+     29     source = "正相关" if found_in_pos else "负相关" if found_in_neg else "未找到"
+---> 31     print(f"  字节 {i:2d}: {byte_key_hex} ({status} {source}), 相关系数: {corr_score:.4f if corr_score else 'N/A'}")
+     33 # 分析泄漏时间点
+     34 print("\n泄漏时间点分析:")
 
-[31mValueError[39m: Invalid format specifier '.4f if corr_score else 'N/A'' for object of type 'float'
+ValueError: Invalid format specifier '.4f if corr_score else 'N/A'' for object of type 'float'
 ```
 
 

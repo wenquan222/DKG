@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
+帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'"
+"帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -141,9 +141,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 加载数据
-plaintext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'
-ciphertext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
+plaintext_path = 'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'
+ciphertext_path = 'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy'
+wave_path = 'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
 
 plaintext = np.load(plaintext_path)
 ciphertext = np.load(ciphertext_path)
@@ -534,11 +534,11 @@ Significant baseline drift detected. Vertical alignment recommended.`
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
   "ref_start": 0,
   "ref_end": 50,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy"
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "ciphertext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy"
 }
 ```
 </details>
@@ -546,7 +546,7 @@ Significant baseline drift detected. Vertical alignment recommended.`
 <details><summary><b>📋 ← `vertical_aligner`</b> (655 chars)</summary>
 
 ```
-{"out_wave_npy": "valigned_20260424_162114_436456.npy", "plot_path": "valign_compare_20260424_162114_436456.png", "n_traces": 100, "n_points": 6500, "ref_region": [0, 50], "baseline_std": 11.4378, "baseline_std_after": 2e-06, "out_plaintext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy", "out_ciphertext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy"}
+{"out_wave_npy": "valigned_20260424_162114_436456.npy", "plot_path": "valign_compare_20260424_162114_436456.png", "n_traces": 100, "n_points": 6500, "ref_region": [0, 50], "baseline_std": 11.4378, "baseline_std_after": 2e-06, "out_plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy", "out_ciphertext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy"}
 ```
 </details>
 
@@ -698,8 +698,8 @@ Significant timing jitter still present. Static alignment needed.`
   "length": 120,
   "max_shift": 50,
   "threshold": 85,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy"
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "ciphertext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy"
 }
 ```
 </details>
@@ -999,8 +999,8 @@ Samples with |correlation| > 0.3:
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
   "round_index": 0,
   "candidates": 30,
   "leakage_model": "HW",
@@ -1163,7 +1163,7 @@ Traceback (most recent call last):
   File "C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\3916137834.py", line 8, in <module>
     result = run_sm4_cpa(plaintext_npy="plaintext_aligned_20260424_162227_413973.npy",wave_npy="aligned_20260424_162227_413973.npy",round_index=1,candidates=30,leakage_model="HW",target="S-box_in",bytes_to_test=None,prev_round_keys=None,wave_start=None,wave_end=None,corr_mode=None)
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "F:\侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/agent/tools\sm4_cpa_tool.py", line 361, in run_sm4_cpa
+  File "agent/tools\sm4_cpa_tool.py", line 361, in run_sm4_cpa
     raise ValueError(f"round_index={round_index} requires {round_index} previous round keys, "
 ValueError: round_index=1 requires 1 previous round keys, got 0
 ```
@@ -1384,8 +1384,8 @@ Note: These are test keys for SM4, not AES.`
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
   "round_index": 0,
   "candidates": 50,
   "leakage_model": "HW",
@@ -1414,8 +1414,8 @@ Note: These are test keys for SM4, not AES.`
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
   "round_index": 0,
   "candidates": 50,
   "leakage_model": "HW",

@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
+帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'"
+"帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -232,9 +232,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 加载数据
-plaintext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'
-ciphertext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
+plaintext_path = 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'
+ciphertext_path = 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy'
+wave_path = 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
 
 plaintext = np.load(plaintext_path)
 ciphertext = np.load(ciphertext_path)
@@ -488,8 +488,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_14288\265954103.py:50: UserWarnin
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy",
+  "plaintext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "wave_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy",
   "target": "R_xor_LOut",
   "leakage_model": "HW",
   "candidates": 30
@@ -528,8 +528,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_14288\265954103.py:50: UserWarnin
 {
   "key_hex": "1002324454422688",
   "algorithm": "DES",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy"
+  "plaintext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy"
 }
 ```
 </details>
@@ -559,8 +559,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_14288\265954103.py:50: UserWarnin
   "algorithm": "DES",
   "recovered_key_hex": "1002324454422688",
   "cpa_detail_file": "des_cpa_detail_20260508_143325_428213.json",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy",
+  "plaintext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy",
   "max_combinations": 50000
 }
 ```
@@ -588,8 +588,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_14288\265954103.py:50: UserWarnin
 {
   "key_hex": "1022324454667688",
   "algorithm": "DES",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy"
+  "plaintext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy"
 }
 ```
 </details>
@@ -613,8 +613,8 @@ import numpy as np
 from Crypto.Cipher import DES
 
 # 加载数据
-plaintext = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy')
-ciphertext = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy')
+plaintext = np.load('data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy')
+ciphertext = np.load('data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy')
 
 # 恢复的密钥
 recovered_key = bytes.fromhex('1022324454667688')
@@ -830,16 +830,16 @@ Per S-box analysis:
   S-box 7: key=0x02, corr=0.0552, gap=25.6%, time=83, ✓ HIGH CONFIDENCE
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mKeyError[39m                                  Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[149][39m[32m, line 33[39m
-[32m     31[39m all_correlations = []
-[32m     32[39m [38;5;28;01mfor[39;00m sbox [38;5;129;01min[39;00m [38;5;28mrange[39m([32m8[39m):
-[32m---> [39m[32m33[39m     corr_curve = np.array([43mcpa_detail[49m[43m[[49m[33;43m'[39;49m[33;43msbox_correlation_curves[39;49m[33;43m'[39;49m[43m][49m[[38;5;28mstr[39m(sbox)])
-[32m     34[39m     all_correlations.append(corr_curve)
-[32m     36[39m all_correlations = np.array(all_correlations)
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+Cell In[149], line 33
+     31 all_correlations = []
+     32 for sbox in range(8):
+---> 33     corr_curve = np.array(cpa_detail['sbox_correlation_curves'][str(sbox)])
+     34     all_correlations.append(corr_curve)
+     36 all_correlations = np.array(all_correlations)
 
-[31mKeyError[39m: 'sbox_correlation_curves'
+KeyError: 'sbox_correlation_curves'
 ```
 
 

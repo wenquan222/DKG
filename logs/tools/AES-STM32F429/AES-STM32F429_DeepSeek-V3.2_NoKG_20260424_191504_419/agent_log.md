@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个STM32F429 MCU软件实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'
+帮我对一个STM32F429 MCU软件实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'，密文文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy',原始波形文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个STM32F429 MCU软件实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'"
+"帮我对一个STM32F429 MCU软件实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'，密文文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy',原始波形文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -140,9 +140,9 @@ import matplotlib.pyplot as plt
 import os
 
 # 检查文件是否存在
-plaintext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'
-ciphertext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'
+plaintext_path = 'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'
+ciphertext_path = 'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy'
+wave_path = 'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'
 
 print("文件存在性检查:")
 print(f"明文文件: {os.path.exists(plaintext_path)}")
@@ -351,11 +351,11 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\3773474337.py:24: UserWarni
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy",
+  "wave_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy",
   "ref_start": 0,
   "ref_end": 50,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy"
+  "plaintext_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy"
 }
 ```
 </details>
@@ -363,7 +363,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\3773474337.py:24: UserWarni
 <details><summary><b>📋 ← `vertical_aligner`</b> (684 chars)</summary>
 
 ```
-{"out_wave_npy": "valigned_20260424_191640_571536.npy", "plot_path": "valign_compare_20260424_191640_571536.png", "n_traces": 1000, "n_points": 1000, "ref_region": [0, 50], "baseline_std": 2457.4998, "baseline_std_after": 0.0, "out_plaintext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy", "out_ciphertext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy"}
+{"out_wave_npy": "valigned_20260424_191640_571536.npy", "plot_path": "valign_compare_20260424_191640_571536.png", "n_traces": 1000, "n_points": 1000, "ref_region": [0, 50], "baseline_std": 2457.4998, "baseline_std_after": 0.0, "out_plaintext_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy", "out_ciphertext_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy"}
 ```
 </details>
 
@@ -585,7 +585,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\3276130357.py:63: UserWarni
 
 **🔧 → `plaintext_ciphertext_correlation`** `{
   "wave_npy": "valigned_20260424_191640_571536.npy",
-  "data_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy",
+  "data_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy",
   "data_type": "plaintext",
   "byte_index": 0,
   "model": "HW"
@@ -692,8 +692,8 @@ CPA区域 [223:323] 统计:
   "length": 50,
   "max_shift": 30,
   "threshold": 80,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000points_cipher.npy"
+  "plaintext_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000points_cipher.npy"
 }
 ```
 </details>
@@ -702,23 +702,23 @@ CPA区域 [223:323] 统计:
 
 ```
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mFileNotFoundError[39m                         Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[423][39m[32m, line 40[39m
-[32m     38[39m ct_path = [33m"[39m[33mF:/[39m[38;5;130;01m\u4fa7[39;00m[38;5;130;01m\u4fe1[39;00m[38;5;130;01m\u9053[39;00m[33m/SCA-GPT/[39m[38;5;130;01m\u5b9e[39;00m[38;5;130;01m\u9a8c[39;00m[38;5;130;01m\u4e94[39;00m[38;5;130;01m\uff1a[39;00m[38;5;130;01m\u57fa[39;00m[38;5;130;01m\u4e8e[39;00m[38;5;130;01m\u77e5[39;00m[38;5;130;01m\u8bc6[39;00m[38;5;130;01m\u56fe[39;00m[38;5;130;01m\u8c31[39;00m[38;5;130;01m\u7684[39;00m[33mAgent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000points_cipher.npy[39m[33m"[39m
-[32m     39[39m [38;5;28;01mif[39;00m ct_path [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
-[32m---> [39m[32m40[39m     ct = [43mnp[49m[43m.[49m[43mload[49m[43m([49m[43mct_path[49m[43m)[49m
-[32m     41[39m     ct_filtered = ct[accepted]
-[32m     42[39m     np.save([33m"[39m[33mciphertext_aligned_20260424_191906_261783.npy[39m[33m"[39m, ct_filtered)
+---------------------------------------------------------------------------
+FileNotFoundError                         Traceback (most recent call last)
+Cell In[423], line 40
+     38 ct_path = "DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000points_cipher.npy"
+     39 if ct_path is not None:
+---> 40     ct = np.load(ct_path)
+     41     ct_filtered = ct[accepted]
+     42     np.save("ciphertext_aligned_20260424_191906_261783.npy", ct_filtered)
 
-[36mFile [39m[32mF:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\numpy\lib\_npyio_impl.py:454[39m, in [36mload[39m[34m(file, mmap_mode, allow_pickle, fix_imports, encoding, max_header_size)[39m
-[32m    452[39m     own_fid = [38;5;28;01mFalse[39;00m
-[32m    453[39m [38;5;28;01melse[39;00m:
-[32m--> [39m[32m454[39m     fid = stack.enter_context([38;5;28mopen[39m(os.fspath(file), [33m"[39m[33mrb[39m[33m"[39m))
-[32m    455[39m     own_fid = [38;5;28;01mTrue[39;00m
-[32m    457[39m [38;5;66;03m# Code to distinguish from NumPy binary files and pickles.[39;00m
+File .venv\Lib\site-packages\numpy\lib\_npyio_impl.py:454, in load(file, mmap_mode, allow_pickle, fix_imports, encoding, max_header_size)
+    452     own_fid = False
+    453 else:
+--> 454     fid = stack.enter_context(open(os.fspath(file), "rb"))
+    455     own_fid = True
+    457 # Code to distinguish from NumPy binary files and pickles.
 
-[31mFileNotFoundError[39m: [Errno 2] No such file or directory: 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000points_cipher.npy'
+FileNotFoundError: [Errno 2] No such file or directory: 'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000points_cipher.npy'
 ```
 
 
@@ -736,7 +736,7 @@ CPA区域 [223:323] 统计:
 import os
 
 # 列出目录中的文件
-trace_dir = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/'
+trace_dir = 'data/traces/AES-128-STM32F429/'
 files = os.listdir(trace_dir)
 print("目录中的文件:")
 for f in files:
@@ -772,8 +772,8 @@ for f in files:
   "length": 50,
   "max_shift": 30,
   "threshold": 80,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy"
+  "plaintext_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy"
 }
 ```
 </details>
@@ -801,8 +801,8 @@ for f in files:
   "length": 50,
   "max_shift": 30,
   "threshold": 60,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy"
+  "plaintext_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy"
 }
 ```
 </details>
@@ -830,8 +830,8 @@ for f in files:
   "length": 50,
   "max_shift": 50,
   "threshold": 40,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy"
+  "plaintext_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy"
 }
 ```
 </details>

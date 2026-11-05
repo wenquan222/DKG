@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
+帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'"
+"帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -140,9 +140,9 @@ print(os.listdir('.'))
 
 # 加载数据
 print("\n加载数据...")
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
+plain_path = 'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'
+cipher_path = 'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy'
+wave_path = 'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
 
 # 加载文件
 plaintexts = np.load(plain_path)
@@ -172,7 +172,7 @@ for i in range(min(3, len(ciphertexts))):
 <details><summary><b>📋 ← `python_jupyter`</b> (570 chars)</summary>
 
 ```
-当前工作目录: F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\DKG\logs\exp_python_only\AES-14443_DeepSeek-V3.2_NoKG_20260508_123953_219
+当前工作目录: logs\exp_python_only\AES-14443_DeepSeek-V3.2_NoKG_20260508_123953_219
 
 目录内容:
 ['agent_log.md']
@@ -1747,17 +1747,17 @@ dpa_bit_results = dpa_attack_multibit(traces_std, plaintexts, byte_index=0, n_tr
 DPA攻击结果: 最佳密钥字节=0x01, DPA信号强度=0.198515
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mNameError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[31][39m[32m, line 50[39m
-[32m     47[39m [38;5;66;03m# DPA信号热图[39;00m
-[32m     48[39m plt.subplot([32m1[39m, [32m2[39m, [32m1[39m)
-[32m     49[39m plt.imshow(dpa_scores, aspect=[33m'[39m[33mauto[39m[33m'[39m, cmap=[33m'[39m[33mhot[39m[33m'[39m, interpolation=[33m'[39m[33mnearest[39m[33m'[39m, 
-[32m---> [39m[32m50[39m            extent=[[32m0[39m, [43mn_samples[49m, [32m0[39m, [32m256[39m])
-[32m     51[39m plt.colorbar(label=[33m'[39m[33mDPA信号强度[39m[33m'[39m)
-[32m     52[39m plt.xlabel([33m'[39m[33m采样点[39m[33m'[39m)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[31], line 50
+     47 # DPA信号热图
+     48 plt.subplot(1, 2, 1)
+     49 plt.imshow(dpa_scores, aspect='auto', cmap='hot', interpolation='nearest', 
+---> 50            extent=[0, n_samples, 0, 256])
+     51 plt.colorbar(label='DPA信号强度')
+     52 plt.xlabel('采样点')
 
-[31mNameError[39m: name 'n_samples' is not defined
+NameError: name 'n_samples' is not defined
 ```
 
 
@@ -1853,16 +1853,16 @@ DPA攻击结果: 最佳密钥字节=0x01, DPA信号强度=0.198515
 使用不同比特位置进行DPA攻击 (字节0):
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mNameError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[32][39m[32m, line 33[39m
-[32m     30[39m plt.show()
-[32m     32[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33m使用不同比特位置进行DPA攻击 (字节0):[39m[33m"[39m)
-[32m---> [39m[32m33[39m dpa_bit_results = [43mdpa_attack_multibit[49m(traces_std, plaintexts, byte_index=[32m0[39m, n_traces=[32m2000[39m)
-[32m     35[39m [38;5;66;03m# 总结DPA结果[39;00m
-[32m     36[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33mDPA攻击结果总结:[39m[33m"[39m)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[32], line 33
+     30 plt.show()
+     32 print("\n使用不同比特位置进行DPA攻击 (字节0):")
+---> 33 dpa_bit_results = dpa_attack_multibit(traces_std, plaintexts, byte_index=0, n_traces=2000)
+     35 # 总结DPA结果
+     36 print("\nDPA攻击结果总结:")
 
-[31mNameError[39m: name 'dpa_attack_multibit' is not defined
+NameError: name 'dpa_attack_multibit' is not defined
 ```
 
 

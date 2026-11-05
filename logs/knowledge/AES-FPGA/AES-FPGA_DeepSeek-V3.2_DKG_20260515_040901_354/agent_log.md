@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'
+帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'"
+"帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -441,9 +441,9 @@ from scipy import stats
 import os
 
 # 加载数据
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'
+plain_path = 'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'
+cipher_path = 'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy'
+wave_path = 'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'
 
 plaintexts = np.load(plain_path)
 ciphertexts = np.load(cipher_path)
@@ -1632,43 +1632,43 @@ CPA结果分析:
 15     0xcd        0.094858  0xe4        0.055000   0.039859   42.02%
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mTypeError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[184][39m[32m, line 91[39m
-[32m     84[39m gap_analysis = {
-[32m     85[39m     [33m'[39m[33mhigh_confidence_count[39m[33m'[39m: high_confidence_count,
-[32m     86[39m     [33m'[39m[33mavg_correlation[39m[33m'[39m: [38;5;28mfloat[39m(np.mean(max_corrs)),
-[32m     87[39m     [33m'[39m[33mgap_details[39m[33m'[39m: gap_details
-[32m     88[39m }
-[32m     90[39m [38;5;28;01mwith[39;00m [38;5;28mopen[39m([33m'[39m[33mgap_analysis.json[39m[33m'[39m, [33m'[39m[33mw[39m[33m'[39m) [38;5;28;01mas[39;00m f:
-[32m---> [39m[32m91[39m     [43mjson[49m[43m.[49m[43mdump[49m[43m([49m[43mgap_analysis[49m[43m,[49m[43m [49m[43mf[49m[43m,[49m[43m [49m[43mindent[49m[43m=[49m[32;43m2[39;49m[43m)[49m
-[32m     93[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33m差距分析已保存到 [39m[33m'[39m[33mgap_analysis.json[39m[33m'[39m[33m"[39m)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[184], line 91
+     84 gap_analysis = {
+     85     'high_confidence_count': high_confidence_count,
+     86     'avg_correlation': float(np.mean(max_corrs)),
+     87     'gap_details': gap_details
+     88 }
+     90 with open('gap_analysis.json', 'w') as f:
+---> 91     json.dump(gap_analysis, f, indent=2)
+     93 print(f"\n差距分析已保存到 'gap_analysis.json'")
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py:179[39m, in [36mdump[39m[34m(obj, fp, skipkeys, ensure_ascii, check_circular, allow_nan, cls, indent, separators, default, sort_keys, **kw)[39m
-[32m    173[39m     iterable = [38;5;28mcls[39m(skipkeys=skipkeys, ensure_ascii=ensure_ascii,
-[32m    174[39m         check_circular=check_circular, allow_nan=allow_nan, indent=indent,
-[32m    175[39m         separators=separators,
-[32m    176[39m         default=default, sort_keys=sort_keys, **kw).iterencode(obj)
-[32m    177[39m [38;5;66;03m# could accelerate with writelines in some versions of Python, at[39;00m
-[32m    178[39m [38;5;66;03m# a debuggability cost[39;00m
-[32m--> [39m[32m179[39m [43m[49m[38;5;28;43;01mfor[39;49;00m[43m [49m[43mchunk[49m[43m [49m[38;5;129;43;01min[39;49;00m[43m [49m[43miterable[49m[43m:[49m
-[32m    180[39m [43m    [49m[43mfp[49m[43m.[49m[43mwrite[49m[43m([49m[43mchunk[49m[43m)[49m
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py:179, in dump(obj, fp, skipkeys, ensure_ascii, check_circular, allow_nan, cls, indent, separators, default, sort_keys, **kw)
+    173     iterable = cls(skipkeys=skipkeys, ensure_ascii=ensure_ascii,
+    174         check_circular=check_circular, allow_nan=allow_nan, indent=indent,
+    175         separators=separators,
+    176         default=default, sort_keys=sort_keys, **kw).iterencode(obj)
+    177 # could accelerate with writelines in some versions of Python, at
+    178 # a debuggability cost
+--> 179 for chunk in iterable:
+    180     fp.write(chunk)
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:432[39m, in [36m_make_iterencode.<locals>._iterencode[39m[34m(o, _current_indent_level)[39m
-[32m    430[39m     [38;5;28;01myield from[39;00m _iterencode_list(o, _current_indent_level)
-[32m    431[39m [38;5;28;01melif[39;00m [38;5;28misinstance[39m(o, [38;5;28mdict[39m):
-[32m--> [39m[32m432[39m     [38;5;28;01myield from[39;00m _iterencode_dict(o, _current_indent_level)
-[32m    433[39m [38;5;28;01melse[39;00m:
-[32m    434[39m     [38;5;28;01mif[39;00m markers [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:432, in _make_iterencode.<locals>._iterencode(o, _current_indent_level)
+    430     yield from _iterencode_list(o, _current_indent_level)
+    431 elif isinstance(o, dict):
+--> 432     yield from _iterencode_dict(o, _current_indent_level)
+    433 else:
+    434     if markers is not None:
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:406[39m, in [36m_make_iterencode.<locals>._iterencode_dict[39m[34m(dct, _current_indent_level)[39m
-[32m    404[39m         [38;5;28;01melse[39;00m:
-[32m    405[39m             chunks = _iterencode(value, _current_indent_level)
-[32m--> [39m[32m406[39m         [38;5;28;01myield from[39;00m chunks
-[32m    407[39m [38;5;28;01mif[39;00m newline_indent [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
-[32m    408[39m     _current_indent_level -= [32m1[39m
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:406, in _make_iterencode.<locals>._iterencode_dict(dct, _current_indent_level)
+    404         else:
+    405             chunks = _iterencode(value, _current_indent_level)
+--> 406         yield from chunks
+    407 if newline_indent is not None:
+    408     _current_indent_level -= 1
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:326[39
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:326[39
 ...(truncated)
 ```
 
@@ -3086,29 +3086,29 @@ else:
 为前4个字节寻找最佳汉明距离模型参数:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mTypeError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[192][39m[32m, line 55[39m
-[32m     53[39m [38;5;28mprint[39m([33m"[39m[33m为前4个字节寻找最佳汉明距离模型参数:[39m[33m"[39m)
-[32m     54[39m [38;5;28;01mfor[39;00m byte_idx [38;5;129;01min[39;00m [38;5;28mrange[39m([32m4[39m):
-[32m---> [39m[32m55[39m     best_result = [43mfind_best_hd_model_per_byte[49m[43m([49m
-[32m     56[39m [43m        [49m[43maligned_traces[49m[43m,[49m[43m [49m[43mplaintexts[49m[43m,[49m[43m [49m[43mbyte_idx[49m[43m,[49m[43m [49m[43m([49m[43manalysis_start[49m[43m,[49m[43m [49m[43manalysis_end[49m[43m)[49m
-[32m     57[39m [43m    [49m[43m)[49m
-[32m     58[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  字节[39m[38;5;132;01m{[39;00mbyte_idx[38;5;132;01m}[39;00m[33m: 参考状态=0x[39m[38;5;132;01m{[39;00mbest_result[[33m'[39m[33mref_state[39m[33m'[39m][38;5;132;01m:[39;00m[33m02x[39m[38;5;132;01m}[39;00m[33m, [39m[33m"[39m
-[32m     59[39m           [33mf[39m[33m"[39m[33m最佳密钥=0x[39m[38;5;132;01m{[39;00mbest_result[[33m'[39m[33mbest_key[39m[33m'[39m][38;5;132;01m:[39;00m[33m02x[39m[38;5;132;01m}[39;00m[33m, [39m[33m"[39m
-[32m     60[39m           [33mf[39m[33m"[39m[33m最大相关系数=[39m[38;5;132;01m{[39;00mbest_result[[33m'[39m[33mmax_corr[39m[33m'[39m][38;5;132;01m:[39;00m[33m.6f[39m[38;5;132;01m}[39;00m[33m"[39m)
-[32m     62[39m [38;5;66;03m# 现在让我尝试一个不同的方法[39;00m
-[32m     63[39m [38;5;66;03m# 也许泄漏不是来自S-box输出，而是来自其他操作[39;00m
-[32m     64[39m [38;5;66;03m# 让我尝试攻击AddRoundKey操作（线性操作）[39;00m
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[192], line 55
+     53 print("为前4个字节寻找最佳汉明距离模型参数:")
+     54 for byte_idx in range(4):
+---> 55     best_result = find_best_hd_model_per_byte(
+     56         aligned_traces, plaintexts, byte_idx, (analysis_start, analysis_end)
+     57     )
+     58     print(f"  字节{byte_idx}: 参考状态=0x{best_result['ref_state']:02x}, "
+     59           f"最佳密钥=0x{best_result['best_key']:02x}, "
+     60           f"最大相关系数={best_result['max_corr']:.6f}")
+     62 # 现在让我尝试一个不同的方法
+     63 # 也许泄漏不是来自S-box输出，而是来自其他操作
+     64 # 让我尝试攻击AddRoundKey操作（线性操作）
 
-[36mCell[39m[36m [39m[32mIn[192][39m[32m, line 20[39m, in [36mfind_best_hd_model_per_byte[39m[34m(traces, plaintexts, byte_idx, analysis_interval)[39m
-[32m     18[39m [38;5;28;01mfor[39;00m kg [38;5;129;01min[39;00m [38;5;28mrange[39m([32m256[39m):
-[32m     19[39m     sbox_input = plaintext_bytes ^ kg
-[32m---> [39m[32m20[39m     sbox_output = [43msbox[49m[43m[[49m[43msbox_input[49m[43m][49m
-[32m     21[39m     hypotheses[:, kg] = [hamming_distance(sb, ref_state) [38;5;28;01mfor[39;00m sb [38;5;129;01min[39;00m sbox_output]
-[32m     23[39m [38;5;66;03m# 计算相关系数[39;00m
+Cell In[192], line 20, in find_best_hd_model_per_byte(traces, plaintexts, byte_idx, analysis_interval)
+     18 for kg in range(256):
+     19     sbox_input = plaintext_bytes ^ kg
+---> 20     sbox_output = sbox[sbox_input]
+     21     hypotheses[:, kg] = [hamming_distance(sb, ref_state) for sb in sbox_output]
+     23 # 计算相关系数
 
-[31mTypeError[39m: only integer scalar arrays can be converted to a scalar index
+TypeError: only integer scalar arrays can be converted to a scalar index
 ```
 
 
@@ -3280,16 +3280,16 @@ else:
 继续AddRoundKey攻击...
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mNameError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[193][39m[32m, line 72[39m
-[32m     70[39m [38;5;66;03m# 继续之前的AddRoundKey攻击[39;00m
-[32m     71[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33m继续AddRoundKey攻击...[39m[33m"[39m)
-[32m---> [39m[32m72[39m recovered_key_ar_hex = [33m'[39m[33m'[39m.join([33mf[39m[33m'[39m[38;5;132;01m{[39;00mb[38;5;132;01m:[39;00m[33m02x[39m[38;5;132;01m}[39;00m[33m'[39m [38;5;28;01mfor[39;00m b [38;5;129;01min[39;00m [43mrecovered_key_ar[49m)
-[32m     73[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m恢复的密钥: [39m[38;5;132;01m{[39;00mrecovered_key_ar_hex[38;5;132;01m}[39;00m[33m"[39m)
-[32m     75[39m [38;5;66;03m# 验证[39;00m
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[193], line 72
+     70 # 继续之前的AddRoundKey攻击
+     71 print("\n继续AddRoundKey攻击...")
+---> 72 recovered_key_ar_hex = ''.join(f'{b:02x}' for b in recovered_key_ar)
+     73 print(f"恢复的密钥: {recovered_key_ar_hex}")
+     75 # 验证
 
-[31mNameError[39m: name 'recovered_key_ar' is not defined
+NameError: name 'recovered_key_ar' is not defined
 ```
 
 

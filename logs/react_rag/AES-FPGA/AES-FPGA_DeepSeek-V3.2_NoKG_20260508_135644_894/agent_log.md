@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'
+帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'"
+"帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -241,9 +241,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 加载数据
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'
-plaintext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'
-ciphertext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy'
+wave_path = 'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'
+plaintext_path = 'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'
+ciphertext_path = 'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy'
 
 # 加载数据
 waves = np.load(wave_path)
@@ -492,11 +492,11 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_14288\349721079.py:71: UserWarnin
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy",
+  "wave_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy",
   "ref_start": 0,
   "ref_end": 50,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy"
+  "plaintext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy"
 }
 ```
 </details>
@@ -504,7 +504,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_14288\349721079.py:71: UserWarnin
 <details><summary><b>📋 ← `vertical_aligner`</b> (653 chars)</summary>
 
 ```
-{"out_wave_npy": "valigned_20260508_135849_631817.npy", "plot_path": "valign_compare_20260508_135849_631817.png", "n_traces": 2000, "n_points": 300, "ref_region": [0, 50], "baseline_std": 5.774, "baseline_std_after": 1e-06, "out_plaintext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy", "out_ciphertext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy"}
+{"out_wave_npy": "valigned_20260508_135849_631817.npy", "plot_path": "valign_compare_20260508_135849_631817.png", "n_traces": 2000, "n_points": 300, "ref_region": [0, 50], "baseline_std": 5.774, "baseline_std_after": 1e-06, "out_plaintext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy", "out_ciphertext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy"}
 ```
 </details>
 
@@ -524,9 +524,9 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_14288\349721079.py:71: UserWarnin
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
+  "plaintext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
   "wave_npy": "valigned_20260508_135849_631817.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
+  "ciphertext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
   "target": "S-box_in_xor_prev_ct",
   "leakage_model": "HW",
   "candidates": 30,
@@ -562,8 +562,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_14288\349721079.py:71: UserWarnin
 {
   "key_hex": "FEDCBA98765432100123456789ABCDEF",
   "algorithm": "AES",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
+  "plaintext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
   "mode": "ECB",
   "operation": "encrypt"
 }
@@ -592,8 +592,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_14288\349721079.py:71: UserWarnin
 {
   "key_hex": "0123456789ABCDEFFEDCBA9876543210",
   "algorithm": "AES",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
+  "plaintext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
   "mode": "ECB",
   "operation": "encrypt"
 }
@@ -668,16 +668,16 @@ for i in range(0, 32, 2):
 CPA攻击结果分析:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mKeyError[39m                                  Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[72][39m[32m, line 9[39m
-[32m      6[39m     cpa_detail = json.load(f)
-[32m      8[39m [38;5;28mprint[39m([33m"[39m[33mCPA攻击结果分析:[39m[33m"[39m)
-[32m----> [39m[32m9[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m恢复的密钥 (正): [39m[38;5;132;01m{[39;00m[43mcpa_detail[49m[43m[[49m[33;43m'[39;49m[33;43mrecovered_key_pos[39;49m[33;43m'[39;49m[43m][49m[38;5;132;01m}[39;00m[33m"[39m)
-[32m     10[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m恢复的密钥 (负): [39m[38;5;132;01m{[39;00mcpa_detail[[33m'[39m[33mrecovered_key_neg[39m[33m'[39m][38;5;132;01m}[39;00m[33m"[39m)
-[32m     11[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m验证正确的密钥: 0123456789ABCDEFFEDCBA9876543210[39m[33m"[39m)
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+Cell In[72], line 9
+      6     cpa_detail = json.load(f)
+      8 print("CPA攻击结果分析:")
+----> 9 print(f"恢复的密钥 (正): {cpa_detail['recovered_key_pos']}")
+     10 print(f"恢复的密钥 (负): {cpa_detail['recovered_key_neg']}")
+     11 print(f"验证正确的密钥: 0123456789ABCDEFFEDCBA9876543210")
 
-[31mKeyError[39m: 'recovered_key_pos'
+KeyError: 'recovered_key_pos'
 ```
 
 
@@ -813,48 +813,48 @@ results长度: 16
 第一个字节的结果结构:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mTypeError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[74][39m[32m, line 9[39m
-[32m      7[39m [38;5;28;01mif[39;00m [38;5;28mlen[39m(results) > [32m0[39m:
-[32m      8[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33m第一个字节的结果结构:[39m[33m"[39m)
-[32m----> [39m[32m9[39m     [38;5;28mprint[39m([43mjson[49m[43m.[49m[43mdumps[49m[43m([49m[43mresults[49m[43m[[49m[32;43m0[39;49m[43m][49m[43m.[49m[43mkeys[49m[43m([49m[43m)[49m[43m,[49m[43m [49m[43mindent[49m[43m=[49m[32;43m2[39;49m[43m)[49m)
-[32m     11[39m     [38;5;66;03m# 查看所有字节的摘要信息[39;00m
-[32m     12[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33m所有16个字节的摘要:[39m[33m"[39m)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[74], line 9
+      7 if len(results) > 0:
+      8     print(f"\n第一个字节的结果结构:")
+----> 9     print(json.dumps(results[0].keys(), indent=2))
+     11     # 查看所有字节的摘要信息
+     12     print(f"\n所有16个字节的摘要:")
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py:238[39m, in [36mdumps[39m[34m(obj, skipkeys, ensure_ascii, check_circular, allow_nan, cls, indent, separators, default, sort_keys, **kw)[39m
-[32m    232[39m [38;5;28;01mif[39;00m [38;5;28mcls[39m [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
-[32m    233[39m     [38;5;28mcls[39m = JSONEncoder
-[32m    234[39m [38;5;28;01mreturn[39;00m [38;5;28;43mcls[39;49m[43m([49m
-[32m    235[39m [43m    [49m[43mskipkeys[49m[43m=[49m[43mskipkeys[49m[43m,[49m[43m [49m[43mensure_ascii[49m[43m=[49m[43mensure_ascii[49m[43m,[49m
-[32m    236[39m [43m    [49m[43mcheck_circular[49m[43m=[49m[43mcheck_circular[49m[43m,[49m[43m [49m[43mallow_nan[49m[43m=[49m[43mallow_nan[49m[43m,[49m[43m [49m[43mindent[49m[43m=[49m[43mindent[49m[43m,[49m
-[32m    237[39m [43m    [49m[43mseparators[49m[43m=[49m[43mseparators[49m[43m,[49m[43m [49m[43mdefault[49m[43m=[49m[43mdefault[49m[43m,[49m[43m [49m[43msort_keys[49m[43m=[49m[43msort_keys[49m[43m,[49m
-[32m--> [39m[32m238[39m [43m    [49m[43m*[49m[43m*[49m[43mkw[49m[43m)[49m[43m.[49m[43mencode[49m[43m([49m[43mobj[49m[43m)[49m
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py:238, in dumps(obj, skipkeys, ensure_ascii, check_circular, allow_nan, cls, indent, separators, default, sort_keys, **kw)
+    232 if cls is None:
+    233     cls = JSONEncoder
+    234 return cls(
+    235     skipkeys=skipkeys, ensure_ascii=ensure_ascii,
+    236     check_circular=check_circular, allow_nan=allow_nan, indent=indent,
+    237     separators=separators, default=default, sort_keys=sort_keys,
+--> 238     **kw).encode(obj)
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:202[39m, in [36mJSONEncoder.encode[39m[34m(self, o)[39m
-[32m    200[39m chunks = [38;5;28mself[39m.iterencode(o, _one_shot=[38;5;28;01mTrue[39;00m)
-[32m    201[39m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28misinstance[39m(chunks, ([38;5;28mlist[39m, [38;5;28mtuple[39m)):
-[32m--> [39m[32m202[39m     chunks = [38;5;28mlist[39m(chunks)
-[32m    203[39m [38;5;28;01mreturn[39;00m [33m'[39m[33m'[39m.join(chunks)
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:202, in JSONEncoder.encode(self, o)
+    200 chunks = self.iterencode(o, _one_shot=True)
+    201 if not isinstance(chunks, (list, tuple)):
+--> 202     chunks = list(chunks)
+    203 return ''.join(chunks)
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:439[39m, in [36m_make_iterencode.<locals>._iterencode[39m[34m(o, _current_indent_level)[39m
-[32m    437[39m         [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m([33m"[39m[33mCircular reference detected[39m[33m"[39m)
-[32m    438[39m     markers[markerid] = o
-[32m--> [39m[32m439[39m o = [43m_default[49m[43m([49m[43mo[49m[43m)[49m
-[32m    440[39m [38;5;28;01myield from[39;00m _iterencode(o, _current_indent_level)
-[32m    441[39m [38;5;28;01mif[39;00m markers [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:439, in _make_iterencode.<locals>._iterencode(o, _current_indent_level)
+    437         raise ValueError("Circular reference detected")
+    438     markers[markerid] = o
+--> 439 o = _default(o)
+    440 yield from _iterencode(o, _current_indent_level)
+    441 if markers is not None:
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:180[39m, in [36mJSONEncoder.default[39m[34m(self, o)[39m
-[32m    161[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mdefault[39m([38;5;28mself[39m, o):
-[32m    162[39m [38;5;250m    [39m[33;03m"""Implement this method in a subclass such that it returns[39;00m
-[32m    163[39m [33;03m    a serializable object for ``o``, or calls the base implementation[39;00m
-[32m    164[39m [33;03m    (to raise a ``TypeError``).[39;00m
-[32m   (...)[39m[32m    178[39m 
-[32m    179[39m [33;03m    """[39;00m
-[32m--> [39m[32m180[39m     [38;5;28;01mraise[39;00m [38;5;167;01mTypeError[39;00m([33mf[39m[33m'[39m[33mObject of type [39m[38;5;132;01m{[39;00mo.[34m__class__[39m.[34m__name__[39m[38;5;132;01m}[39;00m[33m [39m[33m'[39m
-[32m    181[39m                     [33mf[39m[33m'[39m[33mis not JSON serializable[39m[33m'[39m)
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:180, in JSONEncoder.default(self, o)
+    161 def default(self, o):
+    162     """Implement this method in a subclass such that it returns
+    163     a serializable object for ``o``, or calls the base implementation
+    164     (to raise a ``TypeError``).
+   (...)    178 
+    179     """
+--> 180     raise TypeError(f'Object of type {o.__class__.__name__} '
+    181                     f'is not JSON serializable')
 
-[31mTypeError[39m: Object of type dict_keys is not JSON serializable
+TypeError: Object of type dict_keys is not JSON serializable
 ```
 
 

@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'
+帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'"
+"帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -140,9 +140,9 @@ import matplotlib.pyplot as plt
 import os
 
 # 加载数据
-plaintext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'
-ciphertext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'
+plaintext_path = 'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'
+ciphertext_path = 'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy'
+wave_path = 'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'
 
 # 检查文件是否存在
 print("文件存在性检查:")
@@ -319,11 +319,11 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\2729780173.py:50: UserWarni
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy",
+  "wave_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy",
   "ref_start": 0,
   "ref_end": 10,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy"
+  "plaintext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy"
 }
 ```
 </details>
@@ -331,7 +331,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\2729780173.py:50: UserWarni
 <details><summary><b>📋 ← `vertical_aligner`</b> (652 chars)</summary>
 
 ```
-{"out_wave_npy": "valigned_20260424_203852_554382.npy", "plot_path": "valign_compare_20260424_203852_554382.png", "n_traces": 2000, "n_points": 300, "ref_region": [0, 10], "baseline_std": 5.7823, "baseline_std_after": 0.0, "out_plaintext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy", "out_ciphertext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy"}
+{"out_wave_npy": "valigned_20260424_203852_554382.npy", "plot_path": "valign_compare_20260424_203852_554382.png", "n_traces": 2000, "n_points": 300, "ref_region": [0, 10], "baseline_std": 5.7823, "baseline_std_after": 0.0, "out_plaintext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy", "out_ciphertext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy"}
 ```
 </details>
 
@@ -452,9 +452,9 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\1655448645.py:41: UserWarni
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
+  "plaintext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
   "wave_npy": "valigned_20260424_203852_554382.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
+  "ciphertext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
   "target": "S-box_in_xor_prev_ct",
   "leakage_model": "HW",
   "candidates": 30,
@@ -489,8 +489,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\1655448645.py:41: UserWarni
 ```json
 {
   "key_hex": "FEDCBA98765432100123456789ABCDEF",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
+  "plaintext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
   "algorithm": "AES",
   "mode": "ECB",
   "operation": "encrypt"
@@ -519,8 +519,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\1655448645.py:41: UserWarni
 ```json
 {
   "key_hex": "0123456789ABCDEFFEDCBA9876543210",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
+  "plaintext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
   "algorithm": "AES",
   "mode": "ECB",
   "operation": "encrypt"
@@ -601,16 +601,16 @@ CPA攻击结果分析:
 轨迹数量: 2000
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mKeyError[39m                                  Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[585][39m[32m, line 11[39m
-[32m      9[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m使用的模型: [39m[38;5;132;01m{[39;00mcpa_detail[[33m'[39m[33mtarget[39m[33m'[39m][38;5;132;01m}[39;00m[33m + [39m[38;5;132;01m{[39;00mcpa_detail[[33m'[39m[33mleakage_model[39m[33m'[39m][38;5;132;01m}[39;00m[33m"[39m)
-[32m     10[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m轨迹数量: [39m[38;5;132;01m{[39;00mcpa_detail[[33m'[39m[33mn_traces[39m[33m'[39m][38;5;132;01m}[39;00m[33m"[39m)
-[32m---> [39m[32m11[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m恢复的密钥 (正相关): [39m[38;5;132;01m{[39;00m[43mcpa_detail[49m[43m[[49m[33;43m'[39;49m[33;43mrecovered_key_pos[39;49m[33;43m'[39;49m[43m][49m[38;5;132;01m}[39;00m[33m"[39m)
-[32m     12[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m恢复的密钥 (负相关): [39m[38;5;132;01m{[39;00mcpa_detail[[33m'[39m[33mrecovered_key_neg[39m[33m'[39m][38;5;132;01m}[39;00m[33m"[39m)
-[32m     13[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m验证正确的密钥: 0123456789ABCDEFFEDCBA9876543210[39m[33m"[39m)
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+Cell In[585], line 11
+      9 print(f"使用的模型: {cpa_detail['target']} + {cpa_detail['leakage_model']}")
+     10 print(f"轨迹数量: {cpa_detail['n_traces']}")
+---> 11 print(f"恢复的密钥 (正相关): {cpa_detail['recovered_key_pos']}")
+     12 print(f"恢复的密钥 (负相关): {cpa_detail['recovered_key_neg']}")
+     13 print(f"验证正确的密钥: 0123456789ABCDEFFEDCBA9876543210")
 
-[31mKeyError[39m: 'recovered_key_pos'
+KeyError: 'recovered_key_pos'
 ```
 
 
@@ -712,16 +712,16 @@ print(f"\n恢复的完整密钥: {recovered_key}")
 results字段类型: <class 'list'>
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mAttributeError[39m                            Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[587][39m[32m, line 4[39m
-[32m      2[39m results = cpa_detail.get([33m'[39m[33mresults[39m[33m'[39m, {})
-[32m      3[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33mresults字段类型: [39m[38;5;132;01m{[39;00m[38;5;28mtype[39m(results)[38;5;132;01m}[39;00m[33m"[39m)
-[32m----> [39m[32m4[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33mresults字段键值: [39m[38;5;132;01m{[39;00m[38;5;28mlist[39m([43mresults[49m[43m.[49m[43mkeys[49m())[38;5;132;01m}[39;00m[33m"[39m)
-[32m      6[39m [38;5;66;03m# 检查字节0的结果[39;00m
-[32m      7[39m [38;5;28;01mif[39;00m [33m'[39m[33mbyte_0[39m[33m'[39m [38;5;129;01min[39;00m results:
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Cell In[587], line 4
+      2 results = cpa_detail.get('results', {})
+      3 print(f"results字段类型: {type(results)}")
+----> 4 print(f"results字段键值: {list(results.keys())}")
+      6 # 检查字节0的结果
+      7 if 'byte_0' in results:
 
-[31mAttributeError[39m: 'list' object has no attribute 'keys'
+AttributeError: 'list' object has no attribute 'keys'
 ```
 
 

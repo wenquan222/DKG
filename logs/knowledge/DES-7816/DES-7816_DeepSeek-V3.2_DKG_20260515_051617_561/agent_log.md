@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
+帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'"
+"帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -663,9 +663,9 @@ from scipy import stats
 import os
 
 # 加载数据
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
+plain_path = 'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'
+cipher_path = 'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy'
+wave_path = 'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
 
 plaintexts = np.load(plain_path)
 ciphertexts = np.load(cipher_path)
@@ -1347,15 +1347,15 @@ K1二进制: 100100011110100100000001001111000100010000001111
 前5个主密钥候选:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mOverflowError[39m                             Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[236][39m[32m, line 160[39m
-[32m    158[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33m前5个主密钥候选:[39m[33m"[39m)
-[32m    159[39m [38;5;28;01mfor[39;00m i [38;5;129;01min[39;00m [38;5;28mrange[39m([38;5;28mmin[39m([32m5[39m, [38;5;28mlen[39m(master_key_candidates))):
-[32m--> [39m[32m160[39m     key_bytes = [43mmaster_key_candidates[49m[43m[[49m[43mi[49m[43m][49m[43m.[49m[43mto_bytes[49m[43m([49m[32;43m8[39;49m[43m,[49m[43m [49m[43mbyteorder[49m[43m=[49m[33;43m'[39;49m[33;43mbig[39;49m[33;43m'[39;49m[43m)[49m
-[32m    161[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  候选[39m[38;5;132;01m{[39;00mi+[32m1[39m[38;5;132;01m}[39;00m[33m: [39m[38;5;132;01m{[39;00mkey_bytes.hex()[38;5;132;01m}[39;00m[33m"[39m)
+---------------------------------------------------------------------------
+OverflowError                             Traceback (most recent call last)
+Cell In[236], line 160
+    158 print("\n前5个主密钥候选:")
+    159 for i in range(min(5, len(master_key_candidates))):
+--> 160     key_bytes = master_key_candidates[i].to_bytes(8, byteorder='big')
+    161     print(f"  候选{i+1}: {key_bytes.hex()}")
 
-[31mOverflowError[39m: int too big to convert
+OverflowError: int too big to convert
 ```
 
 
@@ -1536,23 +1536,23 @@ if not valid_keys:
 未知位置数: 8 (应有8个)
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mValueError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[237][39m[32m, line 71[39m
-[32m     69[39m [38;5;66;03m# 重新尝试恢复主密钥[39;00m
-[32m     70[39m [38;5;28mprint[39m([33m"[39m[33m重新尝试从K1恢复主密钥...[39m[33m"[39m)
-[32m---> [39m[32m71[39m master_key_candidates = [43mrecover_master_key_from_k1_fixed[49m[43m([49m[43mk1_48[49m[43m,[49m[43m [49m[43mmax_combinations[49m[43m=[49m[32;43m256[39;49m[43m)[49m
-[32m     72[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m生成的主密钥候选数: [39m[38;5;132;01m{[39;00m[38;5;28mlen[39m(master_key_candidates)[38;5;132;01m}[39;00m[33m"[39m)
-[32m     74[39m [38;5;66;03m# 显示前几个候选[39;00m
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[237], line 71
+     69 # 重新尝试恢复主密钥
+     70 print("重新尝试从K1恢复主密钥...")
+---> 71 master_key_candidates = recover_master_key_from_k1_fixed(k1_48, max_combinations=256)
+     72 print(f"生成的主密钥候选数: {len(master_key_candidates)}")
+     74 # 显示前几个候选
 
-[36mCell[39m[36m [39m[32mIn[237][39m[32m, line 57[39m, in [36mrecover_master_key_from_k1_fixed[39m[34m(k1_48, max_combinations)[39m
-[32m     55[39m     parity = [32m1[39m - ([38;5;28mbin[39m(byte).count([33m'[39m[33m1[39m[33m'[39m) % [32m2[39m)
-[32m     56[39m     byte_with_parity = (byte << [32m1[39m) | parity
-[32m---> [39m[32m57[39m     [43mmaster_key_bytes[49m[43m[[49m[43mi[49m[43m][49m = byte_with_parity
-[32m     59[39m [38;5;66;03m# 第8个字节（全0）[39;00m
-[32m     60[39m master_key_bytes[[32m7[39m] = [32m0[39m
+Cell In[237], line 57, in recover_master_key_from_k1_fixed(k1_48, max_combinations)
+     55     parity = 1 - (bin(byte).count('1') % 2)
+     56     byte_with_parity = (byte << 1) | parity
+---> 57     master_key_bytes[i] = byte_with_parity
+     59 # 第8个字节（全0）
+     60 master_key_bytes[7] = 0
 
-[31mValueError[39m: byte must be in range(0, 256)
+ValueError: byte must be in range(0, 256)
 ```
 
 
@@ -2256,7 +2256,15 @@ else:
 已知位置数: 48/56
 未知位置数: 8/56 (应有8个)
 需要枚举 256 种组合
-  进度: 32/256  进度: 64/256  进度: 96/256  进度: 128/256  进度: 160/256  进度: 192/256  进度: 224/256  进度: 256/256
+  进度: 32/256
+  进度: 64/256
+  进度: 96/256
+  进度: 128/256
+  进度: 160/256
+  进度: 192/256
+  进度: 224/256
+  进度: 256/256
+
 搜索完成，找到 0 个候选密钥
 
 ❌ 未找到有效密钥
@@ -2267,7 +2275,15 @@ else:
 已知位置数: 48/56
 未知位置数: 8/56 (应有8个)
 需要枚举 256 种组合
-  进度: 32/256  进度: 64/256  进度: 96/256  进度: 128/256  进度: 160/256  进度: 192/256  进度: 224/256  进度: 256/256
+  进度: 32/256
+  进度: 64/256
+  进度: 96/256
+  进度: 128/256
+  进度: 160/256
+  进度: 192/256
+  进度: 224/256
+  进度: 256/256
+
 搜索完成，找到 0 个候选密钥
 
 ❌ 即使扩大搜索也未找到密钥

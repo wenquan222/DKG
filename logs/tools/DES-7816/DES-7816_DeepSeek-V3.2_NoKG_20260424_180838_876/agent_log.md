@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
+帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'"
+"帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -139,9 +139,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 加载数据
-plaintext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'
-ciphertext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
+plaintext_path = 'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'
+ciphertext_path = 'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy'
+wave_path = 'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
 
 plaintext = np.load(plaintext_path)
 ciphertext = np.load(ciphertext_path)
@@ -342,11 +342,11 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\2159260063.py:49: UserWarni
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy",
+  "wave_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy",
   "ref_start": 0,
   "ref_end": 100,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy"
+  "plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy"
 }
 ```
 </details>
@@ -354,7 +354,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\2159260063.py:49: UserWarni
 <details><summary><b>📋 ← `vertical_aligner`</b> (651 chars)</summary>
 
 ```
-{"out_wave_npy": "valigned_20260424_181015_354675.npy", "plot_path": "valign_compare_20260424_181015_354675.png", "n_traces": 100, "n_points": 2000, "ref_region": [0, 100], "baseline_std": 6.9151, "baseline_std_after": 2e-06, "out_plaintext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy", "out_ciphertext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy"}
+{"out_wave_npy": "valigned_20260424_181015_354675.npy", "plot_path": "valign_compare_20260424_181015_354675.png", "n_traces": 100, "n_points": 2000, "ref_region": [0, 100], "baseline_std": 6.9151, "baseline_std_after": 2e-06, "out_plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy", "out_ciphertext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy"}
 ```
 </details>
 
@@ -455,7 +455,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\1608433502.py:54: UserWarni
 
 **🔧 → `plaintext_ciphertext_correlation`** `{
   "wave_npy": "valigned_20260424_181015_354675.npy",
-  "data_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
+  "data_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
   "data_type": "plaintext",
   "byte_index": 0,
   "model": "HW"
@@ -474,7 +474,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\1608433502.py:54: UserWarni
 **🤖 LLM:** 相关性分析显示多个峰值区域，这表明可能存在多个加密操作或对齐问题。峰值位置分散（标准差472.8），这提示可能需要静态对齐。让我先尝试直接进行CPA攻击，看看是否需要对齐：
 
 **🔧 → `des_cpa_attack`** `{
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
+  "plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
   "wave_npy": "valigned_20260424_181015_354675.npy",
   "target": "S-box_out",
   "leakage_model": "HW",
@@ -710,8 +710,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\725288920.py:42: UserWarnin
   "length": 80,
   "max_shift": 100,
   "threshold": 80,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy"
+  "plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy"
 }
 ```
 </details>
@@ -739,8 +739,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\725288920.py:42: UserWarnin
   "length": 80,
   "max_shift": 150,
   "threshold": 60,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy"
+  "plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy"
 }
 ```
 </details>
@@ -1288,10 +1288,10 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\607579169.py:45: UserWarnin
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy",
+  "wave_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy",
   "weight": 3,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy"
+  "plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy"
 }
 ```
 </details>
@@ -1299,15 +1299,15 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\607579169.py:45: UserWarnin
 <details><summary><b>📋 ← `weighted_moving_average`</b> (1520 chars)</summary>
 
 ```
-{"out_wave_npy": "smoothed_20260424_181647_394139.npy", "plot_path": "smooth_compare_20260424_181647_394139.png", "n_traces": 100, "n_points": 2000, "weight": 3, "plaintext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy", "ciphertext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy"}
+{"out_wave_npy": "smoothed_20260424_181647_394139.npy", "plot_path": "smooth_compare_20260424_181647_394139.png", "n_traces": 100, "n_points": 2000, "weight": 3, "plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy", "ciphertext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy"}
 <>:25: SyntaxWarning: "is not" with a literal. Did you mean "!="?
 <>:27: SyntaxWarning: "is not" with a literal. Did you mean "!="?
 <>:25: SyntaxWarning: "is not" with a literal. Did you mean "!="?
 <>:27: SyntaxWarning: "is not" with a literal. Did you mean "!="?
 C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\3431113982.py:25: SyntaxWarning: "is not" with a literal. Did you mean "!="?
-  if "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy" is not None:
+  if "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy" is not None:
 C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\3431113982.py:27: SyntaxWarning: "is not" with a literal. Did you mean "!="?
-  if "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_ciph
+  if "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_ciph
 ...(truncated)
 ```
 </details>
@@ -1323,7 +1323,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\3431113982.py:27: SyntaxWar
 **🤖 LLM:** 现在让我在平滑后的波形上尝试CPA，使用S-box_out目标和HW模型：
 
 **🔧 → `des_cpa_attack`** `{
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
+  "plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
   "wave_npy": "smoothed_20260424_181647_394139.npy",
   "target": "S-box_out",
   "leakage_model": "HW",
@@ -1356,8 +1356,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\3431113982.py:27: SyntaxWar
 {
   "key_hex": "D044F4102C40204E",
   "algorithm": "DES",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy",
+  "plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy",
   "trace_index": 0
 }
 ```
@@ -1378,7 +1378,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\3431113982.py:27: SyntaxWar
 **🤖 LLM:** 让我尝试一个不同的方法。也许我需要合并多个CPA运行的结果。让我尝试使用S-box_in目标和ID模型：
 
 **🔧 → `des_cpa_attack`** `{
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
+  "plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
   "wave_npy": "smoothed_20260424_181647_394139.npy",
   "target": "S-box_in",
   "leakage_model": "ID",
@@ -1474,7 +1474,7 @@ print("4. 考虑使用模板攻击或其他方法")
 **🤖 LLM:** 让我尝试最后一种方法：使用R_xor_LOut目标，这是针对硬件DES实现的推荐目标：
 
 **🔧 → `des_cpa_attack`** `{
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
+  "plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
   "wave_npy": "smoothed_20260424_181647_394139.npy",
   "target": "R_xor_LOut",
   "leakage_model": "HW",
@@ -1507,8 +1507,8 @@ print("4. 考虑使用模板攻击或其他方法")
 {
   "key_hex": "40C0CEF40E0A248E",
   "algorithm": "DES",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy",
+  "plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy",
   "trace_index": 0
 }
 ```
@@ -1537,8 +1537,8 @@ print("4. 考虑使用模板攻击或其他方法")
   "algorithm": "DES",
   "recovered_key_hex": "40C0CEF40E0A248E",
   "cpa_detail_file": "des_cpa_detail_20260424_181804_912015.json",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy",
+  "plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy",
   "gap_threshold": 0.1,
   "max_candidates_per_byte": 40,
   "max_combinations": 100000

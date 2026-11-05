@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
+帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'"
+"帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -568,9 +568,9 @@ import os
 
 # 加载数据
 print("正在加载数据...")
-plaintexts = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy')
-ciphertexts = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy')
-traces = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy')
+plaintexts = np.load('data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy')
+ciphertexts = np.load('data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy')
+traces = np.load('data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy')
 
 print(f"明文形状: {plaintexts.shape}")
 print(f"密文形状: {ciphertexts.shape}")
@@ -2121,36 +2121,36 @@ print(f"\n结果已保存到 cpa_results.json")
 候选密钥 (字节): [182, 80, 57, 10, 58, 160, 107, 17, 95, 102, 14, 56, 87, 116, 81, 37]
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mTypeError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[166][39m[32m, line 79[39m
-[32m     77[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mjson[39;00m
-[32m     78[39m [38;5;28;01mwith[39;00m [38;5;28mopen[39m([33m'[39m[33mcpa_results.json[39m[33m'[39m, [33m'[39m[33mw[39m[33m'[39m) [38;5;28;01mas[39;00m f:
-[32m---> [39m[32m79[39m     [43mjson[49m[43m.[49m[43mdump[49m[43m([49m[43m{[49m
-[32m     80[39m [43m        [49m[33;43m'[39;49m[33;43mcandidate_key[39;49m[33;43m'[39;49m[43m:[49m[43m [49m[43mcandidate_key[49m[43m.[49m[43mhex[49m[43m([49m[43m)[49m[43m,[49m
-[32m     81[39m [43m        [49m[33;43m'[39;49m[33;43mkey_candidates[39;49m[33;43m'[39;49m[43m:[49m[43m [49m[43mkey_candidates[49m[43m,[49m
-[32m     82[39m [43m        [49m[33;43m'[39;49m[33;43mconfig[39;49m[33;43m'[39;49m[43m:[49m[43m [49m[43m{[49m
-[32m     83[39m [43m            [49m[33;43m'[39;49m[33;43mleakage_model[39;49m[33;43m'[39;49m[43m:[49m[43m [49m[43mleakage_model[49m[43m,[49m
-[32m     84[39m [43m            [49m[33;43m'[39;49m[33;43mtarget[39;49m[33;43m'[39;49m[43m:[49m[43m [49m[43mtarget[49m[43m,[49m
-[32m     85[39m [43m            [49m[33;43m'[39;49m[33;43mtraces_used[39;49m[33;43m'[39;49m[43m:[49m[43m [49m[43mnp[49m[43m.[49m[43msum[49m[43m([49m[43maccepted_v2[49m[43m)[49m
-[32m     86[39m [43m        [49m[43m}[49m
-[32m     87[39m [43m    [49m[43m}[49m[43m,[49m[43m [49m[43mf[49m[43m,[49m[43m [49m[43mindent[49m[43m=[49m[32;43m2[39;49m[43m)[49m
-[32m     89[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33m结果已保存到 cpa_results.json[39m[33m"[39m)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[166], line 79
+     77 import json
+     78 with open('cpa_results.json', 'w') as f:
+---> 79     json.dump({
+     80         'candidate_key': candidate_key.hex(),
+     81         'key_candidates': key_candidates,
+     82         'config': {
+     83             'leakage_model': leakage_model,
+     84             'target': target,
+     85             'traces_used': np.sum(accepted_v2)
+     86         }
+     87     }, f, indent=2)
+     89 print(f"\n结果已保存到 cpa_results.json")
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py:179[39m, in [36mdump[39m[34m(obj, fp, skipkeys, ensure_ascii, check_circular, allow_nan, cls, indent, separators, default, sort_keys, **kw)[39m
-[32m    173[39m     iterable = [38;5;28mcls[39m(skipkeys=skipkeys, ensure_ascii=ensure_ascii,
-[32m    174[39m         check_circular=check_circular, allow_nan=allow_nan, indent=indent,
-[32m    175[39m         separators=separators,
-[32m    176[39m         default=default, sort_keys=sort_keys, **kw).iterencode(obj)
-[32m    177[39m [38;5;66;03m# could accelerate with writelines in some versions of Python, at[39;00m
-[32m    178[39m [38;5;66;03m# a debuggability cost[39;00m
-[32m--> [39m[32m179[39m [43m[49m[38;5;28;43;01mfor[39;49;00m[43m [49m[43mchunk[49m[43m [49m[38;5;129;43;01min[39;49;00m[43m [49m[43miterable[49m[43m:[49m
-[32m    180[39m [43m    [49m[43mfp[49m[43m.[49m[43mwrite[49m[43m([49m[43mchunk[49m[43m)[49m
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py:179, in dump(obj, fp, skipkeys, ensure_ascii, check_circular, allow_nan, cls, indent, separators, default, sort_keys, **kw)
+    173     iterable = cls(skipkeys=skipkeys, ensure_ascii=ensure_ascii,
+    174         check_circular=check_circular, allow_nan=allow_nan, indent=indent,
+    175         separators=separators,
+    176         default=default, sort_keys=sort_keys, **kw).iterencode(obj)
+    177 # could accelerate with writelines in some versions of Python, at
+    178 # a debuggability cost
+--> 179 for chunk in iterable:
+    180     fp.write(chunk)
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:432[39m, in [36m_make_iterencode.<locals>._iterencode[39m[34m(o, _current_indent_level)[39m
-[32m    430[39m     [38;5;28;01myield from[39;00m _iterencode_list(o, _current_indent_level)
-[32m    431[39m [38;5;28;01melif[39;00m [38;5;28misinstance[39m(o, [38;5;28mdict[39m):
-[32m--> [39m[3
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:432, in _make_iterencode.<locals>._iterencode(o, _current_indent_level)
+    430     yield from _iterencode_list(o, _current_indent_level)
+    431 elif isinstance(o, dict):
+--> [3
 ...(truncated)
 ```
 

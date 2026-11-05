@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'
+帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'"
+"帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -413,8 +413,8 @@ The Python (Jupyter) working directory is already set to this session directory.
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy",
+  "plaintext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
+  "wave_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy",
   "target": "S-box_out",
   "leakage_model": "HW",
   "candidates": 20
@@ -451,7 +451,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 加载波形数据
-wave = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy')
+wave = np.load('data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy')
 print(f"波形形状: {wave.shape}")
 
 # 计算每个采样点的方差
@@ -522,7 +522,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 加载波形
-wave = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy')
+wave = np.load('data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy')
 
 # 查看方差峰值区域附近的波形（选择中间的trace作为参考）
 ref_trace_idx = 125
@@ -601,14 +601,14 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\104069811.py:37: UserWarnin
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy",
+  "wave_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy",
   "start": 1080,
   "length": 100,
   "max_shift": 200,
   "threshold": 85,
   "ref_trace": 125,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy"
+  "plaintext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy"
 }
 ```
 </details>
@@ -756,16 +756,16 @@ AES-128 密钥恢复结果
 ============================================================
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mKeyError[39m                                  Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[372][39m[32m, line 10[39m
-[32m      8[39m [38;5;28mprint[39m([33m"[39m[33mAES-128 密钥恢复结果[39m[33m"[39m)
-[32m      9[39m [38;5;28mprint[39m([33m"[39m[33m=[39m[33m"[39m * [32m60[39m)
-[32m---> [39m[32m10[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33m恢复密钥: [39m[38;5;132;01m{[39;00m[43mdetail[49m[43m[[49m[33;43m'[39;49m[33;43mrecovered_key[39;49m[33;43m'[39;49m[43m][49m[38;5;132;01m}[39;00m[33m"[39m)
-[32m     11[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m验证状态: ✅ 通过[39m[33m"[39m)
-[32m     12[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33m各字节详情:[39m[33m"[39m)
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+Cell In[372], line 10
+      8 print("AES-128 密钥恢复结果")
+      9 print("=" * 60)
+---> 10 print(f"\n恢复密钥: {detail['recovered_key']}")
+     11 print(f"验证状态: ✅ 通过")
+     12 print(f"\n各字节详情:")
 
-[31mKeyError[39m: 'recovered_key'
+KeyError: 'recovered_key'
 ```
 
 
@@ -820,16 +820,16 @@ print("=" * 60)
 JSON keys: ['n_traces', 'n_points', 'leakage_model', 'target', 'corr_mode', 'results']
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mKeyError[39m                                  Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[373][39m[32m, line 11[39m
-[32m      8[39m [38;5;28mprint[39m([33m"[39m[33mJSON keys:[39m[33m"[39m, [38;5;28mlist[39m(detail.keys())[:[32m10[39m])
-[32m     10[39m [38;5;66;03m# 从per_byte中提取密钥[39;00m
-[32m---> [39m[32m11[39m per_byte = [43mdetail[49m[43m[[49m[33;43m'[39;49m[33;43mper_byte[39;49m[33;43m'[39;49m[43m][49m
-[32m     12[39m recovered_key = [33m'[39m[33m'[39m.join([byte_info[[33m'[39m[33mbest_key_hex[39m[33m'[39m].replace([33m'[39m[33m0x[39m[33m'[39m, [33m'[39m[33m'[39m).upper().zfill([32m2[39m) [38;5;28;01mfor[39;00m byte_info [38;5;129;01min[39;00m per_byte])
-[32m     14[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33m"[39m + [33m"[39m[33m=[39m[33m"[39m * [32m60[39m)
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+Cell In[373], line 11
+      8 print("JSON keys:", list(detail.keys())[:10])
+     10 # 从per_byte中提取密钥
+---> 11 per_byte = detail['per_byte']
+     12 recovered_key = ''.join([byte_info['best_key_hex'].replace('0x', '').upper().zfill(2) for byte_info in per_byte])
+     14 print("\n" + "=" * 60)
 
-[31mKeyError[39m: 'per_byte'
+KeyError: 'per_byte'
 ```
 
 

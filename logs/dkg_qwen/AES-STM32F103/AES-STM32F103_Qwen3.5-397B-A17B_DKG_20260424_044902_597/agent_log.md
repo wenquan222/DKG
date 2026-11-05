@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'
+帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'"
+"帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -498,9 +498,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load the data
-wave = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy')
-plain = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy')
-cipher = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy')
+wave = np.load('data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy')
+plain = np.load('data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy')
+cipher = np.load('data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy')
 
 print(f"Wave shape: {wave.shape}")
 print(f"Plaintext shape: {plain.shape}")
@@ -588,8 +588,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_24372\2934981454.py:47: UserWarni
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy",
+  "plaintext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
+  "wave_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy",
   "leakage_model": "HW",
   "target": "S-box_out",
   "candidates": 20
@@ -670,16 +670,16 @@ print(f"Low confidence bytes (gap <= 15%): {low_conf_bytes}")
 
 ```
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mKeyError[39m                                  Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[179][39m[32m, line 9[39m
-[32m      6[39m     cpa_detail = json.load(f)
-[32m      8[39m [38;5;66;03m# Extract time indices and correlations[39;00m
-[32m----> [39m[32m9[39m time_indices = [b[[33m'[39m[33mtime_index[39m[33m'[39m] [38;5;28;01mfor[39;00m b [38;5;129;01min[39;00m [43mcpa_detail[49m[43m[[49m[33;43m'[39;49m[33;43mper_byte[39;49m[33;43m'[39;49m[43m][49m]
-[32m     10[39m correlations = [b[[33m'[39m[33mcorrelation[39m[33m'[39m] [38;5;28;01mfor[39;00m b [38;5;129;01min[39;00m cpa_detail[[33m'[39m[33mper_byte[39m[33m'[39m]]
-[32m     11[39m gap_pcts = [b[[33m'[39m[33mgap_pct[39m[33m'[39m] [38;5;28;01mfor[39;00m b [38;5;129;01min[39;00m cpa_detail[[33m'[39m[33mper_byte[39m[33m'[39m]]
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+Cell In[179], line 9
+      6     cpa_detail = json.load(f)
+      8 # Extract time indices and correlations
+----> 9 time_indices = [b['time_index'] for b in cpa_detail['per_byte']]
+     10 correlations = [b['correlation'] for b in cpa_detail['per_byte']]
+     11 gap_pcts = [b['gap_pct'] for b in cpa_detail['per_byte']]
 
-[31mKeyError[39m: 'per_byte'
+KeyError: 'per_byte'
 ```
 
 
@@ -914,7 +914,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load wave
-wave = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy')
+wave = np.load('data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy')
 
 # Calculate variance
 variance = np.var(wave, axis=0)
@@ -1015,7 +1015,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load wave
-wave = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy')
+wave = np.load('data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy')
 
 # Plot a few traces around the high variance region (1090-1120)
 plt.figure(figsize=(15, 6))
@@ -1079,9 +1079,9 @@ for i in range(5):
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy",
+  "wave_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy",
+  "plaintext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy",
   "start": 1100,
   "length": 120,
   "max_shift": 400,

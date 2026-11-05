@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
+帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'"
+"帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -462,9 +462,9 @@ import matplotlib.pyplot as plt
 import os
 
 # 加载数据
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
+plain_path = 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'
+cipher_path = 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy'
+wave_path = 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
 
 print("检查文件是否存在:")
 print(f"明文文件: {os.path.exists(plain_path)}")
@@ -1824,16 +1824,16 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_28024\153177038.py:20: RuntimeWar
   成功: False
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mKeyError[39m                                  Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[103][39m[32m, line 49[39m
-[32m     46[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  成功: [39m[38;5;132;01m{[39;00mtest_result[[33m'[39m[33msuccess[39m[33m'[39m][38;5;132;01m}[39;00m[33m"[39m)
-[32m     48[39m [38;5;66;03m# 可视化测试结果[39;00m
-[32m---> [39m[32m49[39m [38;5;28;01mif[39;00m [43mtest_result[49m[43m[[49m[33;43m'[39;49m[33;43mcorrelations[39;49m[33;43m'[39;49m[43m][49m [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
-[32m     50[39m     plt.figure(figsize=([32m10[39m, [32m6[39m))
-[32m     51[39m     plt.plot(np.abs(test_result[[33m'[39m[33mcorrelations[39m[33m'[39m][[32m0x2A[39m]), label=[33m'[39m[33m正确密钥 (0x2A)[39m[33m'[39m)
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+Cell In[103], line 49
+     46 print(f"  成功: {test_result['success']}")
+     48 # 可视化测试结果
+---> 49 if test_result['correlations'] is not None:
+     50     plt.figure(figsize=(10, 6))
+     51     plt.plot(np.abs(test_result['correlations'][0x2A]), label='正确密钥 (0x2A)')
 
-[31mKeyError[39m: 'correlations'
+KeyError: 'correlations'
 ```
 
 
@@ -2243,23 +2243,23 @@ for sbox in [0, 7]:  # 测试第一个和最后一个S-box
 尝试攻击DES最后一轮...
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mIndexError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[107][39m[32m, line 100[39m
-[32m     98[39m [38;5;28;01mfor[39;00m sbox [38;5;129;01min[39;00m [[32m0[39m, [32m7[39m]:  [38;5;66;03m# 测试第一个和最后一个S-box[39;00m
-[32m     99[39m     [38;5;28;01mfor[39;00m model [38;5;129;01min[39;00m [[33m'[39m[33mHW[39m[33m'[39m, [33m'[39m[33mBIT[39m[33m'[39m]:
-[32m--> [39m[32m100[39m         result = [43mcpa_des_last_round[49m[43m([49m[43mtraces[49m[43m,[49m[43m [49m[43mciphertexts[49m[43m,[49m[43m [49m[43msbox[49m[43m,[49m[43m [49m[43mnew_trace_interval[49m[43m,[49m[43m [49m[43mmodel[49m[43m)[49m
-[32m    101[39m         [38;5;28;01mif[39;00m result[[33m'[39m[33msuccess[39m[33m'[39m]:
-[32m    102[39m             [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  S-box [39m[38;5;132;01m{[39;00msbox[38;5;132;01m}[39;00m[33m, 模型 [39m[38;5;132;01m{[39;00mmodel[38;5;132;01m}[39;00m[33m: 密钥=[39m[38;5;132;01m{[39;00mresult[[33m'[39m[33mbest_key[39m[33m'[39m][38;5;132;01m:[39;00m[33m02x[39m[38;5;132;01m}[39;00m[33m, Gap=[39m[38;5;132;01m{[39;00mresult[[33m'[39m[33mgap_pct[39m[33m'[39m][38;5;132;01m:[39;00m[33m.1f[39m[38;5;132;01m}[39;00m[33m% ✓[39m[33m"[39m)
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+Cell In[107], line 100
+     98 for sbox in [0, 7]:  # 测试第一个和最后一个S-box
+     99     for model in ['HW', 'BIT']:
+--> 100         result = cpa_des_last_round(traces, ciphertexts, sbox, new_trace_interval, model)
+    101         if result['success']:
+    102             print(f"  S-box {sbox}, 模型 {model}: 密钥={result['best_key']:02x}, Gap={result['gap_pct']:.1f}% ✓")
 
-[36mCell[39m[36m [39m[32mIn[107][39m[32m, line 59[39m, in [36mcpa_des_last_round[39m[34m(traces, ciphertexts, target_sbox, trace_interval, model)[39m
-[32m     57[39m [38;5;66;03m# 计算相关性[39;00m
-[32m     58[39m [38;5;28;01mfor[39;00m j, point_idx [38;5;129;01min[39;00m [38;5;28menumerate[39m(trace_interval):
-[32m---> [39m[32m59[39m     [38;5;28;01mif[39;00m np.std([43mtraces[49m[43m[[49m[43m:[49m[43m,[49m[43m [49m[43mpoint_idx[49m[43m][49m) == [32m0[39m [38;5;129;01mor[39;00m np.std(predictions) == [32m0[39m:
-[32m     60[39m         correlations[kg, j] = [32m0[39m
-[32m     61[39m         [38;5;28;01mcontinue[39;00m
+Cell In[107], line 59, in cpa_des_last_round(traces, ciphertexts, target_sbox, trace_interval, model)
+     57 # 计算相关性
+     58 for j, point_idx in enumerate(trace_interval):
+---> 59     if np.std(traces[:, point_idx]) == 0 or np.std(predictions) == 0:
+     60         correlations[kg, j] = 0
+     61         continue
 
-[31mIndexError[39m: index 235 is out of bounds for axis 1 with size 1
+IndexError: index 235 is out of bounds for axis 1 with size 1
 ```
 
 
@@ -2347,16 +2347,16 @@ plt.show()
 新的泄漏区间: 235-295
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mIndexError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[109][39m[32m, line 18[39m
-[32m     15[39m best_points = []
-[32m     17[39m [38;5;28;01mfor[39;00m byte_idx [38;5;129;01min[39;00m [38;5;28mrange[39m([32m8[39m):
-[32m---> [39m[32m18[39m     byte_values = [43mplaintexts[49m[43m[[49m[43m:[49m[43m,[49m[43m [49m[43mbyte_idx[49m[43m][49m
-[32m     19[39m     max_corr = [32m0[39m
-[32m     20[39m     best_point = [32m0[39m
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+Cell In[109], line 18
+     15 best_points = []
+     17 for byte_idx in range(8):
+---> 18     byte_values = plaintexts[:, byte_idx]
+     19     max_corr = 0
+     20     best_point = 0
 
-[31mIndexError[39m: too many indices for array: array is 1-dimensional, but 2 were indexed
+IndexError: too many indices for array: array is 1-dimensional, but 2 were indexed
 ```
 
 

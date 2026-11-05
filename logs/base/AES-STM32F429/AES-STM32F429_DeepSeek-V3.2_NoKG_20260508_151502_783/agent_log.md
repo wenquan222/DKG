@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个STM32F429 MCU软件实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'
+帮我对一个STM32F429 MCU软件实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'，密文文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy',原始波形文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个STM32F429 MCU软件实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'"
+"帮我对一个STM32F429 MCU软件实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'，密文文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy',原始波形文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -138,9 +138,9 @@ print("\n目录内容:")
 print(os.listdir())
 
 # 加载数据
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'
+plain_path = 'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'
+cipher_path = 'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy'
+wave_path = 'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'
 
 print(f"\n加载明文数据: {plain_path}")
 plaintexts = np.load(plain_path)
@@ -159,18 +159,18 @@ print(f"波形数据形状: {traces.shape}")
 <details><summary><b>📋 ← `python_jupyter`</b> (644 chars)</summary>
 
 ```
-当前工作目录: F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\DKG\logs\exp_python_only\AES-STM32F429_DeepSeek-V3.2_NoKG_20260508_151502_783
+当前工作目录: logs\exp_python_only\AES-STM32F429_DeepSeek-V3.2_NoKG_20260508_151502_783
 
 目录内容:
 ['agent_log.md']
 
-加载明文数据: F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy
+加载明文数据: data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy
 明文数据形状: (1000, 16)
 
-加载密文数据: F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy
+加载密文数据: data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy
 密文数据形状: (1000, 16)
 
-加载波形数据: F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy
+加载波形数据: data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy
 波形数据形状: (1000, 1000)
 ```
 </details>
@@ -1313,10 +1313,10 @@ print("\n结果已保存到 cpa_results.json")
 
 ```
 ---ERROR---
-  [36mCell[39m[36m [39m[32mIn[99][39m[32m, line 104[39m
-[31m    [39m[31mprint(f"\n最终密钥猜测: {[f'0x{r['key']:02x}' for r in final_results]}")[39m
+  Cell In[99], line 104
+    print(f"\n最终密钥猜测: {[f'0x{r['key']:02x}' for r in final_results]}")
               ^
-[31mSyntaxError[39m[31m:[39m f-string: f-string: unmatched '['
+SyntaxError: f-string: f-string: unmatched '['
 ```
 
 
@@ -1449,34 +1449,34 @@ plt.show()
 组合分析第一轮和最后一轮攻击...
 C:\Users\Andersen\AppData\Local\Temp\ipykernel_9340\1490610520.py:28: RuntimeWarning: Mean of empty slice.
   trace_means = traces_subset.mean(axis=0, keepdims=True)
-F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\numpy\_core\_methods.py:136: RuntimeWarning: invalid value encountered in divide
+.venv\Lib\site-packages\numpy\_core\_methods.py:136: RuntimeWarning: invalid value encountered in divide
   ret = um.true_divide(
-F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\numpy\_core\_methods.py:222: RuntimeWarning: Degrees of freedom <= 0 for slice
+.venv\Lib\site-packages\numpy\_core\_methods.py:222: RuntimeWarning: Degrees of freedom <= 0 for slice
   ret = _var(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
-F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\numpy\_core\_methods.py:180: RuntimeWarning: invalid value encountered in divide
+.venv\Lib\site-packages\numpy\_core\_methods.py:180: RuntimeWarning: invalid value encountered in divide
   arrmean = um.true_divide(arrmean, div, out=arrmean,
-F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\numpy\_core\_methods.py:211: RuntimeWarning: invalid value encountered in divide
+.venv\Lib\site-packages\numpy\_core\_methods.py:211: RuntimeWarning: invalid value encountered in divide
   ret = um.true_divide(
 C:\Users\Andersen\AppData\Local\Temp\ipykernel_9340\1490610520.py:47: RuntimeWarning: Mean of empty slice.
   hw_mean = hw.mean()
-F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\numpy\_core\_methods.py:144: RuntimeWarning: invalid value encountered in divide
+.venv\Lib\site-packages\numpy\_core\_methods.py:144: RuntimeWarning: invalid value encountered in divide
   ret = ret.dtype.type(ret / rcount)
-F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\numpy\_core\_methods.py:214: RuntimeWarning: invalid value encountered in divide
+.venv\Lib\site-packages\numpy\_core\_methods.py:214: RuntimeWarning: invalid value encountered in divide
   ret = ret.dtype.type(ret / rcount)
 C:\Users\Andersen\AppData\Local\Temp\ipykernel_9340\1490610520.py:55: RuntimeWarning: invalid value encountered in divide
   correlations = np.dot(traces_norm.T, hw_norm) / num_traces
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mValueError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[100][39m[32m, line 13[39m
-[32m     11[39m [38;5;28;01mfor[39;00m key_guess [38;5;129;01min[39;00m [38;5;28mrange[39m([32m256[39m):
-[32m     12[39m     corr = cpa_attack_last_round(aligned_preprocessed, ciphertexts, key_guess, byte_idx)
-[32m---> [39m[32m13[39m     last_corrs.append(np.max([43mnp[49m[43m.[49m[43mabs[49m[43m([49m[43mcorr[49m[43m)[49m))
-[32m     15[39m key2 = np.argmax(last_corrs)
-[32m     16[39m max2 = last_corrs[key2]
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[100], line 13
+     11 for key_guess in range(256):
+     12     corr = cpa_attack_last_round(aligned_preprocessed, ciphertexts, key_guess, byte_idx)
+---> 13     last_corrs.append(np.max(np.abs(corr)))
+     15 key2 = np.argmax(last_corrs)
+     16 max2 = last_corrs[key2]
 
-[31mValueError[39m: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (4,) + inhomogeneous part.
+ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (4,) + inhomogeneous part.
 ```
 
 

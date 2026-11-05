@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
+帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'"
+"帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -498,9 +498,9 @@ plt.rcParams['axes.unicode_minus'] = False
 
 # 加载数据
 print("正在加载数据...")
-plaintexts = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy')
-ciphertexts = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy')
-traces = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy')
+plaintexts = np.load('data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy')
+ciphertexts = np.load('data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy')
+traces = np.load('data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy')
 
 print(f"明文形状: {plaintexts.shape}")
 print(f"密文形状: {ciphertexts.shape}")
@@ -1559,7 +1559,7 @@ import matplotlib.pyplot as plt
 # 加载之前保存的数据
 aligned_traces = np.load('aligned_traces.npy')
 accepted_indices = np.load('accepted_indices.npy')
-plaintexts = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy')
+plaintexts = np.load('data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy')
 plaintexts_subset = plaintexts[accepted_indices]
 
 # 使用之前找到的最佳区域
@@ -1695,7 +1695,7 @@ import matplotlib.pyplot as plt
 print("重新加载数据...")
 aligned_traces = np.load('aligned_traces.npy')
 accepted_indices = np.load('accepted_indices.npy')
-plaintexts = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy')
+plaintexts = np.load('data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy')
 plaintexts_subset = plaintexts[accepted_indices]
 
 print(f"对齐后波形数: {len(aligned_traces)}")
@@ -1939,7 +1939,7 @@ def encrypt_decrypt_verify(key_hex, plaintexts, ciphertexts):
         return False, 0.0
 
 # 加载密文
-ciphertexts = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy')
+ciphertexts = np.load('data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy')
 
 # 验证恢复的密钥
 recovered_key_hex = bytes(key_guesses).hex()

@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
+帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'"
+"帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -397,9 +397,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 加载数据
-wave = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy')
-plain = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy')
-cipher = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy')
+wave = np.load(r'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy')
+plain = np.load(r'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy')
+cipher = np.load(r'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy')
 
 print(f"波形形状: {wave.shape}")
 print(f"明文形状: {plain.shape}")
@@ -738,8 +738,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\1024676722.py:50: UserWarni
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
   "round_index": 0,
   "target": "S-box_out",
   "leakage_model": "HW",
@@ -772,10 +772,10 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\1024676722.py:50: UserWarni
 {
   "candidates": 30,
   "leakage_model": "HW",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "plaintext_npy": "data/traces/SM4-7816/SM4-128-7816-100traces-6500points_plain.npy",
   "round_index": 1,
   "target": "S-box_out",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
   "prev_round_keys": [
     "F1DE7733"
   ]
@@ -786,18 +786,18 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\1024676722.py:50: UserWarni
 **❌ ← `sm4_cpa_attack` Error:**
 
 ```
-SM4 CPA Error: [Errno 2] No such file or directory: 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-7816/SM4-128-7816-100traces-6500points_plain.npy'
+SM4 CPA Error: [Errno 2] No such file or directory: 'data/traces/SM4-7816/SM4-128-7816-100traces-6500points_plain.npy'
 Traceback (most recent call last):
   File "C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\416452052.py", line 8, in <module>
-    result = run_sm4_cpa(plaintext_npy="F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/SM4-7816/SM4-128-7816-100traces-6500points_plain.npy",wave_npy="F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",round_index=1,candidates=30,leakage_model="HW",target="S-box_out",bytes_to_test=None,prev_round_keys=["F1DE7733"],wave_start=None,wave_end=None,corr_mode=None)
+    result = run_sm4_cpa(plaintext_npy="data/traces/SM4-7816/SM4-128-7816-100traces-6500points_plain.npy",wave_npy="data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",round_index=1,candidates=30,leakage_model="HW",target="S-box_out",bytes_to_test=None,prev_round_keys=["F1DE7733"],wave_start=None,wave_end=None,corr_mode=None)
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "F:\侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/agent/tools\sm4_cpa_tool.py", line 336, in run_sm4_cpa
+  File "agent/tools\sm4_cpa_tool.py", line 336, in run_sm4_cpa
     P = np.load(plaintext_npy)  # (n_traces, 16)
         ^^^^^^^^^^^^^^^^^^^^^^
-  File "F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\numpy\lib\_npyio_impl.py", line 454, in load
+  File ".venv\Lib\site-packages\numpy\lib\_npyio_impl.py", line 454, in load
     fid = stack.enter_context(open(os.fspath(file), "rb"))
                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-7816/SM4-128-7816-100traces-6500points_plain.npy'
+FileNotFoundError: [Errno 2] No such file or directory: 'data/traces/SM4-7816/SM4-128-7816-100traces-6500points_plain.npy'
 ```
 
 
@@ -813,13 +813,13 @@ FileNotFoundError: [Errno 2] No such file or directory: 'F:/侧信道/SCA-GPT/�
 {
   "candidates": 30,
   "leakage_model": "HW",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
   "prev_round_keys": [
     "F1DE7733"
   ],
   "round_index": 1,
   "target": "S-box_out",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
 }
 ```
 </details>
@@ -848,14 +848,14 @@ FileNotFoundError: [Errno 2] No such file or directory: 'F:/侧信道/SCA-GPT/�
 {
   "candidates": 30,
   "leakage_model": "HW",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
   "prev_round_keys": [
     "F1DE7733",
     "586CE653"
   ],
   "round_index": 2,
   "target": "S-box_out",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
 }
 ```
 </details>
@@ -884,7 +884,7 @@ FileNotFoundError: [Errno 2] No such file or directory: 'F:/侧信道/SCA-GPT/�
 {
   "candidates": 30,
   "leakage_model": "HW",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
   "prev_round_keys": [
     "F1DE7733",
     "586CE653",
@@ -892,7 +892,7 @@ FileNotFoundError: [Errno 2] No such file or directory: 'F:/侧信道/SCA-GPT/�
   ],
   "round_index": 3,
   "target": "S-box_out",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
 }
 ```
 </details>
@@ -924,8 +924,8 @@ FileNotFoundError: [Errno 2] No such file or directory: 'F:/侧信道/SCA-GPT/�
   "key_hex": "3112E16E3B8A8FCFDE1C388C6CB9DE92",
   "mode": "ECB",
   "operation": "encrypt",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "ciphertext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy",
   "trace_index": 0
 }
 ```
@@ -1305,16 +1305,16 @@ subkey_results示例:
 results字段:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mAttributeError[39m                            Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[42][39m[32m, line 22[39m
-[32m     20[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[38;5;130;01m\n[39;00m[33mresults字段:[39m[33m"[39m)
-[32m     21[39m [38;5;28;01mif[39;00m [33m'[39m[33mresults[39m[33m'[39m [38;5;129;01min[39;00m data:
-[32m---> [39m[32m22[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[33mresults keys: [39m[38;5;132;01m{[39;00m[43mdata[49m[43m[[49m[33;43m'[39;49m[33;43mresults[39;49m[33;43m'[39;49m[43m][49m[43m.[49m[43mkeys[49m()[38;5;132;01m}[39;00m[33m"[39m)
-[32m     23[39m     [38;5;28;01mif[39;00m [33m'[39m[33mtop_candidates[39m[33m'[39m [38;5;129;01min[39;00m data[[33m'[39m[33mresults[39m[33m'[39m]:
-[32m     24[39m         [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33mTop candidates for byte 0:[39m[33m"[39m)
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Cell In[42], line 22
+     20 print("\n\nresults字段:")
+     21 if 'results' in data:
+---> 22     print(f"results keys: {data['results'].keys()}")
+     23     if 'top_candidates' in data['results']:
+     24         print(f"\nTop candidates for byte 0:")
 
-[31mAttributeError[39m: 'list' object has no attribute 'keys'
+AttributeError: 'list' object has no attribute 'keys'
 ```
 
 
@@ -1333,8 +1333,8 @@ results字段:
   "algorithm": "SM4",
   "recovered_key_hex": "3112E16E3B8A8FCFDE1C388C6CB9DE92",
   "cpa_detail_file": "sm4_cpa_round0_detail_20260424_033903_808349.json",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "ciphertext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy",
   "gap_threshold": 0.2,
   "max_candidates_per_byte": 30,
   "max_combinations": 100000,
@@ -1351,36 +1351,36 @@ results字段:
 
 ```
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mValueError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[43][39m[32m, line 7[39m
-[32m      5[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mjson[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01m_json[39;00m
-[32m      6[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mkey_search_tool[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m run_key_search
-[32m----> [39m[32m7[39m result = [43mrun_key_search[49m[43m([49m
-[32m      8[39m [43m    [49m[43malgorithm[49m[43m=[49m[33;43m"[39;49m[33;43mSM4[39;49m[33;43m"[39;49m[43m,[49m
-[32m      9[39m [43m    [49m[43mrecovered_key_hex[49m[43m=[49m[33;43m"[39;49m[33;43m3112E16E3B8A8FCFDE1C388C6CB9DE92[39;49m[33;43m"[39;49m[43m,[49m
-[32m     10[39m [43m    [49m[43mcpa_detail_file[49m[43m=[49m[33;43m"[39;49m[33;43msm4_cpa_round0_detail_20260424_033903_808349.json[39;49m[33;43m"[39;49m[43m,[49m
-[32m     11[39m [43m    [49m[43mplaintext_npy[49m[43m=[49m[33;43m"[39;49m[33;43mF:/[39;49m[38;5;130;43;01m\u4fa7[39;49;00m[38;5;130;43;01m\u4fe1[39;49;00m[38;5;130;43;01m\u9053[39;49;00m[33;43m/SCA-GPT/[39;49m[38;5;130;43;01m\u5b9e[39;49;00m[38;5;130;43;01m\u9a8c[39;49;00m[38;5;130;43;01m\u4e94[39;49;00m[38;5;130;43;01m\uff1a[39;49;00m[38;5;130;43;01m\u57fa[39;49;00m[38;5;130;43;01m\u4e8e[39;49;00m[38;5;130;43;01m\u77e5[39;49;00m[38;5;130;43;01m\u8bc6[39;49;00m[38;5;130;43;01m\u56fe[39;49;00m[38;5;130;43;01m\u8c31[39;49;00m[38;5;130;43;01m\u7684[39;49;00m[33;43mAgent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy[39;49m[33;43m"[39;49m[43m,[49m
-[32m     12[39m [43m    [49m[43mciphertext_npy[49m[43m=[49m[33;43m"[39;49m[33;43mF:/[39;49m[38;5;130;43;01m\u4fa7[39;49;00m[38;5;130;43;01m\u4fe1[39;49;00m[38;5;130;43;01m\u9053[39;49;00m[33;43m/SCA-GPT/[39;49m[38;5;130;43;01m\u5b9e[39;49;00m[38;5;130;43;01m\u9a8c[39;49;00m[38;5;130;43;01m\u4e94[39;49;00m[38;5;130;43;01m\uff1a[39;49;00m[38;5;130;43;01m\u57fa[39;49;00m[38;5;130;43;01m\u4e8e[39;49;00m[38;5;130;43;01m\u77e5[39;49;00m[38;5;130;43;01m\u8bc6[39;49;00m[38;5;130;43;01m\u56fe[39;49;00m[38;5;130;43;01m\u8c31[39;49;00m[38;5;130;43;01m\u7684[39;49;00m[33;43mAgent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy[39;49m[33;43m"[39;49m[43m,[49m
-[32m     13[39m [43m    [49m[43mgap_threshold[49m[43m=[49m[32;43m0.2[39;49m[43m,[49m
-[32m     14[39m [43m    [49m[43mmax_candidates_per_byte[49m[43m=[49m[32;43m30[39;49m[43m,[49m
-[32m     15[39m [43m    [49m[43mmax_combinations[49m[43m=[49m[32;43m100000[39;49m[43m,[49m
-[32m     16[39m [43m    [49m[43mextra_cpa_detail_files[49m[43m=[49m[43m[[49m[33;43m"[39;49m[33;43msm4_cpa_round1_detail_20260424_033918_989992.json[39;49m[33;43m"[39;49m[43m,[49m[43m [49m[33;43m"[39;49m[33;43msm4_cpa_round2_detail_20260424_033927_092352.json[39;49m[33;43m"[39;49m[43m,[49m[43m [49m[33;43m"[39;49m[33;43msm4_cpa_round3_detail_20260424_033934_455745.json[39;49m[33;43m"[39;49m[43m][49m
-[32m     17[39m [43m)[49m
-[32m     18[39m [38;5;28mprint[39m(_json.dumps(result, ensure_ascii=[38;5;28;01mFalse[39;00m))
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[43], line 7
+      5 import json as _json
+      6 from key_search_tool import run_key_search
+----> 7 result = run_key_search(
+      8     algorithm="SM4",
+      9     recovered_key_hex="3112E16E3B8A8FCFDE1C388C6CB9DE92",
+     10     cpa_detail_file="sm4_cpa_round0_detail_20260424_033903_808349.json",
+     11     plaintext_npy="DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+     12     ciphertext_npy="DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy",
+     13     gap_threshold=0.2,
+     14     max_candidates_per_byte=30,
+     15     max_combinations=100000,
+     16     extra_cpa_detail_files=["sm4_cpa_round1_detail_20260424_033918_989992.json", "sm4_cpa_round2_detail_20260424_033927_092352.json", "sm4_cpa_round3_detail_20260424_033934_455745.json"]
+     17 )
+     18 print(_json.dumps(result, ensure_ascii=False))
 
-[36mFile [39m[32mF:\侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/agent/tools\key_search_tool.py:284[39m, in [36mrun_key_search[39m[34m(algorithm, recovered_key_hex, cpa_detail_file, plaintext_npy, ciphertext_npy, gap_threshold, max_candidates_per_byte, max_combinations, extra_cpa_detail_files)[39m
-[32m    281[39m [38;5;28;01mif[39;00m extra_cpa_detail_files:
-[32m    282[39m     file_list.extend(extra_cpa_detail_files)
-[32m--> [39m[32m284[39m results, merge_info = [43m_load_and_merge_cpa_details[49m[43m([49m[43mfile_list[49m[43m)[49m
-[32m    286[39m [38;5;28;01mif[39;00m algo == [33m"[39m[33mDES[39m[33m"[39m:
-[32m    287[39m     out = _des_search(results, pt, ct, gap_threshold, max_candidates_per_byte, max_combinations)
+File agent/tools\key_search_tool.py:284, in run_key_search(algorithm, recovered_key_hex, cpa_detail_file, plaintext_npy, ciphertext_npy, gap_threshold, max_candidates_per_byte, max_combinations, extra_cpa_detail_files)
+    281 if extra_cpa_detail_files:
+    282     file_list.extend(extra_cpa_detail_files)
+--> 284 results, merge_info = _load_and_merge_cpa_details(file_list)
+    286 if algo == "DES":
+    287     out = _des_search(results, pt, ct, gap_threshold, max_candidates_per_byte, max_combinations)
 
-[36mFile [39m[32mF:\侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/agent/tools\key_search_tool.py:176[39m, in [36m_load_and_merge_cpa_details[39m[34m(file_list)[39m
-[32m    174[39m     cur_val = meta.get(field)
-[32m    175[39m     [38;5;28;01mif[39;00m ref_val [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m cur_val [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m ref_val != cur_val:
-[32m--> [39m[32m176[39m         [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(
-[32m    177[39m             [33mf[39m[33m"[39m[33mIncompatible CPA detail files: [39m[38;5;132;01m{[39;00mfield[38;5;132;01m}[39;00m[33m mismatch bet
+File agent/tools\key_search_tool.py:176, in _load_and_merge_cpa_details(file_list)
+    174     cur_val = meta.get(field)
+    175     if ref_val is not None and cur_val is not None and ref_val != cur_val:
+--> 176         raise ValueError(
+    177             f"Incompatible CPA detail files: {field} mismatch bet
 ...(truncated)
 ```
 
@@ -1399,11 +1399,11 @@ results字段:
 {
   "algorithm": "SM4",
   "cpa_detail_file": "sm4_cpa_round0_detail_20260424_033903_808349.json",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy",
+  "ciphertext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy",
   "gap_threshold": 0.2,
   "max_candidates_per_byte": 30,
   "max_combinations": 100000,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
   "recovered_key_hex": "3112E16E3B8A8FCFDE1C388C6CB9DE92"
 }
 ```
@@ -1497,10 +1497,10 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\2931501663.py:49: UserWarni
 ```json
 {
   "byte_index": 0,
-  "data_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "data_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
   "data_type": "plaintext",
   "model": "HW",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
 }
 ```
 </details>
@@ -1522,10 +1522,10 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\2931501663.py:49: UserWarni
 ```json
 {
   "byte_index": 0,
-  "data_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "data_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
   "data_type": "plaintext",
   "model": "SBOX_HW",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
 }
 ```
 </details>
@@ -1550,10 +1550,10 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\2931501663.py:49: UserWarni
 {
   "candidates": 30,
   "leakage_model": "HW",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
   "round_index": 0,
   "target": "S-box_in",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
 }
 ```
 </details>
@@ -1582,13 +1582,13 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\2931501663.py:49: UserWarni
 {
   "candidates": 30,
   "leakage_model": "HW",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
   "prev_round_keys": [
     "3B9F09BB"
   ],
   "round_index": 1,
   "target": "S-box_in",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
 }
 ```
 </details>
@@ -1615,14 +1615,14 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\2931501663.py:49: UserWarni
 {
   "candidates": 30,
   "leakage_model": "HW",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
   "prev_round_keys": [
     "3B9F09BB",
     "A64B70BF"
   ],
   "round_index": 2,
   "target": "S-box_in",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
 }
 ```
 </details>
@@ -1649,7 +1649,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\2931501663.py:49: UserWarni
 {
   "candidates": 30,
   "leakage_model": "HW",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
   "prev_round_keys": [
     "3B9F09BB",
     "A64B70BF",
@@ -1657,7 +1657,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\2931501663.py:49: UserWarni
   ],
   "round_index": 3,
   "target": "S-box_in",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
 }
 ```
 </details>
@@ -1685,11 +1685,11 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\2931501663.py:49: UserWarni
 ```json
 {
   "algorithm": "SM4",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy",
+  "ciphertext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy",
   "key_hex": "507B1133BC6DDED4EE0A101A5A6554AF",
   "mode": "ECB",
   "operation": "encrypt",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
   "trace_index": 0
 }
 ```
@@ -1717,10 +1717,10 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\2931501663.py:49: UserWarni
 {
   "candidates": 30,
   "leakage_model": "HW",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
   "round_index": 0,
   "target": "S-box_in_xor_out",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
 }
 ```
 </details>
@@ -1731,9 +1731,9 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\2931501663.py:49: UserWarni
 SM4 CPA Error: SM4 plaintext shape expect (n_traces, 16), got (100, 6500)
 Traceback (most recent call last):
   File "C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\481656342.py", line 8, in <module>
-    result = run_sm4_cpa(plaintext_npy="F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",wave_npy="F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",round_index=0,candidates=30,leakage_model="HW",target="S-box_in_xor_out",bytes_to_test=None,prev_round_keys=None,wave_start=None,wave_end=None,corr_mode=None)
+    result = run_sm4_cpa(plaintext_npy="data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",wave_npy="data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",round_index=0,candidates=30,leakage_model="HW",target="S-box_in_xor_out",bytes_to_test=None,prev_round_keys=None,wave_start=None,wave_end=None,corr_mode=None)
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "F:\侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/agent/tools\sm4_cpa_tool.py", line 340, in run_sm4_cpa
+  File "agent/tools\sm4_cpa_tool.py", line 340, in run_sm4_cpa
     raise ValueError(f"SM4 plaintext shape expect (n_traces, 16), got {P.shape}")
 ValueError: SM4 plaintext shape expect (n_traces, 16), got (100, 6500)
 ```
@@ -1751,10 +1751,10 @@ ValueError: SM4 plaintext shape expect (n_traces, 16), got (100, 6500)
 {
   "candidates": 30,
   "leakage_model": "HW",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
   "round_index": 0,
   "target": "S-box_in_xor_out",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
 }
 ```
 </details>
@@ -1779,13 +1779,13 @@ ValueError: SM4 plaintext shape expect (n_traces, 16), got (100, 6500)
 {
   "candidates": 30,
   "leakage_model": "HW",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
   "prev_round_keys": [
     "07E394C4"
   ],
   "round_index": 1,
   "target": "S-box_in_xor_out",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
 }
 ```
 </details>
@@ -1810,14 +1810,14 @@ ValueError: SM4 plaintext shape expect (n_traces, 16), got (100, 6500)
 {
   "candidates": 30,
   "leakage_model": "HW",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
   "prev_round_keys": [
     "07E394C4",
     "CF33CC67"
   ],
   "round_index": 2,
   "target": "S-box_in_xor_out",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
 }
 ```
 </details>
@@ -1842,7 +1842,7 @@ ValueError: SM4 plaintext shape expect (n_traces, 16), got (100, 6500)
 {
   "candidates": 30,
   "leakage_model": "HW",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
   "prev_round_keys": [
     "07E394C4",
     "CF33CC67",
@@ -1850,7 +1850,7 @@ ValueError: SM4 plaintext shape expect (n_traces, 16), got (100, 6500)
   ],
   "round_index": 3,
   "target": "S-box_in_xor_out",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
 }
 ```
 </details>
@@ -1875,11 +1875,11 @@ ValueError: SM4 plaintext shape expect (n_traces, 16), got (100, 6500)
 ```json
 {
   "algorithm": "SM4",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy",
+  "ciphertext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy",
   "key_hex": "02E4EB6B721353D4014592DAF6A07237",
   "mode": "ECB",
   "operation": "encrypt",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
   "trace_index": 0
 }
 ```
@@ -1907,12 +1907,12 @@ ValueError: SM4 plaintext shape expect (n_traces, 16), got (100, 6500)
 {
   "length": 120,
   "max_shift": 50,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
   "ref_trace": 50,
   "start": 350,
   "threshold": 85,
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy"
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
+  "ciphertext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy"
 }
 ```
 </details>
@@ -2401,7 +2401,7 @@ print(f"\n总共 {3**4} 种组合")
 import numpy as np
 from Crypto.Cipher import AES
 import sys
-sys.path.append(r'F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\DKG\agent\tools')
+sys.path.append(r'agent\tools')
 
 # 加载对齐后的明文和密文
 plain = np.load('plaintext_aligned_20260424_034223_945356.npy')
@@ -2710,7 +2710,7 @@ print("这需要很长时间，让我们先检查是否有其他问题...")
 ```python
 # 检查SM4 CPA工具的密钥扩展实现
 import sys
-sys.path.append(r'F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\DKG\agent\tools')
+sys.path.append(r'agent\tools')
 
 from sm4_cpa_tool import derive_master_key_from_round_keys
 
@@ -2822,16 +2822,16 @@ if master_key:
 
 ```
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mImportError[39m                               Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[74][39m[32m, line 5[39m
-[32m      2[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01msys[39;00m
-[32m      3[39m sys.path.append([33mr[39m[33m'[39m[33mF:[39m[33m\[39m[33m侧信道[39m[33m\[39m[33mSCA-GPT[39m[33m\[39m[33m实验五：基于知识图谱的Agent[39m[33m\[39m[33mGraphRAG_Agent[39m[33m\[39m[33mDKG[39m[33m\[39m[33magent[39m[33m\[39m[33mtools[39m[33m'[39m)
-[32m----> [39m[32m5[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01msm4_cpa_tool[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m derive_master_key_from_round_keys
-[32m      7[39m [38;5;66;03m# 测试密钥扩展[39;00m
-[32m      8[39m rk0 = [32m0xF12186F9[39m
+---------------------------------------------------------------------------
+ImportError                               Traceback (most recent call last)
+Cell In[74], line 5
+      2 import sys
+      3 sys.path.append(r'DKG\agent\tools')
+----> 5 from sm4_cpa_tool import derive_master_key_from_round_keys
+      7 # 测试密钥扩展
+      8 rk0 = 0xF12186F9
 
-[31mImportError[39m: cannot import name 'derive_master_key_from_round_keys' from 'sm4_cpa_tool' (F:\侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/agent/tools\sm4_cpa_tool.py)
+ImportError: cannot import name 'derive_master_key_from_round_keys' from 'sm4_cpa_tool' (agent/tools\sm4_cpa_tool.py)
 ```
 
 
@@ -2849,7 +2849,7 @@ if master_key:
 # 检查SM4 CPA工具的源代码
 import inspect
 import sys
-sys.path.append(r'F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\DKG\agent\tools')
+sys.path.append(r'agent\tools')
 
 from sm4_cpa_tool import run_sm4_cpa
 
@@ -2917,7 +2917,7 @@ for i, line in enumerate(lines):
 ```python
 # 查看_rk_to_mk函数的实现
 import sys
-sys.path.append(r'F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\DKG\agent\tools')
+sys.path.append(r'agent\tools')
 
 from sm4_cpa_tool import _rk_to_mk, _sm4_key_expand
 
@@ -2990,8 +2990,8 @@ print(f"  rk3: {'✓' if expected_rks[3] == rk3 else '✗'}")
 import numpy as np
 
 # 加载原始数据
-plain_orig = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy')
-cipher_orig = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy')
+plain_orig = np.load(r'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy')
+cipher_orig = np.load(r'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy')
 
 # 加载对齐后的数据
 plain_aligned = np.load('plaintext_aligned_20260424_034223_945356.npy')
@@ -3029,16 +3029,16 @@ print("\n\n让我尝试使用原始数据（不对齐）进行CPA...")
   密文形状: (100, 16)
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mAttributeError[39m                            Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[77][39m[32m, line 15[39m
-[32m     13[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  明文形状: [39m[38;5;132;01m{[39;00mplain_orig.shape[38;5;132;01m}[39;00m[33m"[39m)
-[32m     14[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  密文形状: [39m[38;5;132;01m{[39;00mcipher_orig.shape[38;5;132;01m}[39;00m[33m"[39m)
-[32m---> [39m[32m15[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  明文[0]: [39m[38;5;132;01m{[39;00m[43mplain_orig[49m[43m[[49m[32;43m0[39;49m[43m][49m[43m.[49m[43mhex[49m()[38;5;132;01m}[39;00m[33m"[39m)
-[32m     16[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  密文[0]: [39m[38;5;132;01m{[39;00mcipher_orig[[32m0[39m].hex()[38;5;132;01m}[39;00m[33m"[39m)
-[32m     18[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33m对齐后数据:[39m[33m"[39m)
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Cell In[77], line 15
+     13 print(f"  明文形状: {plain_orig.shape}")
+     14 print(f"  密文形状: {cipher_orig.shape}")
+---> 15 print(f"  明文[0]: {plain_orig[0].hex()}")
+     16 print(f"  密文[0]: {cipher_orig[0].hex()}")
+     18 print("\n对齐后数据:")
 
-[31mAttributeError[39m: 'numpy.ndarray' object has no attribute 'hex'
+AttributeError: 'numpy.ndarray' object has no attribute 'hex'
 ```
 
 
@@ -3055,8 +3055,8 @@ print("\n\n让我尝试使用原始数据（不对齐）进行CPA...")
 import numpy as np
 
 # 加载原始数据
-plain_orig = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy')
-cipher_orig = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy')
+plain_orig = np.load(r'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy')
+cipher_orig = np.load(r'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy')
 
 # 加载对齐后的数据
 plain_aligned = np.load('plaintext_aligned_20260424_034223_945356.npy')
@@ -3118,10 +3118,10 @@ for i in range(len(plain_orig)):
 {
   "candidates": 30,
   "leakage_model": "HW",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
   "round_index": 0,
   "target": "S-box_out",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy",
   "wave_start": 0,
   "wave_end": 2000
 }
@@ -3175,12 +3175,12 @@ for i in range(len(plain_orig)):
 {
   "candidates": 30,
   "leakage_model": "HW",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
   "round_index": 0,
   "target": "S-box_out",
   "wave_end": 2000,
   "wave_start": 1000,
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
 }
 ```
 </details>
@@ -3205,14 +3205,14 @@ for i in range(len(plain_orig)):
 
 ```json
 {
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy",
+  "ciphertext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy",
   "length": 150,
   "max_shift": 100,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
+  "plaintext_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy",
   "ref_trace": 50,
   "start": 1100,
   "threshold": 80,
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
+  "wave_npy": "data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy"
 }
 ```
 </details>
@@ -3538,7 +3538,7 @@ import json
 import numpy as np
 from gmssl import sm4
 import sys
-sys.path.append(r'F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\DKG\agent\tools')
+sys.path.append(r'agent\tools')
 from sm4_cpa_tool import _rk_to_mk
 
 # 加载数据
@@ -3630,7 +3630,7 @@ import json
 import numpy as np
 from gmssl import sm4
 import sys
-sys.path.append(r'F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\DKG\agent\tools')
+sys.path.append(r'agent\tools')
 from sm4_cpa_tool import _rk_to_mk, _sm4_key_expand
 
 # 加载数据
@@ -3801,7 +3801,7 @@ import json
 import numpy as np
 from gmssl import sm4
 import sys
-sys.path.append(r'F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\DKG\agent\tools')
+sys.path.append(r'agent\tools')
 from sm4_cpa_tool import _rk_to_mk
 
 # 加载数据
@@ -3945,7 +3945,7 @@ import json
 import numpy as np
 from gmssl import sm4
 import sys
-sys.path.append(r'F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\DKG\agent\tools')
+sys.path.append(r'agent\tools')
 from sm4_cpa_tool import _rk_to_mk
 
 # 加载数据
@@ -4076,12 +4076,12 @@ if not found:
 # 使用原始数据，尝试不同的泄露区域
 import numpy as np
 import sys
-sys.path.append(r'F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\DKG\agent\tools')
+sys.path.append(r'agent\tools')
 from sm4_cpa_tool import run_sm4_cpa
 
 # 加载原始数据
-plain = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy')
-wave = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy')
+plain = np.load(r'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy')
+wave = np.load(r'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy')
 
 # 根据方差分析，主要高方差区域在：
 # 区域1: [312, 414) - 可能是第一轮
@@ -4092,8 +4092,8 @@ wave = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/Gra
 # 尝试使用第一个高方差区域进行第一轮CPA
 print("尝试使用第一个高方差区域 [312, 414) 进行第一轮CPA...")
 result = run_sm4_cpa(
-    plaintext_npy=r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy',
-    wave_npy=r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy',
+    plaintext_npy=r'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy',
+    wave_npy=r'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy',
     round_index=0,
     target='S-box_out',
     leakage_model='HW',
@@ -4128,8 +4128,8 @@ print(f"高置信度字节数: {result['high_confidence_count']}/4")
 # 尝试使用第二个高方差区域
 print("尝试使用第二个高方差区域 [758, 1050) 进行第一轮CPA...")
 result = run_sm4_cpa(
-    plaintext_npy=r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy',
-    wave_npy=r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy',
+    plaintext_npy=r'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy',
+    wave_npy=r'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy',
     round_index=0,
     target='S-box_out',
     leakage_model='HW',
@@ -4145,8 +4145,8 @@ print(f"高置信度字节数: {result['high_confidence_count']}/4")
 # 尝试使用第三个高方差区域
 print("\n尝试使用第三个高方差区域 [1280, 1857) 进行第一轮CPA...")
 result = run_sm4_cpa(
-    plaintext_npy=r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy',
-    wave_npy=r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy',
+    plaintext_npy=r'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy',
+    wave_npy=r'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy',
     round_index=0,
     target='S-box_out',
     leakage_model='HW',
@@ -4172,32 +4172,32 @@ print(f"高置信度字节数: {result['high_confidence_count']}/4")
 尝试使用第三个高方差区域 [1280, 1857) 进行第一轮CPA...
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mValueError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[96][39m[32m, line 20[39m
-[32m     18[39m [38;5;66;03m# 尝试使用第三个高方差区域[39;00m
-[32m     19[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33m尝试使用第三个高方差区域 [1280, 1857) 进行第一轮CPA...[39m[33m"[39m)
-[32m---> [39m[32m20[39m result = [43mrun_sm4_cpa[49m[43m([49m
-[32m     21[39m [43m    [49m[43mplaintext_npy[49m[43m=[49m[33;43mr[39;49m[33;43m'[39;49m[33;43mF:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy[39;49m[33;43m'[39;49m[43m,[49m
-[32m     22[39m [43m    [49m[43mwave_npy[49m[43m=[49m[33;43mr[39;49m[33;43m'[39;49m[33;43mF:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy[39;49m[33;43m'[39;49m[43m,[49m
-[32m     23[39m [43m    [49m[43mround_index[49m[43m=[49m[32;43m0[39;49m[43m,[49m
-[32m     24[39m [43m    [49m[43mtarget[49m[43m=[49m[33;43m'[39;49m[33;43mS-box_out[39;49m[33;43m'[39;49m[43m,[49m
-[32m     25[39m [43m    [49m[43mleakage_model[49m[43m=[49m[33;43m'[39;49m[33;43mHW[39;49m[33;43m'[39;49m[43m,[49m
-[32m     26[39m [43m    [49m[43mcandidates[49m[43m=[49m[32;43m30[39;49m[43m,[49m
-[32m     27[39m [43m    [49m[43mwave_start[49m[43m=[49m[32;43m1280[39;49m[43m,[49m
-[32m     28[39m [43m    [49m[43mwave_end[49m[43m=[49m[32;43m1860[39;49m
-[32m     29[39m [43m)[49m
-[32m     31[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m轮密钥: [39m[38;5;132;01m{[39;00mresult[[33m'[39m[33mrecovered_round_key[39m[33m'[39m][38;5;132;01m}[39;00m[33m"[39m)
-[32m     32[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m平均相关性: [39m[38;5;132;01m{[39;00mresult[[33m'[39m[33mcpa_avg_correlation[39m[33m'[39m][38;5;132;01m:[39;00m[33m.4f[39m[38;5;132;01m}[39;00m[33m"[39m)
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[96], line 20
+     18 # 尝试使用第三个高方差区域
+     19 print("\n尝试使用第三个高方差区域 [1280, 1857) 进行第一轮CPA...")
+---> 20 result = run_sm4_cpa(
+     21     plaintext_npy=r'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy',
+     22     wave_npy=r'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy',
+     23     round_index=0,
+     24     target='S-box_out',
+     25     leakage_model='HW',
+     26     candidates=30,
+     27     wave_start=1280,
+     28     wave_end=1860
+     29 )
+     31 print(f"轮密钥: {result['recovered_round_key']}")
+     32 print(f"平均相关性: {result['cpa_avg_correlation']:.4f}")
 
-[36mFile [39m[32mF:\侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/agent/tools\sm4_cpa_tool.py:340[39m, in [36mrun_sm4_cpa[39m[34m(plaintext_npy, wave_npy, round_index, candidates, leakage_model, target, bytes_to_test, prev_round_keys, wave_start, wave_end, points_block, corr_mode)[39m
-[32m    337[39m X = np.load(wave_npy)       [38;5;66;03m# (n_traces, n_points)[39;00m
-[32m    339[39m [38;5;28;01mif[39;00m P.ndim != [32m2[39m [38;5;129;01mor[39;00m P.shape[[32m1[39m] != [32m16[39m:
-[32m--> [39m[32m340[39m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m([33mf[39m[33m"[39m[33mSM4 plaintext shape expect (n_traces, 16), got [39m[38;5;132;01m{[39;00mP.shape[38;5;132;01m}[39;00m[33m"[39m)
-[32m    341[39m [38;5;28;01mif[39;00m X.shape[[32m0[39m] != P.shape[[32m0[39m]:
-[32m    342[39m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m([33mf[39m[33m"[39m[33mtrace count mismatch: plaintext [39m[38;5;132;01m{[39;00mP.shape[[32m0[39m][38;5;132;01m}[39;00m[33m vs wave [39m[38;5;132;01m{[39;00mX.shape[[32m0[39m][38;5;132;01m}[39;00m[33m"[39m)
+File agent/tools\sm4_cpa_tool.py:340, in run_sm4_cpa(plaintext_npy, wave_npy, round_index, candidates, leakage_model, target, bytes_to_test, prev_round_keys, wave_start, wave_end, points_block, corr_mode)
+    337 X = np.load(wave_npy)       # (n_traces, n_points)
+    339 if P.ndim != 2 or P.shape[1] != 16:
+--> 340     raise ValueError(f"SM4 plaintext shape expect (n_traces, 16), got {P.shape}")
+    341 if X.shape[0] != P.shape[0]:
+    342     raise ValueError(f"trace count mismatch: plaintext {P.shape[0]} vs wave {X.shape[0]}")
 
-[31mValueError[39m: SM4 plaintext shape expect (n_traces, 16), got (100, 6500)
+ValueError: SM4 plaintext shape expect (n_traces, 16), got (100, 6500)
 ```
 
 

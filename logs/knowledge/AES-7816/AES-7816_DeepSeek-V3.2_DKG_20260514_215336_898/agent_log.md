@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
+帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'"
+"帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -492,9 +492,9 @@ import matplotlib.pyplot as plt
 import os
 
 # 加载数据
-plaintext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'
-ciphertext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy'
-waveform_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
+plaintext_path = 'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'
+ciphertext_path = 'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy'
+waveform_path = 'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
 
 # 检查文件是否存在
 print("检查文件是否存在:")
@@ -1061,8 +1061,8 @@ import numpy as np
 from scipy.stats import pearsonr
 
 # 重新加载数据以防万一
-plaintexts = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy')
-traces = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy')
+plaintexts = np.load('data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy')
+traces = np.load('data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy')
 
 # AES S-box
 sbox = np.array([
@@ -1208,8 +1208,8 @@ print(f"测试字节0结果: 密钥={test_result['key']:02x}, 相关性={test_re
 import numpy as np
 
 # 重新加载数据
-plaintexts = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy')
-traces = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy')
+plaintexts = np.load('data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy')
+traces = np.load('data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy')
 
 print(f"数据加载成功:")
 print(f"明文: {plaintexts.shape}")
@@ -1303,9 +1303,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 重新加载数据
-plaintexts = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy')
-ciphertexts = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy')
-traces = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy')
+plaintexts = np.load('data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy')
+ciphertexts = np.load('data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy')
+traces = np.load('data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy')
 
 print("数据加载成功!")
 print(f"波形形状: {traces.shape}")
@@ -1459,25 +1459,25 @@ plt.show()
 length=100, max_shift=400, threshold=0.85, ref_trace=1
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mValueError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[13][39m[32m, line 101[39m
-[32m     98[39m ref_trace = [32m1[39m  [38;5;66;03m# 第二个轨迹[39;00m
-[32m    100[39m [38;5;66;03m# 执行对齐[39;00m
-[32m--> [39m[32m101[39m aligned_traces, shifts, acceptance_rate, avg_correlation = [43mstatic_align[49m[43m([49m
-[32m    102[39m [43m    [49m[43mtraces[49m[43m,[49m[43m [49m[43mref_trace[49m[43m,[49m[43m [49m[43mpattern_start[49m[43m,[49m[43m [49m[43mpattern_length[49m[43m,[49m[43m [49m[43mmax_shift[49m[43m,[49m[43m [49m[43mthreshold[49m
-[32m    103[39m [43m)[49m
-[32m    105[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m对齐结果:[39m[33m"[39m)
-[32m    106[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m接受率: [39m[38;5;132;01m{[39;00macceptance_rate[38;5;132;01m:[39;00m[33m.1f[39m[38;5;132;01m}[39;00m[33m%[39m[33m"[39m)
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[13], line 101
+     98 ref_trace = 1  # 第二个轨迹
+    100 # 执行对齐
+--> 101 aligned_traces, shifts, acceptance_rate, avg_correlation = static_align(
+    102     traces, ref_trace, pattern_start, pattern_length, max_shift, threshold
+    103 )
+    105 print(f"对齐结果:")
+    106 print(f"接受率: {acceptance_rate:.1f}%")
 
-[36mCell[39m[36m [39m[32mIn[13][39m[32m, line 84[39m, in [36mstatic_align[39m[34m(traces, ref_idx, pattern_start, pattern_length, max_shift, threshold)[39m
-[32m     81[39m         aligned_traces.append(trace)
-[32m     82[39m         shifts.append([32m0[39m)
-[32m---> [39m[32m84[39m aligned_traces = np.array(aligned_traces)
-[32m     85[39m acceptance_rate = accepted_count / n_traces * [32m100[39m
-[32m     87[39m [38;5;28;01mreturn[39;00m aligned_traces, shifts, acceptance_rate, best_corr
+Cell In[13], line 84, in static_align(traces, ref_idx, pattern_start, pattern_length, max_shift, threshold)
+     81         aligned_traces.append(trace)
+     82         shifts.append(0)
+---> 84 aligned_traces = np.array(aligned_traces)
+     85 acceptance_rate = accepted_count / n_traces * 100
+     87 return aligned_traces, shifts, acceptance_rate, best_corr
 
-[31mValueError[39m: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (100,) + inhomogeneous part.
+ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (100,) + inhomogeneous part.
 ```
 
 
@@ -2132,8 +2132,8 @@ from Crypto.Cipher import AES
 import numpy as np
 
 # 加载数据
-ciphertexts = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy')
-plaintexts = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy')
+ciphertexts = np.load('data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy')
+plaintexts = np.load('data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy')
 
 # 恢复的密钥
 recovered_key_hex = "a81a06903c46fc9ec8dba6b301d5690e"
@@ -2276,8 +2276,8 @@ from Crypto.Cipher import AES
 import numpy as np
 
 # 加载数据
-ciphertexts = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy')
-plaintexts = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy')
+ciphertexts = np.load('data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy')
+plaintexts = np.load('data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy')
 
 # 从CPA结果中获取密钥字节和置信度
 cpa_results = [
@@ -2690,7 +2690,7 @@ print("汉明距离模型CPA结果已保存为 'hd_cpa_results.json'")
 import numpy as np
 
 # 重新加载原始波形
-traces = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy')
+traces = np.load('data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy')
 
 print("实施两阶段对齐策略...")
 
@@ -3249,7 +3249,7 @@ import numpy as np
 from Crypto.Cipher import AES
 
 # 加载密文
-ciphertexts = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy')
+ciphertexts = np.load('data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy')
 
 # AES逆S-box
 inv_sbox = np.array([

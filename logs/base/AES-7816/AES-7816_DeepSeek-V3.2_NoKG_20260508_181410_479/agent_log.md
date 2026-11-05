@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
+帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'"
+"帮我对一个接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'，密文文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy',原始波形文件为'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -138,9 +138,9 @@ print("\n目录内容:")
 print(os.listdir('.'))
 
 # 加载数据
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
+plain_path = 'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy'
+cipher_path = 'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy'
+wave_path = 'data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy'
 
 print(f"\n加载明文文件: {plain_path}")
 plaintexts = np.load(plain_path)
@@ -159,18 +159,18 @@ print(f"波形形状: {traces.shape}")
 <details><summary><b>📋 ← `python_jupyter`</b> (588 chars)</summary>
 
 ```
-当前工作目录: F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\DKG\logs\exp_python_only\AES-7816_DeepSeek-V3.2_NoKG_20260508_181410_479
+当前工作目录: logs\exp_python_only\AES-7816_DeepSeek-V3.2_NoKG_20260508_181410_479
 
 目录内容:
 ['agent_log.md']
 
-加载明文文件: F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy
+加载明文文件: data/traces/AES_128_7816/AES-128-7816-100traces-7400points_plain.npy
 明文形状: (100, 16)
 
-加载密文文件: F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy
+加载密文文件: data/traces/AES_128_7816/AES-128-7816-100traces-7400points_cipher.npy
 密文形状: (100, 16)
 
-加载波形文件: F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy
+加载波形文件: data/traces/AES_128_7816/AES-128-7816-100traces-7400points_wave.npy
 波形形状: (100, 7400)
 ```
 </details>
@@ -254,16 +254,16 @@ plt.show()
 明文前5条记录:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mAttributeError[39m                            Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[155][39m[32m, line 8[39m
-[32m      6[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33m明文前5条记录:[39m[33m"[39m)
-[32m      7[39m [38;5;28;01mfor[39;00m i [38;5;129;01min[39;00m [38;5;28mrange[39m([38;5;28mmin[39m([32m5[39m, [38;5;28mlen[39m(plaintexts))):
-[32m----> [39m[32m8[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[33m轨迹 [39m[38;5;132;01m{[39;00mi[38;5;132;01m}[39;00m[33m: [39m[38;5;132;01m{[39;00m[43mplaintexts[49m[43m[[49m[43mi[49m[43m][49m[43m.[49m[43mhex[49m()[38;5;132;01m}[39;00m[33m"[39m)
-[32m     10[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33m密文前5条记录:[39m[33m"[39m)
-[32m     11[39m [38;5;28;01mfor[39;00m i [38;5;129;01min[39;00m [38;5;28mrange[39m([38;5;28mmin[39m([32m5[39m, [38;5;28mlen[39m(ciphertexts))):
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Cell In[155], line 8
+      6 print("\n明文前5条记录:")
+      7 for i in range(min(5, len(plaintexts))):
+----> 8     print(f"轨迹 {i}: {plaintexts[i].hex()}")
+     10 print("\n密文前5条记录:")
+     11 for i in range(min(5, len(ciphertexts))):
 
-[31mAttributeError[39m: 'numpy.ndarray' object has no attribute 'hex'
+AttributeError: 'numpy.ndarray' object has no attribute 'hex'
 ```
 
 

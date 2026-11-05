@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
+帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'"
+"帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -139,9 +139,9 @@ print(os.listdir('.'))
 
 # 加载数据
 print("\n加载数据...")
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
+plain_path = 'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'
+cipher_path = 'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy'
+wave_path = 'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
 
 plaintexts = np.load(plain_path)
 ciphertexts = np.load(cipher_path)
@@ -166,7 +166,7 @@ print(f"第一个波形前10个点: {traces[0, :10]}")
 **❌ ← `python_jupyter` Error:**
 
 ```
-当前工作目录: F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\DKG\logs\exp_python_only\DES-7816_DeepSeek-V3.2_NoKG_20260508_154210_961
+当前工作目录: logs\exp_python_only\DES-7816_DeepSeek-V3.2_NoKG_20260508_154210_961
 
 目录内容:
 ['agent_log.md']
@@ -181,16 +181,16 @@ print(f"第一个波形前10个点: {traces[0, :10]}")
 波形数据类型: float32
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mTypeError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[105][39m[32m, line 31[39m
-[32m     28[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m波形数据类型: [39m[38;5;132;01m{[39;00mtraces.dtype[38;5;132;01m}[39;00m[33m"[39m)
-[32m     30[39m [38;5;66;03m# 查看一些样本[39;00m
-[32m---> [39m[32m31[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33m第一个明文 (十六进制): [39m[38;5;132;01m{[39;00mplaintexts[[32m0[39m][38;5;132;01m:[39;00m[33m016x[39m[38;5;132;01m}[39;00m[33m"[39m)
-[32m     32[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m第一个密文 (十六进制): [39m[38;5;132;01m{[39;00mciphertexts[[32m0[39m][38;5;132;01m:[39;00m[33m016x[39m[38;5;132;01m}[39;00m[33m"[39m)
-[32m     33[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m第一个波形前10个点: [39m[38;5;132;01m{[39;00mtraces[[32m0[39m,[38;5;250m [39m:[32m10[39m][38;5;132;01m}[39;00m[33m"[39m)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[105], line 31
+     28 print(f"波形数据类型: {traces.dtype}")
+     30 # 查看一些样本
+---> 31 print(f"\n第一个明文 (十六进制): {plaintexts[0]:016x}")
+     32 print(f"第一个密文 (十六进制): {ciphertexts[0]:016x}")
+     33 print(f"第一个波形前10个点: {traces[0, :10]}")
 
-[31mTypeError[39m: unsupported format string passed to numpy.ndarray.__format__
+TypeError: unsupported format string passed to numpy.ndarray.__format__
 ```
 
 
@@ -746,37 +746,37 @@ with open('cpa_key_guesses.json', 'w') as f:
 攻击S盒 2...
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mIndexError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[109][39m[32m, line 58[39m
-[32m     55[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m攻击S盒 [39m[38;5;132;01m{[39;00msbox_num+[32m1[39m[38;5;132;01m}[39;00m[33m...[39m[33m"[39m)
-[32m     57[39m [38;5;66;03m# 进行CPA攻击[39;00m
-[32m---> [39m[32m58[39m correlation_matrix = [43mcpa_attack_sbox[49m[43m([49m[43msbox_num[49m[43m,[49m[43m [49m[43mtraces[49m[43m,[49m[43m [49m[43mplaintexts_bits[49m[43m,[49m[43m [49m[43msample_points[49m[43m)[49m
-[32m     59[39m all_cpa_results.append(correlation_matrix)
-[32m     61[39m [38;5;66;03m# 找到最大相关系数对应的密钥[39;00m
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+Cell In[109], line 58
+     55 print(f"攻击S盒 {sbox_num+1}...")
+     57 # 进行CPA攻击
+---> 58 correlation_matrix = cpa_attack_sbox(sbox_num, traces, plaintexts_bits, sample_points)
+     59 all_cpa_results.append(correlation_matrix)
+     61 # 找到最大相关系数对应的密钥
 
-[36mCell[39m[36m [39m[32mIn[109][39m[32m, line 32[39m, in [36mcpa_attack_sbox[39m[34m(sbox_num, traces, plaintexts_bits, sample_points)[39m
-[32m     30[39m hypothetical_values = np.zeros(num_traces)
-[32m     31[39m [38;5;28;01mfor[39;00m i [38;5;129;01min[39;00m [38;5;28mrange[39m(num_traces):
-[32m---> [39m[32m32[39m     sbox_output = [43mdes_sbox_output[49m[43m([49m[43mplaintexts_bits[49m[43m[[49m[43mi[49m[43m][49m[43m,[49m[43m [49m[43mkey_bits[49m[43m,[49m[43m [49m[43msbox_num[49m[43m)[49m
-[32m     33[39m     [38;5;66;03m# 使用汉明重量模型[39;00m
-[32m     34[39m     hypothetical_values[i] = [38;5;28mbin[39m(sbox_output).count([33m'[39m[33m1[39m[33m'[39m)  [38;5;66;03m# 汉明重量[39;00m
+Cell In[109], line 32, in cpa_attack_sbox(sbox_num, traces, plaintexts_bits, sample_points)
+     30 hypothetical_values = np.zeros(num_traces)
+     31 for i in range(num_traces):
+---> 32     sbox_output = des_sbox_output(plaintexts_bits[i], key_bits, sbox_num)
+     33     # 使用汉明重量模型
+     34     hypothetical_values[i] = bin(sbox_output).count('1')  # 汉明重量
 
-[36mCell[39m[36m [39m[32mIn[107][39m[32m, line 266[39m, in [36mdes_sbox_output[39m[34m(plaintext_bits, key_guess, sbox_num)[39m
-[32m    263[39m expanded_block = expanded_r[sbox_num*[32m6[39m:(sbox_num+[32m1[39m)*[32m6[39m]
-[32m    265[39m [38;5;66;03m# 与密钥猜测异或[39;00m
-[32m--> [39m[32m266[39m xor_result = [43m[[49m[43mexpanded_block[49m[43m[[49m[43mi[49m[43m][49m[43m [49m[43m^[49m[43m [49m[43msubkey_guess[49m[43m[[49m[43mi[49m[43m][49m[43m [49m[38;5;28;43;01mfor[39;49;00m[43m [49m[43mi[49m[43m [49m[38;5;129;43;01min[39;49;00m[43m [49m[38;5;28;43mrange[39;49m[43m([49m[32;43m6[39;49m[43m)[49m[43m][49m
-[32m    268[39m [38;5;66;03m# S盒替换[39;00m
-[32m    269[39m row = (xor_result[[32m0[39m] << [32m1[39m) | xor_result[[32m5[39m]
+Cell In[107], line 266, in des_sbox_output(plaintext_bits, key_guess, sbox_num)
+    263 expanded_block = expanded_r[sbox_num*6:(sbox_num+1)*6]
+    265 # 与密钥猜测异或
+--> 266 xor_result = [expanded_block[i] ^ subkey_guess[i] for i in range(6)]
+    268 # S盒替换
+    269 row = (xor_result[0] << 1) | xor_result[5]
 
-[36mCell[39m[36m [39m[32mIn[107][39m[32m, line 266[39m, in [36m<listcomp>[39m[34m(.0)[39m
-[32m    263[39m expanded_block = expanded_r[sbox_num*[32m6[39m:(sbox_num+[32m1[39m)*[32m6[39m]
-[32m    265[39m [38;5;66;03m# 与密钥猜测异或[39;00m
-[32m--> [39m[32m266[39m xor_result = [expanded_block[i] ^ [43msubkey_guess[49m[43m[[49m[43mi[49m[43m][49m [38;5;28;01mfor[39;00m i [38;5;129;01min[39;00m [38;5;28mrange[39m([32m6[39m)]
-[32m    268[39m [38;5;66;03m# S盒替换[39;00m
-[32m    269[39m row = (xor_result[[32m0[39m] << [32m1[39m) | xor_result[[32m5[39m]
+Cell In[107], line 266, in <listcomp>(.0)
+    263 expanded_block = expanded_r[sbox_num*6:(sbox_num+1)*6]
+    265 # 与密钥猜测异或
+--> 266 xor_result = [expanded_block[i] ^ subkey_guess[i] for i in range(6)]
+    268 # S盒替换
+    269 row = (xor_result[0] << 1) | xor_result[5]
 
-[31mIndexError[39m: list index out of range
+IndexError: list index out of range
 ```
 
 

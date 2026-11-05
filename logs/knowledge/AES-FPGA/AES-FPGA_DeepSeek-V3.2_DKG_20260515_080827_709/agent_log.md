@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'
+帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'"
+"帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -529,9 +529,9 @@ from scipy import stats
 import os
 
 # 加载数据
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'
+plain_path = 'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'
+cipher_path = 'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy'
+wave_path = 'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'
 
 print("检查文件是否存在:")
 print(f"明文文件: {os.path.exists(plain_path)}")
@@ -1926,33 +1926,33 @@ else:
 即使限制后组合数仍然太多 (65536)，只测试候选密钥附近的组合
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mOverflowError[39m                             Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[12][39m[32m, line 110[39m
-[32m    108[39m [38;5;66;03m# 尝试key_search[39;00m
-[32m    109[39m [38;5;28mprint[39m([33m"[39m[33m尝试key_search策略...[39m[33m"[39m)
-[32m--> [39m[32m110[39m found_key, found = [43mkey_search[49m[43m([49m
-[32m    111[39m [43m    [49m[43mrecovered_key[49m[43m,[49m[43m [49m[43maligned_traces[49m[43m,[49m[43m [49m[43mplaintexts[49m[43m,[49m[43m [49m[43mciphertexts[49m[43m,[49m
-[32m    112[39m [43m    [49m[43mmax_combinations[49m[43m=[49m[32;43m50000[39;49m[43m,[49m[43m [49m[43mmax_candidates_per_byte[49m[43m=[49m[32;43m3[39;49m
-[32m    113[39m [43m)[49m
-[32m    115[39m [38;5;28;01mif[39;00m found:
-[32m    116[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33m✅ 通过key_search找到正确密钥![39m[33m"[39m)
+---------------------------------------------------------------------------
+OverflowError                             Traceback (most recent call last)
+Cell In[12], line 110
+    108 # 尝试key_search
+    109 print("尝试key_search策略...")
+--> 110 found_key, found = key_search(
+    111     recovered_key, aligned_traces, plaintexts, ciphertexts,
+    112     max_combinations=50000, max_candidates_per_byte=3
+    113 )
+    115 if found:
+    116     print(f"\n✅ 通过key_search找到正确密钥!")
 
-[36mCell[39m[36m [39m[32mIn[12][39m[32m, line 67[39m, in [36mkey_search[39m[34m(candidate_key, traces, plaintexts, ciphertexts, max_combinations, max_candidates_per_byte)[39m
-[32m     65[39m     key_byte = candidate_key[i]
-[32m     66[39m     [38;5;66;03m# 测试key_byte附近的几个值[39;00m
-[32m---> [39m[32m67[39m     nearby = [43m[[49m[43m([49m[43mkey_byte[49m[43m [49m[43m+[49m[43m [49m[43mj[49m[43m)[49m[43m [49m[43m%[49m[43m [49m[32;43m256[39;49m[43m [49m[38;5;28;43;01mfor[39;49;00m[43m [49m[43mj[49m[43m [49m[38;5;129;43;01min[39;49;00m[43m [49m[38;5;28;43mrange[39;49m[43m([49m[43m-[49m[32;43m2[39;49m[43m,[49m[43m [49m[32;43m3[39;49m[43m)[49m[43m][49m
-[32m     68[39m     tested_keys.append(nearby)
-[32m     70[39m combinations = [38;5;28mlist[39m(product(*tested_keys))
+Cell In[12], line 67, in key_search(candidate_key, traces, plaintexts, ciphertexts, max_combinations, max_candidates_per_byte)
+     65     key_byte = candidate_key[i]
+     66     # 测试key_byte附近的几个值
+---> 67     nearby = [(key_byte + j) % 256 for j in range(-2, 3)]
+     68     tested_keys.append(nearby)
+     70 combinations = list(product(*tested_keys))
 
-[36mCell[39m[36m [39m[32mIn[12][39m[32m, line 67[39m, in [36m<listcomp>[39m[34m(.0)[39m
-[32m     65[39m     key_byte = candidate_key[i]
-[32m     66[39m     [38;5;66;03m# 测试key_byte附近的几个值[39;00m
-[32m---> [39m[32m67[39m     nearby = [([43mkey_byte[49m[43m [49m[43m+[49m[43m [49m[43mj[49m) % [32m256[39m [38;5;28;01mfor[39;00m j [38;5;129;01min[39;00m [38;5;28mrange[39m(-[32m2[39m, [32m3[39m)]
-[32m     68[39m     tested_keys.append(nearby)
-[32m     70[39m combinations = [38;5;28mlist[39m(product(*tested_keys))
+Cell In[12], line 67, in <listcomp>(.0)
+     65     key_byte = candidate_key[i]
+     66     # 测试key_byte附近的几个值
+---> 67     nearby = [(key_byte + j) % 256 for j in range(-2, 3)]
+     68     tested_keys.append(nearby)
+     70 combinations = list(product(*tested_keys))
 
-[31mOverflowError[39m: Python integer -2 out of bounds for uint8
+OverflowError: Python integer -2 out of bounds for uint8
 ```
 
 
@@ -2737,47 +2737,47 @@ print(f"验证结果: {enc_match_count}/100 匹配 ({enc_match_percentage:.1f}%)
   峰值 10: 样本 88, 方差=34.8351
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mValueError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[17][39m[32m, line 29[39m
-[32m     27[39m plt.subplot([32m2[39m, [32m1[39m, [32m1[39m)
-[32m     28[39m plt.plot(aligned_variance, [33m'[39m[33mb-[39m[33m'[39m, alpha=[32m0.7[39m, label=[33m'[39m[33mVariance[39m[33m'[39m)
-[32m---> [39m[32m29[39m [43mplt[49m[43m.[49m[43mplot[49m[43m([49m[43mnp[49m[43m.[49m[43marange[49m[43m([49m[43mwindow_size[49m[43m/[49m[43m/[49m[32;43m2[39;49m[43m,[49m[43m [49m[38;5;28;43mlen[39;49m[43m([49m[43maligned_variance[49m[43m)[49m[43m-[49m[43mwindow_size[49m[43m/[49m[43m/[49m[32;43m2[39;49m[43m)[49m[43m,[49m[43m [49m
-[32m     30[39m [43m         [49m[43msmoothed_variance[49m[43m,[49m[43m [49m[33;43m'[39;49m[33;43mr-[39;49m[33;43m'[39;49m[43m,[49m[43m [49m[43malpha[49m[43m=[49m[32;43m0.7[39;49m[43m,[49m[43m [49m[43mlabel[49m[43m=[49m[33;43mf[39;49m[33;43m'[39;49m[33;43mSmoothed (window=[39;49m[38;5;132;43;01m{[39;49;00m[43mwindow_size[49m[38;5;132;43;01m}[39;49;00m[33;43m)[39;49m[33;43m'[39;49m[43m)[49m
-[32m     31[39m [38;5;28;01mfor[39;00m idx [38;5;129;01min[39;00m peak_indices[:[32m5[39m]:  [38;5;66;03m# 只标记前5个峰值[39;00m
-[32m     32[39m     plt.axvline(x=idx+window_size//[32m2[39m, color=[33m'[39m[33mg[39m[33m'[39m, linestyle=[33m'[39m[33m--[39m[33m'[39m, alpha=[32m0.5[39m)
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[17], line 29
+     27 plt.subplot(2, 1, 1)
+     28 plt.plot(aligned_variance, 'b-', alpha=0.7, label='Variance')
+---> 29 plt.plot(np.arange(window_size//2, len(aligned_variance)-window_size//2), 
+     30          smoothed_variance, 'r-', alpha=0.7, label=f'Smoothed (window={window_size})')
+     31 for idx in peak_indices[:5]:  # 只标记前5个峰值
+     32     plt.axvline(x=idx+window_size//2, color='g', linestyle='--', alpha=0.5)
 
-[36mFile [39m[32mF:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\matplotlib\pyplot.py:3838[39m, in [36mplot[39m[34m(scalex, scaley, data, *args, **kwargs)[39m
-[32m   3830[39m [38;5;129m@_copy_docstring_and_deprecators[39m(Axes.plot)
-[32m   3831[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mplot[39m(
-[32m   3832[39m     *args: [38;5;28mfloat[39m | ArrayLike | [38;5;28mstr[39m,
-[32m   (...)[39m[32m   3836[39m     **kwargs,
-[32m   3837[39m ) -> [38;5;28mlist[39m[Line2D]:
-[32m-> [39m[32m3838[39m     [38;5;28;01mreturn[39;00m [43mgca[49m[43m([49m[43m)[49m[43m.[49m[43mplot[49m[43m([49m
-[32m   3839[39m [43m        [49m[43m*[49m[43margs[49m[43m,[49m
-[32m   3840[39m [43m        [49m[43mscalex[49m[43m=[49m[43mscalex[49m[43m,[49m
-[32m   3841[39m [43m        [49m[43mscaley[49m[43m=[49m[43mscaley[49m[43m,[49m
-[32m   3842[39m [43m        [49m[43m*[49m[43m*[49m[43m([49m[43m{[49m[33;43m"[39;49m[33;43mdata[39;49m[33;43m"[39;49m[43m:[49m[43m [49m[43mdata[49m[43m}[49m[43m [49m[38;5;28;43;01mif[39;49;00m[43m [49m[43mdata[49m[43m [49m[38;5;129;43;01mis[39;49;00m[43m [49m[38;5;129;43;01mnot[39;49;00m[43m [49m[38;5;28;43;01mNone[39;49;00m[43m [49m[38;5;28;43;01melse[39;49;00m[43m [49m[43m{[49m[43m}[49m[43m)[49m[43m,[49m
-[32m   3843[39m [43m        [49m[43m*[49m[43m*[49m[43mkwargs[49m[43m,[49m
-[32m   3844[39m [43m    [49m[43m)[49m
+File .venv\Lib\site-packages\matplotlib\pyplot.py:3838, in plot(scalex, scaley, data, *args, **kwargs)
+   3830 @_copy_docstring_and_deprecators(Axes.plot)
+   3831 def plot(
+   3832     *args: float | ArrayLike | str,
+   (...)   3836     **kwargs,
+   3837 ) -> list[Line2D]:
+-> 3838     return gca().plot(
+   3839         *args,
+   3840         scalex=scalex,
+   3841         scaley=scaley,
+   3842         **({"data": data} if data is not None else {}),
+   3843         **kwargs,
+   3844     )
 
-[36mFile [39m[32mF:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\matplotlib\axes\_axes.py:1777[39m, in [36mAxes.plot[39m[34m(self, scalex, scaley, data, *args, **kwargs)[39m
-[32m   1534[39m [38;5;250m[39m[33;03m"""[39;00m
-[32m   1535[39m [33;03mPlot y versus x as lines and/or markers.[39;00m
-[32m   1536[39m 
-[32m   (...)[39m[32m   1774[39m [33;03m(``'green'``) or hex strings (``'#008000'``).[39;00m
-[32m   1775[39m [33;03m"""[39;00m
-[32m   1776[39m kwargs = cbook.normalize_kwargs(kwargs, mlines.Line2D)
-[32m-> [39m[32m1777[39m lines = [*[38;5;28mself[39m._get_lines([38;5;28mself[39m, *args, data=data, **kwargs)]
-[32m   1778[39m [38;5;28;01mfor[39;00m line [38;5;129;01min[39;00m lines:
-[32m   1779[39m     [38;5;28mself[39m.add_line(line)
+File .venv\Lib\site-packages\matplotlib\axes\_axes.py:1777, in Axes.plot(self, scalex, scaley, data, *args, **kwargs)
+   1534 """
+   1535 Plot y versus x as lines and/or markers.
+   1536 
+   (...)   1774 (``'green'``) or hex strings (``'#008000'``).
+   1775 """
+   1776 kwargs = cbook.normalize_kwargs(kwargs, mlines.Line2D)
+-> 1777 lines = [*self._get_lines(self, *args, data=data, **kwargs)]
+   1778 for line in lines:
+   1779     self.add_line(line)
 
-[36mFile [39m[32mF:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\matplotlib\axes\_base.py:297[39m, in [36m_process_plot_var_args.__call__[39m[34m(self, axes, data, return_kwargs, *args, **kwargs)[39m
-[32m    295[39m     this += args[[32m0[39m],
-[32m    296[39m     args = args[[32m1[39m:]
-[32m--> [39m[32m297[39m [38;5;28;01myield from[39;00m [38;5;28;43mself[39;49m[43m.[49m[43m_plot_args[49m[43m([49m
-[32m    298[39m [43m    [49m[43maxes[49m[43m,[49m[43m [49m[43mthis[49m[43m,[49m[43m [49m[43mkwargs[49m[43m,[49m[43m [49m[43mambiguous_fmt_datakey[49m[43m=[49m[43mambiguous_fmt_datakey[49m[43m,[49m
-[32m    299[39m [43m    [49m[43mreturn_kwargs[49m[43m=[49m[43mreturn_kwargs
+File .venv\Lib\site-packages\matplotlib\axes\_base.py:297, in _process_plot_var_args.__call__(self, axes, data, return_kwargs, *args, **kwargs)
+    295     this += args[0],
+    296     args = args[1:]
+--> 297 yield from self._plot_args(
+    298     axes, this, kwargs, ambiguous_fmt_datakey=ambiguous_fmt_datakey,
+    299     return_kwargs=return_kwargs
 ...(truncated)
 ```
 

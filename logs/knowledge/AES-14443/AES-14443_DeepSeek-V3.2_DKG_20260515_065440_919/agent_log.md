@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
+帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'"
+"帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -573,9 +573,9 @@ print("目录内容:", os.listdir())
 # 尝试加载文件
 try:
     # 使用用户提供的完整路径
-    plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'
-    cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy'
-    wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
+    plain_path = 'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'
+    cipher_path = 'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy'
+    wave_path = 'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
     
     plaintexts = np.load(plain_path)
     ciphertexts = np.load(cipher_path)
@@ -600,7 +600,7 @@ except Exception as e:
 ```
 </details>
 
-**📋 ← `python_jupyter`:** `当前工作目录: F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\DKG\logs\exp_knowledge_only\AES-14443_DeepSeek-V3.2_DKG_20260515_065440_919
+**📋 ← `python_jupyter`:** `当前工作目录: logs\exp_knowledge_only\AES-14443_DeepSeek-V3.2_DKG_20260515_065440_919
 目录内容: ['agent_log.md']
 明文形状: (5000, 16)
 密文形状: (5000, 16)
@@ -1312,19 +1312,19 @@ else:
   平均相关性: -0.5853
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mNameError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[313][39m[32m, line 97[39m
-[32m     95[39m [38;5;66;03m# 原始平均轨迹[39;00m
-[32m     96[39m axes[[32m1[39m, [32m0[39m].plot(traces.mean(axis=[32m0[39m), label=[33m'[39m[33m平均[39m[33m'[39m, linewidth=[32m2[39m)
-[32m---> [39m[32m97[39m axes[[32m1[39m, [32m0[39m].fill_between([38;5;28mrange[39m([43mn_samples[49m), 
-[32m     98[39m                        traces.mean(axis=[32m0[39m) - traces.std(axis=[32m0[39m),
-[32m     99[39m                        traces.mean(axis=[32m0[39m) + traces.std(axis=[32m0[39m),
-[32m    100[39m                        alpha=[32m0.3[39m)
-[32m    101[39m axes[[32m1[39m, [32m0[39m].set_title([33m'[39m[33m原始平均轨迹[39m[33m'[39m)
-[32m    102[39m axes[[32m1[39m, [32m0[39m].set_xlabel([33m'[39m[33m采样点[39m[33m'[39m)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[313], line 97
+     95 # 原始平均轨迹
+     96 axes[1, 0].plot(traces.mean(axis=0), label='平均', linewidth=2)
+---> 97 axes[1, 0].fill_between(range(n_samples), 
+     98                        traces.mean(axis=0) - traces.std(axis=0),
+     99                        traces.mean(axis=0) + traces.std(axis=0),
+    100                        alpha=0.3)
+    101 axes[1, 0].set_title('原始平均轨迹')
+    102 axes[1, 0].set_xlabel('采样点')
 
-[31mNameError[39m: name 'n_samples' is not defined
+NameError: name 'n_samples' is not defined
 ```
 
 
@@ -2163,9 +2163,9 @@ from scipy.stats import pearsonr
 import os
 
 # 加载数据
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
+plain_path = 'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'
+cipher_path = 'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy'
+wave_path = 'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
 
 plaintexts = np.load(plain_path)
 ciphertexts = np.load(cipher_path)
@@ -2278,9 +2278,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 重新加载数据
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
+plain_path = 'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'
+cipher_path = 'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy'
+wave_path = 'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
 
 plaintexts = np.load(plain_path)
 ciphertexts = np.load(cipher_path)

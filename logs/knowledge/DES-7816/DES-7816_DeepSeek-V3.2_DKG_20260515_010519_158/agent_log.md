@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
+帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'"
+"帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -663,9 +663,9 @@ from scipy import stats
 import os
 
 # 加载数据
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
+plain_path = 'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'
+cipher_path = 'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy'
+wave_path = 'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
 
 plaintexts = np.load(plain_path)
 ciphertexts = np.load(cipher_path)
@@ -2411,32 +2411,32 @@ S-box 7: 最佳密钥猜测 = 111001 (57), 最大相关性 = 0.3646
 尝试有限数量的组合...
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mValueError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[91][39m[32m, line 254[39m
-[32m    250[39m found_key_random = [38;5;28;01mNone[39;00m
-[32m    252[39m [38;5;28;01mfor[39;00m attempt [38;5;129;01min[39;00m [38;5;28mrange[39m(max_random_combinations):
-[32m    253[39m     [38;5;66;03m# 随机选择每个S-box的一个候选[39;00m
-[32m--> [39m[32m254[39m     combo = [43m[[49m[43mrandom[49m[43m.[49m[43mchoice[49m[43m([49m[43mcandidates[49m[43m)[49m[43m [49m[38;5;28;43;01mfor[39;49;00m[43m [49m[43mcandidates[49m[43m [49m[38;5;129;43;01min[39;49;00m[43m [49m[43msbox_candidates[49m[43m][49m
-[32m    256[39m     [38;5;66;03m# 从8个6位密钥构建48位子密钥[39;00m
-[32m    257[39m     subkey_bits = []
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[91], line 254
+    250 found_key_random = None
+    252 for attempt in range(max_random_combinations):
+    253     # 随机选择每个S-box的一个候选
+--> 254     combo = [random.choice(candidates) for candidates in sbox_candidates]
+    256     # 从8个6位密钥构建48位子密钥
+    257     subkey_bits = []
 
-[36mCell[39m[36m [39m[32mIn[91][39m[32m, line 254[39m, in [36m<listcomp>[39m[34m(.0)[39m
-[32m    250[39m found_key_random = [38;5;28;01mNone[39;00m
-[32m    252[39m [38;5;28;01mfor[39;00m attempt [38;5;129;01min[39;00m [38;5;28mrange[39m(max_random_combinations):
-[32m    253[39m     [38;5;66;03m# 随机选择每个S-box的一个候选[39;00m
-[32m--> [39m[32m254[39m     combo = [[43mrandom[49m[43m.[49m[43mchoice[49m[43m([49m[43mcandidates[49m[43m)[49m [38;5;28;01mfor[39;00m candidates [38;5;129;01min[39;00m sbox_candidates]
-[32m    256[39m     [38;5;66;03m# 从8个6位密钥构建48位子密钥[39;00m
-[32m    257[39m     subkey_bits = []
+Cell In[91], line 254, in <listcomp>(.0)
+    250 found_key_random = None
+    252 for attempt in range(max_random_combinations):
+    253     # 随机选择每个S-box的一个候选
+--> 254     combo = [random.choice(candidates) for candidates in sbox_candidates]
+    256     # 从8个6位密钥构建48位子密钥
+    257     subkey_bits = []
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\random.py:369[39m, in [36mRandom.choice[39m[34m(self, seq)[39m
-[32m    367[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mchoice[39m([38;5;28mself[39m, seq):
-[32m    368[39m [38;5;250m    [39m[33;03m"""Choose a random element from a non-empty sequence."""[39;00m
-[32m--> [39m[32m369[39m     [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m seq:
-[32m    370[39m         [38;5;28;01mraise[39;00m [38;5;167;01mIndexError[39;00m([33m'[39m[33mCannot choose from an empty sequence[39m[33m'[39m)
-[32m    371[39m     [38;5;28;01mreturn[39;00m seq[[38;5;28mself[39m._randbelow([38;5;28mlen[39m(seq))]
+File ~\AppData\Local\Programs\Python\Python311\Lib\random.py:369, in Random.choice(self, seq)
+    367 def choice(self, seq):
+    368     """Choose a random element from a non-empty sequence."""
+--> 369     if not seq:
+    370         raise IndexError('Cannot choose from an empty sequence')
+    371     return seq[self._randbelow(len(seq))]
 
-[31mValueError[39m: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
 ```
 
 

@@ -7,7 +7,7 @@ DKG automates non-profiled correlation power analysis (CPA) on symmetric block c
 | Layer | Entity types | Entities | Relationships |
 |---|---|---|---|
 | Upper (configuration space) | 12 | 462 | 953 |
-| Lower (diagnostic space) | 4 | 871 | 860 |
+| Lower (diagnostic space) | 4 | 872 | 860 |
 | **Total** | **16** | **1,334** | **1,813** |
 
 The graph is stored in two JSON files and loaded into Neo4j:

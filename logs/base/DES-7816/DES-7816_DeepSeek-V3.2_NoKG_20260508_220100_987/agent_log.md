@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
+帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'"
+"帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -139,9 +139,9 @@ print(os.listdir('.'))
 
 # 加载数据
 print("\n加载数据...")
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
+plain_path = 'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'
+cipher_path = 'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy'
+wave_path = 'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
 
 # 检查文件是否存在
 print(f"明文文件存在: {os.path.exists(plain_path)}")
@@ -197,16 +197,16 @@ for i in range(min(3, len(ciphertexts))):
 前3个明文 (十六进制):
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mTypeError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[81][39m[32m, line 38[39m
-[32m     36[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33m前3个明文 (十六进制):[39m[33m"[39m)
-[32m     37[39m [38;5;28;01mfor[39;00m i [38;5;129;01min[39;00m [38;5;28mrange[39m([38;5;28mmin[39m([32m3[39m, [38;5;28mlen[39m(plaintexts))):
-[32m---> [39m[32m38[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  [39m[38;5;132;01m{[39;00mi[38;5;132;01m}[39;00m[33m: [39m[38;5;132;01m{[39;00mplaintexts[i][38;5;132;01m:[39;00m[33m016x[39m[38;5;132;01m}[39;00m[33m"[39m)
-[32m     40[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33m前3个密文 (十六进制):[39m[33m"[39m)
-[32m     41[39m [38;5;28;01mfor[39;00m i [38;5;129;01min[39;00m [38;5;28mrange[39m([38;5;28mmin[39m([32m3[39m, [38;5;28mlen[39m(ciphertexts))):
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[81], line 38
+     36 print(f"\n前3个明文 (十六进制):")
+     37 for i in range(min(3, len(plaintexts))):
+---> 38     print(f"  {i}: {plaintexts[i]:016x}")
+     40 print(f"\n前3个密文 (十六进制):")
+     41 for i in range(min(3, len(ciphertexts))):
 
-[31mTypeError[39m: unsupported format string passed to numpy.ndarray.__format__
+TypeError: unsupported format string passed to numpy.ndarray.__format__
 ```
 
 
@@ -958,17 +958,17 @@ print(f"\n最佳密钥猜测在样本点 {max_corr_sample} 处有最大相关系
 最大相关系数: 0.356293
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mNameError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[86][39m[32m, line 112[39m
-[32m    109[39m [38;5;66;03m# 显示相关系数热图[39;00m
-[32m    110[39m plt.subplot([32m2[39m, [32m2[39m, [32m3[39m)
-[32m    111[39m im = plt.imshow(np.abs(corr_matrix_sbox0_detailed), aspect=[33m'[39m[33mauto[39m[33m'[39m, 
-[32m--> [39m[32m112[39m                 extent=[[32m0[39m, [43mnum_samples[49m, [32m0[39m, [32m64[39m], cmap=[33m'[39m[33mhot[39m[33m'[39m)
-[32m    113[39m plt.colorbar(im, label=[33m'[39m[33mAbsolute Correlation[39m[33m'[39m)
-[32m    114[39m plt.xlabel([33m'[39m[33mSample Point[39m[33m'[39m)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[86], line 112
+    109 # 显示相关系数热图
+    110 plt.subplot(2, 2, 3)
+    111 im = plt.imshow(np.abs(corr_matrix_sbox0_detailed), aspect='auto', 
+--> 112                 extent=[0, num_samples, 0, 64], cmap='hot')
+    113 plt.colorbar(im, label='Absolute Correlation')
+    114 plt.xlabel('Sample Point')
 
-[31mNameError[39m: name 'num_samples' is not defined
+NameError: name 'num_samples' is not defined
 ```
 
 

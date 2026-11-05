@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
+帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'"
+"帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -474,9 +474,9 @@ plt.rcParams['axes.unicode_minus'] = False
 
 # 加载数据
 print("正在加载数据...")
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
+plain_path = 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'
+cipher_path = 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy'
+wave_path = 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
 
 plaintexts = np.load(plain_path)
 ciphertexts = np.load(cipher_path)
@@ -2069,23 +2069,23 @@ else:
 这里我们进行简化验证，尝试使用恢复的子密钥进行加密验证
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mAttributeError[39m                            Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[90][39m[32m, line 77[39m
-[32m     75[39m [38;5;66;03m# 执行验证[39;00m
-[32m     76[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33m执行DES密钥验证...[39m[33m"[39m)
-[32m---> [39m[32m77[39m success, found_key = [43mdes_encrypt_decrypt_verify[49m[43m([49m[43mplaintexts[49m[43m,[49m[43m [49m[43mciphertexts[49m[43m,[49m[43m [49m[43msubkey_48bit[49m[43m)[49m
-[32m     79[39m [38;5;28;01mif[39;00m success:
-[32m     80[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33m成功恢复DES密钥: [39m[38;5;132;01m{[39;00mfound_key[38;5;132;01m}[39;00m[33m"[39m)
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Cell In[90], line 77
+     75 # 执行验证
+     76 print("\n执行DES密钥验证...")
+---> 77 success, found_key = des_encrypt_decrypt_verify(plaintexts, ciphertexts, subkey_48bit)
+     79 if success:
+     80     print(f"\n成功恢复DES密钥: {found_key}")
 
-[36mCell[39m[36m [39m[32mIn[90][39m[32m, line 35[39m, in [36mdes_encrypt_decrypt_verify[39m[34m(plaintexts, ciphertexts, candidate_key_48bit)[39m
-[32m     33[39m [38;5;66;03m# 方式1: 48位零填充到64位[39;00m
-[32m     34[39m key1 = (subkey_48bit << [32m16[39m) | [32m0x0000[39m
-[32m---> [39m[32m35[39m test_keys.append([43mkey1[49m[43m.[49m[43mto_bytes[49m([32m8[39m, [33m'[39m[33mbig[39m[33m'[39m))
-[32m     37[39m [38;5;66;03m# 方式2: 48位重复填充[39;00m
-[32m     38[39m key2_bytes = subkey_48bit.to_bytes([32m6[39m, [33m'[39m[33mbig[39m[33m'[39m)
+Cell In[90], line 35, in des_encrypt_decrypt_verify(plaintexts, ciphertexts, candidate_key_48bit)
+     33 # 方式1: 48位零填充到64位
+     34 key1 = (subkey_48bit << 16) | 0x0000
+---> 35 test_keys.append(key1.to_bytes(8, 'big'))
+     37 # 方式2: 48位重复填充
+     38 key2_bytes = subkey_48bit.to_bytes(6, 'big')
 
-[31mAttributeError[39m: 'numpy.int64' object has no attribute 'to_bytes'
+AttributeError: 'numpy.int64' object has no attribute 'to_bytes'
 ```
 
 
@@ -2574,23 +2574,23 @@ else:
 警告: 搜索空间太大 (65536)，限制为前50000种组合
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mAttributeError[39m                            Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[92][39m[32m, line 201[39m
-[32m    199[39m [38;5;66;03m# 使用恢复的48位子密钥进行主密钥恢复[39;00m
-[32m    200[39m [38;5;28mprint[39m([33m"[39m[33m开始DES主密钥恢复...[39m[33m"[39m)
-[32m--> [39m[32m201[39m found_keys = [43mrecover_master_key_from_k1[49m[43m([49m[43msubkey_48bit[49m[43m,[49m[43m [49m[43mmax_combinations[49m[43m=[49m[32;43m50000[39;49m[43m)[49m
-[32m    203[39m [38;5;28;01mif[39;00m found_keys:
-[32m    204[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33m✅ 找到 [39m[38;5;132;01m{[39;00m[38;5;28mlen[39m(found_keys)[38;5;132;01m}[39;00m[33m 个候选密钥:[39m[33m"[39m)
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Cell In[92], line 201
+    199 # 使用恢复的48位子密钥进行主密钥恢复
+    200 print("开始DES主密钥恢复...")
+--> 201 found_keys = recover_master_key_from_k1(subkey_48bit, max_combinations=50000)
+    203 if found_keys:
+    204     print(f"\n✅ 找到 {len(found_keys)} 个候选密钥:")
 
-[36mCell[39m[36m [39m[32mIn[92][39m[32m, line 155[39m, in [36mrecover_master_key_from_k1[39m[34m(k48, max_combinations)[39m
-[32m    152[39m     candidate_key |= (bit << ([32m64[39m - bit_pos))
-[32m    154[39m [38;5;66;03m# 转换为字节[39;00m
-[32m--> [39m[32m155[39m key_bytes = [43mcandidate_key[49m[43m.[49m[43mto_bytes[49m([32m8[39m, [33m'[39m[33mbig[39m[33m'[39m)
-[32m    157[39m [38;5;66;03m# 验证密钥[39;00m
-[32m    158[39m [38;5;28;01mtry[39;00m:
+Cell In[92], line 155, in recover_master_key_from_k1(k48, max_combinations)
+    152     candidate_key |= (bit << (64 - bit_pos))
+    154 # 转换为字节
+--> 155 key_bytes = candidate_key.to_bytes(8, 'big')
+    157 # 验证密钥
+    158 try:
 
-[31mAttributeError[39m: 'numpy.int64' object has no attribute 'to_bytes'
+AttributeError: 'numpy.int64' object has no attribute 'to_bytes'
 ```
 
 

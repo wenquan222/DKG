@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
+帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'"
+"帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -566,9 +566,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 加载数据
-plain_path = r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'
-cipher_path = r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy'
-wave_path = r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
+plain_path = r'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'
+cipher_path = r'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy'
+wave_path = r'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
 
 plaintext = np.load(plain_path)
 ciphertext = np.load(cipher_path)
@@ -593,16 +593,16 @@ Ciphertext shape: (100, 8), dtype: uint8
 Wave shape: (100, 2000), dtype: float32
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mAttributeError[39m                            Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[167][39m[32m, line 16[39m
-[32m     14[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33mCiphertext shape: [39m[38;5;132;01m{[39;00mciphertext.shape[38;5;132;01m}[39;00m[33m, dtype: [39m[38;5;132;01m{[39;00mciphertext.dtype[38;5;132;01m}[39;00m[33m"[39m)
-[32m     15[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33mWave shape: [39m[38;5;132;01m{[39;00mwave.shape[38;5;132;01m}[39;00m[33m, dtype: [39m[38;5;132;01m{[39;00mwave.dtype[38;5;132;01m}[39;00m[33m"[39m)
-[32m---> [39m[32m16[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33mFirst plaintext: [39m[38;5;132;01m{[39;00m[43mplaintext[49m[43m[[49m[32;43m0[39;49m[43m][49m[43m.[49m[43mhex[49m()[38;5;132;01m}[39;00m[33m"[39m)
-[32m     17[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33mFirst ciphertext: [39m[38;5;132;01m{[39;00mciphertext[[32m0[39m].hex()[38;5;132;01m}[39;00m[33m"[39m)
-[32m     18[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33mWave statistics:[39m[33m"[39m)
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Cell In[167], line 16
+     14 print(f"Ciphertext shape: {ciphertext.shape}, dtype: {ciphertext.dtype}")
+     15 print(f"Wave shape: {wave.shape}, dtype: {wave.dtype}")
+---> 16 print(f"\nFirst plaintext: {plaintext[0].hex()}")
+     17 print(f"First ciphertext: {ciphertext[0].hex()}")
+     18 print(f"\nWave statistics:")
 
-[31mAttributeError[39m: 'numpy.ndarray' object has no attribute 'hex'
+AttributeError: 'numpy.ndarray' object has no attribute 'hex'
 ```
 
 
@@ -619,9 +619,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 加载数据
-plain_path = r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'
-cipher_path = r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy'
-wave_path = r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
+plain_path = r'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'
+cipher_path = r'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy'
+wave_path = r'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
 
 plaintext = np.load(plain_path)
 ciphertext = np.load(cipher_path)
@@ -741,8 +741,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\2776163588.py:68: UserWarni
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy",
+  "plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
+  "wave_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy",
   "target": "S-box_out",
   "leakage_model": "HW",
   "candidates": 20
@@ -781,8 +781,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\2776163588.py:68: UserWarni
 {
   "algorithm": "DES",
   "key_hex": "C044F6082640244E",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy",
+  "plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy",
   "trace_index": 0
 }
 ```
@@ -808,13 +808,13 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\2776163588.py:68: UserWarni
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy",
+  "wave_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy",
   "start": 1100,
   "length": 120,
   "max_shift": 50,
   "threshold": 85,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy"
+  "plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy"
 }
 ```
 </details>
@@ -839,7 +839,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\2776163588.py:68: UserWarni
 import numpy as np
 
 # 加载原始波形
-wave_path = r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
+wave_path = r'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
 wave = np.load(wave_path)
 
 # 在1100-1200范围内找每条波形的峰值位置
@@ -897,13 +897,13 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\1944440677.py:32: UserWarni
 
 ```json
 {
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy",
+  "ciphertext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy",
   "length": 120,
   "max_shift": 200,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
+  "plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
   "start": 1100,
   "threshold": 85,
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy"
+  "wave_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy"
 }
 ```
 </details>

@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个STM32F429 MCU软件实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'
+帮我对一个STM32F429 MCU软件实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'，密文文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy',原始波形文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个STM32F429 MCU软件实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'"
+"帮我对一个STM32F429 MCU软件实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'，密文文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy',原始波形文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -472,9 +472,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 加载数据
-wave = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy')
-plain = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy')
-cipher = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy')
+wave = np.load(r'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy')
+plain = np.load(r'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy')
+cipher = np.load(r'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy')
 
 print(f"波形数据形状: {wave.shape}")
 print(f"明文数据形状: {plain.shape}")
@@ -689,8 +689,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\171611279.py:47: UserWarnin
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy",
+  "plaintext_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy",
+  "wave_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy",
   "target": "S-box_out",
   "leakage_model": "HW",
   "candidates": 20
@@ -726,8 +726,8 @@ CPA攻击非常成功！让我验证恢复的密钥是否正确。
 {
   "algorithm": "AES",
   "key_hex": "00112233445566778899AABBCCDDEEFF",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy",
+  "plaintext_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy",
   "trace_index": 0
 }
 ```
@@ -830,16 +830,16 @@ STM32F429 AES-128 电磁侧信道CPA攻击报告
 --------------------------------------------------
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mKeyError[39m                                  Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[138][39m[32m, line 32[39m
-[32m     30[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;132;01m{[39;00m[33m'[39m[33m字节[39m[33m'[39m[38;5;132;01m:[39;00m[33m<6[39m[38;5;132;01m}[39;00m[33m [39m[38;5;132;01m{[39;00m[33m'[39m[33m密钥[39m[33m'[39m[38;5;132;01m:[39;00m[33m<6[39m[38;5;132;01m}[39;00m[33m [39m[38;5;132;01m{[39;00m[33m'[39m[33m相关系数[39m[33m'[39m[38;5;132;01m:[39;00m[33m<12[39m[38;5;132;01m}[39;00m[33m [39m[38;5;132;01m{[39;00m[33m'[39m[33m时间点[39m[33m'[39m[38;5;132;01m:[39;00m[33m<10[39m[38;5;132;01m}[39;00m[33m [39m[38;5;132;01m{[39;00m[33m'[39m[33mGap[39m[33m%[39m[33m'[39m[38;5;132;01m:[39;00m[33m<10[39m[38;5;132;01m}[39;00m[33m"[39m)
-[32m     31[39m [38;5;28mprint[39m([33m"[39m[33m-[39m[33m"[39m * [32m50[39m)
-[32m---> [39m[32m32[39m [38;5;28;01mfor[39;00m byte_info [38;5;129;01min[39;00m [43mcpa_detail[49m[43m[[49m[33;43m'[39;49m[33;43mper_byte[39;49m[33;43m'[39;49m[43m][49m:
-[32m     33[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;132;01m{[39;00mbyte_info[[33m'[39m[33mbyte[39m[33m'[39m][38;5;132;01m:[39;00m[33m<6[39m[38;5;132;01m}[39;00m[33m [39m[38;5;132;01m{[39;00mbyte_info[[33m'[39m[33mkey[39m[33m'[39m][38;5;132;01m:[39;00m[33m<6[39m[38;5;132;01m}[39;00m[33m [39m[38;5;132;01m{[39;00mbyte_info[[33m'[39m[33mcorrelation[39m[33m'[39m][38;5;132;01m:[39;00m[33m<12.4f[39m[38;5;132;01m}[39;00m[33m [39m[38;5;132;01m{[39;00mbyte_info[[33m'[39m[33mtime_index[39m[33m'[39m][38;5;132;01m:[39;00m[33m<10[39m[38;5;132;01m}[39;00m[33m [39m[38;5;132;01m{[39;00mbyte_info[[33m'[39m[33mgap_pct[39m[33m'[39m][38;5;132;01m:[39;00m[33m<10.1f[39m[38;5;132;01m}[39;00m[33m"[39m)
-[32m     35[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33m【分析总结】[39m[33m"[39m)
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+Cell In[138], line 32
+     30 print(f"{'字节':<6} {'密钥':<6} {'相关系数':<12} {'时间点':<10} {'Gap%':<10}")
+     31 print("-" * 50)
+---> 32 for byte_info in cpa_detail['per_byte']:
+     33     print(f"{byte_info['byte']:<6} {byte_info['key']:<6} {byte_info['correlation']:<12.4f} {byte_info['time_index']:<10} {byte_info['gap_pct']:<10.1f}")
+     35 print("\n【分析总结】")
 
-[31mKeyError[39m: 'per_byte'
+KeyError: 'per_byte'
 ```
 
 
@@ -965,16 +965,16 @@ STM32F429 AES-128 电磁侧信道CPA攻击报告
 --------------------------------------------------
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mKeyError[39m                                  Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[140][39m[32m, line 34[39m
-[32m     32[39m [38;5;28mprint[39m([33m"[39m[33m-[39m[33m"[39m * [32m50[39m)
-[32m     33[39m [38;5;28;01mfor[39;00m byte_idx, result [38;5;129;01min[39;00m [38;5;28menumerate[39m(cpa_detail[[33m'[39m[33mresults[39m[33m'[39m]):
-[32m---> [39m[32m34[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;132;01m{[39;00mbyte_idx[38;5;132;01m:[39;00m[33m<6[39m[38;5;132;01m}[39;00m[33m [39m[38;5;132;01m{[39;00mresult[[33m'[39m[33mbest_key[39m[33m'[39m][38;5;132;01m:[39;00m[33m<6[39m[38;5;132;01m}[39;00m[33m [39m[38;5;132;01m{[39;00m[43mresult[49m[43m[[49m[33;43m'[39;49m[33;43mbest_corr[39;49m[33;43m'[39;49m[43m][49m[38;5;132;01m:[39;00m[33m<12.4f[39m[38;5;132;01m}[39;00m[33m [39m[38;5;132;01m{[39;00mresult[[33m'[39m[33mbest_time[39m[33m'[39m][38;5;132;01m:[39;00m[33m<10[39m[38;5;132;01m}[39;00m[33m [39m[38;5;132;01m{[39;00mresult[[33m'[39m[33mgap_pct[39m[33m'[39m][38;5;132;01m:[39;00m[33m<10.1f[39m[38;5;132;01m}[39;00m[33m"[39m)
-[32m     36[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33m【分析总结】[39m[33m"[39m)
-[32m     37[39m [38;5;28mprint[39m([33m"[39m[33m  1. 攻击非常成功，无需任何预处理（无对齐、无滤波）[39m[33m"[39m)
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+Cell In[140], line 34
+     32 print("-" * 50)
+     33 for byte_idx, result in enumerate(cpa_detail['results']):
+---> 34     print(f"{byte_idx:<6} {result['best_key']:<6} {result['best_corr']:<12.4f} {result['best_time']:<10} {result['gap_pct']:<10.1f}")
+     36 print("\n【分析总结】")
+     37 print("  1. 攻击非常成功，无需任何预处理（无对齐、无滤波）")
 
-[31mKeyError[39m: 'best_corr'
+KeyError: 'best_corr'
 ```
 
 
@@ -1219,7 +1219,7 @@ ax4.grid(True, alpha=0.3)
 
 # 子图5：平均波形与泄漏区域
 ax5 = plt.subplot(2, 3, 5)
-wave = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy')
+wave = np.load(r'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy')
 mean_trace = np.mean(wave, axis=0)
 ax5.plot(mean_trace, linewidth=1, color='blue', alpha=0.7, label='Mean Trace')
 ax5.axvspan(350, 420, alpha=0.3, color='red', label='S-box Leakage Region')

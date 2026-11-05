@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
+帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'"
+"帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -513,9 +513,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 加载数据
-wave = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy')
-plain = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy')
-cipher = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy')
+wave = np.load('data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy')
+plain = np.load('data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy')
+cipher = np.load('data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy')
 
 print(f"波形形状: {wave.shape}")
 print(f"明文形状: {plain.shape}")
@@ -607,11 +607,11 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_22020\2563856603.py:45: UserWarni
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy",
+  "wave_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy",
   "ref_start": 0,
   "ref_end": 30,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy"
+  "plaintext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy"
 }
 ```
 </details>
@@ -619,7 +619,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_22020\2563856603.py:45: UserWarni
 <details><summary><b>📋 ← `vertical_aligner`</b> (657 chars)</summary>
 
 ```
-{"out_wave_npy": "valigned_20260428_050000_668174.npy", "plot_path": "valign_compare_20260428_050000_668174.png", "n_traces": 10000, "n_points": 300, "ref_region": [0, 30], "baseline_std": 1.0036, "baseline_std_after": 1e-06, "out_plaintext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy", "out_ciphertext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy"}
+{"out_wave_npy": "valigned_20260428_050000_668174.npy", "plot_path": "valign_compare_20260428_050000_668174.png", "n_traces": 10000, "n_points": 300, "ref_region": [0, 30], "baseline_std": 1.0036, "baseline_std_after": 1e-06, "out_plaintext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy", "out_ciphertext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy"}
 ```
 </details>
 
@@ -639,7 +639,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_22020\2563856603.py:45: UserWarni
 
 **🔧 → `plaintext_ciphertext_correlation`** `{
   "wave_npy": "valigned_20260428_050000_668174.npy",
-  "data_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "data_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
   "data_type": "plaintext",
   "byte_index": 0,
   "model": "HW"
@@ -663,7 +663,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_22020\2563856603.py:45: UserWarni
 
 **🔧 → `plaintext_ciphertext_correlation`** `{
   "wave_npy": "valigned_20260428_050000_668174.npy",
-  "data_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy",
+  "data_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy",
   "data_type": "ciphertext",
   "byte_index": 0,
   "model": "HW"
@@ -697,8 +697,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_22020\2563856603.py:45: UserWarni
   "max_shift": 100,
   "threshold": 85,
   "ref_trace": 5000,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy"
+  "plaintext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy"
 }
 ```
 </details>
@@ -1846,14 +1846,14 @@ High confidence count: 7
 Per S-box details:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mValueError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[179][39m[32m, line 15[39m
-[32m     13[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33mPer S-box details:[39m[33m"[39m)
-[32m     14[39m [38;5;28;01mfor[39;00m sbox_info [38;5;129;01min[39;00m cpa_detail.get([33m'[39m[33mper_sbox[39m[33m'[39m, []):
-[32m---> [39m[32m15[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  S-box [39m[38;5;132;01m{[39;00msbox_info[[33m'[39m[33msbox[39m[33m'[39m][38;5;132;01m}[39;00m[33m: key=0x[39m[38;5;132;01m{[39;00msbox_info[[33m'[39m[33mkey[39m[33m'[39m][38;5;132;01m:[39;00m[33m02X[39m[38;5;132;01m}[39;00m[33m, corr=[39m[38;5;132;01m{[39;00msbox_info[[33m'[39m[33mcorrelation[39m[33m'[39m][38;5;132;01m:[39;00m[33m.4f[39m[38;5;132;01m}[39;00m[33m, gap=[39m[38;5;132;01m{[39;00msbox_info[[33m'[39m[33mgap_pct[39m[33m'[39m][38;5;132;01m:[39;00m[33m.1f[39m[38;5;132;01m}[39;00m[33m%[39m[33m"[39m)
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[179], line 15
+     13 print("\nPer S-box details:")
+     14 for sbox_info in cpa_detail.get('per_sbox', []):
+---> 15     print(f"  S-box {sbox_info['sbox']}: key=0x{sbox_info['key']:02X}, corr={sbox_info['correlation']:.4f}, gap={sbox_info['gap_pct']:.1f}%")
 
-[31mValueError[39m: Unknown format code 'X' for object of type 'str'
+ValueError: Unknown format code 'X' for object of type 'str'
 ```
 
 
@@ -2041,16 +2041,16 @@ except Exception as e:
 
 ```
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mAttributeError[39m                            Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[182][39m[32m, line 7[39m
-[32m      4[39m plain = np.load([33m'[39m[33mplaintext_aligned_20260428_050027_611390.npy[39m[33m'[39m)
-[32m      5[39m cipher = np.load([33m'[39m[33mciphertext_aligned_20260428_050027_611390.npy[39m[33m'[39m)
-[32m----> [39m[32m7[39m [38;5;28mprint[39m([33m"[39m[33m第一条明文（hex）:[39m[33m"[39m, [43mplain[49m[43m[[49m[32;43m0[39;49m[43m][49m[43m.[49m[43mbytes[49m().hex())
-[32m      8[39m [38;5;28mprint[39m([33m"[39m[33m第一条密文（hex）:[39m[33m"[39m, cipher[[32m0[39m].bytes().hex())
-[32m     10[39m [38;5;66;03m# 尝试使用pycryptodome进行DES加密验证[39;00m
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Cell In[182], line 7
+      4 plain = np.load('plaintext_aligned_20260428_050027_611390.npy')
+      5 cipher = np.load('ciphertext_aligned_20260428_050027_611390.npy')
+----> 7 print("第一条明文（hex）:", plain[0].bytes().hex())
+      8 print("第一条密文（hex）:", cipher[0].bytes().hex())
+     10 # 尝试使用pycryptodome进行DES加密验证
 
-[31mAttributeError[39m: 'numpy.ndarray' object has no attribute 'bytes'
+AttributeError: 'numpy.ndarray' object has no attribute 'bytes'
 ```
 
 
@@ -2170,16 +2170,16 @@ if rec_candidates:
 每个S-box的最佳密钥:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mValueError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[184][39m[32m, line 13[39m
-[32m     11[39m [38;5;28mprint[39m([33m"[39m[33m每个S-box的最佳密钥:[39m[33m"[39m)
-[32m     12[39m [38;5;28;01mfor[39;00m sbox [38;5;129;01min[39;00m per_sbox:
-[32m---> [39m[32m13[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  S-box [39m[38;5;132;01m{[39;00msbox[[33m'[39m[33msbox[39m[33m'[39m][38;5;132;01m}[39;00m[33m: 0x[39m[38;5;132;01m{[39;00msbox[[33m'[39m[33mkey[39m[33m'[39m][38;5;132;01m:[39;00m[33m02x[39m[38;5;132;01m}[39;00m[33m (gap=[39m[38;5;132;01m{[39;00msbox[[33m'[39m[33mgap_pct[39m[33m'[39m][38;5;132;01m:[39;00m[33m.1f[39m[38;5;132;01m}[39;00m[33m%)[39m[33m"[39m)
-[32m     15[39m [38;5;66;03m# 读取明文密文用于验证[39;00m
-[32m     16[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mnp[39;00m
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[184], line 13
+     11 print("每个S-box的最佳密钥:")
+     12 for sbox in per_sbox:
+---> 13     print(f"  S-box {sbox['sbox']}: 0x{sbox['key']:02x} (gap={sbox['gap_pct']:.1f}%)")
+     15 # 读取明文密文用于验证
+     16 import numpy as np
 
-[31mValueError[39m: Unknown format code 'x' for object of type 'str'
+ValueError: Unknown format code 'x' for object of type 'str'
 ```
 
 
@@ -2261,16 +2261,16 @@ if rec_candidates:
 CPA恢复的密钥: 1002324454422688
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mTypeError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[185][39m[32m, line 39[39m
-[32m     37[39m [38;5;66;03m# 从detail中获取推荐候选[39;00m
-[32m     38[39m rec_candidates = detail.get([33m'[39m[33mrecommended_candidates[39m[33m'[39m, [])
-[32m---> [39m[32m39[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33m推荐候选数量: [39m[38;5;132;01m{[39;00m[38;5;28;43mlen[39;49m[43m([49m[43mrec_candidates[49m[43m)[49m[38;5;132;01m}[39;00m[33m"[39m)
-[32m     40[39m [38;5;28;01mif[39;00m rec_candidates:
-[32m     41[39m     [38;5;28mprint[39m([33m"[39m[33m前5个推荐候选:[39m[33m"[39m)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[185], line 39
+     37 # 从detail中获取推荐候选
+     38 rec_candidates = detail.get('recommended_candidates', [])
+---> 39 print(f"\n推荐候选数量: {len(rec_candidates)}")
+     40 if rec_candidates:
+     41     print("前5个推荐候选:")
 
-[31mTypeError[39m: object of type 'int' has no len()
+TypeError: object of type 'int' has no len()
 ```
 
 
@@ -2919,17 +2919,17 @@ PC2未使用的位置（丢失的8位）: [9, 18, 22, 25, 35, 38, 43, 54]
 验证用密文: f434b0f486fc4a4b
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mIndexError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[189][39m[32m, line 181[39m
-[32m    179[39m key56_bits = [[32m0[39m] * [32m56[39m
-[32m    180[39m [38;5;28;01mfor[39;00m i, pos [38;5;129;01min[39;00m [38;5;28menumerate[39m(PC1):
-[32m--> [39m[32m181[39m     key56_bits[i] = [43mc0d0[49m[43m[[49m[43mpos[49m[43m [49m[43m-[49m[43m [49m[32;43m1[39;49m[43m][49m
-[32m    183[39m [38;5;66;03m# 添加奇偶校验位得到64位[39;00m
-[32m    184[39m [38;5;66;03m# 每7位数据位后插入1位奇偶校验[39;00m
-[32m    185[39m key64_bits = []
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+Cell In[189], line 181
+    179 key56_bits = [0] * 56
+    180 for i, pos in enumerate(PC1):
+--> 181     key56_bits[i] = c0d0[pos - 1]
+    183 # 添加奇偶校验位得到64位
+    184 # 每7位数据位后插入1位奇偶校验
+    185 key64_bits = []
 
-[31mIndexError[39m: list index out of range
+IndexError: list index out of range
 ```
 
 

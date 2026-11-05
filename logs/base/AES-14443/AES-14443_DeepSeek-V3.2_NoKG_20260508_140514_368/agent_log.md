@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
+帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'"
+"帮我对一个非接触式智能卡实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'，密文文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy',原始波形文件为'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -141,9 +141,9 @@ print(os.listdir('.'))
 
 # 加载数据
 print("\n加载数据...")
-plain_file = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'
-cipher_file = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy'
-wave_file = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
+plain_file = 'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_plain.npy'
+cipher_file = 'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_cipher.npy'
+wave_file = 'data/traces/AES-128-14443/AES-128-14443-5000traces-1900points_wave.npy'
 
 plaintexts = np.load(plain_file)
 ciphertexts = np.load(cipher_file)
@@ -160,7 +160,7 @@ print(f"数据类型: {traces.dtype}")
 ```
 </details>
 
-**📋 ← `python_jupyter`:** `当前工作目录: F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\DKG\logs\exp_python_only\AES-14443_DeepSeek-V3.2_NoKG_20260508_140514_368
+**📋 ← `python_jupyter`:** `当前工作目录: logs\exp_python_only\AES-14443_DeepSeek-V3.2_NoKG_20260508_140514_368
 
 目录内容:
 ['agent_log.md']
@@ -3479,16 +3479,16 @@ except ImportError:
 尝试在附近搜索正确密钥...
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mOverflowError[39m                             Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[54][39m[32m, line 101[39m
-[32m     99[39m [38;5;28;01mfor[39;00m delta [38;5;129;01min[39;00m [-[32m2[39m, -[32m1[39m, [32m1[39m, [32m2[39m]:
-[32m    100[39m     new_candidate = candidate.copy()
-[32m--> [39m[32m101[39m     new_val = ([43mcandidate[49m[43m[[49m[43mbyte_idx[49m[43m][49m[43m [49m[43m+[49m[43m [49m[43mdelta[49m) % [32m256[39m
-[32m    102[39m     new_candidate[byte_idx] = new_val
-[32m    103[39m     new_candidates.append(new_candidate)
+---------------------------------------------------------------------------
+OverflowError                             Traceback (most recent call last)
+Cell In[54], line 101
+     99 for delta in [-2, -1, 1, 2]:
+    100     new_candidate = candidate.copy()
+--> 101     new_val = (candidate[byte_idx] + delta) % 256
+    102     new_candidate[byte_idx] = new_val
+    103     new_candidates.append(new_candidate)
 
-[31mOverflowError[39m: Python integer -2 out of bounds for uint8
+OverflowError: Python integer -2 out of bounds for uint8
 ```
 
 
@@ -3645,23 +3645,23 @@ print("="*60)
 搜索相关性最低的字节: [11 14  2]
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mOverflowError[39m                             Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[55][39m[32m, line 40[39m
-[32m     38[39m [38;5;28;01mfor[39;00m idx [38;5;129;01min[39;00m low_corr_indices:
-[32m     39[39m     current_val = final_recovered_key[idx]
-[32m---> [39m[32m40[39m     candidates = [43m[[49m[43m([49m[43mcurrent_val[49m[43m [49m[43m+[49m[43m [49m[43mdelta[49m[43m)[49m[43m [49m[43m%[49m[43m [49m[32;43m256[39;49m[43m [49m[38;5;28;43;01mfor[39;49;00m[43m [49m[43mdelta[49m[43m [49m[38;5;129;43;01min[39;49;00m[43m [49m[38;5;28;43mrange[39;49m[43m([49m[43m-[49m[32;43m3[39;49m[43m,[49m[43m [49m[32;43m4[39;49m[43m)[49m[43m][49m
-[32m     41[39m     candidates_per_byte.append(candidates)
-[32m     43[39m [38;5;66;03m# 测试所有组合[39;00m
+---------------------------------------------------------------------------
+OverflowError                             Traceback (most recent call last)
+Cell In[55], line 40
+     38 for idx in low_corr_indices:
+     39     current_val = final_recovered_key[idx]
+---> 40     candidates = [(current_val + delta) % 256 for delta in range(-3, 4)]
+     41     candidates_per_byte.append(candidates)
+     43 # 测试所有组合
 
-[36mCell[39m[36m [39m[32mIn[55][39m[32m, line 40[39m, in [36m<listcomp>[39m[34m(.0)[39m
-[32m     38[39m [38;5;28;01mfor[39;00m idx [38;5;129;01min[39;00m low_corr_indices:
-[32m     39[39m     current_val = final_recovered_key[idx]
-[32m---> [39m[32m40[39m     candidates = [([43mcurrent_val[49m[43m [49m[43m+[49m[43m [49m[43mdelta[49m) % [32m256[39m [38;5;28;01mfor[39;00m delta [38;5;129;01min[39;00m [38;5;28mrange[39m(-[32m3[39m, [32m4[39m)]
-[32m     41[39m     candidates_per_byte.append(candidates)
-[32m     43[39m [38;5;66;03m# 测试所有组合[39;00m
+Cell In[55], line 40, in <listcomp>(.0)
+     38 for idx in low_corr_indices:
+     39     current_val = final_recovered_key[idx]
+---> 40     candidates = [(current_val + delta) % 256 for delta in range(-3, 4)]
+     41     candidates_per_byte.append(candidates)
+     43 # 测试所有组合
 
-[31mOverflowError[39m: Python integer -3 out of bounds for uint8
+OverflowError: Python integer -3 out of bounds for uint8
 ```
 
 

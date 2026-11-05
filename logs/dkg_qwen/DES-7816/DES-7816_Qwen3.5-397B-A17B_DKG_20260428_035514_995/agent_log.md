@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
+帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'"
+"帮我对一个接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy'，密文文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy',原始波形文件为'data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -493,8 +493,8 @@ The Python (Jupyter) working directory is already set to this session directory.
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy",
+  "plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
+  "wave_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy",
   "leakage_model": "HW",
   "target": "S-box_out",
   "candidates": 20
@@ -538,7 +538,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load wave traces
-wave = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy')
+wave = np.load('data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy')
 print(f"Wave shape: {wave.shape}")
 print(f"Wave dtype: {wave.dtype}")
 
@@ -617,9 +617,9 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_22020\352502637.py:33: UserWarnin
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy",
+  "plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
+  "wave_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy",
+  "ciphertext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy",
   "leakage_model": "HW",
   "target": "R_xor_LOut",
   "candidates": 30
@@ -657,9 +657,9 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_22020\352502637.py:33: UserWarnin
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy",
+  "wave_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy",
+  "plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy",
   "start": 165,
   "length": 120,
   "max_shift": 100,
@@ -726,9 +726,9 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_22020\352502637.py:33: UserWarnin
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy",
+  "wave_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy",
+  "plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy",
   "start": 131,
   "length": 120,
   "max_shift": 100,
@@ -3539,16 +3539,16 @@ Plaintext shape: (99, 8)
 Ciphertext shape: (99, 8)
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mAttributeError[39m                            Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[30][39m[32m, line 10[39m
-[32m      8[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33mPlaintext shape: [39m[38;5;132;01m{[39;00mplaintext.shape[38;5;132;01m}[39;00m[33m"[39m)
-[32m      9[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33mCiphertext shape: [39m[38;5;132;01m{[39;00mciphertext.shape[38;5;132;01m}[39;00m[33m"[39m)
-[32m---> [39m[32m10[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33mFirst plaintext: [39m[38;5;132;01m{[39;00m[43mplaintext[49m[43m[[49m[32;43m0[39;49m[43m][49m[43m.[49m[43mhex[49m()[38;5;132;01m}[39;00m[33m"[39m)
-[32m     11[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33mFirst ciphertext: [39m[38;5;132;01m{[39;00mciphertext[[32m0[39m].hex()[38;5;132;01m}[39;00m[33m"[39m)
-[32m     13[39m [38;5;66;03m# CPA recovered key[39;00m
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Cell In[30], line 10
+      8 print(f"Plaintext shape: {plaintext.shape}")
+      9 print(f"Ciphertext shape: {ciphertext.shape}")
+---> 10 print(f"First plaintext: {plaintext[0].hex()}")
+     11 print(f"First ciphertext: {ciphertext[0].hex()}")
+     13 # CPA recovered key
 
-[31mAttributeError[39m: 'numpy.ndarray' object has no attribute 'hex'
+AttributeError: 'numpy.ndarray' object has no attribute 'hex'
 ```
 
 
@@ -4821,20 +4821,20 @@ CPA Detail keys: dict_keys(['schema_version', 'n_traces', 'n_points', 'leakage_m
 Per S-box results:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mValueError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[32][39m[32m, line 17[39m
-[32m     15[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33mPer S-box results:[39m[33m"[39m)
-[32m     16[39m [38;5;28;01mfor[39;00m sbox_result [38;5;129;01min[39;00m cpa_detail[[33m'[39m[33mper_sbox[39m[33m'[39m]:
-[32m---> [39m[32m17[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  S-box [39m[38;5;132;01m{[39;00msbox_result[[33m'[39m[33msbox[39m[33m'[39m][38;5;132;01m}[39;00m[33m: key=0x[39m[38;5;132;01m{[39;00msbox_result[[33m'[39m[33mkey[39m[33m'[39m][38;5;132;01m:[39;00m[33m02X[39m[38;5;132;01m}[39;00m[33m, corr=[39m[38;5;132;01m{[39;00msbox_result[[33m'[39m[33mcorrelation[39m[33m'[39m][38;5;132;01m:[39;00m[33m.4f[39m[38;5;132;01m}[39;00m[33m, gap=[39m[38;5;132;01m{[39;00msbox_result[[33m'[39m[33mgap_pct[39m[33m'[39m][38;5;132;01m:[39;00m[33m.1f[39m[38;5;132;01m}[39;00m[33m%[39m[33m"[39m)
-[32m     19[39m [38;5;66;03m# The CPA recovered key is for the 48-bit round-1 subkey K1[39;00m
-[32m     20[39m [38;5;66;03m# We need to search for the correct 64-bit master key[39;00m
-[32m     21[39m [38;5;66;03m# DES key has 8 bytes, but only 56 bits are used (8 parity bits)[39;00m
-[32m     22[39m 
-[32m     23[39m [38;5;66;03m# Let's first check the top candidates for each S-box from the detail file[39;00m
-[32m     24[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[38;5;130;01m\n[39;00m[33mTop candidates per S-box:[39m[33m"[39m)
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[32], line 17
+     15 print("\nPer S-box results:")
+     16 for sbox_result in cpa_detail['per_sbox']:
+---> 17     print(f"  S-box {sbox_result['sbox']}: key=0x{sbox_result['key']:02X}, corr={sbox_result['correlation']:.4f}, gap={sbox_result['gap_pct']:.1f}%")
+     19 # The CPA recovered key is for the 48-bit round-1 subkey K1
+     20 # We need to search for the correct 64-bit master key
+     21 # DES key has 8 bytes, but only 56 bits are used (8 parity bits)
+     22 
+     23 # Let's first check the top candidates for each S-box from the detail file
+     24 print("\n\nTop candidates per S-box:")
 
-[31mValueError[39m: Unknown format code 'X' for object of type 'str'
+ValueError: Unknown format code 'X' for object of type 'str'
 ```
 
 
@@ -4901,15 +4901,15 @@ Looking for candidates...
 Found subkey_results
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mAttributeError[39m                            Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[33][39m[32m, line 26[39m
-[32m     24[39m [38;5;28;01mif[39;00m [33m'[39m[33msubkey_results[39m[33m'[39m [38;5;129;01min[39;00m cpa_detail:
-[32m     25[39m     [38;5;28mprint[39m([33m"[39m[33mFound subkey_results[39m[33m"[39m)
-[32m---> [39m[32m26[39m     [38;5;28;01mfor[39;00m sbox_idx, result [38;5;129;01min[39;00m [43mcpa_detail[49m[43m[[49m[33;43m'[39;49m[33;43msubkey_results[39;49m[33;43m'[39;49m[43m][49m[43m.[49m[43mitems[49m():
-[32m     27[39m         [38;5;28mprint[39m([33mf[39m[33m"[39m[33mS-box [39m[38;5;132;01m{[39;00msbox_idx[38;5;132;01m}[39;00m[33m: top candidates = [39m[38;5;132;01m{[39;00mresult.get([33m'[39m[33mtop_candidates[39m[33m'[39m,[38;5;250m [39m[])[:[32m3[39m][38;5;132;01m}[39;00m[33m"[39m)
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Cell In[33], line 26
+     24 if 'subkey_results' in cpa_detail:
+     25     print("Found subkey_results")
+---> 26     for sbox_idx, result in cpa_detail['subkey_results'].items():
+     27         print(f"S-box {sbox_idx}: top candidates = {result.get('top_candidates', [])[:3]}")
 
-[31mAttributeError[39m: 'list' object has no attribute 'items'
+AttributeError: 'list' object has no attribute 'items'
 ```
 
 
@@ -4984,8 +4984,8 @@ from Crypto.Cipher import DES
 from itertools import product
 
 # Load plaintext and ciphertext (original, not aligned)
-plaintext_orig = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy')
-ciphertext_orig = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy')
+plaintext_orig = np.load('data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy')
+ciphertext_orig = np.load('data/traces/DES-64-7816/DES-64-7816-100traces-2000points_cipher.npy')
 
 # Load CPA detail file
 with open('des_cpa_detail_20260428_035758_541700.json', 'r') as f:
@@ -5162,26 +5162,26 @@ for sbox_idx, candidates in candidates_to_search.items():
 
 ```
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mFileNotFoundError[39m                         Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[36][39m[32m, line 11[39m
-[32m      8[39m ciphertext = np.load([33m'[39m[33mciphertext_aligned_20260428_035750_247086.npy[39m[33m'[39m)
-[32m     10[39m [38;5;66;03m# Load CPA detail file[39;00m
-[32m---> [39m[32m11[39m [38;5;28;01mwith[39;00m [38;5;28;43mopen[39;49m[43m([49m[33;43m'[39;49m[33;43mdes_cpa_detail_20260428_035750_247086.json[39;49m[33;43m'[39;49m[43m,[49m[43m [49m[33;43m'[39;49m[33;43mr[39;49m[33;43m'[39;49m[43m)[49m [38;5;28;01mas[39;00m f:
-[32m     12[39m     cpa_detail = json.load(f)
-[32m     14[39m [38;5;66;03m# The CPA tool's recovered_key is already in 64-bit format[39;00m
-[32m     15[39m [38;5;66;03m# Let's try to verify it and then search for the correct key[39;00m
+---------------------------------------------------------------------------
+FileNotFoundError                         Traceback (most recent call last)
+Cell In[36], line 11
+      8 ciphertext = np.load('ciphertext_aligned_20260428_035750_247086.npy')
+     10 # Load CPA detail file
+---> 11 with open('des_cpa_detail_20260428_035750_247086.json', 'r') as f:
+     12     cpa_detail = json.load(f)
+     14 # The CPA tool's recovered_key is already in 64-bit format
+     15 # Let's try to verify it and then search for the correct key
 
-[36mFile [39m[32mF:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\IPython\core\interactiveshell.py:343[39m, in [36m_modified_open[39m[34m(file, *args, **kwargs)[39m
-[32m    336[39m [38;5;28;01mif[39;00m file [38;5;129;01min[39;00m {[32m0[39m, [32m1[39m, [32m2[39m}:
-[32m    337[39m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(
-[32m    338[39m         [33mf[39m[33m"[39m[33mIPython won[39m[33m'[39m[33mt let you open fd=[39m[38;5;132;01m{[39;00mfile[38;5;132;01m}[39;00m[33m by default [39m[33m"[39m
-[32m    339[39m         [33m"[39m[33mas it is likely to crash IPython. If you know what you are doing, [39m[33m"[39m
-[32m    340[39m         [33m"[39m[33myou can use builtins[39m[33m'[39m[33m open.[39m[33m"[39m
-[32m    341[39m     )
-[32m--> [39m[32m343[39m [38;5;28;01mreturn[39;00m [43mio_open[49m[43m([49m[43mfile[49m[43m,[49m[43m [49m[43m*[49m[43margs[49m[43m,[49m[43m [49m[43m*[49m[43m*[49m[43mkwargs[49m[43m)[49m
+File .venv\Lib\site-packages\IPython\core\interactiveshell.py:343, in _modified_open(file, *args, **kwargs)
+    336 if file in {0, 1, 2}:
+    337     raise ValueError(
+    338         f"IPython won't let you open fd={file} by default "
+    339         "as it is likely to crash IPython. If you know what you are doing, "
+    340         "you can use builtins' open."
+    341     )
+--> 343 return io_open(file, *args, **kwargs)
 
-[31mFileNotFoundError[39m: [Errno 2] No such file or directory: 'des_cpa_detail_20260428_035750_247086.json'
+FileNotFoundError: [Errno 2] No such file or directory: 'des_cpa_detail_20260428_035750_247086.json'
 ```
 
 
@@ -6784,8 +6784,8 @@ XOR search didn't find the key either.
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy",
+  "plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
+  "wave_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy",
   "leakage_model": "HW",
   "target": "S-box_out",
   "candidates": 50
@@ -6823,8 +6823,8 @@ XOR search didn't find the key either.
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy",
+  "plaintext_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_plain.npy",
+  "wave_npy": "data/traces/DES-64-7816/DES-64-7816-100traces-2000points_wave.npy",
   "leakage_model": "HW",
   "target": "S-box_in",
   "candidates": 50,

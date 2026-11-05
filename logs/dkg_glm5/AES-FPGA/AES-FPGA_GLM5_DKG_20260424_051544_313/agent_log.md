@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'
+帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'"
+"帮我对一个FPGA硬件实现的AES密码算法波形进行CPA恢复密钥，这是硬件实现，可能不需要滤波，可能需要纵向对齐，泄漏模型可能需要用Hamming Distance。明文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy'，密文文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy',原始波形文件为'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -493,9 +493,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 加载数据
-wave = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy')
-plain = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy')
-cipher = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy')
+wave = np.load(r'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy')
+plain = np.load(r'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy')
+cipher = np.load(r'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy')
 
 print(f"波形形状: {wave.shape}")
 print(f"明文形状: {plain.shape}")
@@ -646,11 +646,11 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\3580717549.py:15: UserWarni
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy",
+  "wave_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy",
   "ref_start": 0,
   "ref_end": 30,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy"
+  "plaintext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy"
 }
 ```
 </details>
@@ -658,7 +658,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\3580717549.py:15: UserWarni
 <details><summary><b>📋 ← `vertical_aligner`</b> (654 chars)</summary>
 
 ```
-{"out_wave_npy": "valigned_20260424_051701_546592.npy", "plot_path": "valign_compare_20260424_051701_546592.png", "n_traces": 2000, "n_points": 300, "ref_region": [0, 30], "baseline_std": 5.7737, "baseline_std_after": 1e-06, "out_plaintext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy", "out_ciphertext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy"}
+{"out_wave_npy": "valigned_20260424_051701_546592.npy", "plot_path": "valign_compare_20260424_051701_546592.png", "n_traces": 2000, "n_points": 300, "ref_region": [0, 30], "baseline_std": 5.7737, "baseline_std_after": 1e-06, "out_plaintext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy", "out_ciphertext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy"}
 ```
 </details>
 
@@ -679,8 +679,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\3580717549.py:15: UserWarni
 ```json
 {
   "wave_npy": "valigned_20260424_051701_546592.npy",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
+  "plaintext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
   "target": "S-box_in_xor_prev_ct",
   "leakage_model": "HW",
   "candidates": 30
@@ -715,8 +715,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\3580717549.py:15: UserWarni
 {
   "algorithm": "AES",
   "key_hex": "FEDCBA98765432100123456789ABCDEF",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
+  "plaintext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
   "trace_index": 0
 }
 ```
@@ -744,8 +744,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_15860\3580717549.py:15: UserWarni
 {
   "algorithm": "AES",
   "key_hex": "0123456789ABCDEFFEDCBA9876543210",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
+  "plaintext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_cipher.npy",
   "trace_index": 0
 }
 ```
@@ -821,7 +821,7 @@ fig, axes = plt.subplots(2, 2, figsize=(14, 10))
 
 # 1. 纵向对齐前后对比
 ax1 = axes[0, 0]
-wave_raw = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy')
+wave_raw = np.load(r'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy')
 wave_aligned = np.load('valigned_20260424_051701_546592.npy')
 for i in range(5):
     ax1.plot(wave_raw[i] + i*20, alpha=0.5, linewidth=0.8, label=f'Raw {i}' if i == 0 else '')
@@ -884,16 +884,16 @@ print("="*60)
 
 ```
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mKeyError[39m                                  Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[359][39m[32m, line 26[39m
-[32m     24[39m [38;5;66;03m# 2. 各字节相关性[39;00m
-[32m     25[39m ax2 = axes[[32m0[39m, [32m1[39m]
-[32m---> [39m[32m26[39m correlations = [byte_info[[33m'[39m[33mscore_pos[39m[33m'[39m] [38;5;28;01mfor[39;00m byte_info [38;5;129;01min[39;00m [43mcpa_detail[49m[43m[[49m[33;43m'[39;49m[33;43mper_byte[39;49m[33;43m'[39;49m[43m][49m]
-[32m     27[39m bytes_idx = [38;5;28mlist[39m([38;5;28mrange[39m([32m16[39m))
-[32m     28[39m bars = ax2.bar(bytes_idx, correlations, color=[33m'[39m[33msteelblue[39m[33m'[39m, alpha=[32m0.7[39m)
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+Cell In[359], line 26
+     24 # 2. 各字节相关性
+     25 ax2 = axes[0, 1]
+---> 26 correlations = [byte_info['score_pos'] for byte_info in cpa_detail['per_byte']]
+     27 bytes_idx = list(range(16))
+     28 bars = ax2.bar(bytes_idx, correlations, color='steelblue', alpha=0.7)
 
-[31mKeyError[39m: 'per_byte'
+KeyError: 'per_byte'
 ```
 
 
@@ -948,7 +948,7 @@ fig, axes = plt.subplots(2, 2, figsize=(14, 10))
 
 # 1. 纵向对齐前后对比
 ax1 = axes[0, 0]
-wave_raw = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy')
+wave_raw = np.load(r'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy')
 wave_aligned = np.load('valigned_20260424_051701_546592.npy')
 for i in range(5):
     ax1.plot(wave_raw[i] + i*20, alpha=0.5, linewidth=0.8, label=f'Raw {i}' if i == 0 else '')
@@ -1013,23 +1013,23 @@ print("="*60)
 
 ```
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mTypeError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[361][39m[32m, line 29[39m
-[32m     27[39m [38;5;66;03m# 从results中提取相关性[39;00m
-[32m     28[39m results = cpa_detail[[33m'[39m[33mresults[39m[33m'[39m]
-[32m---> [39m[32m29[39m correlations = [43m[[49m[43mresults[49m[43m[[49m[38;5;28;43mstr[39;49m[43m([49m[43mi[49m[43m)[49m[43m][49m[43m[[49m[33;43m'[39;49m[33;43mtop_candidates[39;49m[33;43m'[39;49m[43m][49m[43m[[49m[32;43m0[39;49m[43m][49m[43m[[49m[33;43m'[39;49m[33;43mcorrelation[39;49m[33;43m'[39;49m[43m][49m[43m [49m[38;5;28;43;01mfor[39;49;00m[43m [49m[43mi[49m[43m [49m[38;5;129;43;01min[39;49;00m[43m [49m[38;5;28;43mrange[39;49m[43m([49m[32;43m16[39;49m[43m)[49m[43m][49m
-[32m     30[39m bytes_idx = [38;5;28mlist[39m([38;5;28mrange[39m([32m16[39m))
-[32m     31[39m bars = ax2.bar(bytes_idx, correlations, color=[33m'[39m[33msteelblue[39m[33m'[39m, alpha=[32m0.7[39m)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[361], line 29
+     27 # 从results中提取相关性
+     28 results = cpa_detail['results']
+---> 29 correlations = [results[str(i)]['top_candidates'][0]['correlation'] for i in range(16)]
+     30 bytes_idx = list(range(16))
+     31 bars = ax2.bar(bytes_idx, correlations, color='steelblue', alpha=0.7)
 
-[36mCell[39m[36m [39m[32mIn[361][39m[32m, line 29[39m, in [36m<listcomp>[39m[34m(.0)[39m
-[32m     27[39m [38;5;66;03m# 从results中提取相关性[39;00m
-[32m     28[39m results = cpa_detail[[33m'[39m[33mresults[39m[33m'[39m]
-[32m---> [39m[32m29[39m correlations = [[43mresults[49m[43m[[49m[38;5;28;43mstr[39;49m[43m([49m[43mi[49m[43m)[49m[43m][49m[[33m'[39m[33mtop_candidates[39m[33m'[39m][[32m0[39m][[33m'[39m[33mcorrelation[39m[33m'[39m] [38;5;28;01mfor[39;00m i [38;5;129;01min[39;00m [38;5;28mrange[39m([32m16[39m)]
-[32m     30[39m bytes_idx = [38;5;28mlist[39m([38;5;28mrange[39m([32m16[39m))
-[32m     31[39m bars = ax2.bar(bytes_idx, correlations, color=[33m'[39m[33msteelblue[39m[33m'[39m, alpha=[32m0.7[39m)
+Cell In[361], line 29, in <listcomp>(.0)
+     27 # 从results中提取相关性
+     28 results = cpa_detail['results']
+---> 29 correlations = [results[str(i)]['top_candidates'][0]['correlation'] for i in range(16)]
+     30 bytes_idx = list(range(16))
+     31 bars = ax2.bar(bytes_idx, correlations, color='steelblue', alpha=0.7)
 
-[31mTypeError[39m: list indices must be integers or slices, not str
+TypeError: list indices must be integers or slices, not str
 ```
 
 
@@ -1087,7 +1087,7 @@ fig, axes = plt.subplots(2, 2, figsize=(14, 10))
 
 # 1. 纵向对齐前后对比
 ax1 = axes[0, 0]
-wave_raw = np.load(r'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy')
+wave_raw = np.load(r'data/traces/AES-128-FPGA/AES-128-FPGA-2000traces-300points_wave.npy')
 wave_aligned = np.load('valigned_20260424_051701_546592.npy')
 for i in range(5):
     ax1.plot(wave_raw[i] + i*20, alpha=0.5, linewidth=0.8, label=f'Raw {i}' if i == 0 else '')

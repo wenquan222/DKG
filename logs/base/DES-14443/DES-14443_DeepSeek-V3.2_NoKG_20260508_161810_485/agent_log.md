@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
+帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'"
+"帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -138,9 +138,9 @@ print("当前工作目录:", os.getcwd())
 print("目录内容:", os.listdir('.'))
 
 # 加载数据
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
+plain_path = 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'
+cipher_path = 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy'
+wave_path = 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
 
 # 加载文件
 plaintexts = np.load(plain_path)
@@ -170,7 +170,7 @@ for i in range(min(5, len(ciphertexts))):
 **❌ ← `python_jupyter` Error:**
 
 ```
-当前工作目录: F:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\DKG\logs\exp_python_only\DES-14443_DeepSeek-V3.2_NoKG_20260508_161810_485
+当前工作目录: logs\exp_python_only\DES-14443_DeepSeek-V3.2_NoKG_20260508_161810_485
 目录内容: ['agent_log.md']
 明文数据形状: (10000, 8)
 密文数据形状: (10000, 8)
@@ -183,16 +183,16 @@ for i in range(min(5, len(ciphertexts))):
 前5个明文 (十六进制):
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mTypeError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[115][39m[32m, line 31[39m
-[32m     29[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33m前5个明文 (十六进制):[39m[33m"[39m)
-[32m     30[39m [38;5;28;01mfor[39;00m i [38;5;129;01min[39;00m [38;5;28mrange[39m([38;5;28mmin[39m([32m5[39m, [38;5;28mlen[39m(plaintexts))):
-[32m---> [39m[32m31[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  [39m[38;5;132;01m{[39;00mi[38;5;132;01m}[39;00m[33m: [39m[38;5;132;01m{[39;00mplaintexts[i][38;5;132;01m:[39;00m[33m016x[39m[38;5;132;01m}[39;00m[33m"[39m)
-[32m     33[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33m前5个密文 (十六进制):[39m[33m"[39m)
-[32m     34[39m [38;5;28;01mfor[39;00m i [38;5;129;01min[39;00m [38;5;28mrange[39m([38;5;28mmin[39m([32m5[39m, [38;5;28mlen[39m(ciphertexts))):
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[115], line 31
+     29 print(f"\n前5个明文 (十六进制):")
+     30 for i in range(min(5, len(plaintexts))):
+---> 31     print(f"  {i}: {plaintexts[i]:016x}")
+     33 print(f"\n前5个密文 (十六进制):")
+     34 for i in range(min(5, len(ciphertexts))):
 
-[31mTypeError[39m: unsupported format string passed to numpy.ndarray.__format__
+TypeError: unsupported format string passed to numpy.ndarray.__format__
 ```
 
 
@@ -802,7 +802,15 @@ plt.show()
 测试 - 第一轮S盒0输出: [0, 0, 0, 0]
 
 使用前1000个轨迹进行测试攻击...
-攻击S盒0:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒0:  16%|█▌        | 10/64 [00:00<00:00, 97.09it/s]攻击S盒0:  33%|███▎      | 21/64 [00:00<00:00, 99.39it/s]攻击S盒0:  48%|████▊     | 31/64 [00:00<00:00, 95.43it/s]攻击S盒0:  66%|██████▌   | 42/64 [00:00<00:00, 97.70it/s]攻击S盒0:  81%|████████▏ | 52/64 [00:00<00:00, 98.34it/s]攻击S盒0:  97%|█████████▋| 62/64 [00:00<00:00, 97.59it/s]攻击S盒0: 100%|██████████| 64/64 [00:00<00:00, 97.52it/s]
+
+攻击S盒0:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒0:  16%|█▌        | 10/64 [00:00<00:00, 97.09it/s]
+攻击S盒0:  33%|███▎      | 21/64 [00:00<00:00, 99.39it/s]
+攻击S盒0:  48%|████▊     | 31/64 [00:00<00:00, 95.43it/s]
+攻击S盒0:  66%|██████▌   | 42/64 [00:00<00:00, 97.70it/s]
+攻击S盒0:  81%|████████▏ | 52/64 [00:00<00:00, 98.34it/s]
+攻击S盒0:  97%|█████████▋| 62/64 [00:00<00:00, 97.59it/s]
+攻击S盒0: 100%|██████████| 64/64 [00:00<00:00, 97.52it/s]
 测试攻击结果 - S盒0:
   最佳密钥猜测: 45 (101101)
   最大相关系数: 0.117712
@@ -1014,44 +1022,57 @@ for i, (key_val, key_bits) in enumerate(recovered_key_bits2):
 攻击第一轮S盒输出:
 
 攻击S盒 0...
-S盒0:   0%|          | 0/64 [00:00<?, ?it/s]S盒0:   9%|▉         | 6/64 [00:00<00:01, 53.48it/s]S盒0:  20%|██        | 13/64 [00:00<00:00, 60.54it/s]S盒0:  31%|███▏      | 20/64 [00:00<00:00, 63.83it/s]S盒0:  42%|████▏     | 27/64 [00:00<00:00, 64.94it/s]S盒0:  53%|█████▎    | 34/64 [00:00<00:00, 65.80it/s]S盒0:  64%|██████▍   | 41/64 [00:00<00:00, 66.10it/s]S盒0:  75%|███████▌  | 48/64 [00:00<00:00, 66.49it/s]S盒0:  86%|████████▌ | 55/64 [00:00<00:00, 66.84it/s]S盒0:  97%|█████████▋| 62/64 [00:00<00:00, 65.64it/s]S盒0: 100%|██████████| 64/64 [00:00<00:00, 65.02it/s]
+
+S盒0:   0%|          | 0/64 [00:00<?, ?it/s]
+S盒0:   9%|▉         | 6/64 [00:00<00:01, 53.48it/s]
+S盒0:  20%|██        | 13/64 [00:00<00:00, 60.54it/s]
+S盒0:  31%|███▏      | 20/64 [00:00<00:00, 63.83it/s]
+S盒0:  42%|████▏     | 27/64 [00:00<00:00, 64.94it/s]
+S盒0:  53%|█████▎    | 34/64 [00:00<00:00, 65.80it/s]
+S盒0:  64%|██████▍   | 41/64 [00:00<00:00, 66.10it/s]
+S盒0:  75%|███████▌  | 48/64 [00:00<00:00, 66.49it/s]
+S盒0:  86%|████████▌ | 55/64 [00:00<00:00, 66.84it/s]
+S盒0:  97%|█████████▋| 62/64 [00:00<00:00, 65.64it/s]
+S盒0: 100%|██████████| 64/64 [00:00<00:00, 65.02it/s]
   S盒0: 最佳密钥 = 19 (010011), 最大|相关系数| = 0.079042
 
 攻击S盒 1...
-S盒1:   0%|          | 0/64 [00:00<?, ?it/s]S盒1:   0%|          | 0/64 [00:00<?, ?it/s]
+
+S盒1:   0%|          | 0/64 [00:00<?, ?it/s]
+S盒1:   0%|          | 0/64 [00:00<?, ?it/s]
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mIndexError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[121][39m[32m, line 65[39m
-[32m     63[39m [38;5;66;03m# 尝试第一轮攻击[39;00m
-[32m     64[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33m攻击第一轮S盒输出:[39m[33m"[39m)
-[32m---> [39m[32m65[39m recovered_key_bits1, correlations1 = [43mcpa_attack_all_sboxes[49m[43m([49m[43mtraces_filtered[49m[43m,[49m[43m [49m[43mplaintexts_bits[49m[43m,[49m[43m [49m[43mnum_traces[49m[43m=[49m[32;43m2000[39;49m[43m)[49m
-[32m     67[39m [38;5;66;03m# 尝试最后一轮攻击[39;00m
-[32m     68[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33m攻击最后一轮S盒输入:[39m[33m"[39m)
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+Cell In[121], line 65
+     63 # 尝试第一轮攻击
+     64 print("\n攻击第一轮S盒输出:")
+---> 65 recovered_key_bits1, correlations1 = cpa_attack_all_sboxes(traces_filtered, plaintexts_bits, num_traces=2000)
+     67 # 尝试最后一轮攻击
+     68 print("\n攻击最后一轮S盒输入:")
 
-[36mCell[39m[36m [39m[32mIn[121][39m[32m, line 35[39m, in [36mcpa_attack_all_sboxes[39m[34m(traces_processed, plaintexts_bits, num_traces, use_last_round)[39m
-[32m     32[39m     hw = [38;5;28msum[39m(sbox_input)  [38;5;66;03m# 汉明重量[39;00m
-[32m     33[39m [38;5;28;01melse[39;00m:
-[32m     34[39m     [38;5;66;03m# 使用第一轮S盒输出[39;00m
-[32m---> [39m[32m35[39m     sbox_output = [43mdes_first_round_sbox_output[49m[43m([49m[43mplaintexts_bits[49m[43m[[49m[43mi[49m[43m][49m[43m,[49m[43m [49m[43mkey_bits[49m[43m,[49m[43m [49m[43msbox_num[49m[43m)[49m
-[32m     36[39m     hw = [38;5;28msum[39m(sbox_output)  [38;5;66;03m# 汉明重量[39;00m
-[32m     38[39m hypothetical_power[i] = hw
+Cell In[121], line 35, in cpa_attack_all_sboxes(traces_processed, plaintexts_bits, num_traces, use_last_round)
+     32     hw = sum(sbox_input)  # 汉明重量
+     33 else:
+     34     # 使用第一轮S盒输出
+---> 35     sbox_output = des_first_round_sbox_output(plaintexts_bits[i], key_bits, sbox_num)
+     36     hw = sum(sbox_output)  # 汉明重量
+     38 hypothetical_power[i] = hw
 
-[36mCell[39m[36m [39m[32mIn[117][39m[32m, line 271[39m, in [36mdes_first_round_sbox_output[39m[34m(plaintext_bits, key_guess, sbox_num)[39m
-[32m    268[39m xored = xor_bits(data_bits, key_bits)
-[32m    270[39m [38;5;66;03m# S盒查找[39;00m
-[32m--> [39m[32m271[39m sbox_output = [43msbox_lookup[49m[43m([49m[43mxored[49m[43m,[49m[43m [49m[43mS_BOX[49m[43m[[49m[43msbox_num[49m[43m][49m[43m)[49m
-[32m    273[39m [38;5;28;01mreturn[39;00m sbox_output
+Cell In[117], line 271, in des_first_round_sbox_output(plaintext_bits, key_guess, sbox_num)
+    268 xored = xor_bits(data_bits, key_bits)
+    270 # S盒查找
+--> 271 sbox_output = sbox_lookup(xored, S_BOX[sbox_num])
+    273 return sbox_output
 
-[36mCell[39m[36m [39m[32mIn[117][39m[32m, line 165[39m, in [36msbox_lookup[39m[34m(bits, sbox)[39m
-[32m    163[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34msbox_lookup[39m(bits, sbox):
-[32m    164[39m [38;5;250m    [39m[33;03m"""S盒查找"""[39;00m
-[32m--> [39m[32m165[39m     row = ([43mbits[49m[43m[[49m[32;43m0[39;49m[43m][49m << [32m1[39m) | bits[[32m5[39m]
-[32m    166[39m     col = bit_string_to_int(bits[[32m1[39m:[32m5[39m])
-[32m    167[39m     [38;5;28;01mreturn[39;00m int_to_bit_string(sbox[row][col], [32m4[39m)
+Cell In[117], line 165, in sbox_lookup(bits, sbox)
+    163 def sbox_lookup(bits, sbox):
+    164     """S盒查找"""
+--> 165     row = (bits[0] << 1) | bits[5]
+    166     col = bit_string_to_int(bits[1:5])
+    167     return int_to_bit_string(sbox[row][col], 4)
 
-[31mIndexError[39m: list index out of range
+IndexError: list index out of range
 ```
 
 
@@ -1459,35 +1480,51 @@ for i in range(8):
 测试高效CPA攻击...
 
 攻击S盒 0...
-攻击S盒0:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒0: 100%|██████████| 64/64 [00:00<00:00, 1968.59it/s]  S盒0: 最佳密钥 = 19 (010011), 最大|相关系数| = 0.079082
+
+攻击S盒0:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒0: 100%|██████████| 64/64 [00:00<00:00, 1968.59it/s]  S盒0: 最佳密钥 = 19 (010011), 最大|相关系数| = 0.079082
 
 
 攻击S盒 1...
-攻击S盒1:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒1: 100%|██████████| 64/64 [00:00<00:00, 2064.52it/s]  S盒1: 最佳密钥 = 63 (111111), 最大|相关系数| = 0.084958
+
+攻击S盒1:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒1: 100%|██████████| 64/64 [00:00<00:00, 2064.52it/s]  S盒1: 最佳密钥 = 63 (111111), 最大|相关系数| = 0.084958
 
 
 攻击S盒 2...
-攻击S盒2:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒2: 100%|██████████| 64/64 [00:00<00:00, 1939.34it/s]  S盒2: 最佳密钥 = 58 (111010), 最大|相关系数| = 0.078323
+
+攻击S盒2:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒2: 100%|██████████| 64/64 [00:00<00:00, 1939.34it/s]  S盒2: 最佳密钥 = 58 (111010), 最大|相关系数| = 0.078323
 
 
 攻击S盒 3...
-攻击S盒3:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒3: 100%|██████████| 64/64 [00:00<00:00, 2000.06it/s]  S盒3: 最佳密钥 = 08 (001000), 最大|相关系数| = 0.077695
+
+攻击S盒3:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒3: 100%|██████████| 64/64 [00:00<00:00, 2000.06it/s]  S盒3: 最佳密钥 = 08 (001000), 最大|相关系数| = 0.077695
 
 
 攻击S盒 4...
-攻击S盒4:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒4: 100%|██████████| 64/64 [00:00<00:00, 2011.96it/s]  S盒4: 最佳密钥 = 46 (101110), 最大|相关系数| = 0.077223
+
+攻击S盒4:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒4: 100%|██████████| 64/64 [00:00<00:00, 2011.96it/s]  S盒4: 最佳密钥 = 46 (101110), 最大|相关系数| = 0.077223
 
 
 攻击S盒 5...
-攻击S盒5:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒5: 100%|██████████| 64/64 [00:00<00:00, 1909.74it/s]  S盒5: 最佳密钥 = 26 (011010), 最大|相关系数| = 0.072098
+
+攻击S盒5:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒5: 100%|██████████| 64/64 [00:00<00:00, 1909.74it/s]  S盒5: 最佳密钥 = 26 (011010), 最大|相关系数| = 0.072098
 
 
 攻击S盒 6...
-攻击S盒6:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒6: 100%|██████████| 64/64 [00:00<00:00, 1939.42it/s]  S盒6: 最佳密钥 = 59 (111011), 最大|相关系数| = 0.075511
+
+攻击S盒6:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒6: 100%|██████████| 64/64 [00:00<00:00, 1939.42it/s]  S盒6: 最佳密钥 = 59 (111011), 最大|相关系数| = 0.075511
 
 
 攻击S盒 7...
-攻击S盒7:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒7: 100%|██████████| 64/64 [00:00<00:00, 1939.44it/s]  S盒7: 最佳密钥 = 06 (000110), 最大|相关系数| = 0.072441
+
+攻击S盒7:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒7: 100%|██████████| 64/64 [00:00<00:00, 1939.44it/s]  S盒7: 最佳密钥 = 06 (000110), 最大|相关系数| = 0.072441
 
 
 ============================================================
@@ -1612,25 +1649,49 @@ print(f"前48位: {sbox_key_bits}")
 ============================================================
 
 使用 1000 个轨迹:
-攻击S盒0:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒0: 100%|██████████| 64/64 [00:00<00:00, 2643.82it/s]
-  S盒0: 密钥 = 19 (010011), 相关系数 = 0.119557
-攻击S盒1:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒1: 100%|██████████| 64/64 [00:00<00:00, 2666.75it/s]  S盒1: 密钥 = 12 (001100), 相关系数 = 0.104812
 
-攻击S盒2:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒2: 100%|██████████| 64/64 [00:00<00:00, 2665.72it/s]
-攻击S盒3:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒3: 100%|██████████| 64/64 [00:00<00:00, 2665.96it/s]
-攻击S盒4:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒4: 100%|██████████| 64/64 [00:00<00:00, 2703.22it/s]
-攻击S盒5:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒5: 100%|██████████| 64/64 [00:00<00:00, 2666.62it/s]
-攻击S盒6:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒6: 100%|██████████| 64/64 [00:00<00:00, 2595.66it/s]
-攻击S盒7:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒7: 100%|██████████| 64/64 [00:00<00:00, 2610.33it/s]
+攻击S盒0:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒0: 100%|██████████| 64/64 [00:00<00:00, 2643.82it/s]
+  S盒0: 密钥 = 19 (010011), 相关系数 = 0.119557
+
+攻击S盒1:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒1: 100%|██████████| 64/64 [00:00<00:00, 2666.75it/s]  S盒1: 密钥 = 12 (001100), 相关系数 = 0.104812
+
+
+攻击S盒2:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒2: 100%|██████████| 64/64 [00:00<00:00, 2665.72it/s]
+
+攻击S盒3:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒3: 100%|██████████| 64/64 [00:00<00:00, 2665.96it/s]
+
+攻击S盒4:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒4: 100%|██████████| 64/64 [00:00<00:00, 2703.22it/s]
+
+攻击S盒5:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒5: 100%|██████████| 64/64 [00:00<00:00, 2666.62it/s]
+
+攻击S盒6:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒6: 100%|██████████| 64/64 [00:00<00:00, 2595.66it/s]
+
+攻击S盒7:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒7: 100%|██████████| 64/64 [00:00<00:00, 2610.33it/s]
   平均相关系数: 0.110330
 
 使用 2000 个轨迹:
-攻击S盒0:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒0: 100%|██████████| 64/64 [00:00<00:00, 2038.73it/s]
+
+攻击S盒0:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒0: 100%|██████████| 64/64 [00:00<00:00, 2038.73it/s]
   S盒0: 密钥 = 19 (010011), 相关系数 = 0.079082
-攻击S盒1:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒1: 100%|██████████| 64/64 [00:00<00:00, 2095.58it/s]
+
+攻击S盒1:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒1: 100%|██████████| 64/64 [00:00<00:00, 2095.58it/s]
   S盒1: 密钥 = 63 (111111), 相关系数 = 0.084958
-攻击S盒2:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒2: 100%|██████████| 64/64 [00:00<00:00, 2044.72it/s]
-攻击S盒3:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒3: 100%|████████
+
+攻击S盒2:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒2: 100%|██████████| 64/64 [00:00<00:00, 2044.72it/s]
+
+攻击S盒3:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒3: 100%|████████
 ...(truncated)
 ```
 </details>
@@ -1956,35 +2017,51 @@ print(f"汉明距离模型: 密钥 = {best_key_hd:02d}, 相关系数 = {best_cor
 ============================================================
 
 攻击S盒 0...
-攻击S盒0:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒0: 100%|██████████| 64/64 [00:00<00:00, 7111.81it/s]  S盒0: 密钥 = 19 (010011), 最大|相关系数| = 0.079082
+
+攻击S盒0:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒0: 100%|██████████| 64/64 [00:00<00:00, 7111.81it/s]  S盒0: 密钥 = 19 (010011), 最大|相关系数| = 0.079082
 
 攻击S盒 1...
 
-攻击S盒1:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒1: 100%|██████████| 64/64 [00:00<00:00, 6399.85it/s]
+
+攻击S盒1:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒1: 100%|██████████| 64/64 [00:00<00:00, 6399.85it/s]
   S盒1: 密钥 = 37 (100101), 最大|相关系数| = 0.072293
 
 攻击S盒 2...
-攻击S盒2:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒2: 100%|██████████| 64/64 [00:00<00:00, 6399.85it/s]
+
+攻击S盒2:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒2: 100%|██████████| 64/64 [00:00<00:00, 6399.85it/s]
   S盒2: 密钥 = 16 (010000), 最大|相关系数| = 0.067403
 
 攻击S盒 3...
-攻击S盒3:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒3: 100%|██████████| 64/64 [00:00<00:00, 7112.00it/s]
+
+攻击S盒3:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒3: 100%|██████████| 64/64 [00:00<00:00, 7112.00it/s]
   S盒3: 密钥 = 45 (101101), 最大|相关系数| = 0.073400
 
 攻击S盒 4...
-攻击S盒4:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒4: 100%|██████████| 64/64 [00:00<00:00, 5818.60it/s]
+
+攻击S盒4:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒4: 100%|██████████| 64/64 [00:00<00:00, 5818.60it/s]
   S盒4: 密钥 = 14 (001110), 最大|相关系数| = 0.062103
 
 攻击S盒 5...
-攻击S盒5:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒5: 100%|██████████| 64/64 [00:00<00:00, 6400.31it/s]
+
+攻击S盒5:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒5: 100%|██████████| 64/64 [00:00<00:00, 6400.31it/s]
   S盒5: 密钥 = 26 (011010), 最大|相关系数| = 0.065397
 
 攻击S盒 6...
-攻击S盒6:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒6: 100%|██████████| 64/64 [00:00<00:00, 7109.55it/s]
+
+攻击S盒6:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒6: 100%|██████████| 64/64 [00:00<00:00, 7109.55it/s]
   S盒6: 密钥 = 59 (111011), 最大|相关系数| = 0.064216
 
 攻击S盒 7...
-攻击S盒7:   0%|          | 0/64 [00:00<?, ?it/s]攻击S盒7: 100%|██████████| 64/64 [00:00<00:00, 7046.84it/s]
+
+攻击S盒7:   0%|          | 0/64 [00:00<?, ?it/s]
+攻击S盒7: 100%|██████████| 64/64 [00:00<00:00, 7046.84it/s]
   S盒7: 密钥 = 04 (000100), 最大|相关系数| = 0.069437
 
 ============================================================
@@ -2375,37 +2452,37 @@ S盒 | 原始空间密钥 | PCA空间密钥 | 原始相关系数 | PCA相关系�
 ============================================================
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mTypeError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[130][39m[32m, line 82[39m
-[32m     80[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mjson[39;00m
-[32m     81[39m [38;5;28;01mwith[39;00m [38;5;28mopen[39m([33m'[39m[33mrecovered_des_keys.json[39m[33m'[39m, [33m'[39m[33mw[39m[33m'[39m) [38;5;28;01mas[39;00m f:
-[32m---> [39m[32m82[39m     [43mjson[49m[43m.[49m[43mdump[49m[43m([49m[43mrecovered_keys_dict[49m[43m,[49m[43m [49m[43mf[49m[43m,[49m[43m [49m[43mindent[49m[43m=[49m[32;43m2[39;49m[43m)[49m
-[32m     84[39m [38;5;28mprint[39m([33m"[39m[33m恢复的密钥已保存到 [39m[33m'[39m[33mrecovered_des_keys.json[39m[33m'[39m[33m"[39m)
-[32m     85[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33m恢复的S盒密钥:[39m[33m"[39m)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[130], line 82
+     80 import json
+     81 with open('recovered_des_keys.json', 'w') as f:
+---> 82     json.dump(recovered_keys_dict, f, indent=2)
+     84 print("恢复的密钥已保存到 'recovered_des_keys.json'")
+     85 print("\n恢复的S盒密钥:")
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py:179[39m, in [36mdump[39m[34m(obj, fp, skipkeys, ensure_ascii, check_circular, allow_nan, cls, indent, separators, default, sort_keys, **kw)[39m
-[32m    173[39m     iterable = [38;5;28mcls[39m(skipkeys=skipkeys, ensure_ascii=ensure_ascii,
-[32m    174[39m         check_circular=check_circular, allow_nan=allow_nan, indent=indent,
-[32m    175[39m         separators=separators,
-[32m    176[39m         default=default, sort_keys=sort_keys, **kw).iterencode(obj)
-[32m    177[39m [38;5;66;03m# could accelerate with writelines in some versions of Python, at[39;00m
-[32m    178[39m [38;5;66;03m# a debuggability cost[39;00m
-[32m--> [39m[32m179[39m [43m[49m[38;5;28;43;01mfor[39;49;00m[43m [49m[43mchunk[49m[43m [49m[38;5;129;43;01min[39;49;00m[43m [49m[43miterable[49m[43m:[49m
-[32m    180[39m [43m    [49m[43mfp[49m[43m.[49m[43mwrite[49m[43m([49m[43mchunk[49m[43m)[49m
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py:179, in dump(obj, fp, skipkeys, ensure_ascii, check_circular, allow_nan, cls, indent, separators, default, sort_keys, **kw)
+    173     iterable = cls(skipkeys=skipkeys, ensure_ascii=ensure_ascii,
+    174         check_circular=check_circular, allow_nan=allow_nan, indent=indent,
+    175         separators=separators,
+    176         default=default, sort_keys=sort_keys, **kw).iterencode(obj)
+    177 # could accelerate with writelines in some versions of Python, at
+    178 # a debuggability cost
+--> 179 for chunk in iterable:
+    180     fp.write(chunk)
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:432[39m, in [36m_make_iterencode.<locals>._iterencode[39m[34m(o, _current_indent_level)[39m
-[32m    430[39m     [38;5;28;01myield from[39;00m _iterencode_list(o, _current_indent_level)
-[32m    431[39m [38;5;28;01melif[39;00m [38;5;28misinstance[39m(o, [38;5;28mdict[39m):
-[32m--> [39m[32m432[39m     [38;5;28;01myield from[39;00m _iterencode_dict(o, _current_indent_level)
-[32m    433[39m [38;5;28;01melse[39;00m:
-[32m    434[39m     [38;5;28;01mif[39;00m markers [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:432, in _make_iterencode.<locals>._iterencode(o, _current_indent_level)
+    430     yield from _iterencode_list(o, _current_indent_level)
+    431 elif isinstance(o, dict):
+--> 432     yield from _iterencode_dict(o, _current_indent_level)
+    433 else:
+    434     if markers is not None:
 
-[36mFile [39m[32m~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:406[39m, in [36m_make_iterencode.<locals>._iterencode_dict[39m[34m(dct, _current_indent_level)[39m
-[32m    404[39m         [38;5;28;01melse[39;00m:
-[32m    405[39m             chunks = _iterencode(value, _current_indent_level)
-[32m--> [39m[32m406[39m         [38;5;28;01myield from[39;00m chunks
-[32m    40
+File ~\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py:406, in _make_iterencode.<locals>._iterencode_dict(dct, _current_indent_level)
+    404         else:
+    405             chunks = _iterencode(value, _current_indent_level)
+--> 406         yield from chunks
+    40
 ...(truncated)
 ```
 

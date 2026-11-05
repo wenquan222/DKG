@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
+帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'"
+"帮我对一个非接触式智能卡实现的DES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy'，密文文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy',原始波形文件为'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -513,9 +513,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 加载数据
-wave = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy')
-plain = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy')
-cipher = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy')
+wave = np.load('data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy')
+plain = np.load('data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy')
+cipher = np.load('data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy')
 
 print(f"波形形状: {wave.shape}")
 print(f"明文形状: {plain.shape}")
@@ -605,7 +605,7 @@ print("\n波形探索图已保存为 waveform_exploration.png")
 import numpy as np
 import matplotlib.pyplot as plt
 
-wave = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy')
+wave = np.load('data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy')
 
 # 计算每点的方差（跨迹线）
 variance = np.var(wave, axis=0)
@@ -677,8 +677,8 @@ print(f"  标准差: {np.std(region):.4f}")
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy",
-  "data_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "wave_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy",
+  "data_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
   "data_type": "plaintext",
   "byte_index": 0,
   "model": "HW"
@@ -708,8 +708,8 @@ print(f"  标准差: {np.std(region):.4f}")
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy",
-  "data_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy",
+  "wave_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy",
+  "data_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy",
   "data_type": "ciphertext",
   "byte_index": 0,
   "model": "HW"
@@ -743,8 +743,8 @@ print(f"  标准差: {np.std(region):.4f}")
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy",
+  "plaintext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "wave_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy",
   "target": "S-box_out",
   "leakage_model": "HW",
   "candidates": 30
@@ -784,8 +784,8 @@ CPA结果显示只有1/8 S-box是高置信度（red band），平均相关性0.0
 
 ```json
 {
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy",
+  "plaintext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "wave_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_wave.npy",
   "target": "R_xor_LOut",
   "leakage_model": "HW",
   "candidates": 30
@@ -832,8 +832,8 @@ CPA结果显示只有1/8 S-box是高置信度（red band），平均相关性0.0
   "algorithm": "DES",
   "mode": "ECB",
   "operation": "encrypt",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy",
+  "plaintext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy",
   "trace_index": 0
 }
 ```
@@ -842,7 +842,7 @@ CPA结果显示只有1/8 S-box是高置信度（red band），平均相关性0.0
 **❌ ← `encrypt_decrypt_verify` Error:**
 
 ```
-Error invoking tool 'encrypt_decrypt_verify' with kwargs {'key_hex': 1002324454422688, 'algorithm': 'DES', 'mode': 'ECB', 'operation': 'encrypt', 'plaintext_npy': 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy', 'ciphertext_npy': 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy', 'trace_index': 0} with error:
+Error invoking tool 'encrypt_decrypt_verify' with kwargs {'key_hex': 1002324454422688, 'algorithm': 'DES', 'mode': 'ECB', 'operation': 'encrypt', 'plaintext_npy': 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy', 'ciphertext_npy': 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy', 'trace_index': 0} with error:
  key_hex: Input should be a valid string
  Please fix the error and try again.
 ```
@@ -868,8 +868,8 @@ Error invoking tool 'encrypt_decrypt_verify' with kwargs {'key_hex': 10023244544
   "algorithm": "DES",
   "mode": "ECB",
   "operation": "encrypt",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy",
+  "plaintext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy",
   "trace_index": 0
 }
 ```
@@ -878,7 +878,7 @@ Error invoking tool 'encrypt_decrypt_verify' with kwargs {'key_hex': 10023244544
 **❌ ← `encrypt_decrypt_verify` Error:**
 
 ```
-Error invoking tool 'encrypt_decrypt_verify' with kwargs {'key_hex': 1002324454422688, 'algorithm': 'DES', 'mode': 'ECB', 'operation': 'encrypt', 'plaintext_npy': 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy', 'ciphertext_npy': 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy', 'trace_index': 0} with error:
+Error invoking tool 'encrypt_decrypt_verify' with kwargs {'key_hex': 1002324454422688, 'algorithm': 'DES', 'mode': 'ECB', 'operation': 'encrypt', 'plaintext_npy': 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy', 'ciphertext_npy': 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy', 'trace_index': 0} with error:
  key_hex: Input should be a valid string
  Please fix the error and try again.
 ```
@@ -933,16 +933,16 @@ Avg correlation: 0.06467658405169366
 Per S-box details:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mValueError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[11][39m[32m, line 15[39m
-[32m     13[39m [38;5;28mprint[39m([33m"[39m[38;5;130;01m\n[39;00m[33mPer S-box details:[39m[33m"[39m)
-[32m     14[39m [38;5;28;01mfor[39;00m sbox_info [38;5;129;01min[39;00m detail.get([33m'[39m[33mper_sbox[39m[33m'[39m, []):
-[32m---> [39m[32m15[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  S-box [39m[38;5;132;01m{[39;00msbox_info[[33m'[39m[33msbox[39m[33m'[39m][38;5;132;01m}[39;00m[33m: key=0x[39m[38;5;132;01m{[39;00msbox_info[[33m'[39m[33mkey[39m[33m'[39m][38;5;132;01m:[39;00m[33m02X[39m[38;5;132;01m}[39;00m[33m, corr=[39m[38;5;132;01m{[39;00msbox_info[[33m'[39m[33mcorrelation[39m[33m'[39m][38;5;132;01m:[39;00m[33m.4f[39m[38;5;132;01m}[39;00m[33m, gap=[39m[38;5;132;01m{[39;00msbox_info[[33m'[39m[33mgap_pct[39m[33m'[39m][38;5;132;01m:[39;00m[33m.1f[39m[38;5;132;01m}[39;00m[33m%, time=[39m[38;5;132;01m{[39;00msbox_info[[33m'[39m[33mtime_index[39m[33m'[39m][38;5;132;01m}[39;00m[33m"[39m)
-[32m     17[39m [38;5;66;03m# 检查是否有master_key字段[39;00m
-[32m     18[39m [38;5;28;01mif[39;00m [33m'[39m[33mmaster_key[39m[33m'[39m [38;5;129;01min[39;00m detail:
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[11], line 15
+     13 print("\nPer S-box details:")
+     14 for sbox_info in detail.get('per_sbox', []):
+---> 15     print(f"  S-box {sbox_info['sbox']}: key=0x{sbox_info['key']:02X}, corr={sbox_info['correlation']:.4f}, gap={sbox_info['gap_pct']:.1f}%, time={sbox_info['time_index']}")
+     17 # 检查是否有master_key字段
+     18 if 'master_key' in detail:
 
-[31mValueError[39m: Unknown format code 'X' for object of type 'str'
+ValueError: Unknown format code 'X' for object of type 'str'
 ```
 
 
@@ -1029,8 +1029,8 @@ Per S-box details:
   "algorithm": "DES",
   "recovered_key_hex": 1002324454422688,
   "cpa_detail_file": "des_cpa_detail_20260428_035212_417006.json",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy",
+  "plaintext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy",
   "gap_threshold": 0.15,
   "max_candidates_per_byte": 20,
   "max_combinations": 50000
@@ -1041,7 +1041,7 @@ Per S-box details:
 **❌ ← `key_search` Error:**
 
 ```
-Error invoking tool 'key_search' with kwargs {'algorithm': 'DES', 'recovered_key_hex': 1002324454422688, 'cpa_detail_file': 'des_cpa_detail_20260428_035212_417006.json', 'plaintext_npy': 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy', 'ciphertext_npy': 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy', 'gap_threshold': 0.15, 'max_candidates_per_byte': 20, 'max_combinations': 50000} with error:
+Error invoking tool 'key_search' with kwargs {'algorithm': 'DES', 'recovered_key_hex': 1002324454422688, 'cpa_detail_file': 'des_cpa_detail_20260428_035212_417006.json', 'plaintext_npy': 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy', 'ciphertext_npy': 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy', 'gap_threshold': 0.15, 'max_candidates_per_byte': 20, 'max_combinations': 50000} with error:
  recovered_key_hex: Input should be a valid string
  Please fix the error and try again.
 ```
@@ -1066,8 +1066,8 @@ Error invoking tool 'key_search' with kwargs {'algorithm': 'DES', 'recovered_key
   "algorithm": "DES",
   "recovered_key_hex": 1002324454422688,
   "cpa_detail_file": "des_cpa_detail_20260428_035212_417006.json",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy"
+  "plaintext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy"
 }
 ```
 </details>
@@ -1075,7 +1075,7 @@ Error invoking tool 'key_search' with kwargs {'algorithm': 'DES', 'recovered_key
 **❌ ← `key_search` Error:**
 
 ```
-Error invoking tool 'key_search' with kwargs {'algorithm': 'DES', 'recovered_key_hex': 1002324454422688, 'cpa_detail_file': 'des_cpa_detail_20260428_035212_417006.json', 'plaintext_npy': 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy', 'ciphertext_npy': 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy'} with error:
+Error invoking tool 'key_search' with kwargs {'algorithm': 'DES', 'recovered_key_hex': 1002324454422688, 'cpa_detail_file': 'des_cpa_detail_20260428_035212_417006.json', 'plaintext_npy': 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy', 'ciphertext_npy': 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy'} with error:
  recovered_key_hex: Input should be a valid string
  Please fix the error and try again.
 ```
@@ -1193,8 +1193,8 @@ Error invoking tool 'key_search' with kwargs {'algorithm': 'DES', 'recovered_key
   "algorithm": "DES",
   "mode": "ECB",
   "operation": "encrypt",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy",
+  "plaintext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy",
   "trace_index": 0
 }
 ```
@@ -1203,7 +1203,7 @@ Error invoking tool 'key_search' with kwargs {'algorithm': 'DES', 'recovered_key
 **❌ ← `encrypt_decrypt_verify` Error:**
 
 ```
-Error invoking tool 'encrypt_decrypt_verify' with kwargs {'key_hex': 1002324454422688, 'algorithm': 'DES', 'mode': 'ECB', 'operation': 'encrypt', 'plaintext_npy': 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy', 'ciphertext_npy': 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy', 'trace_index': 0} with error:
+Error invoking tool 'encrypt_decrypt_verify' with kwargs {'key_hex': 1002324454422688, 'algorithm': 'DES', 'mode': 'ECB', 'operation': 'encrypt', 'plaintext_npy': 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy', 'ciphertext_npy': 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy', 'trace_index': 0} with error:
  key_hex: Input should be a valid string
  Please fix the error and try again.
 ```
@@ -1247,8 +1247,8 @@ import numpy as np
 from Crypto.Cipher import DES
 
 # 加载数据
-plain = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy')
-cipher = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy')
+plain = np.load('data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy')
+cipher = np.load('data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy')
 
 # CPA恢复的密钥
 recovered_key_hex = "1002324454422688"
@@ -1294,16 +1294,16 @@ Recovered key (bytes): 1002324454422688
 Trace 0:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mAttributeError[39m                            Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[15][39m[32m, line 20[39m
-[32m     17[39m ct_expected = cipher[[32m0[39m]
-[32m     19[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33mTrace 0:[39m[33m"[39m)
-[32m---> [39m[32m20[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  Plaintext:  [39m[38;5;132;01m{[39;00m[43mpt[49m[43m.[49m[43mhex[49m()[38;5;132;01m}[39;00m[33m"[39m)
-[32m     21[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  Expected CT: [39m[38;5;132;01m{[39;00mct_expected.hex()[38;5;132;01m}[39;00m[33m"[39m)
-[32m     23[39m [38;5;66;03m# 尝试加密[39;00m
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Cell In[15], line 20
+     17 ct_expected = cipher[0]
+     19 print(f"\nTrace 0:")
+---> 20 print(f"  Plaintext:  {pt.hex()}")
+     21 print(f"  Expected CT: {ct_expected.hex()}")
+     23 # 尝试加密
 
-[31mAttributeError[39m: 'numpy.ndarray' object has no attribute 'hex'
+AttributeError: 'numpy.ndarray' object has no attribute 'hex'
 ```
 
 
@@ -1326,8 +1326,8 @@ import numpy as np
 from Crypto.Cipher import DES
 
 # 加载数据
-plain = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy')
-cipher = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy')
+plain = np.load('data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy')
+cipher = np.load('data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy')
 
 # CPA恢复的密钥
 recovered_key_hex = "1002324454422688"
@@ -1441,8 +1441,8 @@ Top candidates per S-box:
   "algorithm": "DES",
   "recovered_key_hex": "1002324454422688",
   "cpa_detail_file": "des_cpa_detail_20260428_035212_417006.json",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy"
+  "plaintext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy"
 }
 ```
 </details>
@@ -1475,8 +1475,8 @@ key_search找到了正确的密钥！让我验证这个密钥：
   "algorithm": "DES",
   "mode": "ECB",
   "operation": "encrypt",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy",
+  "plaintext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy",
+  "ciphertext_npy": "data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy",
   "trace_index": 0
 }
 ```
@@ -1485,7 +1485,7 @@ key_search找到了正确的密钥！让我验证这个密钥：
 **❌ ← `encrypt_decrypt_verify` Error:**
 
 ```
-Error invoking tool 'encrypt_decrypt_verify' with kwargs {'key_hex': 1022324454667688, 'algorithm': 'DES', 'mode': 'ECB', 'operation': 'encrypt', 'plaintext_npy': 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy', 'ciphertext_npy': 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy', 'trace_index': 0} with error:
+Error invoking tool 'encrypt_decrypt_verify' with kwargs {'key_hex': 1022324454667688, 'algorithm': 'DES', 'mode': 'ECB', 'operation': 'encrypt', 'plaintext_npy': 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy', 'ciphertext_npy': 'data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy', 'trace_index': 0} with error:
  key_hex: Input should be a valid string
  Please fix the error and try again.
 ```
@@ -1510,8 +1510,8 @@ import numpy as np
 from Crypto.Cipher import DES
 
 # 加载数据
-plain = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy')
-cipher = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy')
+plain = np.load('data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy')
+cipher = np.load('data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy')
 
 # key_search找到的正确密钥
 correct_key_hex = "1022324454667688"
@@ -1574,8 +1574,8 @@ import numpy as np
 from Crypto.Cipher import DES
 
 # 加载数据
-plain = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy')
-cipher = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy')
+plain = np.load('data/traces/DES-64-14443/DES-64-14443-10000traces-300points_plain.npy')
+cipher = np.load('data/traces/DES-64-14443/DES-64-14443-10000traces-300points_cipher.npy')
 
 # key_search找到的正确密钥
 correct_key_hex = "1022324454667688"

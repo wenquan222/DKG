@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
+帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'"
+"帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -475,9 +475,9 @@ from scipy import stats
 import os
 
 # 加载数据
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
+plain_path = 'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'
+cipher_path = 'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy'
+wave_path = 'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
 
 plaintexts = np.load(plain_path)
 ciphertexts = np.load(cipher_path)
@@ -999,27 +999,27 @@ print(f"相关性: {first_round_corrs}")
 攻击第一轮，字节 0:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mOverflowError[39m                             Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[120][39m[32m, line 127[39m
-[32m    125[39m [38;5;28;01mfor[39;00m byte_idx [38;5;129;01min[39;00m [38;5;28mrange[39m([32m4[39m):  [38;5;66;03m# SM4每轮有4个字节的轮密钥[39;00m
-[32m    126[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[38;5;130;01m\n[39;00m[33m攻击第一轮，字节 [39m[38;5;132;01m{[39;00mbyte_idx[38;5;132;01m}[39;00m[33m:[39m[33m"[39m)
-[32m--> [39m[32m127[39m     correlations, best_key, best_corr = [43mcpa_attack[49m[43m([49m
-[32m    128[39m [43m        [49m[43mtraces[49m[43m,[49m[43m [49m[43mplaintexts[49m[43m,[49m[43m [49m[43mbyte_idx[49m[43m,[49m[43m [49m[32;43m0[39;49m[43m,[49m[43m [49m
-[32m    129[39m [43m        [49m[43mleakage_model[49m[43m=[49m[33;43m'[39;49m[33;43mHW[39;49m[33;43m'[39;49m[43m,[49m
-[32m    130[39m [43m        [49m[43mstart_point[49m[43m=[49m[43mstart_point[49m[43m,[49m[43m [49m[43mend_point[49m[43m=[49m[43mend_point[49m
-[32m    131[39m [43m    [49m[43m)[49m
-[32m    133[39m     first_round_keys.append(best_key)
-[32m    134[39m     first_round_corrs.append(best_corr)
+---------------------------------------------------------------------------
+OverflowError                             Traceback (most recent call last)
+Cell In[120], line 127
+    125 for byte_idx in range(4):  # SM4每轮有4个字节的轮密钥
+    126     print(f"\n攻击第一轮，字节 {byte_idx}:")
+--> 127     correlations, best_key, best_corr = cpa_attack(
+    128         traces, plaintexts, byte_idx, 0, 
+    129         leakage_model='HW',
+    130         start_point=start_point, end_point=end_point
+    131     )
+    133     first_round_keys.append(best_key)
+    134     first_round_corrs.append(best_corr)
 
-[36mCell[39m[36m [39m[32mIn[120][39m[32m, line 72[39m, in [36mcpa_attack[39m[34m(traces, plaintexts, target_byte_idx, round_num, leakage_model, start_point, end_point)[39m
-[32m     69[39m     rk_guess = key_guess
-[32m     71[39m [38;5;66;03m# 计算 X1 ⊕ X2 ⊕ X3 ⊕ rk_guess[39;00m
-[32m---> [39m[32m72[39m intermediate = [43mX1[49m[43m [49m[43m^[49m[43m [49m[43mX2[49m[43m [49m[43m^[49m[43m [49m[43mX3[49m[43m [49m[43m^[49m[43m [49m[43mrk_guess[49m
-[32m     74[39m [38;5;66;03m# 提取目标字节[39;00m
-[32m     75[39m [38;5;28;01mif[39;00m byte_in_word == [32m0[39m:
+Cell In[120], line 72, in cpa_attack(traces, plaintexts, target_byte_idx, round_num, leakage_model, start_point, end_point)
+     69     rk_guess = key_guess
+     71 # 计算 X1 ⊕ X2 ⊕ X3 ⊕ rk_guess
+---> 72 intermediate = X1 ^ X2 ^ X3 ^ rk_guess
+     74 # 提取目标字节
+     75 if byte_in_word == 0:
 
-[31mOverflowError[39m: Python integer 16777216 out of bounds for uint8
+OverflowError: Python integer 16777216 out of bounds for uint8
 ```
 
 
@@ -1209,31 +1209,31 @@ print(f"区域: {best_regions}")
   尝试区域 0: 1000-1500
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mOverflowError[39m                             Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[121][39m[32m, line 120[39m
-[32m    117[39m [38;5;28;01mfor[39;00m region_idx, (start, end) [38;5;129;01min[39;00m [38;5;28menumerate[39m(high_var_regions):
-[32m    118[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  尝试区域 [39m[38;5;132;01m{[39;00mregion_idx[38;5;132;01m}[39;00m[33m: [39m[38;5;132;01m{[39;00mstart[38;5;132;01m}[39;00m[33m-[39m[38;5;132;01m{[39;00mend[38;5;132;01m}[39;00m[33m"[39m)
-[32m--> [39m[32m120[39m     correlations, best_key, best_corr = [43mcpa_attack_fixed[49m[43m([49m
-[32m    121[39m [43m        [49m[43mtraces[49m[43m,[49m[43m [49m[43mplaintexts[49m[43m,[49m[43m [49m[43mbyte_idx[49m[43m,[49m[43m [49m[32;43m0[39;49m[43m,[49m
-[32m    122[39m [43m        [49m[43mleakage_model[49m[43m=[49m[33;43m'[39;49m[33;43mHW[39;49m[33;43m'[39;49m[43m,[49m
-[32m    123[39m [43m        [49m[43mstart_point[49m[43m=[49m[43mstart[49m[43m,[49m[43m [49m[43mend_point[49m[43m=[49m[43mend[49m
-[32m    124[39m [43m    [49m[43m)[49m
-[32m    126[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[33m    最佳密钥: [39m[38;5;132;01m{[39;00mbest_key[38;5;132;01m:[39;00m[33m02x[39m[38;5;132;01m}[39;00m[33m, 相关性: [39m[38;5;132;01m{[39;00mbest_corr[38;5;132;01m:[39;00m[33m.4f[39m[38;5;132;01m}[39;00m[33m"[39m)
-[32m    128[39m     [38;5;28;01mif[39;00m best_corr > best_corr_for_byte:
+---------------------------------------------------------------------------
+OverflowError                             Traceback (most recent call last)
+Cell In[121], line 120
+    117 for region_idx, (start, end) in enumerate(high_var_regions):
+    118     print(f"  尝试区域 {region_idx}: {start}-{end}")
+--> 120     correlations, best_key, best_corr = cpa_attack_fixed(
+    121         traces, plaintexts, byte_idx, 0,
+    122         leakage_model='HW',
+    123         start_point=start, end_point=end
+    124     )
+    126     print(f"    最佳密钥: {best_key:02x}, 相关性: {best_corr:.4f}")
+    128     if best_corr > best_corr_for_byte:
 
-[36mCell[39m[36m [39m[32mIn[121][39m[32m, line 48[39m, in [36mcpa_attack_fixed[39m[34m(traces, plaintexts, target_byte_idx, round_num, leakage_model, start_point, end_point)[39m
-[32m     45[39m     rk_guess = key_guess
-[32m     47[39m [38;5;66;03m# 计算 X1 ⊕ X2 ⊕ X3 ⊕ rk_guess[39;00m
-[32m---> [39m[32m48[39m intermediate = [43mX1[49m[43m [49m[43m^[49m[43m [49m[43mX2[49m[43m [49m[43m^[49m[43m [49m[43mX3[49m[43m [49m[43m^[49m[43m [49m[43mrk_guess[49m
-[32m     50[39m [38;5;66;03m# 应用S-box（tau变换）[39;00m
-[32m     51[39m [38;5;66;03m# 注意：在SM4中，T函数 = L(tau(x))[39;00m
-[32m     52[39m [38;5;66;03m# 对于CPA，我们通常攻击S-box的输出或输入[39;00m
-[32m     53[39m 
-[32m     54[39m [38;5;66;03m# 提取目标字节进行S-box查找[39;00m
-[32m     55[39m [38;5;28;01mif[39;00m target_byte_idx == [32m0[39m:
+Cell In[121], line 48, in cpa_attack_fixed(traces, plaintexts, target_byte_idx, round_num, leakage_model, start_point, end_point)
+     45     rk_guess = key_guess
+     47 # 计算 X1 ⊕ X2 ⊕ X3 ⊕ rk_guess
+---> 48 intermediate = X1 ^ X2 ^ X3 ^ rk_guess
+     50 # 应用S-box（tau变换）
+     51 # 注意：在SM4中，T函数 = L(tau(x))
+     52 # 对于CPA，我们通常攻击S-box的输出或输入
+     53 
+     54 # 提取目标字节进行S-box查找
+     55 if target_byte_idx == 0:
 
-[31mOverflowError[39m: Python integer 16777216 out of bounds for uint8
+OverflowError: Python integer 16777216 out of bounds for uint8
 ```
 
 
@@ -1737,31 +1737,31 @@ print(f"第二轮密钥 (32位): 0x{second_round_key_bytes[0]:02x}{second_round_
 攻击第二轮字节 0:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mOverflowError[39m                             Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[124][39m[32m, line 125[39m
-[32m    122[39m best_correlations = [38;5;28;01mNone[39;00m
-[32m    124[39m [38;5;28;01mfor[39;00m start, end [38;5;129;01min[39;00m second_round_candidate_intervals:
-[32m--> [39m[32m125[39m     correlations, key_guess, corr = [43mcpa_attack_round2[49m[43m([49m
-[32m    126[39m [43m        [49m[43mtraces[49m[43m,[49m[43m [49m[43mplaintexts[49m[43m,[49m[43m [49m[43mbyte_idx[49m[43m,[49m[43m [49m[43mfirst_round_key_bytes[49m[43m,[49m
-[32m    127[39m [43m        [49m[43mleakage_model[49m[43m=[49m[33;43m'[39;49m[33;43mHW[39;49m[33;43m'[39;49m[43m,[49m
-[32m    128[39m [43m        [49m[43mstart_point[49m[43m=[49m[43mstart[49m[43m,[49m[43m [49m[43mend_point[49m[43m=[49m[43mend[49m
-[32m    129[39m [43m    [49m[43m)[49m
-[32m    131[39m     [38;5;28;01mif[39;00m corr > best_corr:
-[32m    132[39m         best_corr = corr
+---------------------------------------------------------------------------
+OverflowError                             Traceback (most recent call last)
+Cell In[124], line 125
+    122 best_correlations = None
+    124 for start, end in second_round_candidate_intervals:
+--> 125     correlations, key_guess, corr = cpa_attack_round2(
+    126         traces, plaintexts, byte_idx, first_round_key_bytes,
+    127         leakage_model='HW',
+    128         start_point=start, end_point=end
+    129     )
+    131     if corr > best_corr:
+    132         best_corr = corr
 
-[36mCell[39m[36m [39m[32mIn[124][39m[32m, line 40[39m, in [36mcpa_attack_round2[39m[34m(traces, plaintexts, target_byte_idx, first_round_key, leakage_model, start_point, end_point)[39m
-[32m     36[39m X0, X1, X2, X3 = words
-[32m     38[39m [38;5;66;03m# 计算第一轮输出[39;00m
-[32m     39[39m [38;5;66;03m# X4 = X0 ⊕ T(X1 ⊕ X2 ⊕ X3 ⊕ rk0)[39;00m
-[32m---> [39m[32m40[39m round1_output = X0 ^ sm4_t_function([43mX1[49m[43m [49m[43m^[49m[43m [49m[43mX2[49m[43m [49m[43m^[49m[43m [49m[43mX3[49m[43m [49m[43m^[49m[43m [49m[43mrk0[49m)
-[32m     42[39m [38;5;66;03m# 对于第二轮，我们攻击 X2 ⊕ X3 ⊕ X4 ⊕ rk1 的S-box输出[39;00m
-[32m     43[39m [38;5;66;03m# 其中rk1是第二轮密钥（我们正在猜测）[39;00m
-[32m     44[39m 
-[32m     45[39m [38;5;66;03m# 构建第二轮密钥猜测[39;00m
-[32m     46[39m rk1_guess = [32m0[39m
+Cell In[124], line 40, in cpa_attack_round2(traces, plaintexts, target_byte_idx, first_round_key, leakage_model, start_point, end_point)
+     36 X0, X1, X2, X3 = words
+     38 # 计算第一轮输出
+     39 # X4 = X0 ⊕ T(X1 ⊕ X2 ⊕ X3 ⊕ rk0)
+---> 40 round1_output = X0 ^ sm4_t_function(X1 ^ X2 ^ X3 ^ rk0)
+     42 # 对于第二轮，我们攻击 X2 ⊕ X3 ⊕ X4 ⊕ rk1 的S-box输出
+     43 # 其中rk1是第二轮密钥（我们正在猜测）
+     44 
+     45 # 构建第二轮密钥猜测
+     46 rk1_guess = 0
 
-[31mOverflowError[39m: Python integer 2114258995 out of bounds for uint8
+OverflowError: Python integer 2114258995 out of bounds for uint8
 ```
 
 
@@ -1959,27 +1959,27 @@ print(f"第二轮密钥 (32位): 0x{second_round_key_bytes[0]:02x}{second_round_
 攻击第二轮字节 0:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mOverflowError[39m                             Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[125][39m[32m, line 134[39m
-[32m    131[39m best_correlations = [38;5;28;01mNone[39;00m
-[32m    133[39m [38;5;28;01mfor[39;00m start, end [38;5;129;01min[39;00m second_round_candidate_intervals:
-[32m--> [39m[32m134[39m     correlations, key_guess, corr = [43mcpa_attack_round2_fixed[49m[43m([49m
-[32m    135[39m [43m        [49m[43mtraces[49m[43m,[49m[43m [49m[43mplaintexts[49m[43m,[49m[43m [49m[43mbyte_idx[49m[43m,[49m[43m [49m[43mfirst_round_key_bytes[49m[43m,[49m
-[32m    136[39m [43m        [49m[43mleakage_model[49m[43m=[49m[33;43m'[39;49m[33;43mHW[39;49m[33;43m'[39;49m[43m,[49m
-[32m    137[39m [43m        [49m[43mstart_point[49m[43m=[49m[43mstart[49m[43m,[49m[43m [49m[43mend_point[49m[43m=[49m[43mend[49m
-[32m    138[39m [43m    [49m[43m)[49m
-[32m    140[39m     [38;5;28;01mif[39;00m corr > best_corr:
-[32m    141[39m         best_corr = corr
+---------------------------------------------------------------------------
+OverflowError                             Traceback (most recent call last)
+Cell In[125], line 134
+    131 best_correlations = None
+    133 for start, end in second_round_candidate_intervals:
+--> 134     correlations, key_guess, corr = cpa_attack_round2_fixed(
+    135         traces, plaintexts, byte_idx, first_round_key_bytes,
+    136         leakage_model='HW',
+    137         start_point=start, end_point=end
+    138     )
+    140     if corr > best_corr:
+    141         best_corr = corr
 
-[36mCell[39m[36m [39m[32mIn[125][39m[32m, line 64[39m, in [36mcpa_attack_round2_fixed[39m[34m(traces, plaintexts, target_byte_idx, first_round_key, leakage_model, start_point, end_point)[39m
-[32m     61[39m X3 = (plain[[32m12[39m] << [32m24[39m) | (plain[[32m13[39m] << [32m16[39m) | (plain[[32m14[39m] << [32m8[39m) | plain[[32m15[39m]
-[32m     63[39m [38;5;66;03m# 计算第一轮输出：X4 = X0 ⊕ T(X1 ⊕ X2 ⊕ X3 ⊕ rk0)[39;00m
-[32m---> [39m[32m64[39m round_input = ([43mX1[49m[43m [49m[43m^[49m[43m [49m[43mX2[49m[43m [49m[43m^[49m[43m [49m[43mX3[49m[43m [49m[43m^[49m[43m [49m[43mrk0[49m) & [32m0xFFFFFFFF[39m
-[32m     65[39m round1_output = (X0 ^ sm4_t_function_fixed(round_input)) & [32m0xFFFFFFFF[39m
-[32m     67[39m [38;5;66;03m# 构建第二轮密钥猜测[39;00m
+Cell In[125], line 64, in cpa_attack_round2_fixed(traces, plaintexts, target_byte_idx, first_round_key, leakage_model, start_point, end_point)
+     61 X3 = (plain[12] << 24) | (plain[13] << 16) | (plain[14] << 8) | plain[15]
+     63 # 计算第一轮输出：X4 = X0 ⊕ T(X1 ⊕ X2 ⊕ X3 ⊕ rk0)
+---> 64 round_input = (X1 ^ X2 ^ X3 ^ rk0) & 0xFFFFFFFF
+     65 round1_output = (X0 ^ sm4_t_function_fixed(round_input)) & 0xFFFFFFFF
+     67 # 构建第二轮密钥猜测
 
-[31mOverflowError[39m: Python integer 2114258995 out of bounds for uint8
+OverflowError: Python integer 2114258995 out of bounds for uint8
 ```
 
 
@@ -2948,16 +2948,16 @@ SM4 CPA攻击结果总结
   实际密文: 169b73531b72211de486ef3fc2830686
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mNameError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[130][39m[32m, line 98[39m
-[32m     95[39m     X.append(word)
-[32m     97[39m [38;5;66;03m# 前4轮[39;00m
-[32m---> [39m[32m98[39m round_keys = [recovered_rk0, recovered_rk1, [43mrecovered_rk2[49m, recovered_rk3]
-[32m     99[39m [38;5;28;01mfor[39;00m i [38;5;129;01min[39;00m [38;5;28mrange[39m([32m4[39m):
-[32m    100[39m     rk = round_keys[i]
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[130], line 98
+     95     X.append(word)
+     97 # 前4轮
+---> 98 round_keys = [recovered_rk0, recovered_rk1, recovered_rk2, recovered_rk3]
+     99 for i in range(4):
+    100     rk = round_keys[i]
 
-[31mNameError[39m: name 'recovered_rk2' is not defined
+NameError: name 'recovered_rk2' is not defined
 ```
 
 

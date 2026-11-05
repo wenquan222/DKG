@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
+帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'"
+"帮我对一个接触式智能卡实现的SM4密码算法波形进行CPA恢复密钥，SM4需要分4轮分别做CPA恢复轮密钥，然后从4个轮密钥反推主密钥。明文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'，密文文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy',原始波形文件为'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -135,9 +135,9 @@ from scipy import signal
 import os
 
 # 加载数据
-plain_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'
-cipher_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
+plain_path = 'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_plain.npy'
+cipher_path = 'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_cipher.npy'
+wave_path = 'data/traces/SM4-128-7816/SM4-128-7816-100traces-6500points_wave.npy'
 
 print("正在加载数据...")
 plaintexts = np.load(plain_path)
@@ -1441,22 +1441,22 @@ T_input = X1 ⊕ X2 ⊕ X3 ⊕ key_guess
 测试修正后的函数:
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mOverflowError[39m                             Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[45][39m[32m, line 73[39m
-[32m     71[39m plain = plaintexts[i]
-[32m     72[39m [38;5;28;01mfor[39;00m byte_pos [38;5;129;01min[39;00m [38;5;28mrange[39m([32m4[39m):
-[32m---> [39m[32m73[39m     result = [43mcompute_sbox_input_corrected[49m[43m([49m[43mplain[49m[43m,[49m[43m [49m[43mtest_key_32bit[49m[43m,[49m[43m [49m[43mbyte_pos[49m[43m)[49m
-[32m     74[39m     [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  明文 [39m[38;5;132;01m{[39;00mi[38;5;132;01m}[39;00m[33m, 字节 [39m[38;5;132;01m{[39;00mbyte_pos[38;5;132;01m}[39;00m[33m: 中间值 = 0x[39m[38;5;132;01m{[39;00mresult[38;5;132;01m:[39;00m[33m02x[39m[38;5;132;01m}[39;00m[33m"[39m)
+---------------------------------------------------------------------------
+OverflowError                             Traceback (most recent call last)
+Cell In[45], line 73
+     71 plain = plaintexts[i]
+     72 for byte_pos in range(4):
+---> 73     result = compute_sbox_input_corrected(plain, test_key_32bit, byte_pos)
+     74     print(f"  明文 {i}, 字节 {byte_pos}: 中间值 = 0x{result:02x}")
 
-[36mCell[39m[36m [39m[32mIn[45][39m[32m, line 56[39m, in [36mcompute_sbox_input_corrected[39m[34m(plaintext, key_guess_32bit, byte_pos)[39m
-[32m     53[39m X2 = (plaintext[[32m8[39m] << [32m24[39m) | (plaintext[[32m9[39m] << [32m16[39m) | (plaintext[[32m10[39m] << [32m8[39m) | plaintext[[32m11[39m]
-[32m     54[39m X3 = (plaintext[[32m12[39m] << [32m24[39m) | (plaintext[[32m13[39m] << [32m16[39m) | (plaintext[[32m14[39m] << [32m8[39m) | plaintext[[32m15[39m]
-[32m---> [39m[32m56[39m T_input = [43mX1[49m[43m [49m[43m^[49m[43m [49m[43mX2[49m[43m [49m[43m^[49m[43m [49m[43mX3[49m[43m [49m[43m^[49m[43m [49m[43mkey_guess_32bit[49m
-[32m     58[39m [38;5;28;01mif[39;00m byte_pos == [32m0[39m:
-[32m     59[39m     [38;5;28;01mreturn[39;00m (T_input >> [32m24[39m) & [32m0xFF[39m
+Cell In[45], line 56, in compute_sbox_input_corrected(plaintext, key_guess_32bit, byte_pos)
+     53 X2 = (plaintext[8] << 24) | (plaintext[9] << 16) | (plaintext[10] << 8) | plaintext[11]
+     54 X3 = (plaintext[12] << 24) | (plaintext[13] << 16) | (plaintext[14] << 8) | plaintext[15]
+---> 56 T_input = X1 ^ X2 ^ X3 ^ key_guess_32bit
+     58 if byte_pos == 0:
+     59     return (T_input >> 24) & 0xFF
 
-[31mOverflowError[39m: Python integer 305419896 out of bounds for uint8
+OverflowError: Python integer 305419896 out of bounds for uint8
 ```
 
 
@@ -1625,23 +1625,23 @@ else:
   X3 = 0x000000fd
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mOverflowError[39m                             Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[46][39m[32m, line 44[39m
-[32m     41[39m         [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  X[39m[38;5;132;01m{[39;00mj[38;5;132;01m}[39;00m[33m = 0x[39m[38;5;132;01m{[39;00mword[38;5;132;01m:[39;00m[33m08x[39m[38;5;132;01m}[39;00m[33m"[39m)
-[32m     43[39m     [38;5;28;01mfor[39;00m byte_pos [38;5;129;01min[39;00m [38;5;28mrange[39m([32m4[39m):
-[32m---> [39m[32m44[39m         result = [43mcompute_sbox_input_fixed[49m[43m([49m[43mplain_words[49m[43m,[49m[43m [49m[43mtest_key_32bit[49m[43m,[49m[43m [49m[43mbyte_pos[49m[43m)[49m
-[32m     45[39m         [38;5;28mprint[39m([33mf[39m[33m"[39m[33m  字节 [39m[38;5;132;01m{[39;00mbyte_pos[38;5;132;01m}[39;00m[33m: 中间值 = 0x[39m[38;5;132;01m{[39;00mresult[38;5;132;01m:[39;00m[33m02x[39m[38;5;132;01m}[39;00m[33m"[39m)
-[32m     47[39m [38;5;66;03m# 现在实现正确的CPA攻击[39;00m
+---------------------------------------------------------------------------
+OverflowError                             Traceback (most recent call last)
+Cell In[46], line 44
+     41         print(f"  X{j} = 0x{word:08x}")
+     43     for byte_pos in range(4):
+---> 44         result = compute_sbox_input_fixed(plain_words, test_key_32bit, byte_pos)
+     45         print(f"  字节 {byte_pos}: 中间值 = 0x{result:02x}")
+     47 # 现在实现正确的CPA攻击
 
-[36mCell[39m[36m [39m[32mIn[46][39m[32m, line 23[39m, in [36mcompute_sbox_input_fixed[39m[34m(plain_words, key_guess_32bit, byte_pos)[39m
-[32m     20[39m X2 = plain_words[[32m2[39m]
-[32m     21[39m X3 = plain_words[[32m3[39m]
-[32m---> [39m[32m23[39m T_input = [43mX1[49m[43m [49m[43m^[49m[43m [49m[43mX2[49m[43m [49m[43m^[49m[43m [49m[43mX3[49m[43m [49m[43m^[49m[43m [49m[43mkey_guess_32bit[49m
-[32m     25[39m [38;5;28;01mif[39;00m byte_pos == [32m0[39m:
-[32m     26[39m     [38;5;28;01mreturn[39;00m (T_input >> [32m24[39m) & [32m0xFF[39m
+Cell In[46], line 23, in compute_sbox_input_fixed(plain_words, key_guess_32bit, byte_pos)
+     20 X2 = plain_words[2]
+     21 X3 = plain_words[3]
+---> 23 T_input = X1 ^ X2 ^ X3 ^ key_guess_32bit
+     25 if byte_pos == 0:
+     26     return (T_input >> 24) & 0xFF
 
-[31mOverflowError[39m: Python integer 305419896 out of bounds for uint8
+OverflowError: Python integer 305419896 out of bounds for uint8
 ```
 
 
@@ -1883,16 +1883,16 @@ else:
 重新运行CPA攻击...
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mNameError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[48][39m[32m, line 8[39m
-[32m      5[39m traces_processed = traces - traces.mean(axis=[32m1[39m, keepdims=[38;5;28;01mTrue[39;00m)
-[32m      7[39m [38;5;66;03m# 攻击第一轮的第一个字节[39;00m
-[32m----> [39m[32m8[39m correlations = [43mcpa_attack_corrected[49m(traces_processed, plaintexts_words, target_byte=[32m0[39m)
-[32m     10[39m max_corrs = np.max(correlations, axis=[32m1[39m)
-[32m     11[39m best_key = np.argmax(max_corrs)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[48], line 8
+      5 traces_processed = traces - traces.mean(axis=1, keepdims=True)
+      7 # 攻击第一轮的第一个字节
+----> 8 correlations = cpa_attack_corrected(traces_processed, plaintexts_words, target_byte=0)
+     10 max_corrs = np.max(correlations, axis=1)
+     11 best_key = np.argmax(max_corrs)
 
-[31mNameError[39m: name 'cpa_attack_corrected' is not defined
+NameError: name 'cpa_attack_corrected' is not defined
 ```
 
 
@@ -3449,23 +3449,23 @@ print(f"\n最终结果已保存到 'final_cpa_results.json'")
 测试部分加密（4轮）...
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mOverflowError[39m                             Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[57][39m[32m, line 65[39m
-[32m     63[39m [38;5;28mprint[39m([33m"[39m[33m测试部分加密（4轮）...[39m[33m"[39m)
-[32m     64[39m test_plain = plaintexts[[32m0[39m]
-[32m---> [39m[32m65[39m X_partial = [43mpartial_sm4_encrypt[49m[43m([49m[43mtest_plain[49m[43m,[49m[43m [49m[43mrecovered_rks[49m[43m,[49m[43m [49m[32;43m4[39;49m[43m)[49m
-[32m     67[39m [38;5;28mprint[39m([33mf[39m[33m"[39m[33m加密4轮后的状态:[39m[33m"[39m)
-[32m     68[39m [38;5;28;01mfor[39;00m i [38;5;129;01min[39;00m [38;5;28mrange[39m([32m8[39m):  [38;5;66;03m# 显示X[0]到X[7][39;00m
+---------------------------------------------------------------------------
+OverflowError                             Traceback (most recent call last)
+Cell In[57], line 65
+     63 print("测试部分加密（4轮）...")
+     64 test_plain = plaintexts[0]
+---> 65 X_partial = partial_sm4_encrypt(test_plain, recovered_rks, 4)
+     67 print(f"加密4轮后的状态:")
+     68 for i in range(8):  # 显示X[0]到X[7]
 
-[36mCell[39m[36m [39m[32mIn[57][39m[32m, line 58[39m, in [36mpartial_sm4_encrypt[39m[34m(plaintext, rk_list, num_rounds)[39m
-[32m     54[39m     [38;5;66;03m# 线性变换L（简化版）[39;00m
-[32m     55[39m     L_output = tau_output ^ ((tau_output << [32m2[39m) & [32m0xFFFFFFFF[39m) ^ ((tau_output << [32m10[39m) & [32m0xFFFFFFFF[39m) ^ \
-[32m     56[39m                ((tau_output << [32m18[39m) & [32m0xFFFFFFFF[39m) ^ ((tau_output << [32m24[39m) & [32m0xFFFFFFFF[39m)
-[32m---> [39m[32m58[39m     X[i+[32m4[39m] = [43mX[49m[43m[[49m[43mi[49m[43m][49m[43m [49m[43m^[49m[43m [49m[43mL_output[49m
-[32m     60[39m [38;5;28;01mreturn[39;00m X
+Cell In[57], line 58, in partial_sm4_encrypt(plaintext, rk_list, num_rounds)
+     54     # 线性变换L（简化版）
+     55     L_output = tau_output ^ ((tau_output << 2) & 0xFFFFFFFF) ^ ((tau_output << 10) & 0xFFFFFFFF) ^ \
+     56                ((tau_output << 18) & 0xFFFFFFFF) ^ ((tau_output << 24) & 0xFFFFFFFF)
+---> 58     X[i+4] = X[i] ^ L_output
+     60 return X
 
-[31mOverflowError[39m: Python integer 253115413 out of bounds for uint8
+OverflowError: Python integer 253115413 out of bounds for uint8
 ```
 
 

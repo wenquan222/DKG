@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'
+帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'"
+"帮我对一个STM32F103 MCU软件实现的AES密码算法波形进行CPA恢复密钥，明文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'，密文文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy',原始波形文件为'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -140,9 +140,9 @@ import matplotlib.pyplot as plt
 import os
 
 # 检查文件是否存在
-plaintext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'
-ciphertext_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy'
-wave_path = 'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'
+plaintext_path = 'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy'
+ciphertext_path = 'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy'
+wave_path = 'data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy'
 
 print(f"文件存在性检查:")
 print(f"明文文件: {os.path.exists(plaintext_path)}")
@@ -386,11 +386,11 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\1267779386.py:32: UserWarni
 
 ```json
 {
-  "wave_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy",
+  "wave_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy",
   "ref_start": 0,
   "ref_end": 100,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy"
+  "plaintext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy"
 }
 ```
 </details>
@@ -398,7 +398,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\1267779386.py:32: UserWarni
 <details><summary><b>📋 ← `vertical_aligner`</b> (676 chars)</summary>
 
 ```
-{"out_wave_npy": "valigned_20260424_173343_292368.npy", "plot_path": "valign_compare_20260424_173343_292368.png", "n_traces": 250, "n_points": 1500, "ref_region": [0, 100], "baseline_std": 11.1387, "baseline_std_after": 4e-06, "out_plaintext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy", "out_ciphertext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy"}
+{"out_wave_npy": "valigned_20260424_173343_292368.npy", "plot_path": "valign_compare_20260424_173343_292368.png", "n_traces": 250, "n_points": 1500, "ref_region": [0, 100], "baseline_std": 11.1387, "baseline_std_after": 4e-06, "out_plaintext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy", "out_ciphertext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy"}
 ```
 </details>
 
@@ -420,8 +420,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\1267779386.py:32: UserWarni
 {
   "wave_npy": "valigned_20260424_173343_292368.npy",
   "weight": 3,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy"
+  "plaintext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy"
 }
 ```
 </details>
@@ -433,11 +433,11 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\1267779386.py:32: UserWarni
 <>:27: SyntaxWarning: "is not" with a literal. Did you mean "!="?
 <>:25: SyntaxWarning: "is not" with a literal. Did you mean "!="?
 <>:27: SyntaxWarning: "is not" with a literal. Did you mean "!="?
-{"out_wave_npy": "smoothed_20260424_173357_319191.npy", "plot_path": "smooth_compare_20260424_173357_319191.png", "n_traces": 250, "n_points": 1500, "weight": 3, "plaintext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy", "ciphertext_npy": "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy"}
+{"out_wave_npy": "smoothed_20260424_173357_319191.npy", "plot_path": "smooth_compare_20260424_173357_319191.png", "n_traces": 250, "n_points": 1500, "weight": 3, "plaintext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy", "ciphertext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy"}
 C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\3346562468.py:25: SyntaxWarning: "is not" with a literal. Did you mean "!="?
-  if "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy" is not None:
+  if "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy" is not None:
 C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\3346562468.py:27: SyntaxWarning: "is not" with a literal. Did you mean "!="?
-  if "F:/\u4fa7\u4fe1\u9053/SCA-GPT/\u5b9e\u9a8c\u4e94\uff1a\u57fa\u4e8e\u77e5\u8bc6\u56fe\u8c31\u7684Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32
+  if "data/traces/AES-128-STM32
 ...(truncated)
 ```
 </details>
@@ -528,7 +528,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\3342730499.py:51: UserWarni
 
 **🔧 → `plaintext_ciphertext_correlation`** `{
   "wave_npy": "smoothed_20260424_173357_319191.npy",
-  "data_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
+  "data_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
   "data_type": "plaintext",
   "byte_index": 0,
   "model": "HW"
@@ -624,8 +624,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\459290898.py:41: UserWarnin
   "length": 120,
   "max_shift": 50,
   "threshold": 85,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy"
+  "plaintext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy"
 }
 ```
 </details>
@@ -859,8 +859,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\459290898.py:41: UserWarnin
   "length": 120,
   "max_shift": 80,
   "threshold": 75,
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy"
+  "plaintext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy"
 }
 ```
 </details>
@@ -1254,50 +1254,50 @@ if len(peak_indices) > 10:
 能量峰值位置范围: 246 到 305
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mValueError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[217][39m[32m, line 29[39m
-[32m     27[39m plt.subplot([32m3[39m, [32m1[39m, [32m2[39m)
-[32m     28[39m plt.plot(energy, linewidth=[32m1[39m, alpha=[32m0.7[39m, label=[33m'[39m[33mInstant Energy[39m[33m'[39m)
-[32m---> [39m[32m29[39m [43mplt[49m[43m.[49m[43mplot[49m[43m([49m[38;5;28;43mrange[39;49m[43m([49m[43mwindow_size[49m[43m/[49m[43m/[49m[32;43m2[39;49m[43m,[49m[43m [49m[38;5;28;43mlen[39;49m[43m([49m[43menergy[49m[43m)[49m[43m-[49m[43mwindow_size[49m[43m/[49m[43m/[49m[32;43m2[39;49m[43m)[49m[43m,[49m[43m [49m[43menergy_smoothed[49m[43m,[49m[43m [49m[43mlinewidth[49m[43m=[49m[32;43m1.5[39;49m[43m,[49m[43m [49m[43mcolor[49m[43m=[49m[33;43m'[39;49m[33;43mred[39;49m[33;43m'[39;49m[43m,[49m[43m [49m[43mlabel[49m[43m=[49m[33;43mf[39;49m[33;43m'[39;49m[33;43mSmoothed Energy (window=[39;49m[38;5;132;43;01m{[39;49;00m[43mwindow_size[49m[38;5;132;43;01m}[39;49;00m[33;43m)[39;49m[33;43m'[39;49m[43m)[49m
-[32m     30[39m plt.axhline(y=peak_threshold, color=[33m'[39m[33morange[39m[33m'[39m, linestyle=[33m'[39m[33m--[39m[33m'[39m, alpha=[32m0.7[39m, label=[33mf[39m[33m'[39m[33mPeak threshold[39m[33m'[39m)
-[32m     31[39m plt.title([33m'[39m[33mWaveform Energy Analysis[39m[33m'[39m)
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[217], line 29
+     27 plt.subplot(3, 1, 2)
+     28 plt.plot(energy, linewidth=1, alpha=0.7, label='Instant Energy')
+---> 29 plt.plot(range(window_size//2, len(energy)-window_size//2), energy_smoothed, linewidth=1.5, color='red', label=f'Smoothed Energy (window={window_size})')
+     30 plt.axhline(y=peak_threshold, color='orange', linestyle='--', alpha=0.7, label=f'Peak threshold')
+     31 plt.title('Waveform Energy Analysis')
 
-[36mFile [39m[32mF:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\matplotlib\pyplot.py:3838[39m, in [36mplot[39m[34m(scalex, scaley, data, *args, **kwargs)[39m
-[32m   3830[39m [38;5;129m@_copy_docstring_and_deprecators[39m(Axes.plot)
-[32m   3831[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mplot[39m(
-[32m   3832[39m     *args: [38;5;28mfloat[39m | ArrayLike | [38;5;28mstr[39m,
-[32m   (...)[39m[32m   3836[39m     **kwargs,
-[32m   3837[39m ) -> [38;5;28mlist[39m[Line2D]:
-[32m-> [39m[32m3838[39m     [38;5;28;01mreturn[39;00m [43mgca[49m[43m([49m[43m)[49m[43m.[49m[43mplot[49m[43m([49m
-[32m   3839[39m [43m        [49m[43m*[49m[43margs[49m[43m,[49m
-[32m   3840[39m [43m        [49m[43mscalex[49m[43m=[49m[43mscalex[49m[43m,[49m
-[32m   3841[39m [43m        [49m[43mscaley[49m[43m=[49m[43mscaley[49m[43m,[49m
-[32m   3842[39m [43m        [49m[43m*[49m[43m*[49m[43m([49m[43m{[49m[33;43m"[39;49m[33;43mdata[39;49m[33;43m"[39;49m[43m:[49m[43m [49m[43mdata[49m[43m}[49m[43m [49m[38;5;28;43;01mif[39;49;00m[43m [49m[43mdata[49m[43m [49m[38;5;129;43;01mis[39;49;00m[43m [49m[38;5;129;43;01mnot[39;49;00m[43m [49m[38;5;28;43;01mNone[39;49;00m[43m [49m[38;5;28;43;01melse[39;49;00m[43m [49m[43m{[49m[43m}[49m[43m)[49m[43m,[49m
-[32m   3843[39m [43m        [49m[43m*[49m[43m*[49m[43mkwargs[49m[43m,[49m
-[32m   3844[39m [43m    [49m[43m)[49m
+File .venv\Lib\site-packages\matplotlib\pyplot.py:3838, in plot(scalex, scaley, data, *args, **kwargs)
+   3830 @_copy_docstring_and_deprecators(Axes.plot)
+   3831 def plot(
+   3832     *args: float | ArrayLike | str,
+   (...)   3836     **kwargs,
+   3837 ) -> list[Line2D]:
+-> 3838     return gca().plot(
+   3839         *args,
+   3840         scalex=scalex,
+   3841         scaley=scaley,
+   3842         **({"data": data} if data is not None else {}),
+   3843         **kwargs,
+   3844     )
 
-[36mFile [39m[32mF:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\matplotlib\axes\_axes.py:1777[39m, in [36mAxes.plot[39m[34m(self, scalex, scaley, data, *args, **kwargs)[39m
-[32m   1534[39m [38;5;250m[39m[33;03m"""[39;00m
-[32m   1535[39m [33;03mPlot y versus x as lines and/or markers.[39;00m
-[32m   1536[39m 
-[32m   (...)[39m[32m   1774[39m [33;03m(``'green'``) or hex strings (``'#008000'``).[39;00m
-[32m   1775[39m [33;03m"""[39;00m
-[32m   1776[39m kwargs = cbook.normalize_kwargs(kwargs, mlines.Line2D)
-[32m-> [39m[32m1777[39m lines = [*[38;5;28mself[39m._get_lines([38;5;28mself[39m, *args, data=data, **kwargs)]
-[32m   1778[39m [38;5;28;01mfor[39;00m line [38;5;129;01min[39;00m lines:
-[32m   1779[39m     [38;5;28mself[39m.add_line(line)
+File .venv\Lib\site-packages\matplotlib\axes\_axes.py:1777, in Axes.plot(self, scalex, scaley, data, *args, **kwargs)
+   1534 """
+   1535 Plot y versus x as lines and/or markers.
+   1536 
+   (...)   1774 (``'green'``) or hex strings (``'#008000'``).
+   1775 """
+   1776 kwargs = cbook.normalize_kwargs(kwargs, mlines.Line2D)
+-> 1777 lines = [*self._get_lines(self, *args, data=data, **kwargs)]
+   1778 for line in lines:
+   1779     self.add_line(line)
 
-[36mFile [39m[32mF:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\matplotlib\axes\_base.py:297[39m, in [36m_process_plot_var_args.__call__[39m[34m(self, axes, data, return_kwargs, *args, **kwargs)[39m
-[32m    295[39m     this += args[[32m0[39m],
-[32m    296[39m     args = args[[32m1[39m:]
-[32m--> [39m[32m297[39m [38;5;28;01myield from[39;00m [38;5;28;43mself[39;49m[43m.[49m[43m_plot_args[49m[43m([49m
-[32m    298[39m [43m    [49m[43maxes[49m[43m,[49m[43m [49m[43mthis[49m[43m,[49m[43m [49m[43mkwargs[49m[43m,[49m[43m [49m[43mambiguous_fmt_datakey[49m[43m=[49m[43mambiguous_fmt_datakey[49m[43m,[49m
-[32m    299[39m [43m    [49m[43mreturn_kwargs[49m[43m=[49m[43mreturn_kwargs[49m
-[32m    300[39m [43m[49m[43m)[49m
+File .venv\Lib\site-packages\matplotlib\axes\_base.py:297, in _process_plot_var_args.__call__(self, axes, data, return_kwargs, *args, **kwargs)
+    295     this += args[0],
+    296     args = args[1:]
+--> 297 yield from self._plot_args(
+    298     axes, this, kwargs, ambiguous_fmt_datakey=ambiguous_fmt_datakey,
+    299     return_kwargs=return_kwargs
+    300 )
 
-[36mFile [39m[32mF:\侧信道\SCA-GPT\实验五：基于知识图谱的Agent\GraphRAG_Agent\.venv\Lib\site-packages\matplotlib\axes\_base.py:494[39m, in [36m_process_plot_var_args._plot_args[39m[34m(self, axes, tup, kwargs, return_kwargs, ambiguous_fmt_datakey)[39m
-[32m 
+File .venv\Lib\site-packages\matplotlib\axes\_base.py:494, in _process_plot_var_args._plot_args(self, axes, tup, kwargs, return_kwargs, ambiguous_fmt_datakey)
+ 
 ...(truncated)
 ```
 
@@ -1432,7 +1432,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\3353347079.py:43: UserWarni
 
 ```python
 # 尝试使用原始波形但进行不同的预处理
-raw_wave = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy')
+raw_wave = np.load('data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_wave.npy')
 
 # 只进行垂直对齐，不进行平滑
 # 使用更长的参考区域进行垂直对齐
@@ -1484,7 +1484,7 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\4088276556.py:26: UserWarni
 **🤖 LLM:** 现在让我在这个垂直对齐的波形上进行CPA攻击：
 
 **🔧 → `aes_cpa_attack`** `{
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
+  "plaintext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
   "wave_npy": "valigned_raw.npy",
   "candidates": 60,
   "leakage_model": "HW",
@@ -1519,8 +1519,8 @@ C:\Users\Andersen\AppData\Local\Temp\ipykernel_20104\4088276556.py:26: UserWarni
   "algorithm": "AES",
   "mode": "ECB",
   "operation": "encrypt",
-  "plaintext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
-  "ciphertext_npy": "F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy",
+  "plaintext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_plain.npy",
+  "ciphertext_npy": "data/traces/AES-128-STM32F103/AES-128-STM32F103-250traces-1500points_cipher.npy",
   "trace_index": 0
 }
 ```

@@ -20,7 +20,7 @@
 ## 3. User Query
 
 ```
-帮我对一个STM32F429 MCU软件实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'
+帮我对一个STM32F429 MCU软件实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'，密文文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy',原始波形文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'
 ```
 
 ## 4. Initial Knowledge Retrieval
@@ -33,7 +33,7 @@
 You are a side-channel analysis expert. Extract a FEW, HIGH-QUALITY search keywords from the user's request to query a DUAL-LAYER knowledge graph (upper = configuration space with 12 entity types: Algorithm / DeviceClass / TraceType / AttackPoint / LeakageModel / Preprocessing / StatMethod / Countermeasure / Pipeline / DiagnosticMethod / ValidationMethod / RecoveryMethod; lower = diagnostic space: Observation / Cause / Action / Strategy).
 
 User request:
-"帮我对一个STM32F429 MCU软件实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'，密文文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy',原始波形文件为'F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'"
+"帮我对一个STM32F429 MCU软件实现的AES密码算法波形进行CPA恢复密钥，这是电磁侧信道（EM），明文文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy'，密文文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy',原始波形文件为'data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy'"
 
 ## Output rules (strict)
 
@@ -492,9 +492,9 @@ plt.rcParams['axes.unicode_minus'] = False
 
 # 加载数据
 print("正在加载数据...")
-plaintexts = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy')
-ciphertexts = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy')
-traces = np.load('F:/侧信道/SCA-GPT/实验五：基于知识图谱的Agent/GraphRAG_Agent/DKG/data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy')
+plaintexts = np.load('data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_plain.npy')
+ciphertexts = np.load('data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_cipher.npy')
+traces = np.load('data/traces/AES-128-STM32F429/AES-128-STM32F429-EM-1000traces-1000points_wave.npy')
 
 print(f"明文形状: {plaintexts.shape}")
 print(f"密文形状: {ciphertexts.shape}")
@@ -1806,16 +1806,16 @@ print(f"  标准差: {np.std(max_correlations):.4f}")
 可视化最佳CPA结果...
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mIndexError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[51][39m[32m, line 88[39m
-[32m     86[39m [38;5;28;01mfor[39;00m byte_idx [38;5;129;01min[39;00m [38;5;28mrange[39m([32m16[39m):
-[32m     87[39m     corr_matrix = correlations_best[byte_idx]
-[32m---> [39m[32m88[39m     best_key = [43mbest_key[49m[43m[[49m[43mbyte_idx[49m[43m][49m
-[32m     90[39m     [38;5;66;03m# 找到相关性最大的采样点[39;00m
-[32m     91[39m     max_corr_idx = np.argmax(np.abs(corr_matrix[best_key]))
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+Cell In[51], line 88
+     86 for byte_idx in range(16):
+     87     corr_matrix = correlations_best[byte_idx]
+---> 88     best_key = best_key[byte_idx]
+     90     # 找到相关性最大的采样点
+     91     max_corr_idx = np.argmax(np.abs(corr_matrix[best_key]))
 
-[31mIndexError[39m: invalid index to scalar variable.
+IndexError: invalid index to scalar variable.
 ```
 
 
@@ -1959,16 +1959,16 @@ print(f"\n结果已保存到: cpa_final_results.json")
 修复可视化代码...
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mIndexError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[52][39m[32m, line 24[39m
-[32m     22[39m [38;5;28;01mfor[39;00m byte_idx [38;5;129;01min[39;00m [38;5;28mrange[39m([32m16[39m):
-[32m     23[39m     corr_matrix = correlations_best[byte_idx]
-[32m---> [39m[32m24[39m     key_byte = [43mrecovered_key_bytes_array[49m[43m[[49m[43mbyte_idx[49m[43m][49m
-[32m     26[39m     [38;5;66;03m# 找到相关性最大的采样点[39;00m
-[32m     27[39m     max_corr_idx = np.argmax(np.abs(corr_matrix[key_byte]))
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+Cell In[52], line 24
+     22 for byte_idx in range(16):
+     23     corr_matrix = correlations_best[byte_idx]
+---> 24     key_byte = recovered_key_bytes_array[byte_idx]
+     26     # 找到相关性最大的采样点
+     27     max_corr_idx = np.argmax(np.abs(corr_matrix[key_byte]))
 
-[31mIndexError[39m: too many indices for array: array is 0-dimensional, but 1 were indexed
+IndexError: too many indices for array: array is 0-dimensional, but 1 were indexed
 ```
 
 
@@ -2126,16 +2126,16 @@ print("="*60)
 修复变量名冲突...
 
 ---ERROR---
-[31m---------------------------------------------------------------------------[39m
-[31mIndexError[39m                                Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[53][39m[32m, line 24[39m
-[32m     22[39m [38;5;28;01mfor[39;00m byte_idx [38;5;129;01min[39;00m [38;5;28mrange[39m([32m16[39m):
-[32m     23[39m     corr_matrix = correlations_final[byte_idx]
-[32m---> [39m[32m24[39m     key_byte = [43mrecovered_key_array[49m[43m[[49m[43mbyte_idx[49m[43m][49m
-[32m     26[39m     [38;5;66;03m# 找到相关性最大的采样点[39;00m
-[32m     27[39m     max_corr_idx = np.argmax(np.abs(corr_matrix[key_byte]))
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+Cell In[53], line 24
+     22 for byte_idx in range(16):
+     23     corr_matrix = correlations_final[byte_idx]
+---> 24     key_byte = recovered_key_array[byte_idx]
+     26     # 找到相关性最大的采样点
+     27     max_corr_idx = np.argmax(np.abs(corr_matrix[key_byte]))
 
-[31mIndexError[39m: too many indices for array: array is 0-dimensional, but 1 were indexed
+IndexError: too many indices for array: array is 0-dimensional, but 1 were indexed
 ```
 
 
