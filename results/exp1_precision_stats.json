@@ -1,0 +1,44 @@
+{
+  "per_layer": {
+    "Upper": {
+      "Y": 90,
+      "N": 3,
+      "partial": 7,
+      "other": 0,
+      "total": 100,
+      "strict_precision_pct": 90.0,
+      "lenient_precision_pct": 93.5
+    },
+    "Lower": {
+      "Y": 97,
+      "N": 1,
+      "partial": 2,
+      "other": 0,
+      "total": 100,
+      "strict_precision_pct": 97.0,
+      "lenient_precision_pct": 98.0
+    },
+    "Cross": {
+      "Y": 43,
+      "N": 1,
+      "partial": 6,
+      "other": 0,
+      "total": 50,
+      "strict_precision_pct": 86.0,
+      "lenient_precision_pct": 92.0
+    }
+  },
+  "overall": {
+    "Y": 230,
+    "N": 5,
+    "partial": 15,
+    "other": 0,
+    "total": 250,
+    "strict_precision_pct": 92.0,
+    "lenient_precision_pct": 95.0
+  },
+  "notes": {
+    "strict": "Y / total (partial counts as error)",
+    "lenient": "(Y + 0.5*partial) / total  — partial counts as half correct; used in paper for fairness on edge cases"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "method": "llm_semantic_match",
+  "threshold": 0.7,
+  "llm_model": "deepseek-ai/DeepSeek-V3.2",
+  "cand_k": 30,
+  "cand_threshold": 0.2,
+  "per_doc": {
+    "MAN-01-2024-MathMagic-AES-Contact-TestCard-Example": {
+      "tp": 28,
+      "fn": 0,
+      "total": 28,
+      "recall_pct": 100.0
+    },
+    "PAP-04-2004-CHES-Brier-CPA-Leakage-Model": {
+      "tp": 20,
+      "fn": 7,
+      "total": 27,
+      "recall_pct": 74.07
+    },
+    "PAP-93-2014-ePrint-OFlynn-AES256-Bootloader-CPA": {
+      "tp": 16,
+      "fn": 2,
+      "total": 18,
+      "recall_pct": 88.89
+    },
+    "TOOL-01-08-2023-NewAE-CW-SCA101-Lab4_2-CPA-AES": {
+      "tp": 22,
+      "fn": 2,
+      "total": 24,
+      "recall_pct": 91.67
+    },
+    "TOOL-01-12-2023-NewAE-CW-SCA201-Lab1_1A-Resync-SAD": {
+      "tp": 14,
+      "fn": 2,
+      "total": 16,
+      "recall_pct": 87.5
+    }
+  },
+  "per_kind": {
+    "upper": {
+      "tp": 55,
+      "fn": 5,
+      "total": 60,
+      "recall_pct": 91.67
+    },
+    "lower": {
+      "tp": 32,
+      "fn": 7,
+      "total": 39,
+      "recall_pct": 82.05
+    },
+    "cross": {
+      "tp": 13,
+      "fn": 1,
+      "total": 14,
+      "recall_pct": 92.86
+    }
+  },
+  "overall": {
+    "tp": 100,
+    "fn": 13,
+    "total": 113,
+    "recall_pct": 88.5
+  },
+  "missed_rows": [
+    {
+      "doc": "PAP-04-2004-CHES-Brier-CPA-Leakage-Model",
+      "kind": "upper",
+      "subject": "Hamming Distance",
+      "relation": "alternative_to",
+      "object": "Hamming Weight",
+      "content": "",
+      "reason": "No candidate expresses the alternative relationship between Hamming Distance and Hamming Weight."
+    },
+    {
+      "doc": "PAP-04-2004-CHES-Brier-CPA-Leakage-Model",
+      "kind": "upper",
+      "subject": "Electromagnetic Radiation",
+      "relation": "alternative_to",
+      "object": "Power",
+      "content": "",
+      "reason": "No candidate expresses the alternative relationship between Electromagnetic Radiation and Power."
+    },
+    {
+      "doc": "PAP-04-2004-CHES-Brier-CPA-Leakage-Model",
+      "kind": "lower",
+      "subject": "exhaustively search for reference state R",
+      "relation": "",
+      "object": "",
+      "content": "Exhaustively test possible values of the unknown reference state R to maximize correlation.",
+      "reason": "No candidate describes an exhaustive search over a reference state R."
+    },
+    {
+      "doc": "PAP-04-2004-CHES-Brier-CPA-Leakage-Model",
+      "kind": "lower",
+      "subject": "use partial correlation for wider architectures",
+      "relation": "",
+      "object": "",
+      "content": "On 32-bit architectures, use partial correlation or prior knowledge when exhaustive search for R is infeasible.",
+      "reason": "no candidates above threshold"
+    },
+    {
+      "doc": "PAP-04-2004-CHES-Brier-CPA-Leakage-Model",
+      "kind": "cross",
+      "subject": "use partial correlation for wider architectures",
+      "relation": "strategy_applies_to",
+      "object": "32-bit architecture",
+      "content": "",
+      "reason": "No candidate mentions partial correlation or a strategy for wider (32-bit) architectures."
+    },
+    {
+      "doc": "PAP-04-2004-CHES-Brier-CPA-Leakage-Model",
+      "kind": "upper",
+      "subject": "CPA",
+      "relation": "alternative_to",
+      "object": "DPA",
+      "content": "",
+      "reason": "No candidate expresses CPA as an alternative to DPA; candidates show CPA works_with various entities or other alternatives to DPA."
+    },
+    {
+      "doc": "PAP-04-2004-CHES-Brier-CPA-Leakage-Model",
+      "kind": "upper",
+      "subject": "Unstable Clocking",
+      "relation": "weakens",
+      "object": "CPA",
+      "content": "",
+      "reason": "No candidate describes a countermeasure based on clock desynchronization."
+    },
+    {
+      "doc": "PAP-93-2014-ePrint-OFlynn-AES256-Bootloader-CPA",
+      "kind": "lower",
+      "subject": "use absolute correlation value for S-box attack",
+      "relation": "",
+      "object": "",
+      "content": "When attacking the S-Box output, the absolute value of the correlation can be used because the S-Box is non-linear.",
+      "reason": "no candidates above threshold"
+    },
+    {
+      "doc": "PAP-93-2014-ePrint-OFlynn-AES256-Bootloader-CPA",
+      "kind": "lower",
+      "subject": "cannot use absolute correlation for XOR attack",
+      "relation": "",
+      "object": "",
+      "content": "When attacking a linear XOR operation, the absolute value of the correlation cannot be used because the bitwise inverse ",
+      "reason": "no candidates above threshold"
+    },
+    {
+      "doc": "TOOL-01-08-2023-NewAE-CW-SCA101-Lab4_2-CPA-AES",
+      "kind": "upper",
+      "subject": "Hamming Distance",
+      "relation": "alternative_to",
+      "object": "Hamming Weight",
+      "content": "",
+      "reason": "No candidate expresses the alternative relationship between Hamming Distance and Hamming Weight."
+    },
+    {
+      "doc": "TOOL-01-08-2023-NewAE-CW-SCA101-Lab4_2-CPA-AES",
+      "kind": "lower",
+      "subject": "use absolute correlation for key ranking",
+      "relation": "",
+      "object": "",
+      "content": "Take the absolute value of the correlation coefficient when selecting the best key guess, as only the linear relationshi",
+      "reason": "no candidates above threshold"
+    },
+    {
+      "doc": "TOOL-01-12-2023-NewAE-CW-SCA201-Lab1_1A-Resync-SAD",
+      "kind": "lower",
+      "subject": "select unique reference segment",
+      "relation": "",
+      "object": "",
+      "content": "Choose a reference trace segment that is unique and not near edges to avoid false matches in SAD alignment.",
+      "reason": "no candidates above threshold"
+    },
+    {
+      "doc": "TOOL-01-12-2023-NewAE-CW-SCA201-Lab1_1A-Resync-SAD",
+      "kind": "lower",
+      "subject": "discard traces with excessive shift",
+      "relation": "",
+      "object": "",
+      "content": "Set a max_shift threshold and discard traces that require a shift beyond it to avoid disrupting the dataset.",
+      "reason": "no candidates above threshold"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+# Copy to config.yaml and fill in your own values.
+api:
+  siliconflow:
+    base_url: "https://api.siliconflow.cn/v1"
+    api_key: "YOUR_API_KEY"
+  openrouter:
+    base_url: "https://openrouter.ai/api/v1"
+    api_key: "YOUR_API_KEY"
+
+neo4j:
+  uri: "bolt://localhost:7687"
+  username: "neo4j"
+  password: "YOUR_NEO4J_PASSWORD"
+  database: "neo4j"
+
+agent:
+  max_iterations: 50
+
+paths:
+  sources_dir: "knowledge/sources"
+  workspace_dir: "knowledge/extraction/workspace"
+  traces_dir: "data/traces"
+  logs_dir: "logs"

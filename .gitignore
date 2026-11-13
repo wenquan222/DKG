@@ -1,0 +1,8 @@
+config.yaml
+__pycache__/
+*.pyc
+*.npy
+*.pdf
+data/
+logs/**/*.npy
+logs/**/*.png

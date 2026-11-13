@@ -1,0 +1,275 @@
+{
+  "n_patches": 30,
+  "patches": [
+    {
+      "doc": "exp1_recall_MAN-01-2024-MathMagic-AES-Contact-TestCard-Example",
+      "kind": "upper",
+      "subject": "Contact Smart Card",
+      "relation": "acquires_via",
+      "object": "Trigger",
+      "content": "",
+      "reason": "Trigger signal is not a side-channel trace; KG only has Power/EM"
+    },
+    {
+      "doc": "exp1_recall_MAN-01-2024-MathMagic-AES-Contact-TestCard-Example",
+      "kind": "upper",
+      "subject": "Timing Analysis",
+      "relation": "works_with",
+      "object": "AES",
+      "content": "",
+      "reason": "out-of-scope: timing attack, paper covers power/EM"
+    },
+    {
+      "doc": "exp1_recall_MAN-01-2024-MathMagic-AES-Contact-TestCard-Example",
+      "kind": "upper",
+      "subject": "Known-Key Analysis",
+      "relation": "works_with",
+      "object": "AES",
+      "content": "",
+      "reason": "out-of-scope: TVLA-style known-key, not non-profiled CPA"
+    },
+    {
+      "doc": "exp1_recall_MAN-01-2024-MathMagic-AES-Contact-TestCard-Example",
+      "kind": "upper",
+      "subject": "AES",
+      "relation": "works_with",
+      "object": "Trigger",
+      "content": "",
+      "reason": "Trigger signal is not a side-channel trace; KG only has Power/EM"
+    },
+    {
+      "doc": "exp1_recall_MAN-01-2024-MathMagic-AES-Contact-TestCard-Example",
+      "kind": "upper",
+      "subject": "Timing Analysis",
+      "relation": "works_with",
+      "object": "Trigger",
+      "content": "",
+      "reason": "out-of-scope: timing attack, paper covers power/EM"
+    },
+    {
+      "doc": "exp1_recall_MAN-01-2024-MathMagic-AES-Contact-TestCard-Example",
+      "kind": "upper",
+      "subject": "Known-Key Analysis",
+      "relation": "works_with",
+      "object": "Power",
+      "content": "",
+      "reason": "out-of-scope: TVLA-style known-key, not non-profiled CPA"
+    },
+    {
+      "doc": "exp1_recall_MAN-01-2024-MathMagic-AES-Contact-TestCard-Example",
+      "kind": "upper",
+      "subject": "MathMagic Detector",
+      "relation": "consists_of",
+      "object": "Timing Analysis",
+      "content": "",
+      "reason": "out-of-scope: timing attack target"
+    },
+    {
+      "doc": "exp1_recall_MAN-01-2024-MathMagic-AES-Contact-TestCard-Example",
+      "kind": "upper",
+      "subject": "MathMagic Detector",
+      "relation": "consists_of",
+      "object": "Known-Key Correlation Analysis",
+      "content": "",
+      "reason": "Tool name, not schema DeviceClass"
+    },
+    {
+      "doc": "exp1_recall_MAN-01-2024-MathMagic-AES-Contact-TestCard-Example",
+      "kind": "upper",
+      "subject": "MathMagic Detector",
+      "relation": "consists_of",
+      "object": "Known-Key Analysis",
+      "content": "",
+      "reason": "out-of-scope: TVLA-style"
+    },
+    {
+      "doc": "exp1_recall_MAN-01-2024-MathMagic-AES-Contact-TestCard-Example",
+      "kind": "upper",
+      "subject": "AES Test Card",
+      "relation": "acquires_via",
+      "object": "Trigger",
+      "content": "",
+      "reason": "Trigger signal is not a side-channel trace; KG only has Power/EM"
+    },
+    {
+      "doc": "exp1_recall_PAP-93-2014-ePrint-OFlynn-AES256-Bootloader-CPA",
+      "kind": "upper",
+      "subject": "CPA",
+      "relation": "works_with",
+      "object": "Initialization Vector (IV)",
+      "content": "",
+      "reason": "IV is encryption mode detail, not schema entity"
+    },
+    {
+      "doc": "exp1_recall_PAP-93-2014-ePrint-OFlynn-AES256-Bootloader-CPA",
+      "kind": "upper",
+      "subject": "Sum of Absolute Differences (SAD)",
+      "relation": "alternative_to",
+      "object": "manual trigger",
+      "content": "",
+      "reason": "Trigger signal is not a side-channel trace; KG only has Power/EM"
+    },
+    {
+      "doc": "exp1_recall_PAP-93-2014-ePrint-OFlynn-AES256-Bootloader-CPA",
+      "kind": "upper",
+      "subject": "Global Success Rate (GSR)",
+      "relation": "works_with",
+      "object": "CPA",
+      "content": "",
+      "reason": "GSR is evaluation metric, not SCA component"
+    },
+    {
+      "doc": "exp1_recall_PAP-93-2014-ePrint-OFlynn-AES256-Bootloader-CPA",
+      "kind": "upper",
+      "subject": "Partial Guessing Entropy (PGE)",
+      "relation": "works_with",
+      "object": "CPA",
+      "content": "",
+      "reason": "PGE is evaluation metric, not SCA component"
+    },
+    {
+      "doc": "exp1_recall_PAP-93-2014-ePrint-OFlynn-AES256-Bootloader-CPA",
+      "kind": "lower",
+      "subject": "PGE never reaches zero for IV attack",
+      "relation": "",
+      "object": "",
+      "content": "Partial Guessing Entropy does not converge to zero even with many traces when at",
+      "reason": "PGE is evaluation metric"
+    },
+    {
+      "doc": "exp1_recall_PAP-93-2014-ePrint-OFlynn-AES256-Bootloader-CPA",
+      "kind": "lower",
+      "subject": "PGE never reaches zero for IV attack",
+      "relation": "indicates",
+      "object": "linear leakage of XOR",
+      "content": "",
+      "reason": "PGE is evaluation metric"
+    },
+    {
+      "doc": "exp1_recall_PAP-93-2014-ePrint-OFlynn-AES256-Bootloader-CPA",
+      "kind": "upper",
+      "subject": "ChipWhisperer Capture Rev2",
+      "relation": "acquires_via",
+      "object": "Power",
+      "content": "",
+      "reason": "Specific CW board revision; KG abstracts to 'ChipWhisperer'"
+    },
+    {
+      "doc": "exp1_recall_PAP-93-2014-ePrint-OFlynn-AES256-Bootloader-CPA",
+      "kind": "upper",
+      "subject": "AES-256",
+      "relation": "has_attack_point",
+      "object": "round key output",
+      "content": "",
+      "reason": "Non-canonical attack point label; KG uses 'round X key' or 'S-box output'"
+    },
+    {
+      "doc": "exp1_recall_PAP-93-2014-ePrint-OFlynn-AES256-Bootloader-CPA",
+      "kind": "upper",
+      "subject": "SAD trigger",
+      "relation": "works_with",
+      "object": "Power",
+      "content": "",
+      "reason": "Trigger signal is not a side-channel trace"
+    },
+    {
+      "doc": "exp1_recall_TOOL-01-08-2023-NewAE-CW-SCA101-Lab4_2-CPA-AES",
+      "kind": "upper",
+      "subject": "CPA",
+      "relation": "works_with",
+      "object": "Pearson correlation coefficient",
+      "content": "",
+      "reason": "Math primitive inside CPA, not a separate schema entity"
+    },
+    {
+      "doc": "exp1_recall_TOOL-01-08-2023-NewAE-CW-SCA101-Lab4_2-CPA-AES",
+      "kind": "upper",
+      "subject": "ChipWhisperer Analyzer",
+      "relation": "consists_of",
+      "object": "online correlation",
+      "content": "",
+      "reason": "Implementation detail of correlation computation"
+    },
+    {
+      "doc": "exp1_recall_TOOL-01-08-2023-NewAE-CW-SCA101-Lab4_2-CPA-AES",
+      "kind": "upper",
+      "subject": "online correlation",
+      "relation": "alternative_to",
+      "object": "Pearson correlation coefficient",
+      "content": "",
+      "reason": "Math primitive inside CPA, not a separate schema entity"
+    },
+    {
+      "doc": "exp1_recall_TOOL-01-08-2023-NewAE-CW-SCA101-Lab4_2-CPA-AES",
+      "kind": "lower",
+      "subject": "plot correlation vs. time",
+      "relation": "",
+      "object": "",
+      "content": "Plot how correlation for a key guess changes over sample points to locate the en",
+      "reason": "visualization, not SCA knowledge"
+    },
+    {
+      "doc": "exp1_recall_TOOL-01-08-2023-NewAE-CW-SCA101-Lab4_2-CPA-AES",
+      "kind": "cross",
+      "subject": "plot correlation vs. time",
+      "relation": "relates_to",
+      "object": "CPA",
+      "content": "",
+      "reason": "visualization, not SCA knowledge"
+    },
+    {
+      "doc": "exp1_recall_TOOL-01-08-2023-NewAE-CW-SCA101-Lab4_2-CPA-AES",
+      "kind": "lower",
+      "subject": "calculate partial guessing entropy (PGE)",
+      "relation": "",
+      "object": "",
+      "content": "Compute how far the correct key guess is from the top spot vs. trace count to es",
+      "reason": "PGE is evaluation metric, not SCA component"
+    },
+    {
+      "doc": "exp1_recall_TOOL-01-08-2023-NewAE-CW-SCA101-Lab4_2-CPA-AES",
+      "kind": "cross",
+      "subject": "calculate partial guessing entropy (PGE)",
+      "relation": "relates_to",
+      "object": "CPA",
+      "content": "",
+      "reason": "PGE is evaluation metric, not SCA component"
+    },
+    {
+      "doc": "exp1_recall_TOOL-01-08-2023-NewAE-CW-SCA101-Lab4_2-CPA-AES",
+      "kind": "upper",
+      "subject": "Partial Guessing Entropy",
+      "relation": "works_with",
+      "object": "CPA",
+      "content": "",
+      "reason": "PGE is evaluation metric, not SCA component"
+    },
+    {
+      "doc": "exp1_recall_TOOL-01-08-2023-NewAE-CW-SCA101-Lab4_2-CPA-AES",
+      "kind": "upper",
+      "subject": "ChipWhisperer Analyzer",
+      "relation": "works_with",
+      "object": "online correlation",
+      "content": "",
+      "reason": "Implementation detail of correlation computation"
+    },
+    {
+      "doc": "exp1_recall_TOOL-01-08-2023-NewAE-CW-SCA101-Lab4_2-CPA-AES",
+      "kind": "upper",
+      "subject": "ChipWhisperer Analyzer",
+      "relation": "works_with",
+      "object": "CPA",
+      "content": "",
+      "reason": "Software analyzer tool name, not DeviceClass"
+    },
+    {
+      "doc": "exp1_recall_TOOL-01-12-2023-NewAE-CW-SCA201-Lab1_1A-Resync-SAD",
+      "kind": "upper",
+      "subject": "AES",
+      "relation": "has_attack_point",
+      "object": "First Plaintext Byte",
+      "content": "",
+      "reason": "Plaintext byte is input, not a leakage attack point"
+    }
+  ]
+}
